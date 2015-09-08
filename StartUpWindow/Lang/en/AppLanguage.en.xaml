@@ -1,0 +1,126 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lang="clr-namespace:System;assembly=mscorlib">
+	<!-- 应该在此定义资源字典条目。-->
+    <!--全局Begin-->
+    <lang:String x:Key="Lang_Global_NoHardware">(No Hardware)</lang:String>
+    <lang:String x:Key="Lang_Global_Screen">显示屏</lang:String>
+
+    <!--全局End-->
+    
+    <!--亮度Begin-->
+    <lang:String x:Key="Lang_Bright_MainWinText">亮度调节</lang:String>
+    <lang:String x:Key="Lang_Bright_SetGlobalBrightness">设置亮度</lang:String>
+    <lang:String x:Key="Lang_Bright_SetRedBrightness">设置红色亮度</lang:String>
+    <lang:String x:Key="Lang_Bright_SetGreenBrightness">设置绿色亮度</lang:String>
+    <lang:String x:Key="Lang_Bright_SetBlueBrightness">设置蓝色亮度</lang:String>
+    <lang:String x:Key="Lang_Bright_SetRedGammaTable">设置Gamma</lang:String>
+    <lang:String x:Key="Lang_Bright_SetCurrentGain">设置电流增益</lang:String>
+    <lang:String x:Key="Lang_Bright_SaveScanBdConfig">保存配置</lang:String>
+    <lang:String x:Key="Lang_Bright_Result">结果</lang:String>
+    <lang:String x:Key="Lang_Bright_Success">成功!</lang:String>
+    <lang:String x:Key="Lang_Bright_Unkonwn">失败!原因:未知!</lang:String>
+    <lang:String x:Key="Lang_Bright_Timeout">失败!原因:超时!</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadParams_Succeed">读取参数成功！</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadParams_Failed">读取参数失败！</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadChipFailed">读取芯片类型失败！</lang:String>
+    <!--亮度End-->
+
+
+
+
+
+
+    <!--协议库中的资源Begin-->
+    <!--ChipType-->
+    <lang:String x:Key="Chip_CommonBase">Common Chip</lang:String>
+    <lang:String x:Key="Chip_MBI5028">MBI5028</lang:String>
+    <lang:String x:Key="Chip_MBI5030">MBI5030</lang:String>
+    <lang:String x:Key="Chip_MBI5036">MBI5036</lang:String>
+    <lang:String x:Key="Chip_MBI5040">MBI5040</lang:String>
+    <lang:String x:Key="Chip_MBI5042">MBI5042/5041</lang:String>
+    <lang:String x:Key="Chip_MBI5042B">MBI5042B/5041B</lang:String>
+    <lang:String x:Key="Chip_MBI5050">MBI5050</lang:String>
+    <lang:String x:Key="Chip_MBI5167">MBI5167</lang:String>
+    <lang:String x:Key="Chip_DM13H">DM13H</lang:String>
+    <lang:String x:Key="Chip_P2518">P2518</lang:String>
+    <lang:String x:Key="Chip_P2510">P2510</lang:String>
+    <lang:String x:Key="Chip_RFT3630">RFT3630</lang:String>
+    <lang:String x:Key="Chip_SUM2017">SUM2017</lang:String>
+    <lang:String x:Key="Chip_MBI5034">MBI5034</lang:String>
+    <lang:String x:Key="Chip_SUM2018">SUM2018</lang:String>
+    <lang:String x:Key="Chip_SUM2030">SUM2030</lang:String>
+    <lang:String x:Key="Chip_MBI5037">MBI5037</lang:String>
+    <lang:String x:Key="Chip_MBI5039">MBI5039</lang:String>
+    <lang:String x:Key="Chip_MY9268">MY9268</lang:String>
+    <lang:String x:Key="Chip_SCL8060">SCL8060</lang:String>
+    <lang:String x:Key="Chip_MBI5224">MBI5224</lang:String>
+    <lang:String x:Key="Chip_MBI5051">MBI5051</lang:String>
+    <lang:String x:Key="Chip_MBI5052">MBI5052</lang:String>
+    <lang:String x:Key="Chip_MBI5053">MBI5053</lang:String>
+
+    <!--ScanType-->
+    <lang:String x:Key="Scan_static">Static</lang:String>
+    <lang:String x:Key="Scan_2">1/2</lang:String>
+    <lang:String x:Key="Scan_3">1/3</lang:String>
+    <lang:String x:Key="Scan_4">1/4</lang:String>
+    <lang:String x:Key="Scan_5">1/5</lang:String>
+    <lang:String x:Key="Scan_6">1/6</lang:String>
+    <lang:String x:Key="Scan_7">1/7</lang:String>
+    <lang:String x:Key="Scan_8">1/8</lang:String>
+    <lang:String x:Key="Scan_9">1/9</lang:String>
+    <lang:String x:Key="Scan_10">1/10</lang:String>
+    <lang:String x:Key="Scan_11">1/11</lang:String>
+    <lang:String x:Key="Scan_12">1/12</lang:String>
+    <lang:String x:Key="Scan_13">1/13</lang:String>
+    <lang:String x:Key="Scan_14">1/14</lang:String>
+    <lang:String x:Key="Scan_15">1/15</lang:String>
+    <lang:String x:Key="Scan_16">1/16</lang:String>
+    <lang:String x:Key="Scan_17">1/17</lang:String>
+    <lang:String x:Key="Scan_18">1/18</lang:String>
+    <lang:String x:Key="Scan_19">1/19</lang:String>
+    <lang:String x:Key="Scan_20">1/20</lang:String>
+    <lang:String x:Key="Scan_21">1/21</lang:String>
+    <lang:String x:Key="Scan_22">1/22</lang:String>
+    <lang:String x:Key="Scan_23">1/23</lang:String>
+    <lang:String x:Key="Scan_24">1/24</lang:String>
+    <lang:String x:Key="Scan_25">1/25</lang:String>
+    <lang:String x:Key="Scan_26">1/26</lang:String>
+    <lang:String x:Key="Scan_27">1/27</lang:String>
+    <lang:String x:Key="Scan_28">1/28</lang:String>
+    <lang:String x:Key="Scan_29">1/29</lang:String>
+    <lang:String x:Key="Scan_30">1/30</lang:String>
+    <lang:String x:Key="Scan_31">1/31</lang:String>
+    <lang:String x:Key="Scan_32">1/32</lang:String>
+    <lang:String x:Key="Scan_Unknown">Unknown</lang:String>
+
+    <!--DataDirectionType-->
+    <lang:String x:Key="Horizontal">Horizontal</lang:String>
+    <lang:String x:Key="Vertical">Vertical</lang:String>
+
+    <!--DecodeType-->
+    <lang:String x:Key="StaticNoCode">Static</lang:String>
+    <lang:String x:Key="Decode138">74HC138 Decoding</lang:String>
+    <lang:String x:Key="DicrectCode">Straight Decoding</lang:String>
+
+    <!--TestMode-->
+    <lang:String x:Key="Reserved1_Mode">Normal</lang:String>
+    <lang:String x:Key="Reserved2_Mode">Normal</lang:String>
+    <lang:String x:Key="Red_Mode">Red</lang:String>
+    <lang:String x:Key="Green_Mode">Green</lang:String>
+    <lang:String x:Key="Blue_Mode">Blue</lang:String>
+    <lang:String x:Key="White_Mode">White</lang:String>
+    <lang:String x:Key="HorizonLine_Mode">Horizon Line</lang:String>
+    <lang:String x:Key="VerticalLine_Mode">Vertical Line</lang:String>
+    <lang:String x:Key="InclineLine_Mode">Incline Line</lang:String>
+    <lang:String x:Key="GrayIncrease_Mode">Gray Scale</lang:String>
+    <lang:String x:Key="Age_Mode">Aging</lang:String>
+
+    <!--VirtualModeType-->
+    <lang:String x:Key="Disable">Real Pixel</lang:String>
+    <lang:String x:Key="Led4Mode1">Four Light Virtual Mode 1</lang:String>
+    <lang:String x:Key="Led4Mode2">Four Light Virtual Mode 2</lang:String>
+    <lang:String x:Key="Led3">Three Light Virtual Mode</lang:String>
+    <!--协议库中的资源End-->
+</ResourceDictionary>

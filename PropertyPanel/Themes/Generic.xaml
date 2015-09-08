@@ -1,0 +1,27 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF4" 
+    xmlns:local="clr-namespace:Nova.SmartLCT.UI"      
+    xmlns:my="clr-namespace:Nova.SmartLCT.SmartLCTControl;assembly=SmartLCTControl"   
+    xmlns:localInterface="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData"     
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+    xmlns:myNumericUD="clr-namespace:Nova.Wpf.Control;assembly=Nova.Wpf.Control.NumericUpDown"   
+    xmlns:xcts="http://schemas.xceed.com/wpf/xaml/toolkit"   
+    xmlns:Nova_SmartLCT_Behavior="clr-namespace:Nova.SmartLCT.Behavior;assembly=Behavior" >
+    <localInterface:LayerTypeConvertStr x:Key="layerTypeConvertStr"></localInterface:LayerTypeConvertStr>
+    <localInterface:EleTypeConvertLayerName x:Key="eleTypeConvertLayerName"></localInterface:EleTypeConvertLayerName>
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/CustomScanBdPropertyPanel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/ScanBoardPropertyPanel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/ScreenMapLocationPropertyPanel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/ScreenPropertyPanel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/SenderPropertyPanel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Nova.SmartLCT.UI.PropertyPanel;component/Themes/ButtonCollectionControl.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+
+
+</ResourceDictionary>

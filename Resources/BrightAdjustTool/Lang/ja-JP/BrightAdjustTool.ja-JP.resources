@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>BrightAdjustTool</Name>
+    <Controls>
+      <Control name="ToolStripMenuItem_ReconnectServer" text="サーバーに再レジスタする" />
+      <Control name="ToolStripMenuItem_ReadLEDInfo" text="ディスプレー・スクリーン・スクリーン・スクリーン情報を繰り返す読み取る" />
+      <Control name="ToolStripMenuItem_AdvancedConfig" text="高度配置" />
+      <Control name="ToolStripMenuItem_Exit" text="退出" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>BrightAdjustToolInfo</Name>
+    <Controls>
+      <Control name="Succeed" text="成功" />
+      <Control name="Failed" text="失敗" />
+      <Control name="SomeScreenIsNotExist" text="発送成功、なお、存在していないスクリーンがある！" />
+      <Control name="None" text="なし" />
+      <Control name="Name" text="名称" />
+      <Control name="Config" text="スクリーン配置" />
+      <Control name="AdjustMode" text="調節モデル" />
+      <Control name="DriverType" text="ドライブ・チープ" />
+      <Control name="LastAdjustInfo" text="すぐ前の調節情報" />
+      <Control name="Screen" text="スクリーン" />
+      <Control name="View" text="見る" />
+      <Control name="Manual" text="手動" />
+      <Control name="Schedual" text="定時" />
+      <Control name="Auto" text="自動" />
+      <Control name="Programmed" text="プログラム制御" />
+      <Control name="CommPortScreen" text="シリアルポート－スクリーン：" />
+      <Control name="NotExist" text="存在しない！" />
+      <Control name="No" text="いえ" />
+      <Control name="Yes" text="はい" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_AdjustInfoPreview</Name>
+    <Controls>
+      <Control name="Frm_AdjustInfoPreview" text="すぐ前の調整調節を見る" />
+      <Control name="label_Time" text="調節時間" />
+      <Control name="label_Result" text="調節結果" />
+      <Control name="groupBox_Data" text="調節データ" />
+      <Control name="label_Bright" text="輝度値" />
+      <Control name="label1_Gamma" text="Gamma値" />
+      <Control name="groupBox_Gain" text="増益" />
+      <Control name="groupBox_RGBBrightness" text="RGB輝度成分" />
+      <Control name="crystalButton_Close" text="閉じる" />
+      <Control name="label_RedGain" text="赤" />
+      <Control name="label_GreenGain" text="緑" />
+      <Control name="label_BlueGain" text="青" />
+      <Control name="label_RedBright" text="赤" />
+      <Control name="label_GreeenBright" text="緑" />
+      <Control name="label_BlueBright" text="青" />
+      <Control name="groupBox_ColorTemp" text="色温度情報" />
+      <Control name="label_IsEnableLowBright" text="低輝度を保証するか" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_AdvancedConfig</Name>
+    <Controls>
+      <Control name="Frm_AdvancedConfig" text="光度配置" />
+      <Control name="seperatePanel_LogEffectiveDays" text="日誌の有効日数を調節する" />
+      <Control name="label_Days" text="日数" />
+      <Control name="seperatePanel_AutoBrightInfo" text="自動輝度調節情報" />
+      <Control name="label_AutoBrightPeriod" text="環境輝度を検出する周期" />
+      <Control name="label_ReadLuxCnt" text="環境輝度を読み取る次数" />
+      <Control name="label_Notice" text="提示：自動輝度調節モデルで、毎回、ディスプレー・スクリーン・スクリーン・スクリーン輝度を調節する前に必ず読んだN次の光プローブ値の最大値と最小値を減って平均値を求めて、その後環境輝度とディスプレー・スクリーン・スクリーン・スクリーン輝度で構成した曲線によってディスプレー・スクリーン・スクリーン・スクリーン輝度を調節する！" />
+      <Control name="crystalButton_Ok" text="確定" />
+      <Control name="crystalButton_Cancel" text="取り消す" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_DisplayInfo</Name>
+    <Controls>
+      <Control name="seperatePanel_ScreenInfo" text="輝度調節情報" />
+      <Control name="label_NoServer" text="現在にサーバーに接続していない" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_SupperDisplayLayout</Name>
+    <Controls>
+      <Control name="Frm_SupperDisplayLayout" text="キット・トポロジー図" />
+      <Control name="label_ScalingRate" text="縮小拡大率" />
+      <Control name="label_OK" text="ディスプレー・スクリーン・スクリーン・スクリーン・スクリーン接続正常" />
+      <Control name="label_Unknown" text="ディスプレー・スクリーン・スクリーン・スクリーンを検出していない" />
+      <Control name="crystalButto_Exit" text="閉じる" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>CustomMessageBox</Name>
+    <Controls>
+      <Control name="button_Yes" text="はい" />
+      <Control name="button_No" text="いえ" />
+      <Control name="button_Abort" text="終止" />
+      <Control name="button_Retry" text="再トライ" />
+      <Control name="button_Ignore" text="無視" />
+      <Control name="button_Cancel" text="取り消す" />
+      <Control name="button_OK" text="確定" />
+    </Controls>
+  </Form>
+</Resource>

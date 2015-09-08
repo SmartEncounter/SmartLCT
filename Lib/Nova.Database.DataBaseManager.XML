@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Database.DataBaseManager</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Database.DataBaseManager.DbSqLiteHelper">
+            <summary>
+            SqLite访问的统一类
+            </summary>
+        </member>
+        <member name="T:Nova.Database.DataBaseManager.IDataBaseManager">
+            <summary>
+            数据库访问统一接口
+            </summary>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ConnectionInit">
+            <summary>
+            初始化Connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ConnectionInit(System.String)">
+            <summary>
+            初始化Connection
+            </summary>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteNonQuery(System.String)">
+            <summary>
+            执行Sql
+            </summary>
+            <param name="strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteNonQuery(System.String,System.String[],System.Object[],System.Data.DbType[])">
+            <summary>
+            带参数的执行Sql
+            </summary>
+            <param name="strSql"></param>
+            <param name="cmdParamNames"></param>
+            <param name="cmdParamValues"></param>
+            <param name="cmdParamTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteNonQueryTrans(System.Collections.Generic.List{System.String})">
+            <summary>
+            批量执行Sql
+            </summary>
+            <param name="sqlList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteNonQueryTrans(System.String[])">
+            <summary>
+            批量执行Sql
+            </summary>
+            <param name="sqlList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.OpenConnect">
+            <summary>
+            打开连接：可不用关心，执行内部需要打开会自动打开
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.CloseConnect">
+            <summary>
+            关闭连接：可不用关心，执行内部需要打开会自动关闭
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteReader(System.String)">
+            <summary>
+            执行Sql，返回只读集合
+            </summary>
+            <param name="strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteDataTable(System.String)">
+            <summary>
+            执行Sql，返回DataTable
+            </summary>
+            <param name="strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteDataTableUpdate(System.String)">
+            <summary>
+            执行Sql，返回DataTableUpdate，用于将更新后DataTable,更新入库
+            </summary>
+            <param name="strSql"></param>
+            <param name="isWrite">当为ture时要求单表必须有主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.DataTableUpdateToDB(Nova.Database.DataBaseManager.DataTableUpdate)">
+            <summary>
+            更新后DataTable，更新入库,来源于ExecuteDataTable的返回结果
+            </summary>
+            <param name="dataTableUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.GetSchema(System.String)">
+            <summary>
+            得到表的架构
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.IsTableExist(System.String)">
+            <summary>
+            判断表是否存在
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.ExecuteScalar(System.String)">
+            <summary>
+            返回Sql的首行首列的结果，无数据时返回null
+            </summary>
+            <param name="strSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Database.DataBaseManager.IDataBaseManager.UpdatePassWord(System.String)">
+            <summary>
+            修改数据库的密码
+            </summary>
+            <param name="updatePwd"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.Database.DataBaseManager.IDataBaseManager.Db_Conn">
+            <summary>
+            DataBase Connection 系统自动处理
+            </summary>
+        </member>
+        <member name="P:Nova.Database.DataBaseManager.IDataBaseManager.Db_Comm">
+            <summary>
+            DataBase Command 系统自动处理
+            </summary>
+        </member>
+        <member name="P:Nova.Database.DataBaseManager.IDataBaseManager.ConnectionString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,566 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lang="clr-namespace:System;assembly=mscorlib">
+	<!-- 应该在此定义资源字典条目。-->
+    <!--全局Begin-->
+    <lang:String x:Key="Lang_Global_NoHardware">(No Hardware)</lang:String>
+    <lang:String x:Key="Lang_Global_Screen">Screen</lang:String>
+    <lang:String x:Key="Lang_Global_ScreenShort">Screen</lang:String>
+    <lang:String x:Key="Lang_Global_ScannerFile">Scan Board Config Files</lang:String>
+    <lang:String x:Key="Lang_Gloabal_AllFile">All Files</lang:String>
+    <lang:String x:Key="Lang_Gloabal_SetSucceed">Succeed to set!</lang:String>
+    <lang:String x:Key="Lang_Gloabal_SetFail">Fail to set</lang:String>
+    <lang:String x:Key="Lang_Gloabal_ReadSucceed">Succeed to read!</lang:String>
+    <lang:String x:Key="Lang_Gloabal_ReadFail">Fail to read!</lang:String>
+    <lang:String x:Key="Lang_Gloabal_Set">Set </lang:String>
+    <lang:String x:Key="Lang_Gloabal_SetError">resolution error!</lang:String>
+    <lang:String x:Key="Lang_Gloabal_ResolutionNotSupport">No support resolution!</lang:String>
+    <lang:String x:Key="Lang_Global_NotLink">Some of the scan board are no connected!</lang:String>
+    <lang:String x:Key="Lang_Global_NetPort">Net Port</lang:String>
+    <lang:String x:Key="Lang_Global_Hardware">Hardware</lang:String>
+    <lang:String x:Key="Lang_Global_SendingBoard">Sending Board</lang:String>
+    <lang:String x:Key="Lang_Global_ReceivingCard">Receiving Card</lang:String>
+    <lang:String x:Key="Lang_Gloabal_FunctionCard">Function Card</lang:String>
+    <lang:String x:Key="Lang_Gloabal_SensorIndexOnFuncCard">Interface</lang:String>
+
+    <lang:String x:Key="Lang_Global_SaveAs">Save As</lang:String>
+    <lang:String x:Key="Lang_Global_OK">OK</lang:String>
+    <lang:String x:Key="Lang_Global_Cancel">Cancel</lang:String>
+    <lang:String x:Key="Lang_Global_Yes">Yes</lang:String>
+    <lang:String x:Key="Lang_Global_No">No</lang:String>
+    <lang:String x:Key="Lang_Global_Apply">Apply</lang:String>
+
+    <lang:String x:Key="Lang_Global_Custom">Custom</lang:String>    
+    <lang:String x:Key="Lang_Global_Send">Send</lang:String>
+    <lang:String x:Key="Lang_Global_Save">Save</lang:String>
+    <lang:String x:Key="Lang_Global_SendToHardware">Send To Hardware</lang:String>
+    <lang:String x:Key="Lang_Gloabal_ExportFileSuccessed">Export file successed!</lang:String>
+
+    <!--全局End-->
+    
+    <!--启动窗口Start-->
+    <lang:String x:Key="Lang_StartUp_Initialize">Initializing...</lang:String>
+    <lang:String x:Key="Lang_StartUp_StartServer">Start up services...</lang:String>
+    <lang:String x:Key="Lang_StartUp_StartBright">Start up bright adjustment tool...</lang:String>
+    <lang:String x:Key="Lang_StartUp_RegistServer">Services registering...</lang:String>
+    <lang:String x:Key="Lang_StartUp_GetData">Getting data...</lang:String>
+    <lang:String x:Key="Lang_StartUp_GetHWData">Getting hardware data...</lang:String>
+    <lang:String x:Key="Lang_StartUp_SureToModifySender">Sure to change the sending board type to</lang:String>
+    <!--启动窗口End-->
+    
+    <!--亮度Begin-->
+    <lang:String x:Key="Lang_Bright_GammaAdjust">Gamma Adjustment</lang:String>
+    <lang:String x:Key="Lang_Bright_ScreenQuality">Display Quality</lang:String>
+    <lang:String x:Key="Lang_Bright_QualitySoft">Soft</lang:String>
+    <lang:String x:Key="Lang_Bright_QualityEnhanced">Enhanced</lang:String>
+    <lang:String x:Key="Lang_Bright_GammaMode">Gamma Mode</lang:String>
+    <lang:String x:Key="Lang_Bright_GammaModeA">Mode A</lang:String>
+    <lang:String x:Key="Lang_Bright_GammaModeB">Mode B</lang:String>
+    <lang:String x:Key="Lang_Bright_BrightAdjust">Bright Adjustment</lang:String>
+    <lang:String x:Key="Lang_Bright_ColorTemperature">Color Temperature</lang:String>
+    <lang:String x:Key="Lang_Bright_Sync">Synchronous</lang:String>
+    <lang:String x:Key="Lang_Bright_Custom">Custom</lang:String>
+    <lang:String x:Key="Lang_Bright_CurrentGain">Current Gain</lang:String>
+    <lang:String x:Key="Lang_Bright_DefaultCurrentGain">Default</lang:String>
+    <lang:String x:Key="Lang_Bright_Refresh">Refresh</lang:String>
+    
+
+    <lang:String x:Key="Lang_Bright_MainWinText">Bright Adjustment</lang:String>
+    <lang:String x:Key="Lang_Bright_SetGlobalBrightness">Set global brightness</lang:String>
+    <lang:String x:Key="Lang_Bright_SetRedBrightness">Set red brightness</lang:String>
+    <lang:String x:Key="Lang_Bright_SetGreenBrightness">Set green brightness</lang:String>
+    <lang:String x:Key="Lang_Bright_SetBlueBrightness">Set blue brightness</lang:String>
+    <lang:String x:Key="Lang_Bright_SetRedGammaTable">Set gamma</lang:String>
+    <lang:String x:Key="Lang_Bright_SetCurrentGain">Set current gain</lang:String>
+    <lang:String x:Key="Lang_Bright_SaveScanBdConfig">Save configuration</lang:String>
+    <lang:String x:Key="Lang_Bright_Result">result</lang:String>
+    <lang:String x:Key="Lang_Bright_Success">Successful!</lang:String>
+    <lang:String x:Key="Lang_Bright_Unkonwn">Fail! Reason: Unknown!</lang:String>
+    <lang:String x:Key="Lang_Bright_Timeout">Fail! Reason: Timeout!</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadParams_Succeed">Succeed to read!</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadParams_Failed">Fail to read!</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadChipFailed">Fail to read driver chip type!</lang:String>
+	<lang:String x:Key="Lang_Bright_AdjustType">Adjust Mode</lang:String>
+	<lang:String x:Key="Lang_Bright_ManualAdjust">Manual</lang:String>
+    <lang:String x:Key="Lang_Bright_AutoAdjust">Auto Adjust</lang:String>
+	<lang:String x:Key="Lang_Bright_TimingAdjust">Smart Bright</lang:String>
+	<lang:String x:Key="Lang_Bright_Add">Add</lang:String>
+	<lang:String x:Key="Lang_Bright_IsStart">Enable</lang:String>
+    <lang:String x:Key="Lang_Bright_TimePeriod">Period</lang:String>
+	<lang:String x:Key="Lang_Bright_Time">Time</lang:String>
+	<lang:String x:Key="Lang_Bright_Bright">Brightness(%)</lang:String>
+	<lang:String x:Key="Lang_Bright_ClearList">Clear</lang:String>
+	<lang:String x:Key="Lang_Bright_Delete">Delete</lang:String>
+	<lang:String x:Key="Lang_Bright_Edit">Edit</lang:String>
+	<lang:String x:Key="Lang_Bright_Monday">Mon.</lang:String>
+    <lang:String x:Key="Lang_Bright_Tuesday">Tues.</lang:String>
+    <lang:String x:Key="Lang_Bright_Wednesday">Wed.</lang:String>
+	<lang:String x:Key="Lang_Bright_Thursday">Thur.</lang:String>
+	<lang:String x:Key="Lang_Bright_Friday">Fri.</lang:String>
+	<lang:String x:Key="Lang_Bright_Saturday">Sat.</lang:String>
+    <lang:String x:Key="Lang_Bright_Sunday">Sun.</lang:String>
+    <lang:String x:Key="Lang_Bright_Today">Today</lang:String>
+    <lang:String x:Key="Lang_Bright_MonToFri">Mon-Fri</lang:String>
+    <lang:String x:Key="Lang_Bright_EveryDay">Everyday</lang:String>
+    <lang:String x:Key="Lang_Bright_AllHours">All Hours</lang:String>    
+	<lang:String x:Key="Lang_Bright_FastSegmentation">FastSegmentation</lang:String>
+  	<lang:String x:Key="Lang_Bright_ControlMode">Control Type</lang:String>
+	<lang:String x:Key="Lang_Bright_PScreenBright">Screen Brightness(%)</lang:String>
+	<lang:String x:Key="Lang_Bright_PEnvironmentBright">Environment Brightness(Lux)</lang:String>
+	<lang:String x:Key="Lang_Bright_ScreenBright">Screen Brightness</lang:String>
+	<lang:String x:Key="Lang_Bright_EnvironmentBright">Environment Brightness</lang:String>
+    <lang:String x:Key="Lang_Bright_Above">Above</lang:String>
+	<lang:String x:Key="Lang_Bright_SegmentationAdjust">Linear piecewise between Max value and Min value</lang:String>
+	<lang:String x:Key="Lang_Bright_SegmentationNum">Segments</lang:String>
+    <lang:String x:Key="Lang_Bright_Below">Below</lang:String>
+    <lang:String x:Key="Lang_Bright_SureDeleSmartBrightItem">Sure to delete smart bright item?</lang:String>
+    <lang:String x:Key="Lang_Bright_SureClearSmartBrightItem">Sure to clear all smart items?</lang:String>
+    <lang:String x:Key="Lang_Bright_ReadAllPeripherals">Search light sensors from connected controller system, please wait...</lang:String>
+    <lang:String x:Key="Lang_Bright_SensorOnSender">Light sensor on sending board:</lang:String>
+    <lang:String x:Key="Lang_Bright_SensorOnFuncCard">Light sensor on function card:</lang:String>
+    <lang:String x:Key="Lang_Bright_EnvironmentScreenBrightMap">Mapping Of Environment Bright And Screen Bright</lang:String>
+    <lang:String x:Key="Lang_Bright_LightSensorSelect">Select </lang:String>
+    <lang:String x:Key="Lang_Bright_SmartAutoBrightNeedConfig">Auto-adjust is used in smart bright, the light sensors should be configured first!</lang:String>
+    <lang:String x:Key="Lang_Bright_NoConfigEnviScrBrightMapping">The relation between environment bright and screen bright must be set first </lang:String>
+    <lang:String x:Key="Lang_Bright_NoLightSensorSele">Please select light sensors for the screen</lang:String>
+    <lang:String x:Key="Lang_Bright_SernsorSetting">Light sensors</lang:String>
+    <lang:String x:Key="Lang_Bright_SmartBrightSettingSucceed">Succed to set!</lang:String>
+    <lang:String x:Key="Lang_Bright_SmartBrightSettingFailed">Fail to set!</lang:String>
+    <lang:String x:Key="Lang_Bright_EnvironmentBrightRange">The range of environment bright is:(0~60000)</lang:String>
+    <lang:String x:Key="Lang_Bright_ScreenBrightRange">The range of screen bright is:(0%~100%)</lang:String>
+    <lang:String x:Key="Lang_Bright_PeripheralSettingTitle">Light Sensors Settings</lang:String>
+    <lang:String x:Key="Lang_Bright_AddSmartBrightTitle">Smart Bright Settings</lang:String>
+
+
+    <!--亮度End-->
+
+    
+    
+    
+    
+    <!--配屏信息发送资源Begin-->
+    
+    <lang:String x:Key="Lang_ScreenInfo_SaveDataToHW">The data has not been saved, and will lost if power off! Do you want to save to hardware?</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SaveDataProcessMsg">Saving to hardware, please wait...</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SaveDataFailt">Fail to save to hardware!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_ServiceBusy">Server is processing other requests, please wait...</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_ReturnFactoryData">Restore factory failed!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SendToHWSuccess">Save information to hardware succeed!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_ReturnFactoryDataSuccess">Return to factory settings successful!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SenderCardParameterErr">Sending board parameter error!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SendScreenDataFailt">Send screen information failed!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_OneReceiveCardInfo">No scan board!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_NoReceiveCard">Sending board does not exist，The Index is </lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_OnePortLoadQuantity">The number of one serial port can not larger than 20480!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_Screen">Screen</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_PortLoadQuantityLarge">Port loaded can not large than 1024!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SendCardNumber">Sending Board</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_PortNumber">Port</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_PhysicalAddressesRepeat">Scan board address repeated!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_RepeatAddresses">Repeated address is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_RecieveCardNumber">Scan board number</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_MsgExtern">The scan board address must start from 1!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_MsgExternContinuous">The index of scan board must be continuous!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_MsgExternErr">Error:One scan board does not exist, the index is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SenderCardStride">The set region of sending board spans tow DVI interface! The sending board index is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_ScreenResolution">The display mode is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_ScannerText">Scan Board</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SendSuccessed">Succeed to send!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_SendFailt">Fail to send!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_RegionNoExist">The display region of sending board is beyond range，continue?</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_DisplayResolution">The display mode is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_StrReduNotExist">Redundancy equipment hasn't been connected, please connect the redundancy equipment or delete the redundancy information of this screen!</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_StrReduSender">The number of the redundancy sending board is:</lang:String>
+    <lang:String x:Key="Lang_ScreenInfo_StrSendDataNow">Sending information, please wait...</lang:String>
+
+
+    <lang:String x:Key="Lang_EquipmentManager_SerialPort">Serial Number</lang:String>
+    <lang:String x:Key="Lang_EquipmentManager_DeviceType">Device Type</lang:String>
+    <lang:String x:Key="Lang_EquipmentManager_PortCount">Net Port Number</lang:String>
+    <lang:String x:Key="Lang_EquipmentManager_Send">Send</lang:String>
+    <lang:String x:Key="Lang_EquipmentManager_SendToHW">Save</lang:String>
+    <lang:String x:Key="Lang_EquipmentManager_SystemCount">Controller Number</lang:String>
+
+    <!--配屏信息发送资源End-->
+
+    
+    <!--EDID设置Begin-->
+    <!--EDID设置End-->
+    
+    <!--显示屏连线配置Begin-->
+    <lang:String x:Key="Lang_ScrCfg_NotFileCacls">Can't find the calculator under the operation system!</lang:String>
+    <lang:String x:Key="Lang_ScrCfg_NotFileTestTool">Can't find the test tools in the application!</lang:String>
+    <lang:String x:Key="Lang_ScrCfg_ScreenName">Scan Board Connection</lang:String>
+
+    <!--显示屏连线配置End-->
+
+    <!--接收卡参数文件Begin-->
+    <lang:String x:Key="Lang_ReceiveCard_DeleteSeletedData">Sure to delete the selected row?</lang:String>
+    <lang:String x:Key="Lang_ReceiveCard_RightToLeft">Right to Left</lang:String>
+    <lang:String x:Key="Lang_ReceiveCard_LeftToRight">Left to Right</lang:String>
+    <lang:String x:Key="Lang_ReceiveCard_BottomToTop">Down to Up</lang:String>
+    <lang:String x:Key="Lang_ReceiveCard_TopToBottom">Up to Down</lang:String>
+
+
+    <lang:String x:Key="Lang_ScanBoardConfigManager_SelectedAll">All</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ScanBoardName">Cabinet Name</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ChipType">Driver Chip Type:</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ReceiveSize">Size:</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ConnectLineType">Cascade Type：</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ImportConfigFile">Import</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_ExportConfigFile">Export</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_DeleteConfigFile">Delete</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Close">Close</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Export">Export</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Cancel">Cancel</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_State">Status</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Operate">Operation</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_OK">OK</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Add">Add</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_NoAdd">NoAdd</lang:String> 
+    <lang:String x:Key="Lang_ScanBoardConfigManager_Replace">Replace</lang:String>
+    <!--接收卡参数文件End-->
+
+    <!--协议库中的资源Begin-->
+    <!--ChipType-->
+    <lang:String x:Key="Chip_CommonBase">Common Chip</lang:String>
+    <lang:String x:Key="Chip_MBI5028">MBI5028</lang:String>
+    <lang:String x:Key="Chip_MBI5030">MBI5030</lang:String>
+    <lang:String x:Key="Chip_MBI5036">MBI5036</lang:String>
+    <lang:String x:Key="Chip_MBI5040">MBI5040</lang:String>
+    <lang:String x:Key="Chip_MBI5042">MBI5042/5041</lang:String>
+    <lang:String x:Key="Chip_MBI5042B">MBI5042B/5041B</lang:String>
+    <lang:String x:Key="Chip_MBI5050">MBI5050</lang:String>
+    <lang:String x:Key="Chip_MBI5167">MBI5167</lang:String>
+    <lang:String x:Key="Chip_DM13H">DM13H</lang:String>
+    <lang:String x:Key="Chip_P2518">P2518</lang:String>
+    <lang:String x:Key="Chip_P2510">P2510</lang:String>
+    <lang:String x:Key="Chip_RFT3630">RFT3630</lang:String>
+    <lang:String x:Key="Chip_SUM2017">SUM2017</lang:String>
+    <lang:String x:Key="Chip_MBI5034">MBI5034</lang:String>
+    <lang:String x:Key="Chip_SUM2018">SUM2018</lang:String>
+    <lang:String x:Key="Chip_SUM2030">SUM2030</lang:String>
+    <lang:String x:Key="Chip_MBI5037">MBI5037</lang:String>
+    <lang:String x:Key="Chip_MBI5039">MBI5039</lang:String>
+    <lang:String x:Key="Chip_MY9268">MY9268</lang:String>
+    <lang:String x:Key="Chip_SCL8060">SCL8060</lang:String>
+    <lang:String x:Key="Chip_MBI5224">MBI5224</lang:String>
+    <lang:String x:Key="Chip_MBI5051">MBI5051</lang:String>
+    <lang:String x:Key="Chip_MBI5052">MBI5052</lang:String>
+    <lang:String x:Key="Chip_MBI5053">MBI5053</lang:String>
+
+    <!--ScanType-->
+    <lang:String x:Key="Scan_static">Static</lang:String>
+    <lang:String x:Key="Scan_2">1/2</lang:String>
+    <lang:String x:Key="Scan_3">1/3</lang:String>
+    <lang:String x:Key="Scan_4">1/4</lang:String>
+    <lang:String x:Key="Scan_5">1/5</lang:String>
+    <lang:String x:Key="Scan_6">1/6</lang:String>
+    <lang:String x:Key="Scan_7">1/7</lang:String>
+    <lang:String x:Key="Scan_8">1/8</lang:String>
+    <lang:String x:Key="Scan_9">1/9</lang:String>
+    <lang:String x:Key="Scan_10">1/10</lang:String>
+    <lang:String x:Key="Scan_11">1/11</lang:String>
+    <lang:String x:Key="Scan_12">1/12</lang:String>
+    <lang:String x:Key="Scan_13">1/13</lang:String>
+    <lang:String x:Key="Scan_14">1/14</lang:String>
+    <lang:String x:Key="Scan_15">1/15</lang:String>
+    <lang:String x:Key="Scan_16">1/16</lang:String>
+    <lang:String x:Key="Scan_17">1/17</lang:String>
+    <lang:String x:Key="Scan_18">1/18</lang:String>
+    <lang:String x:Key="Scan_19">1/19</lang:String>
+    <lang:String x:Key="Scan_20">1/20</lang:String>
+    <lang:String x:Key="Scan_21">1/21</lang:String>
+    <lang:String x:Key="Scan_22">1/22</lang:String>
+    <lang:String x:Key="Scan_23">1/23</lang:String>
+    <lang:String x:Key="Scan_24">1/24</lang:String>
+    <lang:String x:Key="Scan_25">1/25</lang:String>
+    <lang:String x:Key="Scan_26">1/26</lang:String>
+    <lang:String x:Key="Scan_27">1/27</lang:String>
+    <lang:String x:Key="Scan_28">1/28</lang:String>
+    <lang:String x:Key="Scan_29">1/29</lang:String>
+    <lang:String x:Key="Scan_30">1/30</lang:String>
+    <lang:String x:Key="Scan_31">1/31</lang:String>
+    <lang:String x:Key="Scan_32">1/32</lang:String>
+    <lang:String x:Key="Scan_Unknown">Unknown</lang:String>
+
+    <!--DataDirectionType-->
+    <lang:String x:Key="Horizontal">Horizontal</lang:String>
+    <lang:String x:Key="Vertical">Vertical</lang:String>
+
+    <!--DecodeType-->
+    <lang:String x:Key="StaticNoCode">Static</lang:String>
+    <lang:String x:Key="Decode138">74HC138 Decoding</lang:String>
+    <lang:String x:Key="DicrectCode">Straight Decoding</lang:String>
+
+    <!--TestMode-->
+    <lang:String x:Key="Reserved1_Mode">Normal</lang:String>
+    <lang:String x:Key="Reserved2_Mode">Normal</lang:String>
+    <lang:String x:Key="Red_Mode">Red</lang:String>
+    <lang:String x:Key="Green_Mode">Green</lang:String>
+    <lang:String x:Key="Blue_Mode">Blue</lang:String>
+    <lang:String x:Key="White_Mode">White</lang:String>
+    <lang:String x:Key="HorizonLine_Mode">Horizon Line</lang:String>
+    <lang:String x:Key="VerticalLine_Mode">Vertical Line</lang:String>
+    <lang:String x:Key="InclineLine_Mode">Incline Line</lang:String>
+    <lang:String x:Key="GrayIncrease_Mode">Gray Scale</lang:String>
+    <lang:String x:Key="Age_Mode">Aging</lang:String>
+
+    <!--VirtualModeType-->
+    <lang:String x:Key="Disable">Real Pixel</lang:String>
+    <lang:String x:Key="Led4Mode1">Four Light Virtual Mode 1</lang:String>
+    <lang:String x:Key="Led4Mode2">Four Light Virtual Mode 2</lang:String>
+    <lang:String x:Key="Led3">Three Light Virtual Mode</lang:String>
+    <!--协议库中的资源End-->
+
+
+
+    <!--菜单栏文件-->
+    <lang:String x:Key="Lang_SmartLCT_File">File</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_NewLayer">New</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_OpenConfigFile">Open</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Close">Close</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Save">Save</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Exit">Exit</lang:String>
+
+    <!--菜单栏编辑-->
+    <lang:String x:Key="Lang_SmartLCT_Edit">Edit</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Cut">Cut</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Copy">Copy</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Paste">Paste</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Delete">Delete</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_SelectedAll">Select All</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_CancelSelectedAll">Cancel Selected</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Clear">Clear</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_ClearLine">Clear Connection</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Alignment">Align...</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_LeftAlignment">Align Left</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_RightAlignment">Align Right</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_TopAlignment">Align Top</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_BottomAlignment">Align Bottom</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_LevelMiddleAlignment">Horizontal Center</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_PlumbMiddleAlignment">Vertical Center</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_CancelLevelSpace">No Horizontal Space</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_CancelPlumbSpace">No Vertical Space</lang:String>
+
+    <!--菜单栏工具-->
+    <lang:String x:Key="Lang_SmartLCT_Tool">Tools</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_SystemCheckDlg">System Checkout</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_ScanBoardConfigManager">Cabinet Management</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_EDIDManager">Sending Board Setting...</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_BrightAdjust">Brightness</lang:String>
+
+
+    <lang:String x:Key="Lang_SmartLCT_OriginalSize">Original Size</lang:String>
+    <!--菜单栏插件-->
+    <lang:String x:Key="Lang_SmartLCT_Plugin">Plug-in</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_TestTool">Test Tool</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Calculator">Calculator</lang:String>
+
+    <!--菜单栏语言-->
+    <lang:String x:Key="Lang_SmartLCT_Language">Language(Lang)</lang:String>
+
+    <!--菜单栏皮肤-->
+    <lang:String x:Key="Lang_SmartLCT_Skin">Skin</lang:String>
+
+    <!--帮助-->
+    <lang:String x:Key="Lang_SmartLCT_Help">Help</lang:String>
+
+    <!--添加发送卡、网口-->
+    <lang:String x:Key="Lang_SmartLCT_AddSender">Add Sending Board</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_AddPort">Add Port</lang:String>
+    
+    <!--右侧属性-->
+    <lang:String x:Key="Lang_SmartLCT_Sender">Sending Board</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_Receive">Scan Board</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_PleaseSelElment">Please selected elements from the left control!</lang:String>
+
+    <!--SmartLCT-MainWindow_VM-->
+    <lang:String x:Key="Lang_SmartLCT_VM_Screen">Screen</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_IsSave">Sure to save?</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_New">New</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_ConfileFile">Configuration File</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_AllFile">All Files</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_SystemConfigFile">System Configuration File</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_SaveError">Fail to save system configuration file</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_VM_SaveSuccessful">Succeed to save system config file</lang:String>
+    
+    <!--MainWindow-->
+    <lang:String x:Key="Lang_SmartLCT_MainWin_ScannerConnect">Design Screen</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_ScrMapping">Screen Location</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Thumbnail">Thumbnail</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_NewScreen">New Screen</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_NewProject">New Project</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_New">New</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Open">Open</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_OpenFile">Open File</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Save">Save</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Undo">Undo</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Redo">Redo</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Cut">Cut</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Copy">Copy</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Paste">Paste</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Delete">Delete</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_ClearLine">Clear Lines</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Enlarge">Enlarge</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Reduce">Reduce</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_OriginalSize">Original Size</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_Combine">Group</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_CancelCombine">Ungroup</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_EditSize">Edit Size</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_MaxLoadSize">Max Load：</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_MainWin_CurrentLoadSize">Current Load：</lang:String>
+
+
+    <lang:String x:Key="Lang_SmartLCT_MainWin_SureToDeleScr">Sure to delete the screen</lang:String>
+
+    <!--PortPropertyPanel-->
+    <lang:String x:Key="Lang_PortPropPanel_AddScanner">Add Cabinet</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_Add">Add</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ConnectScanner">Scan Board Connection</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_XCoordinate">Axis x:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_YCoordinate">Axis y:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_Height">Height:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_Width">Width:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ReceiveSize">Cabinet cfg:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_AddCols">Columns:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_AddRow">Rows:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_CanAddReceive">Can added number:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ChipType">Driver Chip Type:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_LightConnect">Cascade Type:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_DataGroupCount">Data Group:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ScanCount">Scan Type:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_Import">Import</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_SelecteSender">1.Select sending board</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_SelectePort">2.Select port</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_SelecteConnectType">3.Select connection mode</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ModelType">Model:</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_ManualConnect">Manual Connect</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_HorLeftTop">Left Top, Horizontal </lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_HorLeftBottom">Left Bottom, Horizontal</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_HorRightTop">Right Top, Horizontal</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_HorRightBottom">Right Bottom, Horizontal</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_VerLeftTop">Left Top, Vertical</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_VerLeftBottom">Left Bottom, Vertical</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_VerRightTop">Right Top, Vertical</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_VerRightBottom">Right Bottom, Vertical</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_SendingBoardResolution">Resolution:</lang:String>
+
+    <lang:String x:Key="Lang_PortPropPanel_ClearLine">Please clear connection of current port then reconnect!</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_PleaseSelectReceive">Please selecte scan board to connect!</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_CannotUserOnePort">Can not use one and the same port in different screen while more than one senders are used!</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_HaveUseThisPort">This port have been used!</lang:String>
+    <lang:String x:Key="Lang_PortPropPanel_UseSamePort">use the same port.</lang:String>
+
+
+    <!--添加发送卡-->
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSender_AddSenderTitle">Add Sending Board</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSender_SenderIndex">Sending Board Number：</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSender_Add">Add</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSender_Cancel">Cancel</lang:String>
+
+
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSenderVM_Sender">Sending Board</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSenderVM_SenderIsExit">exist, please try another!</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddSenderVM_SenderIsMaxCount">Can not max then 10!</lang:String>
+
+    <!--添加网口-->
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPort_AddPortTitle">Add Port</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPort_Sender">Sending Board:</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPort_PortIndex">Port:</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPort_Add">Add</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPort_Cancel">Cancel</lang:String>
+
+
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPortVM_Port">Port</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPortVM_PortIsExit">Exist, please try another!</lang:String>
+    <lang:String x:Key="Lang_SmartLCT_FrmAddPortVM_PortIsMaxCount">Port number can not max then 6!</lang:String>
+    
+    <!--RectLayer-->
+    <lang:String x:Key="Lang_CommonData_RectLayer_New">New</lang:String>
+    <lang:String x:Key="Lang_CommonData_RectLayer_Port">Port</lang:String>
+    <lang:String x:Key="Lang_CommonData_RectLayer_Sender">Sending Board</lang:String>
+    <lang:String x:Key="Lang_CommonData_RectLayer_Screen">Screen</lang:String>
+
+    <!--SmartLCTControl-->
+    <lang:String x:Key="Lang_SmartLCTControl_CancelSpaceError">Fail to operate!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_CancelLevelSpaceOverPort">Reason: Out of range!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_AgainSelected">Please select element!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_CancelPlumbSpaceOverPort">Reason: Out of range!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_AlignmentError">Fail to operate!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_AlignmentErrorReason">Reason: Out of Range!</lang:String>
+    <lang:String x:Key="Lang_SmartLCTControl_PortIsLocked">Port locked, please unlock!</lang:String>
+    
+    <!--SendEDIDManager-->
+    <lang:String x:Key="Lang_SendEDIDManager_SenderIndex">Number</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_Reslution">Resolution</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_RefreshRate">Refresh Rate</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_SetEDID">Setting</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_Refash">Refresh</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_ReslutionRate">Resolution:</lang:String>
+    <lang:String x:Key="Lang_SendEDIDManager_RectLayer_RefashRate">Refresh Rate:</lang:String>
+
+    <!--ScreenVirtualEditer-->
+    <lang:String x:Key="Lang_ScreenVirtualEditer_Position">Layout</lang:String>
+    <lang:String x:Key="Lang_ScreenVirtualEditer_Led4Mode1">Retangle</lang:String>
+    <lang:String x:Key="Lang_ScreenVirtualEditer_Led31">Erected Triangle Interaction</lang:String>
+    <lang:String x:Key="Lang_ScreenVirtualEditer_Led3">Inverted Triangle Interaction</lang:String>
+    <lang:String x:Key="Lang_ScreenVirtualEditer_Preview">Preview</lang:String>
+
+    <!--Frm_Guide_two.xaml-->
+    <lang:String x:Key="Lang_Frm_Guide_two_Project">Project</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_ProjectName">Name</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_ProjectPath">Location</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Browse">Browse</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_NewProject">An empty project</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Import">Import</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_CabinetSize">Cabinet Cfg</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_RowsAndCols">Rows,Cols</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Rows">Rows</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Cols">Cols</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_ConnectionMode">Connection</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Create">Create</lang:String>
+    <lang:String x:Key="Lang_Frm_Guide_two_Cancel">Cancel</lang:String>
+
+    <!--StartWindow-->
+    <lang:String x:Key="Lang_StartWindow_Start">Start</lang:String>
+    <lang:String x:Key="Lang_StartWindow_Normal">Normal</lang:String>
+    <lang:String x:Key="Lang_StartWindow_NewWizard">New Wizard</lang:String>
+    <lang:String x:Key="Lang_StartWindow_Wizard">Wizard</lang:String>
+    <lang:String x:Key="Lang_StartWindow_NewEmptyProject">New Project</lang:String>
+    <lang:String x:Key="Lang_StartWindow_Open">Open</lang:String>
+    <lang:String x:Key="Lang_StartWindow_RecentFiles">Recent Files</lang:String>
+    <lang:String x:Key="Lang_StartWindow_DevicesNews">Product</lang:String>
+    <lang:String x:Key="Lang_StartWindow_CanOpenFile">Can not open this file:</lang:String>
+    <lang:String x:Key="Lang_StartWindow_SureRemoveFile">Sure to remove from 'Recent Files'?</lang:String>
+
+    <!--转换器语言-->
+    <lang:String x:Key="Lang_Convertor_ScreenInfo">Screen Information</lang:String>
+    <lang:String x:Key="Lang_Convertor_SenderInfo">Sending Board Information</lang:String>
+    <lang:String x:Key="Lang_Convertor_PortInfo">Port Information</lang:String>
+    <lang:String x:Key="Lang_Convertor_CurScr">Current Screen</lang:String>
+    <lang:String x:Key="Lang_Convertor_CurSender">Current Sending Board</lang:String>
+    <lang:String x:Key="Lang_Convertor_Size">Size</lang:String>
+    <lang:String x:Key="Lang_Convertor_Location">Location</lang:String>
+    <lang:String x:Key="Lang_Convertor_OverLoad">Overload</lang:String>
+    <lang:String x:Key="Lang_Convertor_CurLoadOK">Loaded OK</lang:String>
+    <lang:String x:Key="Lang_Convertor_Load">Loaded</lang:String>
+
+    <!--ScanBoardConfigManager-->
+    <lang:String x:Key="Lang_ScanBoardConfigManager_MinScanner">Width and height of cabinet can not small than 32!</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_OverLoad">Over load, please try again!</lang:String>
+    <lang:String x:Key="Lang_ScanBoardConfigManager_SameFile">Fail to create! There is one file with the same name in that directory!</lang:String>
+    
+    <!--Window_SetCustomReceive-->
+    <lang:String x:Key="Lang_Window_SetCustomReceive_CustomCabinet">Custom Cabinet</lang:String>
+    <lang:String x:Key="Lang_Window_SetCustomReceive_CabinetWidth">Width:</lang:String>
+    <lang:String x:Key="Lang_Window_SetCustomReceive_CabinetHeight">Height:</lang:String>
+
+    <!--Win_LanguageSelect-->
+    <lang:String x:Key="Lang_LanguangSelect_Title">Language</lang:String>
+    <lang:String x:Key="Lang_LanguangSelect_NoSelectLang">Please select the language!</lang:String>
+    <lang:String x:Key="Lang_LanguangSelect_NeedRestartForLang">It's need to restart the sortware, sure to restart?</lang:String>
+    <lang:String x:Key="Lang_LanguangSelect_LangSel">Language Selecte:</lang:String>
+
+</ResourceDictionary>

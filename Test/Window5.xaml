@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:Nova.SmartLCT.UI;assembly=Nova.SmartLCT.UI.ScreenVirtualEditer" xmlns:local="clr-namespace:Test" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Test.Window5"
+        Title="Window5" Height="429" Width="726">
+	<Window.Resources>
+		<local:Window5_VM x:Key="Window5_VMDataSource" d:IsDataSource="True"/>
+        <my:ScreenVirtualContainer_VM x:Key="ScreenVirtualContainer_VMDataSource" d:IsDataSource="true"></my:ScreenVirtualContainer_VM>
+	</Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource Window5_VMDataSource}}">
+        <my:ScreenVirtualContainer HorizontalAlignment="Left" Margin="12,12,0,0" x:Name="screenVirtualContainer1" VerticalAlignment="Top" Height="296" Width="517" VirtualMode="{Binding VirtualMode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VirtualMap="{Binding VirtualMap, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GreenLightImage="{Binding GreenImage}" BlueLightImage="{Binding BlueImage}" RedLightImage="{Binding RedImage}" VRedLightImage="{Binding VRedImage}" d:LayoutOverrides="HorizontalAlignment"  />
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="596,356,0,0" Name="button1" VerticalAlignment="Top" Width="75" Command="{Binding CmdTest, Mode=OneWay}" Click="button1_Click" />
+        <TextBlock HorizontalAlignment="Right" Margin="0,0,262.853,13.163" TextWrapping="Wrap" Text="{Binding VirtualMap, ElementName=screenVirtualContainer1}" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

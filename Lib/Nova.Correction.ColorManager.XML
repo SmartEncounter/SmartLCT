@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Correction.ColorManager</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Correction.UI.UCHSIAction">
+            <summary>
+            HSI界面信息
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.Action">
+            <summary>
+            用户动作几类
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.UC_HSIManager">
+            <summary>
+            HSI调整控件
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.SaturationSwitcher(System.Int32,System.Double@)">
+            <summary>
+            与SaturationOppsiteSwitcher变化相反
+            </summary>
+            <param name="saturationHsroolBarValue"></param>
+            <param name="switchValue"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.SaturationOppsiteSwitcher(System.Double,System.Int32@)">
+            <summary>
+            由饱和度值（自变量x，double类型，定义域0-100）至界面控件值的映射（自变量y，整型，值域0-100），
+            映射关系为y = x2 / 100
+            </summary>
+            <param name="switchValue"></param>
+            <param name="hsroolBarValue"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.RemoveInvalidSteps">
+            <summary>
+            删除
+            </summary>
+            <param name="startMarkItem"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.SetRGBHSIValue(Nova.Correction.UI.RGBHSIValue,System.Boolean)">
+            <summary>
+            将HSI结构体的值刷新显示到界面
+            </summary>
+            <param name="hsiValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.GetRGBHSIValue(Nova.Correction.UI.RGBHSIValue@)">
+            <summary>
+            获取当前的HSI结构体值
+            </summary>
+            <param name="hsiValue"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.Correction.UI.UC_HSIManager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_HSIManager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.SetAdjustType(Nova.Correction.UI.CoefsAdjustType)">
+            <summary>
+            设置系数调节类型(亮度调节、色调饱和度调节)
+            </summary>
+            <param name="AdjustType"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.SetZoneCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs})">
+            <summary>
+            设置需要调节的区域及该区域校正系数列表
+            </summary>
+            <param name="partsCoefs"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.GetZoneCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs}@)">
+            <summary>
+            获取调节后的区域及该区域校正系数列表
+            </summary>
+            <param name="partsCoefs"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.SetCoefMatrix(Nova.Correction.UI.ColorMatrix)">
+            <summary>
+            设置需要调节的3*3矩阵
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.GetCoefMatrix(Nova.Correction.UI.ColorMatrix@)">
+            <summary>
+            获取调节后的3*3矩阵
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.IColorManager.GetAdjustMatrix(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},MatrixLibrary.Matrix@)">
+            <summary>
+            获取输入的两组系数的调整矩阵
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.UC_ColorManager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.UpdateLanguage(System.String)">
+            <summary>
+            更新语言
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.#ctor">
+            <summary>
+            色彩管理控件，用于调整校正系数
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.DoubleToUInt16(System.Double,System.UInt16,System.UInt16)">
+            <summary>
+            将Double转换为Uint16并作临界判断
+            </summary>
+            <param name="ConvertValue"></param>
+            <param name="MinValue"></param>
+            <param name="MaxValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.PixelCoefToMatrix(Nova.Correction.UI.PixelCoefs)">
+            <summary>
+            将像素校正系数转换为3*3矩阵
+            </summary>
+            <param name="PixCofs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetAdjustMatrix(MatrixLibrary.Matrix,MatrixLibrary.Matrix,MatrixLibrary.Matrix@)">
+            <summary>
+            获得调整前后3*3矩阵中各个值的平均值的变化矩阵
+            </summary>
+            <param name="oldCoef"></param>
+            <param name="newCoef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.SetAdjustType(Nova.Correction.UI.CoefsAdjustType)">
+            <summary>
+            设置色彩管理的界面显示，是色域调节还是亮度调节
+            </summary>
+            <param name="AdjustType"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.SetZoneCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs})">
+            <summary>
+            设置校正系数至控件并刷新界面亮度、饱和度、色调值显示
+            </summary>
+            <param name="ZoneCoefsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetZoneCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs}@)">
+            <summary>
+            获取校正亮度、色调、饱和度后的校正系数
+            </summary>
+            <param name="ZoneCoefsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.SetCoefMatrix(Nova.Correction.UI.ColorMatrix)">
+            <summary>
+            设置校正矩阵至控件，并根据其刷新界面显示值
+            </summary>
+            <param name="Marix"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetCoefMatrix(Nova.Correction.UI.ColorMatrix@)">
+            <summary>
+            获取调整后的校正矩阵
+            </summary>
+            <param name="Marix"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.AdjustCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},MatrixLibrary.Matrix,System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs}@)">
+            <summary>
+            根据给定的调整矩阵调整输入的多区域校正系数列表，并返回调整后的多区域校正系数列表
+            </summary>
+            <param name="ZoneCoefsList"></param>
+            <param name="AdjustMatrix"></param>
+            <param name="AdjustedZoneCoefsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.AdjustPixCoefsList(System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs},MatrixLibrary.Matrix,System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs}@)">
+            <summary>
+            根据给定的调整矩阵调整输入的区域校正系数列表，并返回调整后的区域校正系数列表
+            </summary>
+            <param name="CoefsList"></param>
+            <param name="AdjustMatrix"></param>
+            <param name="AdjustededCoefsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetAdjustMatrix(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},MatrixLibrary.Matrix@)">
+            <summary>
+            根据输入的源校正系数列表和目标校正系数列表，计算出源到目标的转换矩阵并返回
+            </summary>
+            <param name="sourceList"></param>
+            <param name="targetList"></param>
+            <param name="agjustMatrix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.SetZoneCoefs(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs})">
+            <summary>
+            刷新校正系数列表值至色彩管理控件界面，并将该列表的“色调”“饱和度”“亮度”三项参数值
+            调节至参考校正系数列表所对应的“色调”“饱和度”“亮度”值
+            </summary>
+            <param name="ZoneCoefsList">校正系数列表</param>
+            <param name="CoefsReferenceList">参考校正系数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetUndoListLength">
+            <summary>
+            获取可撤消步骤列表的长度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.GetCurrentUndoIndex">
+            <summary>
+            获取当前步骤在可撤消列表中的索引
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_ColorManager.SetUndoStep(System.Int32)">
+            <summary>
+            设置当前撤消步骤的索引
+            </summary>
+            <param name="undoStepIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Nova.Correction.UI.UC_ColorManager.CoefsAdjustTypeChangedEvent">
+            <summary>
+            系数调整模式发生改变时的通知事件
+            </summary>
+        </member>
+        <member name="P:Nova.Correction.UI.UC_ColorManager.ValueShow">
+            <summary>
+            界面数值显示形式的设置和获取
+            </summary>
+        </member>
+        <member name="E:Nova.Correction.UI.UC_ColorManager.AdjustMatrixChangedEvent">
+            <summary>
+            调整矩阵改变的通知事件
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.UC_IntensityManager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.UC_IntensityManager._actionList">
+            <summary>
+            动作列表
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.AddUndoStepToList">
+            <summary>
+            添加动作至“可撤消动作列表”
+            </summary>
+            <param name="IAction"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.RemoveInvalidSteps">
+            <summary>
+            删除无效动作
+            </summary>
+            <param name="startMarkItem"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.RefreshCurIAction">
+            <summary>
+            将当前界面上的控件状态值作为一种动作刷新至“全局当前动作”变量
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.SetRGBIntensity(Nova.Correction.UI.RGBIntensity,System.Boolean)">
+            <summary>
+            刷新输入参数intensityValue所对应的控件值值界面显示
+            </summary>
+            <param name="intensityValue"></param>
+            <param name="isAddStepAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.UC_IntensityManager.SetUndoStep(Nova.Correction.UI.UCIntensityAction)">
+            <summary>
+            跳转至指定“可撤消动作”
+            </summary>
+            <param name="undoStepIndex">跳转至动作在“可撤消列表”</param>
+            <returns>动作执行结果</returns>
+        </member>
+        <member name="P:Nova.Correction.UI.UC_IntensityManager.ValueShow">
+            <summary>
+            当前显示数据的类型，整数形式还是小数形式
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:Nova.Correction.UI.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Nova.Correction.UI.Properties.Resources.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.AdjustColorType">
+            <summary>
+            Led颜色
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ColorGamutType">
+            <summary>
+            色域类型
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.AdjustObjectType">
+            <summary>
+            “色彩管理”调节的对象类型
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.AdjustObjectType.ZoneCoefsList">
+            <summary>
+            “区域校正系数”调节
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.AdjustObjectType.ColorMarix">
+            <summary>
+            “色彩矩阵”调节
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.HardwarePartsType">
+            <summary>
+            硬件构件类型
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.IHardwarePartsAddress">
+            <summary>
+            硬件构件地址信息
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ScanBoardAddress">
+            <summary>
+            扫描板地址
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ModuleAddress">
+            <summary>
+            灯板地址
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.PixelCoefs">
+            <summary>
+            像素系数信息
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Rr">
+            <summary>
+            显示红色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Rg">
+            <summary>
+            显示绿色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Rb">
+            <summary>
+            显示蓝色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Gr">
+            <summary>
+            显示红色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Gg">
+            <summary>
+            显示绿色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Gb">
+            <summary>
+            显示蓝色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Br">
+            <summary>
+            显示红色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Bg">
+            <summary>
+            显示绿色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.PixelCoefs.Bb">
+            <summary>
+            显示蓝色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ColorMatrix">
+            <summary>
+            像素系数信息
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Rr">
+            <summary>
+            显示红色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Rg">
+            <summary>
+            显示绿色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Rb">
+            <summary>
+            显示蓝色屏时红灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Gr">
+            <summary>
+            显示红色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Gg">
+            <summary>
+            显示绿色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Gb">
+            <summary>
+            显示蓝色屏时绿灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Br">
+            <summary>
+            显示红色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Bg">
+            <summary>
+            显示绿色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.ColorMatrix.Bb">
+            <summary>
+            显示蓝色屏时蓝灯的系数
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.HardwarePartsCoefs">
+            <summary>
+            选中区域的系数和地址信息
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ZoneCoefs">
+            <summary>
+            色彩管理需要调节的对象
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.UCIntensityAction">
+            <summary>
+            亮度调节界面信息
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ColorChangedEventArgs">
+            <summary>
+            颜色改变的事件通知类
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.AdjustMatrixEventArgs._bRes">
+            <summary>
+            获取调整矩阵的结果，成功或失败
+            </summary>
+        </member>
+        <member name="F:Nova.Correction.UI.AdjustMatrixEventArgs._adjustMatrix">
+            <summary>
+            调整矩阵
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.CoefsAdjustType">
+            <summary>
+            校正系数调整模式，分为简单亮度调节和相对复杂的亮度、色调、饱和度调节
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ValueShowType">
+            <summary>
+            控件的值显示类型，分为整数形式和小数形式，例如56和0.56.
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.CoefsAdjustTypeChangedHandler">
+            <summary>
+            系数调整模式发生改变时的函数执行委托
+            </summary>
+            <param name="CurType"></param>
+        </member>
+        <member name="T:Nova.Correction.UI.RGB">
+             <summary>
+            表征RGB三色的结构体
+             </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.HSI">
+            <summary>
+            表征色调、饱和度、强度的HSI结构体
+            </summary>
+        </member>
+        <member name="T:Nova.Correction.UI.ColorSpaceConvert">
+            <summary>
+            RGB和HSI二者色彩空间的转换类
+            </summary>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.HSItoRGB(Nova.Correction.UI.HSI)">
+            <summary>
+             HSI --> RGB 转换（此处的RGB是11位---程序目前设置为11位，可更改）
+            </summary>
+            <param name="hsi">待转换的HSI结构体</param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.HSItoRGB255(Nova.Correction.UI.HSI)">
+            <summary>
+             HSI --> RGB转换（此处的RGB是8位的）
+            </summary>
+            <param name="hsi">待转换的HSI结构体</param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.RGBtoHSI(Nova.Correction.UI.RGB)">
+            <summary>
+            RGB --> HSI转换
+            </summary>
+            <param name="rgb">待转换的RGB结构体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.UpdatePixelCoefs(System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs},Nova.Correction.UI.HSI[],System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs}@)">
+            <summary>
+            由输入的系数列表获得其校正系数平均值，又输入的HSI获得其对应的系数平均值，
+            计算得到两个系数平均值的转换矩阵，最后将其该转换矩阵映射到输入的系数列表中
+            的每一个像素，将其输出
+            </summary>
+            <param name="hsi">色调、饱和度、亮度结构体</param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.UpdateHSI(System.Collections.Generic.List{Nova.Correction.UI.ZoneCoefs},Nova.Correction.UI.HSI[]@)">
+            <summary>
+            通过读取当前选中区域（可以是多个区域）的校正系数来返回该区域对应的RGB三个颜色的色调、饱和度、亮度
+            </summary>
+            <param name="hsb">RGB三个颜色的色调、饱和度、亮度结构体数组</param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.PixelCoefToHSI(Nova.Correction.UI.PixelCoefs,Nova.Correction.UI.HSI[]@)">
+            <summary>
+            将校正系数转换为HSI
+            </summary>
+            <param name="coefs"></param>
+            <param name="hsi"></param>
+            <param name="rgbArray"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.ColorMatrixToHSI(Nova.Correction.UI.ColorMatrix,Nova.Correction.UI.HSI[]@)">
+            <summary>
+            将色彩矩阵转换为HSI
+            </summary>
+            <param name="coefs"></param>
+            <param name="hsi"></param>
+            <param name="rgbArray"></param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.AjustEveryPixelCoef(System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs}@)">
+            <summary>
+             将对平均值矩阵的变化比例映射到各个像素中去
+            </summary>
+            <param name="CorrectedCoefsList">调整后的校正系数列表</param>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.PixelCoefToMatrix(Nova.Correction.UI.PixelCoefs)">
+            <summary>
+            将像素校正系数转换为3*3矩阵
+            </summary>
+            <param name="PixCofs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.DoubleToUInt16(System.Double,System.UInt16,System.UInt16)">
+            <summary>
+            将Double转换为Uint16并作临界判断
+            </summary>
+            <param name="ConvertValue"></param>
+            <param name="MinValue"></param>
+            <param name="MaxValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.GetAdjustMatrix(MatrixLibrary.Matrix,MatrixLibrary.Matrix,MatrixLibrary.Matrix@)">
+            <summary>
+            获得调整前后3*3矩阵中各个值的平均值的变化矩阵
+            </summary>
+            <param name="oldCoef"></param>
+            <param name="newCoef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Correction.UI.ColorSpaceConvert.GetAverageCoef(System.Collections.Generic.List{Nova.Correction.UI.PixelCoefs})">
+            <summary>
+            获得输入的PixelCoefs列表中的元素的平均值
+            </summary>
+            <param name="SelectCoefs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Correction.UI.IntensityLimit">
+            <summary>
+            亮度阈值
+            </summary>
+        </member>
+    </members>
+</doc>

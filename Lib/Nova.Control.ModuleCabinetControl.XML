@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Control.ModuleCabinetControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo">
+            <summary>
+            规则箱体的信息控件
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.ModCascadeStr">
+            <summary>
+            规则箱体中灯板的级联方式
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.#ctor(Nova.Control.ModuleCabinetControl.ModuleInfo)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_RegularCabinetInfo.SetRegularCabinetInfo(Nova.LCT.GigabitSystem.Common.RegularCabinetProperty)">
+            <summary>
+            设置规则箱体显示的信息
+            </summary>
+            <param name="regularCabinetPro"></param>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo">
+            <summary>
+            导出灯板时的信息窗口
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.ModuleListHeader">
+            <summary>
+            列表列头信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.SetSelectOutputInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.LEDModuleProperty})">
+            <summary>
+            设置选中灯板的信息
+            </summary>
+            <param name="moduleProp"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.InitiDataGirdView">
+            <summary>
+            初始化DataGridView
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.UpdateLanguage">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputModuleInfo.UpdateFont(System.Drawing.Font)">
+            <summary>
+            设置字体
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo">
+            <summary>
+            导出时灯板时信息显示窗口
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.ModuleField">
+            <summary>
+            DataGridView标题
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.#ctor(Nova.Control.ModuleCabinetControl.ModuleInfo)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.InitiDataGirdView">
+            <summary>
+            初始化DataGridView
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.DisplayModuleInfo(Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            设置灯板显示的信息
+            </summary>
+            <param name="moduleInfo"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.UpdateLanguage">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.UpdateFont(System.Drawing.Font)">
+            <summary>
+            设置字体
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.StringConverToString(System.String[])">
+             <summary>
+            字符数组转换为字符串
+             </summary>
+             <param name="byt"></param>
+             <returns></returns>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.ModuleName">
+            <summary>
+            灯板的名称
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Form_InputModuleInfo.ModuleNameReadOnly">
+            <summary>
+            设置和获取灯板名称是否支持修改
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.NumTextBox">
+            <summary>
+            不支持右键快捷粘贴和第一位不能为0的数字文本框
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.NumTextBox.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            按键操作
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.NumTextBox.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            控件消息
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.NumTextBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            文本框输入内容改变时触发该函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.ModuleInfo">
+            <summary>
+            灯板信息类
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.ModuleInfo.DataDirectStr">
+            <summary>
+            数据方向数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.ModuleInfo.DecodeStr">
+            <summary>
+            编码方向数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.ModuleInfo.DriverChipStr">
+            <summary>
+            驱动芯片数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.ModuleInfo.OEPolarityStr">
+            <summary>
+            OE极性数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.ModuleInfo.ScanStr">
+            <summary>
+            扫描方式数组
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.#ctor(System.Int32,Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="moduleID">灯板的ID</param>
+            <param name="moduleProp">灯板的属性</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.#ctor(System.Int32,Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="moduleID">灯板的ID</param>
+            <param name="moduleProp">灯板的属性</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.StringConverToString(System.String[])">
+             <summary>
+            字符数组转换为字符串
+             </summary>
+             <param name="byt"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.StringConverString(System.String)">
+            <summary>
+            字符串转换为字符数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.ModuleInfo.UpDateLanguage">
+            <summary>
+            更新资源
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.ModuleProp">
+            <summary>
+            灯板属性
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.ID">
+            <summary>
+            获取灯板ID
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.Name">
+            <summary>
+            灯板名称
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.ModulePixelCols">
+            <summary>
+            获取灯板像素列数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.ModulePixelRows">
+            <summary>
+            获取灯板像素行数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.DataDirectType">
+            <summary>
+            获取数据方向
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.DriverChipType">
+            <summary>
+            获取驱动芯片
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.Scan">
+            <summary>
+            获取扫描方式
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.DecType">
+            <summary>
+            获取编码方式
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.OEPolarity">
+            <summary>
+            获取灯板的OE极性
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.TotalPointInTable">
+            <summary>
+            获取灯板走线表总点数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.DataGroup">
+            <summary>
+             获取灯板数据组数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.ScanABCDCode">
+            <summary>
+            获取灯板扫描线参数排列
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.RGBCode">
+            <summary>
+            获取灯板四色参数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.DataGroupSequence">
+            <summary>
+            获取数据组驱动灯板顺序，最多支持8组数据
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.ModuleInfo.RowsCtrlByDataGroup">
+            <summary>
+            获取灯板每组数据驱动的行列数
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.CabinetInfo">
+            <summary>
+            箱体信息类
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.CabinetInfo.CabinetStr">
+            <summary>
+            箱体类型数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.CabinetInfo.ModCascadeStr">
+            <summary>
+            规则箱体中灯板的级联方式
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.CabinetInfo.#ctor(System.Int32,Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cabinetID">箱体的ID</param>
+            <param name="cabinetPro">箱体的属性</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.CabinetInfo.#ctor(System.Int32,Nova.LCT.GigabitSystem.Common.ICabinetProperty,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cabinetID">箱体的ID</param>
+            <param name="cabinetPro">箱体的属性</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.CabinetInfo.#ctor">
+            <summary>
+            构造数据
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.CabinetInfo.#ctor(System.String)">
+            <summary>
+            构造数据
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.CabinetInfo.UpDateLanguage">
+            <summary>
+            更新资源
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.CabinetPro">
+            <summary>
+            获取箱体属性
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.ID">
+            <summary>
+            获取箱体的ID
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.Name">
+            <summary>
+            获取箱体的名称
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.Width">
+            <summary>
+            获取箱体的宽
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.Height">
+            <summary>
+            获取箱体的高
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.CabinetInfo.CabinetType">
+             <summary>
+            箱体类型 
+             </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.UC_Module">
+            <summary>
+            灯板数据操作控件
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Module.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Module._moduleField">
+            <summary>
+            灯板列表列的字段数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Module._selectModuleProperty">
+            <summary>
+            记录最后一个选中的灯板信息
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Module._infoTable">
+            <summary>
+            解析出的语言表
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.AddModule(Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            添加灯板
+            </summary>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.RemoveSelectModule">
+            <summary>
+            移除列表中选中的灯板信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.RefreshModuleInfo">
+            <summary>
+            按条件刷新灯板信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.ClearModuleInfo">
+            <summary>
+            删除所有灯板(包括与之关联的灯板)
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.GetSelectModuleInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.LEDModuleProperty}@)">
+            <summary>
+            获取当前选中的灯板信息
+            </summary>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.UpdateLanguage(System.String)">
+            <summary>
+            更新内部自定义语言,(注:此处只更新自定义的语言资源，界面资源需要主窗口更新)
+            </summary>
+            <param name="langFileName">数据库UI的资源路径或者含有UC_Module_String资源的文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新内部自定义语言,(注:此处只更新自定义的语言资源，界面资源需要主窗口更新)
+            </summary>
+            <param name="langFileName">数据库UI的资源路径或者含有UC_Module_String资源的文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.RemoveCabinetByModuleID(System.Int32)">
+            <summary>
+            按照灯板的ID移除与之相关的箱体
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Module.GetSearchCodition(Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch@)">
+            <summary>
+            获取筛选条件
+            </summary>
+            <param name="searchCodition">返回得到的筛选条件</param>
+            <returns>返回True 筛选，False 不筛选</returns>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Module.ModuleCabinetDataBase">
+            <summary>
+            设置和获取灯板箱体数据库操作类
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Module.IsSupportMoreSelect">
+            <summary>
+            设置和获取灯板列表是否支持多选
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Module.CustomSearch">
+            <summary>
+            获取和设置自定义搜索条件
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Module.IsCustomSearch">
+             <summary>
+            设置和获取是否自定义搜索
+             </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Module.SelectModuleCount">
+            <summary>
+            从列表选择灯板的个数
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.UC_Cabinet">
+            <summary>
+            箱体数据操作控件类
+            </summary>
+            <summary>
+            箱体UI界面
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Cabinet.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Cabinet._cabinetField">
+            <summary>
+            箱体列表字段数组
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.UC_Cabinet._selectIrRegularCabinet">
+            <summary>
+            记录选中的最后一个不规则箱体的信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.AddCabinet(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            添加箱体
+            </summary>
+            <param name="cabinetProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.RemoveSelectCabinet">
+            <summary>
+            移除选中的箱体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.RefreshCabinetInfo">
+            <summary>
+            刷新箱体信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.ClearCabinetInfo">
+            <summary>
+            清空存在的箱体信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.GetSelectCabinetInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ICabinetProperty}@)">
+            <summary>
+            获取选中的箱体信息
+            </summary>
+            <param name="cabinetList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.UpdateLanguage(System.String)">
+            <summary>
+            更新内部自定义语言,(注:此处只更新自定义的语言资源，界面资源需要主窗口更新)
+            </summary>
+            <param name="langFileName">数据库UI的资源路径或者含有UC_Module_String资源的文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新内部自定义语言,(注:此处只更新自定义的语言资源，界面资源需要主窗口更新)
+            </summary>
+            <param name="langFileName">数据库UI的资源路径或者含有UC_Module_String资源的文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.GetSearchCodition(Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch@)">
+            <summary>
+            获取筛选条件
+            </summary>
+            <param name="searchCodition">返回得到的筛选条件</param>
+            <returns>返回True 筛选，False 不筛选</returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.UC_Cabinet.DisplaySelectCabinetInfo">
+            <summary>
+            显示选中的箱体信息
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Cabinet.ModuleCabinetDataBase">
+            <summary>
+            获取和设置灯板箱体数据操作类
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Cabinet.IsSupportMoreSelect">
+            <summary>
+            获取和设置箱体列表是否支持多选
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.UC_Cabinet.SelectCabinetCount">
+            <summary>
+            从箱体里表中选择箱体的个数
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo">
+            <summary>
+            导出箱体时选中的箱体信息
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.CabinetListHeader">
+            <summary>
+            列表列头信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.SetSelectOutputInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ICabinetProperty})">
+            <summary>
+            设置选中箱体的信息
+            </summary>
+            <param name="cabinetList"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.InitiDataGirdView">
+            <summary>
+            初始化DataGridView
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.UpdateLanguage">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.UpdateFont(System.Drawing.Font)">
+            <summary>
+            设置字体
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_OutputCabinetInfo.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet">
+            <summary>
+            灯板箱体操作窗口
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.ModuleText">
+            <summary>
+            设置灯板页面时toolStripButton的文本内容
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.CabinetText">
+            <summary>
+             设置箱体页面时toolStripButton的文本内容
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.ModuleVersion">
+            <summary>
+            灯板的版本
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.CabinetVersion">
+            <summary>
+            箱体的版本
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.InfoTable">
+            <summary>
+            解析出的语言表
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.LanguageFileName">
+            <summary>
+            语言文件路径
+            </summary>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.ProxyLanName">
+            <summary>
+            语言文件路径
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言资源
+            </summary>
+            <param name="fileName"></param>
+            <param name="proxyLanName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.UpdateFont(System.Drawing.Font)">
+            <summary>
+            设置字体
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Form_ModuleCabinet.ModuleCabinetDataBse">
+            <summary>
+            获取和设置数据库操作类
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Properties.Resources.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo">
+            <summary>
+            箱体信息窗口
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.#ctor(Nova.Control.ModuleCabinetControl.ModuleInfo)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.DisplayCabinetInfo(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            显示箱体的信息
+            </summary>
+            <param name="cabinetInfo"></param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.UpdateFont(System.Drawing.Font)">
+            <summary>
+            设置字体
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.CabinetName">
+            <summary>
+            箱体的名称
+            </summary>
+        </member>
+        <member name="P:Nova.Control.ModuleCabinetControl.Form_InputCabinetInfo.CabinetNameReadOnly">
+            <summary>
+            箱体的名称是否支持更改
+            </summary>
+        </member>
+    </members>
+</doc>

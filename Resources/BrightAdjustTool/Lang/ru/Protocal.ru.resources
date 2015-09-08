@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>Protocol_Interface</Name>
+    <Controls>
+      <Control name="ReadDeviceType" text="читать тип оборудования" />
+      <Control name="ReadCompanyID" text="читать ID компании" />
+      <Control name="ReadControllerModelId" text="читать тип карты послания" />
+      <Control name="ReadCommunicationProtocol" text="читать версию коммуникационного протокола" />
+      <Control name="ReadControllerSnHigh" text="читать номер Sn карты послания" />
+      <Control name="SetControllerSnHigh" text="установить номер Sn карты принятия" />
+      <Control name="ReadSortOrder" text="читать порядочный номер" />
+      <Control name="SetSortOrder" text="установить порядок" />
+      <Control name="ReadSaveSendCardsParameters" text="читать запись значения параметров карты послания " />
+      <Control name="SetSaveSendCardsParameters" text="записать параметры карты послания" />
+      <Control name="ReadReturnFactoryValues" text="читать значение заводского установления" />
+      <Control name="SetReturnFactoryValues" text="возвращать заводское установление" />
+      <Control name="ReadTestPoint" text="читать испытательную точку" />
+      <Control name="SetTestPoint" text="послать испытательную точку" />
+      <Control name="ReadControllerPhysical" text="читать адрес карты послания" />
+      <Control name="ReadTemperature" text="читать температуру карты послания" />
+      <Control name="ReadHumidity" text="читать влажность карты послания" />
+      <Control name="ReadFan" text="читать состояние вентиляров карты послания" />
+      <Control name="SetFieldRateMode" text="установить режим полевой частоты" />
+      <Control name="ReadFieldRateMode" text="читать режим полевой частоты" />
+      <Control name="ReadFieldRate" text="читать полевой частоты" />
+      <Control name="SetFieldRate" text="установить полевой частоты" />
+      <Control name="ReadAudioControl" text="читать управление звуком карты послания" />
+      <Control name="SetAudioControl" text="послать управление звуком карты послания" />
+      <Control name="ReadIoControl" text="читать управление IO карты послания" />
+      <Control name="SetIoControl" text="послать  управление IO карты послания" />
+      <Control name="ReadSenderBrightnessLux" text="читать значение щупа карты послания" />
+      <Control name="ReadRtco" text="читать часы карты послания" />
+      <Control name="SetRtco" text="установить часы карты послания" />
+      <Control name="ReadDVI0FieldRate" text="читать полевой частоты DVI0" />
+      <Control name="ReadDVI1FieldRate" text="читать полевой частоты DVI1" />
+      <Control name="ReadMasterOrSlave" text="читать резервную информацию" />
+      <Control name="SetMasterOrSlave" text="послать резервную информацию" />
+      <Control name="ReadHoldTime" text="читать протяженость кадра запуска машины" />
+      <Control name="SetHoldTime" text="установить протяженость кадра запуска машины" />
+      <Control name="ReadDviMode" text="читать режим DVI" />
+      <Control name="SetDviMode" text="установить  режим DVI" />
+      <Control name="ReadDviSelect" text="читать выборный  DVI" />
+      <Control name="SetDviSelect" text="установить выборный  DVI" />
+      <Control name="ReadDviWidth" text="читать ширину DVI" />
+      <Control name="SetDviWidth" text="установить ширину DVI" />
+      <Control name="ReadDviHeight" text="читать высоту DVI" />
+      <Control name="SetDviHeight" text="установить высоту DVI" />
+      <Control name="ReadDviOffsetX" text="читать смещение Х от DVI" />
+      <Control name="SetDviOffsetX" text="установить смещение Х от DVI" />
+      <Control name="ReadDviOffsetY" text="читать смещение У от DVI" />
+      <Control name="SetDviOffsetY" text="установить  смещение У от DVI" />
+      <Control name="ReadDvi1Dvi0OffsetX" text="читать смещение Х от DVI1 относительно DVI0" />
+      <Control name="SetDvi1Dvi0OffsetX" text="установить смещение Х от DVI1 относительно DVI0" />
+      <Control name="ReadDvi1Dvi0OffsetY" text="читать смещение У от DVI1 относительно DVI0" />
+      <Control name="SetDvi1Dvi0OffsetY" text="установить смещение У от DVI1 относительно DVI0" />
+      <Control name="ReadPortEnable" text="читать знак характеристики сетевого порта карты послания" />
+      <Control name="SetPortEnable" text="установить знак характеристики сетевого порта карты послания" />
+      <Control name="ReadPortWidth" text="читать ширину сетевого порта карты послания" />
+      <Control name="SetPortWidth" text="установить ширину сетевого порта карты послания" />
+      <Control name="ReadPortHeight" text="читать высоту сетевого порта карты послания" />
+      <Control name="SetPortHeight" text="установить высоту сетевого порта карты послания" />
+      <Control name="ReadPortOffsetX" text="читать смещение Х сетевого порта карты послания" />
+      <Control name="SetPortOffsetX" text="установить  смещение Х сетевого порта карты послания" />
+      <Control name="ReadPortOffsetY" text=" читать смещение У сетевого порта карты послания" />
+      <Control name="SetPortOffsetY" text="установить смещение У сетевого порта карты послания" />
+      <Control name="ReadEthernetPortScannerX" text="читать координату Х порта карты принятия" />
+      <Control name="SetEthernetPortScannerX" text="установить  координату Х порта карты принятия" />
+      <Control name="ReadEthernetPortScannerY" text="читать координату У порта карты принятия" />
+      <Control name="SetEthernetPortScannerY" text="установить  координату У порта карты принятия" />
+      <Control name="ReadEthernetPortScannerXY" text="читать координату Х, У порта карты принятия" />
+      <Control name="SetEthernetPortScannerXY" text="установить  координату Х, У порта карты принятия" />
+      <Control name="ReadNumberOfCardOrScanBoardInPort" text="читать количество карты принятия загрузки сетевого порта" />
+      <Control name="SetNumberOfCardOrScanBoardInPort" text="установить  количество карты принятия загрузки сетевого порта" />
+      <Control name="ReadVirtualEnable" text="читать виртуальный знак характеристики " />
+      <Control name="SetVirtualEnable" text="установить  виртуальный знак характеристики " />
+      <Control name="ReadDisplayMode" text="читать режим отображения" />
+      <Control name="ReadHDEnable" text="Читать разрешенный знак с высокой чёткостью" />
+      <Control name="SetHDEnable" text="Установить разрешенный знак с высокой чёткостью" />
+      <Control name="ReadSender_McuProgramLength" text="читать длину программы компьютера на одной интегральной схеме " />
+      <Control name="SetSender_McuProgramLength" text="установить длину программы компьютера на одной интегральной схеме " />
+      <Control name="ReadSender_McuProgramEdition" text="читать версию программы компьютера на одной интегральной схеме " />
+      <Control name="SetSender_McuProgramEdition" text="установить версию программы компьютера на одной интегральной схеме" />
+      <Control name="ReadSender_McuProgramRemarks" text="читать примечание программы компьютера на одной интегральной схеме" />
+      <Control name="SetSender_McuProgramRemarks" text="установить примечание программы компьютера на одной интегральной схеме" />
+      <Control name="ReadSender_Mcu" text="читать данные программы компьютера на одной интегральной схеме" />
+      <Control name="SetSender_Mcu" text="установить  данные программы компьютера на одной интегральной схеме" />
+      <Control name="SetSender_Reset" text=" возвращать программы компьютера на одной интегральной схеме" />
+      <Control name="SetSender_EncryptHandShake" text="обновлять  держание руки программы компьютера на одной интегральной схеме" />
+      <Control name="SetSender_McuUpdateProgrammFinish" text="обновлять  окончание программы компьютера на одной интегральной схеме" />
+      <Control name="ReadSender_FPGAProgramLength" text="читать длину программы  FPGA" />
+      <Control name="SetSender_FPGAProgramLength" text="установить длину программы  FPGA" />
+      <Control name="ReadSender_FPGAProgramEdition" text="читать версию программы  FPGA" />
+      <Control name="SetSender_FPGAProgramEdition" text="установить версию программы  FPGA" />
+      <Control name="ReadSender_FPGAProgramRemarks" text="читать примечание программы  FPGA" />
+      <Control name="SetSender_FPGAProgramRemarks" text="установить  примечание программы  FPGA" />
+      <Control name="ReadSender_FPGA" text="читать данные программы  FPGA" />
+      <Control name="SetSender_FPGA" text="послать данные программы  FPGA" />
+      <Control name="ReadSender_SoftwareSpace" text="читать данные в пространстве программного обеспечивания" />
+      <Control name="SetSender_SoftwareSpace" text="писать  данные в пространстве программного обеспечивания" />
+      <Control name="ReadSender_EDIDSpace" text="читать данные EDID" />
+      <Control name="SetSender_EDIDSpace" text="писать данные EDID" />
+      <Control name="ReadSender_AuthorizeTime" text="читать время уполномоченное карты послания" />
+      <Control name="SetSender_AuthorizeTime" text="установить время уполномоченное карты послания" />
+      <Control name="ReadSender_AuthorizePassward" text="читать код уполномоченный карты послания" />
+      <Control name="SetSender_AuthorizePassward" text="установить  код уполномоченный карты послания" />
+      <Control name="ReadSender_RedGammaTable" text="Читать Gamma таблицу" />
+      <Control name="SetSender_RedGammaTable" text="Установить Gamma таблицу" />
+      <Control name="ReadSender_GreenGammaTable" text="Читать Gamma таблицу" />
+      <Control name="SetSender_GreenGammaTable" text="Установить Gamma таблицу" />
+      <Control name="ReadSender_BlueGammaTable" text="Читать Gamma таблицу" />
+      <Control name="SetSender_BlueGammaTable" text="Установить Gamma таблицу" />
+      <Control name="ReadScanCardModle" text="читать карту принятия ID" />
+      <Control name="ReadScanCardGoldenFPGAProgramVerion" text="читать версию программного обеспечивания карты принятия Glden" />
+      <Control name="ReadAttachedMonitorCardExist" text="проверять наличие дополнительной контрольной карты карты принятия" />
+      <Control name="ReadAttachedMonitorCardModle" text="читать ModleID дополнительной контрольной карты карты принятия" />
+      <Control name="ReadAttachedMonitorCardProgramVersion" text="читать версию программного обеспечивания дополнительной контрольной карты карты принятия" />
+      <Control name="SetScreenEncrypt" text="карта принятия жесткого установления кода " />
+      <Control name="SetScreenDecrypt" text="расшифровка карты принятия" />
+      <Control name="SetCoefficientStore2SpiFlash" text="записать исправленные данные в карты принятия" />
+      <Control name="SetCoefficientStore2IIcFlash" text="записать исправленные данные в плиту лампы" />
+      <Control name="SetCoefficientReloadFromSpiFlash" text="загрузить из карты принятия исправленные данные " />
+      <Control name="SetCoefficientReloadFromIIcFlash" text="загрузить из плиты лампы исправленные данные " />
+      <Control name="SetCoefficientInSpiFlashErase" text="стирать из карты принятия исправленные данные" />
+      <Control name="SetCoefficientInIIcFlashErase" text="стирать из плиты лампы принятия исправленные данные" />
+      <Control name="SetRebootGoldenFPGAProgram" text="перегрузить программное обеспечивание FPGA Golden" />
+      <Control name="SetRebootWorkFPGAProgram" text="перегрузить программное обеспечивание FPGA " />
+      <Control name="SetFPGAWorkProgramStore" text="записать программное обеспечивание FPGA " />
+      <Control name="SetFPGAGoldenProgramStore" text="записать программное обеспечивание FPGA на район программного обеспечивания Golden" />
+      <Control name="SetParameterReloadFromSpiFlash" text="захватить параметры" />
+      <Control name="SetParameterStore2SpiFlash" text="записать параметры " />
+      <Control name="SetRecaculateParameter" text="пересчитать параметры" />
+      <Control name="SetGenLinearScanBoardRunLineTable" text="установить лист линий карты принятия" />
+      <Control name="SetCoefficienceFromDvi" text="вписать введенный в интернет коэффициент" />
+      <Control name="SetStoreStartingLogoImage" text="установить текущий кадр экрана в кадр запуска машины" />
+      <Control name="SetStoreNoSignalLogoImage" text="установить текущий кадр экрана в кадр без сигнала" />
+      <Control name="SetStartLedCheck" text="запустить поголовочный осмотр карты принятия" />
+      <Control name="SetConfigRegister" text="писать регистр распределения" />
+      <Control name="ReadOnePackageSBParameters" text="читать параметры карты принятия" />
+      <Control name="ReadGamma" text="читать значение Gamma" />
+      <Control name="SetGamma" text="писать  значение Gamma" />
+      <Control name="ReadGlobalBrightness" text="читать яркость экрана" />
+      <Control name="SetGlobalBrightness" text="установить яркость экрана" />
+      <Control name="ReadRedBrightness" text="читать яркость красного цвета" />
+      <Control name="SetRedBrightness" text="установить  яркость красного цвета" />
+      <Control name="ReadGreenBrightness" text="читать  яркость зеленого цвета" />
+      <Control name="SetGreenBrightness" text="установить  яркость зеленого цвета" />
+      <Control name="ReadBlueBrightness" text="читать  яркость синего цвета" />
+      <Control name="SetBlueBrightness" text="установить  яркость синего цвета" />
+      <Control name="ReadVRedBrightness" text="читать виртуальную яркость красного цвета" />
+      <Control name="SetVRedBrightness" text="установить виртуальную яркость красного цвета" />
+      <Control name="ReadDataDirection" text="читать направление передачи данных плиты лампы" />
+      <Control name="SetDataDirection" text="установить  направление передачи данных плиты лампы" />
+      <Control name="ReadModuleWidth" text="читать ширину плиты лампы" />
+      <Control name="SetModuleWidth" text="установить ширину плиты лампы" />
+      <Control name="ReadModuleHeight" text="читать высоту плиты лампы" />
+      <Control name="SetModuleHeight" text="установить  высоту плиты лампы" />
+      <Control name="ReadDriverType" text="читать тип чипов привода плиты лампы" />
+      <Control name="SetDriverType" text="установить  тип чипов привода плиты лампы" />
+      <Control name="ReadScanMode" text="читать способ развертки плиты лампы" />
+      <Control name="SetScanMode" text="установить  способ развертки плиты лампы" />
+      <Control name="ReadOEPority" text="читать полярность ОЕ" />
+      <Control name="SetOEPority" text="установить полярность ОЕ" />
+      <Control name="ReadDecodeType" text="читать способ декодирования плиты лампы" />
+      <Control name="SetDecodeType" text="установить способ декодирования плиты лампы" />
+      <Control name="ReadGroupNumInModule" text="читать группу данных плиты лампы" />
+      <Control name="SetGroupNumInModule" text="установить группу данных плиты лампы" />
+      <Control name="ReadDataGroupSequence" text="читать порядок S групп данных" />
+      <Control name="SetDataGroupSequence" text="установить" />
+      <Control name="ReadModuelCols" text="читать количество рядов плиты лампы загрузки карты принятия" />
+      <Control name="SetModuelCols" text="установить количество рядов плиты лампы загрузки карты принятия" />
+      <Control name="ReadModuelRows" text="читать количество строк плиты лампы загрузки карты принятия" />
+      <Control name="SetModuelRows" text="установить количество строк плиты лампы загрузки карты принятия" />
+      <Control name="ReadControlWidth" text="читать ширину загрузки карты принятия " />
+      <Control name="SetControlWidth" text="установить ширину загрузки карты принятия " />
+      <Control name="ReadControlHeight" text="читать высоту загрузки карты принятия " />
+      <Control name="SetControlHeight" text="установить высоту загрузки карты принятия " />
+      <Control name="ReadPhysicalTotalDataGroupNum" text="читать количество групп данных Р полной карты принятия " />
+      <Control name="SetPhysicalTotalDataGroupNum" text="установить количество групп данных Р полной карты принятия " />
+      <Control name="ReadCascadeDiretion" text="читать направление классного соединения плиты лампы" />
+      <Control name="SetCascadeDiretion" text="установить направление классного соединения плиты лампы" />
+      <Control name="ReadTotalPointInTable" text="читать общее количество точек листа линий плиты лампы" />
+      <Control name="SetTotalPointInTable" text="установить общее количество точек листа линий плиты лампы" />
+      <Control name="ReadPointNumPerDrive" text="читать количество точек секций плиты лампы" />
+      <Control name="SetPointNumPerDrive" text="установить количество точек секций плиты лампы" />
+      <Control name="ReadIrregularScreenDrive" text="читать неровную линию загрузки？" />
+      <Control name="SetIrregularScreenDrive" text="установить неровную линию загрузки？" />
+      <Control name="ReadLogicalTotalDataGroupNum" text="читать количество групп данных L карты принятия " />
+      <Control name="SetLogicalTotalDataGroupNum" text="установить  количество групп данных L карты принятия " />
+      <Control name="ReadDriverFucntion" text="читать описание плиты лампы F" />
+      <Control name="SetDriverFucntion" text="установить описание плиты лампы F" />
+      <Control name="ReadGrayDepth" text="читать степень серости" />
+      <Control name="SetGrayDepth" text="установить степень серости" />
+      <Control name="ReadGrayMode" text="читать режим серости" />
+      <Control name="SetGrayMode" text="установить  режим серости" />
+      <Control name="ReadRefNumPerVs" text="читать степень обновления" />
+      <Control name="SetRefNumPerVs" text="установить степень обновления" />
+      <Control name="ReadLightFrom1stGray" text="читать начало яркости из первой степени" />
+      <Control name="SetLightFrom1stGray" text="установить  начало яркости из первой степени" />
+      <Control name="ReadGhostRemoveMode" text="читать способ устранения послесвечения" />
+      <Control name="SetGhostRemoveMode" text="установить способ устранения послесвечения" />
+      <Control name="ReadBlankUnitNumPerScan" text="читать скрытое время" />
+      <Control name="SetBlankUnitNumPerScan" text="установить  скрытое время" />
+      <Control name="ReadRowChangePoint" text="читать время RC" />
+      <Control name="SetRowChangePoint" text="установить  время RC" />
+      <Control name="ReadABCDRollOver" text="читать время R" />
+      <Control name="SetABCDRollOver" text="установить  время R" />
+      <Control name="ReadGclkNumPerScan" text="читать количество gclk" />
+      <Control name="SetGclkNumPerScan" text="установить количество gclk" />
+      <Control name="ReadLightTimePerSubFieldRatio" text="читать параметры LR" />
+      <Control name="SetLightTimePerSubFieldRatio" text="установить параметры LR" />
+      <Control name="ReadShiftUnitNumPerSubField" text="читать длину S" />
+      <Control name="SetShiftUnitNumPerSubField" text="установить  длину S" />
+      <Control name="ReadTotalUnitNumPerSubField" text="читать количество Т" />
+      <Control name="SetTotalUnitNumPerSubField" text="установить  количество Т" />
+      <Control name="ReadLightTimePerSubField" text="читать время L" />
+      <Control name="SetLightTimePerSubField" text="установить  время L" />
+      <Control name="ReadDclkUnitCycle" text="читать dclk" />
+      <Control name="SetDclkUnitCycle" text="установить dclk" />
+      <Control name="ReadDclkPhase" text="читать фазу dclk" />
+      <Control name="SetDclkPhase" text="установить  фазу dclk" />
+      <Control name="ReadDclkHigh" text="читать параметр dclk H" />
+      <Control name="SetDclkHigh" text="установить параметр dclk H" />
+      <Control name="ReadGclkUnitCycle" text="читать Gclk" />
+      <Control name="SetGclkUnitCycle" text="установить Gclk" />
+      <Control name="ReadGclkPhase" text="читать фазу Gclk" />
+      <Control name="SetGclkPhase" text="установить фазу Gclk" />
+      <Control name="ReadGclkHigh" text="читать паметры Gclk H" />
+      <Control name="SetGclkHigh" text="установить  паметры Gclk H" />
+      <Control name="ReadSubField" text="читать количество Sub" />
+      <Control name="SetSubField" text="установить  количество Sub" />
+      <Control name="ReadRowsCtrlByDataGroup" text="читать количество строк (рядов) одну групп данных в плите лампы " />
+      <Control name="SetRowsCtrlByDataGroup" text="установить количество строк (рядов) одну групп данных в плите лампы " />
+      <Control name="ReadTotalGclkUnitNumPerScan" text="читать количество секций Gclk" />
+      <Control name="SetTotalGclkUnitNumPerScan" text="установить  количество секций Gclk" />
+      <Control name="ReadCorrectionOn" text="читать запуск исправления？" />
+      <Control name="SetCorrectionOn" text="установить  запуск исправления？" />
+      <Control name="ReadCoefficientSource" text="читать источник исправленных данных" />
+      <Control name="SetCoefficientSource" text="установить источник исправленного коэффициента" />
+      <Control name="ReadShowLastFrameWhenCableNotConected" text="читать режим отображения перерыва сигналов карты принятия" />
+      <Control name="SetShowLastFrameWhenCableNotConected" text="установить режим отображения перерыва сигналов карты принятия" />
+      <Control name="ReadABCDCode" text="читать параметр развертки" />
+      <Control name="SetABCDCode" text="установить параметр развертки" />
+      <Control name="ReadRgbCode" text="читать параметр цвета RGB" />
+      <Control name="SetRgbCode" text="установить  параметр цвета RGB" />
+      <Control name="ReadRgain" text="читать значение усиления красного цвета" />
+      <Control name="SetRgain" text="установить  значение усиления красного цвета" />
+      <Control name="ReadGgain" text="читать значение усиления зеленого цвета" />
+      <Control name="SetGgain" text="установить  значение усиления зеленого цвета" />
+      <Control name="ReadBgain" text="читать значение усиления синего цвета" />
+      <Control name="SetBgain" text="установить значение усиления синего цвета" />
+      <Control name="ReadVRgain" text="читать виртуальное усиления красного цвета" />
+      <Control name="SetVRgain" text="установить  виртуальное усиления красного цвета" />
+      <Control name="ReadThreshold" text="читать значение клапана поголовочного осмотра " />
+      <Control name="SetThreshold" text="установить значение клапана поголовочного осмотра " />
+      <Control name="ReadColorMatrix" text="читать параметр СМ" />
+      <Control name="SetColorMatrix" text="установить параметр СМ" />
+      <Control name="ReadStartPositionOfDataGroup" text="читать начальную строку (ряд) загрузки каждой групп данных в плите лампы" />
+      <Control name="SetStartPositionOfDataGroup" text="установить начальную строку (ряд) загрузки каждой групп данных в плите лампы" />
+      <Control name="ReadCabinetSerialNum" text="читать номер корпуса ящика привода карты принятия " />
+      <Control name="SetvCabinetSerialNum" text="установить номер корпуса ящика привода карты принятия " />
+      <Control name="ReadConfigRegister" text="читать регистр распределения" />
+      <Control name="ReadTVCardDVI0Width" text="читать фактическую ширину загрузки карты телевизора" />
+      <Control name="SetTVCardDVI0Width" text="установить фактическую ширину загрузки карты телевизора" />
+      <Control name="ReadTVCardDVI0Height" text="читать фактическую высоту загрузки карты телевизора" />
+      <Control name="SetTVCardDVI0Height" text="установить  фактическую высоту загрузки карты телевизора" />
+      <Control name="ReadTVCardDVI0OffsetX" text=" читать смещение горизонтальное загрузки карты телевизора" />
+      <Control name="SetTVCardDVI0OffsetX" text="установить смещение горизонтальное загрузки карты телевизора" />
+      <Control name="ReadTVCardDVI0OffsetY" text=" читать смещение вертикальное загрузки карты телевизора" />
+      <Control name="SetTVCardDVI0OffsetY" text="установить  смещение вертикальное загрузки карты телевизора" />
+      <Control name="ReadKillMode" text="читать режим управления экраном " />
+      <Control name="SetKillMode" text="установить режим управления экраном " />
+      <Control name="ReadSelfTestMode" text="читать режим самоконтроля экрана" />
+      <Control name="SetSelfTestMode" text="установить режим самоконтроля экрана" />
+      <Control name="ReadLockMode" text="читать режим блокировки экрана" />
+      <Control name="SetLockMode" text="установить  режим блокировки экрана" />
+      <Control name="ReadScreenEncrypt" text="читать уполномочение карты принятия " />
+      <Control name="ReadSmartSetMode" text="читать режим установления карты принятия" />
+      <Control name="SetSmartSetMode" text="установить  режим установления карты принятия" />
+      <Control name="ReadModuleRunLineTable" text="читать лист линий плиты лампы" />
+      <Control name="SetModuleRunLineTable" text="установить лист линий плиты лампы" />
+      <Control name="ReadScanBoardRunLineTable" text="читать лист линий карты принятия" />
+      <Control name="SetScanBoardRunLineTable" text="установить лист линий карты принятия" />
+      <Control name="ReadRedGammaTable" text="читать лист Gamma" />
+      <Control name="SetRedGammaTable" text="установить лист Gamma" />
+      <Control name="ReadGreenGammaTable" text="читать лист Gamma зеленого цвета" />
+      <Control name="SetGreenGammaTable" text="установить лист Gamma зеленого цвета" />
+      <Control name="ReadBlueGammaTable" text="читать лист Gamma синего цвета" />
+      <Control name="SetBlueGammaTable" text="установить  лист Gamma синего цвета" />
+      <Control name="ReadOETable" text="читать лист ОЕ" />
+      <Control name="SetOETable" text="установить  лист ОЕ" />
+      <Control name="ReadCoefficient" text="читать коэффициент исправления" />
+      <Control name="ReadCoefficientByOffset" text="читать коэффициент исправления" />
+      <Control name="SetCoefficient" text="установить коэффициент исправления" />
+      <Control name="ReadScanner_FPGAProgramLength" text="читать длину программы FPGA карты принятия" />
+      <Control name="SetScanner_FPGAProgramLength" text="установить длину программы FPGA карты принятия" />
+      <Control name="ReadScanner_FPGAProgramEdition" text="читать версию программы FPGA карты принятия" />
+      <Control name="SetScanner_FPGAProgramEdition" text="установить версию программы FPGA карты принятия" />
+      <Control name="ReadScanner_FPGAProgramRemarks" text="читать примечание программы FPGA карты принятия" />
+      <Control name="SetScanner_FPGAProgramRemarks" text="установить примечание программы FPGA карты принятия" />
+      <Control name="ReadScanner_FPGA" text="читать данные программы FPGA карты принятия" />
+      <Control name="SetScanner_FPGA" text="установить  данные программы FPGA карты принятия" />
+      <Control name="ReadScanner_McuProgramLength" text="читать длину программы MCU карты принятия" />
+      <Control name="SetScanner_McuProgramLength" text="установить  длину программы MCU карты принятия" />
+      <Control name="ReadScanner_McuProgramEdition" text="читать версии программы MCU карты принятия" />
+      <Control name="SetScanner_McuProgramEdition" text="установить версии программы MCU карты принятия" />
+      <Control name="ReadScanner_McuProgramRemarks" text="читать примечание программы MCU карты принятия" />
+      <Control name="SetScanner_McuProgramRemarks" text="установить  примечание программы MCU карты принятия" />
+      <Control name="ReadScanner_Mcu" text=" читать данные программы MCU карты принятия" />
+      <Control name="SetScanner_Mcu" text="установить  данные программы MCU карты принятия" />
+      <Control name="ReadTempInfoOfScanCard" text="читать температуру плиты карты принятия" />
+      <Control name="ReadHumiOfScanCard" text="читать влажность плиты карты принятия" />
+      <Control name="ReadVoltageOfScanCard" text="читать напряжение плиты карты принятия" />
+      <Control name="ReadTempInfoOfMonitorCard" text="читать температуру дополнительной контрольной карты плиты карты принятия" />
+      <Control name="ReadHumiOfMonitorCard" text="читать влажность дополнительной контрольной карты плиты карты принятия" />
+      <Control name="ReadSmokeWarningOfMonitorCard" text="читать даныые предупреждения дыма дополнительной контрольной карты плиты карты принятия" />
+      <Control name="ReadFanSpeedOfMonitorCard" text="читать скорость вращения вентилятора дополнительной контрольной карты плиты карты принятия" />
+      <Control name="ReadVoltageOfMonitorCard" text="читать значение напряжения дополнительной контрольной карты плиты карты принятия" />
+      <Control name="ReadAllStatus" text="читать контрольные данные дополнительной контрольной карты и карты принятия" />
+      <Control name="ReadScanCardAllStatus" text="читать данные контрольные карты принятия" />
+      <Control name="ReadMonitorCardAllStatus" text="читать данные контрольные дополнительной контрольной карты карты принятия" />
+      <Control name="ReadScanner_MutiChipRamA" text="читать лист RamA" />
+      <Control name="SetScanner_MutiChipRamA" text="установить  лист RamA" />
+      <Control name="ReadScanner_MutiChipRamB" text="читать лист RamВ" />
+      <Control name="SetScanner_MutiChipRamB" text="установить  лист RamВ" />
+      <Control name="ReadScanner_MutiChipRamC" text="читать лист RamС" />
+      <Control name="SetScanner_MutiChipRamC" text="установить  лист RamС" />
+      <Control name="FuncCard_ReadFuncCardModle" text="читать тип карты многофункциональной" />
+      <Control name="FuncCard_ReadGoldenFPGAVersion" text="читать версию программного обеспечивания FPGA на районе Gloden многфункциональной карте" />
+      <Control name="FuncCard_ReadMonitorCardModle" text="читать тип дополнительной контрольной карты многофункциональной карты" />
+      <Control name="FuncCard_ReadMonitorFPGAVersion" text="читать версию программного обеспечивания дополнительной контрольной карты FPGA из многофункциональной карты" />
+      <Control name="FuncCard_ReadFuncCardFPGALength" text="читать длину применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_SetFuncCardFPGALength" text="установить длину применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_ReadFuncCardFPGAVersion" text="читать версию применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_SetFuncCardFPGAVersion" text="установить версию применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_ReadFuncCardFPGADescription" text="читать примечание применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_SetFuncCardFPGADescription" text="установить примечание применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_ReadFuncCardFPGAData" text="читать данные применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_SetFuncCardFPGAData" text="послать документы применительного программного обеспечивания многофункциональной карты FPGA" />
+      <Control name="FuncCard_ReadFuncCardMCULength" text="читать длину применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_SetFuncCardMCULength" text="установить длину применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_ReadFuncCardMCUVersion" text="читать версию применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_SetFuncCardMCUVersion" text="установить версию применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_ReadFuncCardMCUDescription" text="читать примечание применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_SetFuncCardMCUDescription" text="установить  примечание применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_ReadFuncCardMCUData" text="читать данные применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_SetFuncCardMCUData" text="послать данные применительного программного обеспечивания многофункциональной карты MCU" />
+      <Control name="FuncCard_SetRebootBootFpgaProgram" text="загрузить программное обеспечивание FPGA с  района Gloden" />
+      <Control name="FuncCard_SetRebootAppFpgaProgram" text="загрузить программное обеспечивание FPGA с прикладного района" />
+      <Control name="FuncCard_SetStoreFpgaBootProgram" text="записать программное обеспечивание FPGA на район Golden" />
+      <Control name="FuncCard_SetStoreFpgaAppProgram" text="записать программное обеспечивание FPGA на прикладной район" />
+      <Control name="FuncCard_ReadTempInfoOfFuncCard" text="читать температуру плиты мноногфункциональной карты" />
+      <Control name="FuncCard_ReadHumiOfFuncCard" text="читать влажность плиты мноногфункциональной карты" />
+      <Control name="FuncCard_ReadVoltageOfFuncCard" text="читать напряжение плиты мноногфункциональной карты" />
+      <Control name="FuncCard_ReadLinkStateOfMonitorCard" text="читать соединительное состояние дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadTempInfoOfMonitorCard" text="читать температуры дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadHumiOfMonitorCard" text="читать влажность дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadSmokeWarningOfMonitorCard" text="читать состояние тревоги дыма дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadFanSpeedOfMonitorCard" text="читать скорость вращения вентилятора дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadVoltageOfMonitorCard" text="читать напряжение дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadFuncCardAllStatus" text="читать контрольные данные плиты многофункциональной карты" />
+      <Control name="FuncCard_ReadMonitorCardAllInfo" text="читать контрольные данные дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadMonitorCardAllStatus" text="читать контрольные данные дополнительной контрольной карты из многофункциональной карты" />
+      <Control name="FuncCard_ReadTimeOnFuncCard" text="читать время многофункциональной карты" />
+      <Control name="FuncCard_SetTimeOnFuncCard" text="установить время многофункциональной карты" />
+      <Control name="FuncCard_ReadPowerPortCtrl" text="читать состояние источника питания многофункциональной карты" />
+      <Control name="FuncCard_SetPowerPortCtrl_Start" text="запустить источника питания" />
+      <Control name="FuncCard_SetPowerPortCtrl_Stop" text="выключать источника питания" />
+      <Control name="FuncCard_ReadAllPowerPortCtrl" text="читать состояние источника питания текущей многофункциональной карты" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Start" text="запустить все источники питания текущей многофункциональной карты" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Stop" text="закрыть все источники питания текущей многофункциональной карты" />
+      <Control name="FuncCard_ReadPowerOperTime" text="читать время автоматического управления текущей многофункциональной картой" />
+      <Control name="FuncCard_SetPowerOperTime" text="установать время эксплуатации автоматической источника питания" />
+      <Control name="FuncCard_ReadPowerCtrlMode" text="читать режим управления источником питания многофункциональной карты " />
+      <Control name="FuncCard_SetPowerCtrlMode" text="установить режим управления источником питания многофункциональной карты " />
+      <Control name="FuncCard_ReadDelayTime" text="читать время выдержки запуска источника питания многофункциональной картой" />
+      <Control name="FuncCard_SetDelayTime" text="установить время выдержки запуска источника питания многофункциональной картой" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Start" text="запустить все источники питания текущей многофункциональной карты" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Stop" text="закрыть все источники питания текущей многофункциональной карты" />
+      <Control name="FuncCard_ReadPowerPortCtrlTotal" text="читать состояние аварийного управления источником питания многофункциоанльной карты" />
+      <Control name="FuncCard_ReadOutDeviceValue" text="читать значение щупа соединения  многофункциоанльной карты" />
+      <Control name="FuncCard_SetOutDevice" text="установить периферию соедиения многофункциональной карты в световой щуп" />
+      <Control name="FuncCard_ReadAudioFrequency" text="Читать коэффициент отбора тональных проб многофункциональной карты" />
+      <Control name="FuncCard_SetAudioFrequency" text="Установить коэффициент отбора тональных проб многофункциональной карты" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>PackageResults</Name>
+    <Controls>
+      <Control name="ok" text="успех" />
+      <Control name="fileErr" text="неуспех, причина ошибки：ошибка документа" />
+      <Control name="memErr" text="неуспех, причина ошибки：ошибка памяти" />
+      <Control name="fileDeleteErr" text="неуспех, причина ошибки：исключать ошибочно документ" />
+      <Control name="directoryCreateErr" text="неуспех, причина ошибки：ошибочно создать путь" />
+      <Control name="invalidPort" text="неуспех, причина ошибки：недействительный последовательный порт" />
+      <Control name="parseFailure" text="неуспех, причина ошибки：неуспех анализировать адрес из пакета данных" />
+      <Control name="messageDisconnect" text="неуспех, причина ошибки：отключено сообщение информации" />
+      <Control name="forceCancel" text="неуспех, причина ошибки：принудительное снятие услуги" />
+      <Control name="sendError" text="неуспех, причина ошибки：послать ошибочно" />
+      <Control name="parsePackAddrFailure" text="неуспех, причина ошибки：неуспех анализировать адрес из пакета данных" />
+      <Control name="fileSendNotExist" text="неуспех, причина ошибки：отсутствует документ послания" />
+      <Control name="deviceSpaceNoEnough" text="неуспех, причина ошибки：недостаточно объема программного обеспечивания" />
+      <Control name="fileDataNotEnough" text="неуспех, причина ошибки：недостаточно длины документов" />
+      <Control name="fileCrcErr" text="неуспех, причина ошибки：ошибка документа crc" />
+      <Control name="createCheckCodeError" text="неуспех, причина ошибки：создать ошибочно контрольный код" />
+      <Control name="unkonwn" text="неуспех, причина ошибки：не обознанная " />
+      <Control name="timeout" text="неуспех, причина ошибки：превышать время" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>CommResults</Name>
+    <Controls>
+      <Control name="ok" text="успех" />
+      <Control name="pending" text="неуспех, причина ошибки：весить" />
+      <Control name="crcErr" text="неуспех, причина ошибки：ошибка crc" />
+      <Control name="lengthErr" text="неуспех, причина ошибки：ошибка длины" />
+      <Control name="portErr" text="неуспех, причина ошибки：ошибка последовательного порта" />
+      <Control name="timeout" text="неуспех, причина ошибки：превышать время" />
+      <Control name="codeErr" text="неуспех, причина ошибки：код ошибный" />
+      <Control name="forcedCancel" text="неуспех, причина ошибки：принудительное снятие" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>AckResults</Name>
+    <Controls>
+      <Control name="ok" text="успех" />
+      <Control name="timeout" text="неуспех, причина ошибки：превышать время" />
+      <Control name="requestCrcErr" text="неуспех, причина ошибки：ошибка просьбы crc " />
+      <Control name="replyCrcErr" text="неуспех, причина ошибки：ошибка ответка на crc" />
+      <Control name="unknownCmd" text="неуспех, причина ошибки：не обознанная команд" />
+      <Control name="invalid" text="неуспех, причина ошибки：недействительный" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>ProtocolEnum_Interface</Name>
+    <Controls>
+      <Control name="Unknown" text="не обознан" />
+      <Control name="NormalMode" text="нормально" />
+      <Control name="BlackMode" text="черный экран" />
+      <Control name="LockMode" text="блокирован" />
+      <Control name="Light" text="яркость" />
+      <Control name="Chroma" text="цветность" />
+      <Control name="Chip_CommonBase" text="чипы универсальный" />
+      <Control name="Chip_MBI5028" text="MBI5028" />
+      <Control name="Chip_MBI5030" text="MBI5030" />
+      <Control name="Chip_MBI5036" text="MBI5036" />
+      <Control name="Chip_MBI5040" text="MBI5040" />
+      <Control name="Chip_MBI5042" text="MBI5042/5041" />
+      <Control name="Chip_MBI5050" text="MBI5050" />
+      <Control name="Chip_MBI5167" text="MBI5167" />
+      <Control name="Chip_DM13H" text="DM13H" />
+      <Control name="Chip_P2518" text="P2518" />
+      <Control name="Chip_P2510" text="P2510" />
+      <Control name="Chip_RFT3630" text="RFT3630" />
+      <Control name="Chip_SUM2017" text="SUM2017" />
+      <Control name="Chip_MBI5034" text="MBI5034" />
+      <Control name="Chip_SUM2018" text="SUM2018" />
+      <Control name="Chip_SUM2030" text="SUM2030" />
+      <Control name="Chip_MBI5037" text="MBI5037" />
+      <Control name="Chip_MBI5039" text="MBI5039" />
+      <Control name="Chip_MY9268" text="MY9268" />
+      <Control name="Chip_SCL8060" text="SCL8060" />
+      <Control name="Chip_MBI5224" text="MBI5224" />
+      <Control name="Chip_MBI5051" text="MBI5051" />
+      <Control name="Chip_MBI5052" text="MBI5052" />
+      <Control name="Chip_MBI5053" text="MBI5053" />
+      <Control name="Chip_MY9266" text="MY9266" />
+      <Control name="Chip_MY9269" text="MY9269" />
+      <Control name="Chip_MBI5042B" text="MBI5042B/5041B" />
+      <Control name="Chip_MBI5045" text="MBI5045" />
+      <Control name="LessOrEqual4_Data2" text="？" />
+      <Control name="LessOrEqual4_Data1" text="？" />
+      <Control name="LessOrEqual8_Data1" text="？" />
+      <Control name="LessOrEqual8_Data2" text="？" />
+      <Control name="MoreThan8" text="？" />
+      <Control name="RightLeft" text="из правой стороны в левую" />
+      <Control name="LeftRight" text="из левой стороны в правую" />
+      <Control name="DownUp" text="снизу вверх" />
+      <Control name="UpDown" text="сверху вниз" />
+      <Control name="HighEnable" text="высота действительная" />
+      <Control name="LowEnable" text="низкость действительная" />
+      <Control name="Disable" text="невиртуальная" />
+      <Control name="Led4Mode1" text="режим виртуальный из 4 лампы 1" />
+      <Control name="Led4Mode2" text="режим виртуальный из 4 лампы 2" />
+      <Control name="Led3" text="режим виртуальный из 3 лампы" />
+      <Control name="StaticNoCode" text="статика  не нужна раскодирование" />
+      <Control name="Decode138" text="раскодирование 74HC138" />
+      <Control name="DicrectCode" text="раскодирование прямое" />
+      <Control name="Scan_static" text="статика" />
+      <Control name="Scan_2" text="развертка 2" />
+      <Control name="Scan_3" text="развертка 3" />
+      <Control name="Scan_4" text="развертка 4" />
+      <Control name="Scan_5" text="развертка 5" />
+      <Control name="Scan_6" text="развертка 6" />
+      <Control name="Scan_7" text="развертка 7" />
+      <Control name="Scan_8" text="развертка 8" />
+      <Control name="Scan_9" text="развертка 9" />
+      <Control name="Scan_10" text="развертка 10" />
+      <Control name="Scan_11" text="развертка 11" />
+      <Control name="Scan_12" text="развертка 12" />
+      <Control name="Scan_13" text="развертка 13" />
+      <Control name="Scan_14" text="развертка 14" />
+      <Control name="Scan_15" text="развертка 15" />
+      <Control name="Scan_16" text="развертка 16" />
+      <Control name="Scan_Unknown" text="не обознан" />
+      <Control name="Scanner_Card" text="Scanner_Card" />
+      <Control name="FunctionCard_1" text="FunctionCard_1" />
+      <Control name="FunctionCard_2" text="FunctionCard_2" />
+      <Control name="FunctionCard_3" text="FunctionCard_3" />
+      <Control name="FunctionCard_4" text="FunctionCard_4" />
+      <Control name="FunctionCard_5" text="FunctionCard_5" />
+      <Control name="FunctionCard_6" text="FunctionCard_6" />
+      <Control name="FunctionCard_7" text="FunctionCard_7" />
+      <Control name="FunctionCard_8" text="FunctionCard_8" />
+      <Control name="FunctionCard_9" text="FunctionCard_9" />
+      <Control name="FunctionCard_10" text="FunctionCard_10" />
+      <Control name="FunctionCard_11" text="FunctionCard_11" />
+      <Control name="FunctionCard_12" text="FunctionCard_12" />
+      <Control name="FunctionCard_13" text="FunctionCard_13" />
+      <Control name="FunctionCard_14" text="FunctionCard_14" />
+      <Control name="FunctionCard_15" text="FunctionCard_15" />
+      <Control name="Reserved1_Mode" text="Reserved1" />
+      <Control name="Reserved2_Mode" text="Reserved2" />
+      <Control name="Red_Mode" text="красный цвет" />
+      <Control name="Green_Mode" text="зеленый цвет" />
+      <Control name="Blue_Mode" text="синий цвет" />
+      <Control name="White_Mode" text="белый цвет" />
+      <Control name="HorizonLine_Mode" text="горизонтальная линия" />
+      <Control name="VerticalLine_Mode" text="вертикальная линия" />
+      <Control name="InclineLine_Mode" text="косая линия" />
+      <Control name="GrayIncrease_Mode" text="степень серости" />
+      <Control name="Age_Mode" text="устарение" />
+      <Control name="Horizontal" text="горизонт" />
+      <Control name="Vertical" text="перпендикулярность" />
+      <Control name="Lowlight" text="низная яркость" />
+      <Control name="Normallight" text="нормально" />
+      <Control name="Highlight" text="высокая яркость" />
+      <Control name="ScanBoardFlash" text="карта принятия Flash" />
+      <Control name="ModuleFlash" text="плита лампы Flash" />
+      <Control name="None" text="отсутствие" />
+      <Control name="BlackScreen" text="черный экран" />
+      <Control name="LastFrame" text="предыдущий кадр" />
+      <Control name="OK" text="нормально" />
+      <Control name="Error" text="отказ" />
+      <Control name="Start" text="начало" />
+      <Control name="Stop" text="стоп" />
+      <Control name="Mannual" text="ручной" />
+      <Control name="Auto" text="автоматический" />
+      <Control name="SmartMode" text="интеллектуальный режим" />
+      <Control name="BT_115200bps" text="степень Бод 115200" />
+      <Control name="BT_57600bps" text="степень Бод 57600" />
+      <Control name="BT_38400bps" text="степень Бод 38400" />
+      <Control name="BT_19200bps" text="степень Бод 19200" />
+      <Control name="BT_9600bps" text="степень Бод 9600" />
+      <Control name="BT_4800bps" text="степень Бод 4800" />
+      <Control name="BT_2400bps" text="степень Бод 2400" />
+      <Control name="BT_1200bps" text="степень Бод 1200" />
+      <Control name="BT_Reserved" text="？" />
+      <Control name="LightSensor" text="световой щуп" />
+      <Control name="requestRead" text="читать просьбу" />
+      <Control name="replyRead" text="читать ответ" />
+      <Control name="requestWrite" text="писать просбу" />
+      <Control name="replyWrite" text="писать отвер" />
+      <Control name="FirstScaleDevice" text="？" />
+      <Control name="Scanner" text="карта принятия " />
+      <Control name="FunctionCard" text="многофункциональная карта" />
+    </Controls>
+  </Form>
+</Resource>

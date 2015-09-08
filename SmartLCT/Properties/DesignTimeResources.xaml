@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="E:\项目\LCT三代\VTS\SmartLCT\CommonData\Lang\zh-CN\AppLanguage.zh-CN.xaml"/>
+		<ResourceDictionary Source="C:\Users\peter\Desktop\VTS\VTS合并\0113合并\SmartLCT V1.0 S2 T1\SmartLCT\CommonData\Lang\zh-CN\AppLanguage.zh-CN.xaml"/>
+		<ResourceDictionary Source="E:\VTS\VTS合并\0113合并\SmartLCT V1.0 S2 T1\SmartLCT\CommonData\Lang\zh-CN\AppLanguage.zh-CN.xaml"/>
+		<ResourceDictionary Source="E:\VTS\VTS S2后\SmartLCT V1.0 S2 T2代码\CommonData\Lang\zh-CN\AppLanguage.zh-CN.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+	<!-- 应该在此定义资源字典条目。-->
+</ResourceDictionary>

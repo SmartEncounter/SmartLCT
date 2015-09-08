@@ -1,0 +1,76 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF4" 
+    xmlns:local="clr-namespace:Nova.SmartLCT.UI"    
+    xmlns:my="clr-namespace:Nova.SmartLCT.SmartLCTControl;assembly=SmartLCTControl"   
+    xmlns:localInterface="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData"     
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+    xmlns:myNumericUD="clr-namespace:Nova.Wpf.Control;assembly=Nova.Wpf.Control.NumericUpDown"   
+    xmlns:xcts="http://schemas.xceed.com/wpf/xaml/toolkit"   
+    xmlns:Nova_SmartLCT_Behavior="clr-namespace:Nova.SmartLCT.Behavior;assembly=Behavior" >
+    <localInterface:LayerTypeConvertStr x:Key="layerTypeConvertStr"></localInterface:LayerTypeConvertStr>
+    <localInterface:EleTypeConvertLayerName x:Key="eleTypeConvertLayerName"></localInterface:EleTypeConvertLayerName>
+
+
+    <Style TargetType="{x:Type local:ScreenMapLocationPropertyPanel}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ScreenMapLocationPropertyPanel}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ScreenMapRealParams}"
+                             >
+                        <Grid>
+                            <Label Content="{DynamicResource Lang_PortPropPanel_SendingBoardResolution}" Height="Auto" Width="Auto" Foreground="#FFDCDCDC" Margin="5,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+                            <myNumericUD:NumericUpDown IsSelectedAll="True" DataContext="{Binding SenderLoadRectLayer}" HorizontalAlignment="Left" Margin="100,23,120,0"  Width="200"  x:Name="myWidth" MaxValue="4096"  Value="{Binding Width, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Height="20"  Foreground="#FFDCDCDC">
+                                <myNumericUD:NumericUpDown.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF616161" Offset="0"/>
+                                        <GradientStop Color="#FF585858" Offset="1"/>
+                                        <GradientStop Color="#FF616161" Offset="0.495"/>
+                                        <GradientStop Color="#FE585858" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </myNumericUD:NumericUpDown.Background>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="ValueChangedEvent">
+                                        <cmd:EventToCommand Command="{x:Static local:ScreenMapLocationPropertyPanel.WidthChangedCommand}" CommandParameter="{Binding Value, ElementName=myWidth}"/>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="GotMouseCapture">
+                                        <cmd:EventToCommand Command="{x:Static local:ScreenMapLocationPropertyPanel.WidthChangedBeforeCommand}" CommandParameter="{Binding Value, ElementName=myWidth}"></cmd:EventToCommand>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </myNumericUD:NumericUpDown>
+                            <Label Content="*" Height="Auto" FontSize="20"  Foreground="#FFDCDCDC" Margin="175,18,100,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+                            <myNumericUD:NumericUpDown IsSelectedAll="True" DataContext="{Binding SenderLoadRectLayer}" x:Name="myHeight" HorizontalAlignment="Left" Width="200"  Margin="210,23,10,0"  MaxValue="4096" VerticalAlignment="Top" Height="20" d:LayoutOverrides="VerticalAlignment" Value="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Foreground="#FFDCDCDC">
+                                <myNumericUD:NumericUpDown.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF616161" Offset="0"/>
+                                        <GradientStop Color="#FF585858" Offset="1"/>
+                                        <GradientStop Color="#FF616161" Offset="0.495"/>
+                                        <GradientStop Color="#FE585858" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </myNumericUD:NumericUpDown.Background>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="ValueChangedEvent">
+                                        <cmd:EventToCommand Command="{x:Static local:ScreenMapLocationPropertyPanel.HeightChangedCommand}" CommandParameter="{Binding Value, ElementName=myHeight}"/>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="GotMouseCapture">
+                                        <cmd:EventToCommand Command="{x:Static local:ScreenMapLocationPropertyPanel.HeightChangedBeforeCommand}" CommandParameter="{Binding Value, ElementName=myHeight}"></cmd:EventToCommand>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </myNumericUD:NumericUpDown>
+                            <Label Content="{Binding RectLayerType,Converter={StaticResource layerTypeConvertStr}}" Height="Auto" Foreground="#FFDCDCDC" Margin="5,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+                            <Grid x:Name="myRadioButGrid"  Background="Transparent" Margin="90,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"  Height="50" ></Grid>
+                        </Grid>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

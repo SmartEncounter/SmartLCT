@@ -1,0 +1,14 @@
+--------------------------------------------------------
+C:\Users\peter\Desktop\VTS\VTS\SmartLCT\Test\Test.csproj
+--------------------------------------------------------
+正在将 <Reference Include=“System.Windows.Interactivity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL”> 的 <Include> 从“System.Windows.Interactivity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL”更新为“System.Windows.Interactivity”
+正在保存文件
+
+
+----------------------------------------------------
+C:\Users\peter\Desktop\VTS\VTS\SmartLCT\SmartLCT.sln
+----------------------------------------------------
+正在将解决方案格式头设置为“Microsoft Visual Studio Solution File, Format Version 11.00”
+正在保存文件
+
+

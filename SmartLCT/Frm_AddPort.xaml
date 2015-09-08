@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF4"
+    xmlns:d="http://schemas.microsoft.com/mlnexpression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+     xmlns:myNumericUD="clr-namespace:Nova.Wpf.Control;assembly=Nova.Wpf.Control.NumericUpDown"   
+    xmlns:local="clr-namespace:SmartLCT" xmlns:d1="http://schemas.microsoft.com/expression/blend/2008" 
+        mc:Ignorable="d d1" x:Class="SmartLCT.Frm_AddPort"
+        Title="{DynamicResource Lang_SmartLCT_FrmAddPort_AddPortTitle}" Height="287" Width="302" WindowStyle="ToolWindow" ResizeMode="NoResize" Foreground="Black" Background="Black">
+	<Window.Resources>
+		<local:Frm_AddPort_VM x:Key="Frm_AddPort_VMDataSource" d1:IsDataSource="True"/>
+        
+	</Window.Resources>
+	<Window.DataContext>
+		<Binding Source="{StaticResource Frm_AddPort_VMDataSource}"/>
+	</Window.DataContext>
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Closed">
+			<cmd:EventToCommand Command="{Binding CmdClosed, Mode=OneWay}"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+    <Grid>
+
+
+        <Label Content="{DynamicResource Lang_SmartLCT_FrmAddPort_Sender}" Height="37" HorizontalAlignment="Left" Margin="40,33,0,0" x:Name="label_Sender" VerticalAlignment="Top" Width="69" Foreground="White" />
+        <Label Content="{DynamicResource Lang_SmartLCT_FrmAddPort_PortIndex}" Height="37" HorizontalAlignment="Left" Margin="43,92,0,0" x:Name="label_Port" VerticalAlignment="Top" Width="69" Foreground="White" />
+        <myNumericUD:NumericUpDown Margin="138,93,46,143" Value="{Binding PortIndex,Mode=TwoWay}" MinValue="1" BorderBrush="#FF352A2A" Background="#FFE2E2E2"/>
+        <Button Content="{DynamicResource Lang_SmartLCT_FrmAddPort_Add}" IsEnabled="{Binding IsEnabled,Mode=TwoWay}" Height="35"  HorizontalAlignment="Left" Margin="48,177,0,0" x:Name="button_Add" VerticalAlignment="Top" Width="80" d:LayoutOverrides="HorizontalAlignment" Command="{Binding CmdAddPort, Mode=OneWay}" />
+        <ComboBox x:Name="ComboBox_Semder"  IsEnabled="{Binding IsEnabledSelectedSender,Mode=TwoWay}"  Height="28" Margin="137,35,47,0" VerticalAlignment="Top" ItemsSource="{Binding SenderInfoList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" SelectedValuePath="Data" SelectedValue="{Binding SelectedSenderInfoValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <Button x:Name="button_Cancel" Content="{DynamicResource Lang_SmartLCT_FrmAddPort_Cancel}" Margin="0,0,49,52.5" HorizontalAlignment="Right" Width="80" Command="{Binding CmdCancel, Mode=OneWay}" Height="35" VerticalAlignment="Bottom" d1:LayoutOverrides="VerticalAlignment, Height"/>
+    </Grid>
+</Window>

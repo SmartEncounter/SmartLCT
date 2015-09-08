@@ -1,0 +1,219 @@
+﻿<Nova_SmartLCT_Interface:CustomWindow 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Nova.SmartLCT.UI" 
+    xmlns:Nova_SmartLCT_Interface="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData" 
+    xmlns:Nova_SmartLCT_Behavior="clr-namespace:Nova.SmartLCT.Behavior;assembly=Behavior" 
+    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+    mc:Ignorable="d" 
+    x:Class="Nova.SmartLCT.UI.ScanBoardConfigManager"     
+    Title="{DynamicResource Lang_SmartLCT_ScanBoardConfigManager}" Height="388" Width="664" Closed="Window_Closed" ResizeMode="NoResize" Background="#FF303435" AllowsTransparency="True" WindowStyle="None">
+	<Window.Resources>
+		<local:ScanBoardConfigManager_VM x:Key="ScanBoardConfigManager_VMDataSource" d:IsDataSource="True"/>
+		
+		 <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#F3F3F3" Offset="0"/>
+            <GradientStop Color="#EBEBEB" Offset="0.5"/>
+            <GradientStop Color="#DDDDDD" Offset="0.5"/>
+            <GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" BorderThickness="1" CornerRadius="3">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+
+
+                                    <GradientStop Color="#FF3995DE" Offset="0"/>
+                                    <GradientStop Color="#FF057AD7" Offset="1"/>
+                                    <GradientStop Color="#FF057AD7" Offset="0.525"/>
+                                    <GradientStop Color="#FF3995DE" Offset="0.495"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock TextWrapping="Wrap" Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF75ECF2" Offset="0"/>
+                                            <GradientStop Color="#FF19E0E7" Offset="1"/>
+                                            <GradientStop Color="#FF19E0E7" Offset="0.5"/>
+                                            <GradientStop Color="#FF75ECF2" Offset="0.495"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true"/>
+                            <Trigger Property="ToggleButton.IsChecked" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+		
+		
+		<Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+			<Setter Property="Width" Value="8"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Cursor" Value="SizeWE"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Thumb}">
+						<Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="DataGridColumnHeaderStyle_Common" TargetType="{x:Type DataGridColumnHeader}">
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+						<Grid>
+							<Microsoft_Windows_Themes:DataGridHeaderBorder BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}" Background="#FF373B3C">
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Microsoft_Windows_Themes:DataGridHeaderBorder>
+							<Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}" Foreground="Gainsboro"/>
+							<Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}" Background="#00000000" Foreground="Gainsboro"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<DataTemplate x:Key="DataTemplate1">
+			<Grid/>
+		</DataTemplate>
+		<Style x:Key="DataGridRowStyle_Common" TargetType="{x:Type DataGridRow}">
+			<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+			<Setter Property="SnapsToDevicePixels" Value="true"/>
+			<Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+			<Setter Property="ValidationErrorTemplate">
+				<Setter.Value>
+					<ControlTemplate>
+						<TextBlock Foreground="Red" Margin="2,0,0,0" Text="!" VerticalAlignment="Center"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type DataGridRow}">
+						<Border x:Name="DGR_Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True" Background="#FF585858">
+							<SelectiveScrollingGrid Background="{x:Null}">
+								<SelectiveScrollingGrid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto"/>
+									<ColumnDefinition Width="*"/>
+								</SelectiveScrollingGrid.ColumnDefinitions>
+								<SelectiveScrollingGrid.RowDefinitions>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="Auto"/>
+								</SelectiveScrollingGrid.RowDefinitions>
+								<DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+								<DataGridDetailsPresenter Grid.Column="1" Grid.Row="1" SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}"/>
+								<DataGridRowHeader Grid.RowSpan="2" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Row}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Foreground="Gainsboro" Style="{DynamicResource DataGridRowHeaderStyle1}"/>
+							</SelectiveScrollingGrid>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<BooleanToVisibilityConverter x:Key="bool2VisibilityConverter"/>
+		<Style x:Key="RowHeaderGripperStyle" TargetType="{x:Type Thumb}">
+			<Setter Property="Height" Value="8"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Cursor" Value="SizeNS"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Thumb}">
+						<Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="DataGridRowHeaderStyle1" TargetType="{x:Type DataGridRowHeader}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type DataGridRowHeader}">
+						<Grid>
+							<Microsoft_Windows_Themes:DataGridHeaderBorder BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" IsSelected="{TemplateBinding IsRowSelected}" Orientation="Horizontal" Padding="{TemplateBinding Padding}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+								<StackPanel Orientation="Horizontal">
+									<ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
+									<Control SnapsToDevicePixels="false" Template="{Binding ValidationErrorTemplate, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}" Visibility="{Binding (Validation.HasError), Converter={StaticResource bool2VisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}"/>
+								</StackPanel>
+							</Microsoft_Windows_Themes:DataGridHeaderBorder>
+							<Thumb x:Name="PART_TopHeaderGripper" Style="{StaticResource RowHeaderGripperStyle}" VerticalAlignment="Top" Foreground="Gainsboro"/>
+							<Thumb x:Name="PART_BottomHeaderGripper" Style="{StaticResource RowHeaderGripperStyle}" VerticalAlignment="Bottom" Foreground="Gainsboro"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource ScanBoardConfigManager_VMDataSource}}">
+        <Button Background="White" Content="{DynamicResource Lang_ScanBoardConfigManager_ImportConfigFile}" Height="29.463" HorizontalAlignment="Right" Margin="0,0,253.05,18" RenderTransformOrigin="0.693,0.98" VerticalAlignment="Bottom" Width="99" Command="{Binding CmdImortConfigFile, Mode=OneWay}">
+        	<i:Interaction.Behaviors>
+        		<Nova_SmartLCT_Behavior:OpenFileDialogBehavior IsFileNameValid="{Binding OpenFile.IsCheckedOK, Mode=TwoWay}" SelectedFileNames="{Binding OpenFile.OpenFileNameList, Mode=TwoWay}" FilterString="{Binding OpenFile.FileFilter, Mode=TwoWay}" IsMultiselect="{Binding OpenFile.IsMultiselect, Mode=TwoWay}" SelectedFileName="{Binding OpenFile.OpenFileName, Mode=TwoWay}"/>
+        	</i:Interaction.Behaviors>
+        </Button>
+        <Button Background="White" Content="{DynamicResource Lang_ScanBoardConfigManager_ExportConfigFile}" Height="29.463" HorizontalAlignment="Right" Margin="0,0,138.05,18" RenderTransformOrigin="0.693,0.98"  VerticalAlignment="Bottom" Width="99" Command="{Binding CmdExportConfifFile, Mode=OneWay}"/>
+        <Button Background="White" Content="{DynamicResource Lang_ScanBoardConfigManager_DeleteConfigFile}" Height="29.463" HorizontalAlignment="Left" Margin="8,0,0,18" RenderTransformOrigin="0.693,0.98"  VerticalAlignment="Bottom" Width="99" Command="{Binding CmdDeleteConfig, Mode=OneWay}"/>
+        <DataGrid AutoGenerateColumns="False" Margin="11,10,0,69" x:Name="dataGrid" CanUserAddRows="False" ItemsSource="{Binding DataGradItemInfoList, Mode=TwoWay}" CanUserResizeRows="True" CanUserSortColumns="False" HorizontalAlignment="Left" Width="367" IsReadOnly="True" RowHeaderWidth="0" SelectedValue="{Binding SelectedValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#FF414244" Foreground="Gainsboro" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle_Common}" ItemTemplate="{DynamicResource DataTemplate1}" BorderBrush="#FF545454" RowStyle="{DynamicResource DataGridRowStyle_Common}">
+            <DataGrid.Columns>
+            	<DataGridTemplateColumn >
+            		<DataGridTemplateColumn.HeaderTemplate>
+            			<DataTemplate>
+            				<CheckBox  Foreground="#FFDCDCDC" Content="{DynamicResource Lang_ScanBoardConfigManager_SelectedAll}" Width="Auto" IsThreeState="True" IsChecked="{Binding SelectedAll, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            					DataContext="{Binding Source={StaticResource ScanBoardConfigManager_VMDataSource}}" />
+            			</DataTemplate>
+            		</DataGridTemplateColumn.HeaderTemplate>
+            		<DataGridTemplateColumn.CellTemplate>
+            			<DataTemplate>
+            				<StackPanel>
+            					<CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+            				</StackPanel>
+            			</DataTemplate>
+            		</DataGridTemplateColumn.CellTemplate>
+            	</DataGridTemplateColumn>
+            	<DataGridTextColumn Binding="{Binding ScanBoardName, Mode=TwoWay}" Header="{DynamicResource Lang_ScanBoardConfigManager_ScanBoardName}" Width="*" Foreground="Gainsboro" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Background="#FF414244" Margin="0,10,8,69" DataContext="{Binding SelectedItem, ElementName=dataGrid, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Width="256">
+            <TextBlock HorizontalAlignment="Left" Margin="12.332,65,0,0" Text="{DynamicResource Lang_ScanBoardConfigManager_ReceiveSize}" d:LayoutOverrides="VerticalAlignment" Height="17" VerticalAlignment="Top" Foreground="Gainsboro" />
+            <TextBlock Margin="133,63.5,0,0" MinWidth="20" x:Name="tb_cabinetSize" d:LayoutOverrides="VerticalAlignment" DataContext="{Binding SelectedItem, ElementName=dataGrid}" Text="{Binding ScanBoardSize}" HorizontalAlignment="Left" Width="84" Height="18" VerticalAlignment="Top" Foreground="Gainsboro" />
+            <TextBlock HorizontalAlignment="Left" Margin="12.332,30,0,0"  Text="{DynamicResource Lang_ScanBoardConfigManager_ChipType}" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Foreground="Gainsboro" />
+            <TextBlock Margin="0,30.663,39,0" MinWidth="20" x:Name="tb_chipType" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Text="{Binding ChipType}" HorizontalAlignment="Right" Width="84" Foreground="Gainsboro" />
+            <TextBlock HorizontalAlignment="Left" Margin="12.332,97,0,0"  Text="{DynamicResource Lang_ScanBoardConfigManager_ConnectLineType}" VerticalAlignment="Top" Foreground="Gainsboro" />
+            <TextBlock DataContext="{Binding SelectedItem, ElementName=dataGrid}" Margin="133,97,0,0" MinWidth="20" x:Name="tb_cascateType"  Text="{Binding CascadeType}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84" Foreground="Gainsboro" />
+        </Grid>
+        <Button Name="bt_close" Background="White" Content="{DynamicResource Lang_ScanBoardConfigManager_Close}" Height="29.463" HorizontalAlignment="Right" Margin="0,0,23.705,18" RenderTransformOrigin="0.693,0.98"  VerticalAlignment="Bottom" Width="99" Click="bt_close_Click"/>
+    </Grid>
+</Nova_SmartLCT_Interface:CustomWindow>

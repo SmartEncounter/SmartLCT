@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>BrightAdjustTool</Name>
+    <Controls>
+      <Control name="ToolStripMenuItem_ReconnectServer" text="заново зарегистрироваться в услуге" />
+      <Control name="ToolStripMenuItem_ReadLEDInfo" text="заново читать информации на экране" />
+      <Control name="ToolStripMenuItem_AdvancedConfig" text="распределение высокого класса" />
+      <Control name="ToolStripMenuItem_Exit" text="выход" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>BrightAdjustToolInfo</Name>
+    <Controls>
+      <Control name="Succeed" text="успех" />
+      <Control name="Failed" text="неуспех" />
+      <Control name="SomeScreenIsNotExist" text="успешно послан, но имеется отсутствующий экран!" />
+      <Control name="None" text="отсутствие" />
+      <Control name="Name" text="наименование" />
+      <Control name="Config" text="распределение экрана" />
+      <Control name="AdjustMode" text="установленный режим" />
+      <Control name="DriverType" text="чипы привода" />
+      <Control name="LastAdjustInfo" text="установленная информация в предыдующий раз" />
+      <Control name="Screen" text="экран" />
+      <Control name="View" text="посмотреть" />
+      <Control name="Manual" text="вручную" />
+      <Control name="Schedual" text="регулярно" />
+      <Control name="Auto" text="автоматически" />
+      <Control name="Programmed" text="программный контроль" />
+      <Control name="CommPortScreen" text="последовательный порт - экран：" />
+      <Control name="NotExist" text="отсутствие!" />
+      <Control name="No" text="нет" />
+      <Control name="Yes" text="да" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_AdjustInfoPreview</Name>
+    <Controls>
+      <Control name="Frm_AdjustInfoPreview" text="просмотреть установленные данные в предыдующий раз" />
+      <Control name="label_Time" text="установленное время" />
+      <Control name="label_Result" text="установленный результат" />
+      <Control name="groupBox_Data" text="установленные данные" />
+      <Control name="label_Bright" text="значение яркости" />
+      <Control name="label1_Gamma" text="значение Gamma" />
+      <Control name="groupBox_Gain" text="усиление" />
+      <Control name="groupBox_RGBBrightness" text="составляющая яркости RGB " />
+      <Control name="crystalButton_Close" text="закрывать " />
+      <Control name="label_RedGain" text="красный цвет" />
+      <Control name="label_GreenGain" text="зеленый цвет" />
+      <Control name="label_BlueGain" text="синий цвет" />
+      <Control name="label_RedBright" text="красный цвет" />
+      <Control name="label_GreeenBright" text="зеленый цвет" />
+      <Control name="label_BlueBright" text="синий цвет" />
+      <Control name="groupBox_ColorTemp" text="информация цветной температуры" />
+      <Control name="label_IsEnableLowBright" text="обеспечивать нижнюю серость？" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_AdvancedConfig</Name>
+    <Controls>
+      <Control name="Frm_AdvancedConfig" text="распределение высокого класса" />
+      <Control name="seperatePanel_LogEffectiveDays" text="регулировать действующее число дней дневника" />
+      <Control name="label_Days" text="день" />
+      <Control name="seperatePanel_AutoBrightInfo" text="регулирующая информация автоматической яркости " />
+      <Control name="label_AutoBrightPeriod" text="контрольный период яркости среды" />
+      <Control name="label_ReadLuxCnt" text="частость чтения яркости среды" />
+      <Control name="label_Notice" text="подсказка：необходимо снять максимум и минимум световой зондирующей головы с N кратности в режиме регулирующая информация автоматической яркости перед регулированием яркости экрана каждый раз, и производить осреднение , затем регулировать яркость корпуса э" />
+      <Control name="crystalButton_Ok" text="подтверждение" />
+      <Control name="crystalButton_Cancel" text="снятие" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_DisplayInfo</Name>
+    <Controls>
+      <Control name="seperatePanel_ScreenInfo" text="информация регулирования яркости" />
+      <Control name="label_NoServer" text="в текущее время не подключается к услуге!" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>Frm_SupperDisplayLayout</Name>
+    <Controls>
+      <Control name="Frm_SupperDisplayLayout" text="схема топологическая комбинированного экрана" />
+      <Control name="label_ScalingRate" text="степень пантографа" />
+      <Control name="label_OK" text="нормальное подключение к корпусу экрана" />
+      <Control name="label_Unknown" text="не обнаружен корпус экрана" />
+      <Control name="crystalButto_Exit" text="закрывать " />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>CustomMessageBox</Name>
+    <Controls>
+      <Control name="button_Yes" text="да" />
+      <Control name="button_No" text="нет" />
+      <Control name="button_Abort" text="конец" />
+      <Control name="button_Retry" text="заново попробовать " />
+      <Control name="button_Ignore" text="пренебрежение" />
+      <Control name="button_Cancel" text="снять" />
+      <Control name="button_OK" text="подтверждение " />
+    </Controls>
+  </Form>
+</Resource>

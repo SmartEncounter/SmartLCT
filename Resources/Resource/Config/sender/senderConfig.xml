@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSenderConfigInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SenderConfigInfo>
+    <SenderTypeName>MCTRL500</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>4</PortCount>
+  </SenderConfigInfo>
+  <SenderConfigInfo>
+    <SenderTypeName>MCTRL600</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>4</PortCount>
+  </SenderConfigInfo>
+  <SenderConfigInfo>
+    <SenderTypeName>MCTRL610</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>4</PortCount>
+  </SenderConfigInfo>
+  <SenderConfigInfo>
+    <SenderTypeName>MCTRL660</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>4</PortCount>
+  </SenderConfigInfo>
+<SenderConfigInfo>
+    <SenderTypeName>MSD300</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>2</PortCount>
+  </SenderConfigInfo>
+<SenderConfigInfo>
+    <SenderTypeName>MCTRL300</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>2</PortCount>
+  </SenderConfigInfo>
+<SenderConfigInfo>
+    <SenderTypeName>MSD600</SenderTypeName>
+    <SenderProp>
+      <FieldRate>60</FieldRate>
+      <CompanyID>0</CompanyID>
+      <ModalID>0</ModalID>
+      <DviSelect>DVI</DviSelect>
+      <AudioControl>External</AudioControl>
+      <HDEnable>Bit8</HDEnable>
+      <VedioSelect>Manual</VedioSelect>
+    </SenderProp>
+    <SenderPicturePath />
+    <PortCount>4</PortCount>
+  </SenderConfigInfo>
+</ArrayOfSenderConfigInfo>

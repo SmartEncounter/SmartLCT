@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<Resource>
+  <Form>
+    <Name>BrightAdjustTool</Name>
+    <Controls>
+      <Control name="ToolStripMenuItem_ReconnectServer" text="重新向服务注册" />
+      <Control name="ToolStripMenuItem_ReadLEDInfo" text="重读屏体信息" />
+      <Control name="ToolStripMenuItem_AdvancedConfig" text="高级配置" />
+      <Control name="ToolStripMenuItem_Exit" text="退出" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>BrightAdjustToolInfo</Name>
+    <Controls>
+      <Control name="Succeed" text="成功" />
+      <Control name="Failed" text="失败" />
+      <Control name="SomeScreenIsNotExist" text="发送成功，但有不存在的屏!" />
+      <Control name="None" text="无" />
+      <Control name="Name" text="名称" />
+      <Control name="Config" text="屏配置" />
+      <Control name="AdjustMode" text="调节模式" />
+      <Control name="DriverType" text="驱动芯片" />
+      <Control name="LastAdjustInfo" text="上一次调节信息" />
+      <Control name="Screen" text="屏" />
+      <Control name="View" text="查看" />
+      <Control name="Manual" text="手动" />
+      <Control name="Schedual" text="定时" />
+      <Control name="Auto" text="自动" />
+      <Control name="Programmed" text="程控" />
+      <Control name="CommPortScreen" text="串口-屏:" />
+      <Control name="NotExist" text="不存在!" />
+      <Control name="No" text="否" />
+      <Control name="Yes" text="是" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdjustInfoPreview</Name>
+    <Controls>
+      <Control name="Frm_AdjustInfoPreview" text="查看上一次的调节数据" />
+      <Control name="label_Time" text="调节时间" />
+      <Control name="label_Result" text="调节结果" />
+      <Control name="groupBox_Data" text="调节数据" />
+      <Control name="label_Bright" text="亮度值" />
+      <Control name="label1_Gamma" text="Gamma值" />
+      <Control name="groupBox_Gain" text="增益" />
+      <Control name="groupBox_RGBBrightness" text="RGB 亮度分量" />
+      <Control name="crystalButton_Close" text="关闭" />
+      <Control name="label_RedGain" text="红" />
+      <Control name="label_GreenGain" text="绿" />
+      <Control name="label_BlueGain" text="蓝" />
+      <Control name="label_RedBright" text="红" />
+      <Control name="label_GreeenBright" text="绿" />
+      <Control name="label_BlueBright" text="蓝" />
+      <Control name="groupBox_ColorTemp" text="色温信息" />
+      <Control name="label_IsEnableLowBright" text="是否保证低灰" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdvancedConfig</Name>
+    <Controls>
+      <Control name="Frm_AdvancedConfig" text="高级配置" />
+      <Control name="seperatePanel_LogEffectiveDays" text="调节日志有效天数" />
+      <Control name="label_Days" text="天" />
+      <Control name="seperatePanel_AutoBrightInfo" text="自动亮度调节信息" />
+      <Control name="label_AutoBrightPeriod" text="环境亮度检测周期" />
+      <Control name="label_ReadLuxCnt" text="读环境亮度的次数" />
+      <Control name="label_Notice" text="提示:自动亮度调节模式下，每次调节屏体亮度前均需要对读到的N次的光探头值去掉最大值和最小求平均值，然后根据环境亮度和屏体亮度组成的曲线调节屏体亮度!" />
+      <Control name="crystalButton_Ok" text="确定" />
+      <Control name="crystalButton_Cancel" text="取消" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_DisplayInfo</Name>
+    <Controls>
+      <Control name="seperatePanel_ScreenInfo" text="亮度调节信息" />
+      <Control name="label_NoServer" text="当前未连接到服务!" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_SupperDisplayLayout</Name>
+    <Controls>
+      <Control name="Frm_SupperDisplayLayout" text="组合屏拓扑图" />
+      <Control name="label_ScalingRate" text="缩放率" />
+      <Control name="label_OK" text="屏体连接正常" />
+      <Control name="label_Unknown" text="未检测到屏体" />
+      <Control name="crystalButto_Exit" text="关闭" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>CustomMessageBox</Name>
+    <Controls>
+      <Control name="button_Yes" text="是"/>
+      <Control name="button_No" text="否"/>
+
+      <Control name="button_Abort" text="终止"/>
+      <Control name="button_Retry" text="重试"/>
+      <Control name="button_Ignore" text="忽略"/>
+
+      <Control name="button_Cancel" text="取消"/>
+      <Control name="button_OK" text="确定"/>
+    </Controls>
+  </Form>
+</Resource>

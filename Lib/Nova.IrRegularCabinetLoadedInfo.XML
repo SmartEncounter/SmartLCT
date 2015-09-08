@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.IrRegularCabinet</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.Control.OperateType">
+            <summary>
+            对箱体中灯板的操作类型
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.AddModule">
+            <summary>
+            添加灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.DeleteAllModule">
+            <summary>
+            删除所有灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.DeleteSeletedModule">
+            <summary>
+            删除选中灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.MoveModule">
+            <summary>
+            移动灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.ConnectModule">
+            <summary>
+            双击灯板，将灯板与箱体指定数据组数连接
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.UndoConnect">
+            <summary>
+            右键取消连接
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.ClearAllConnection">
+            <summary>
+            清除所有连接
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.ClearSelectedModuleConnection">
+            <summary>
+            清除选中灯板的连接
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.OperateType.ClearModuleConnectionOfCabinetGroup">
+            <summary>
+            清除箱体指定数据组数的连接
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction">
+            <summary>
+            异性箱体的构造控件
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.#ctor">
+            <summary>
+            构造IrRegularCabinetConstruction
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SetCabinetInfo(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+             设置箱体行列信息，和数据组数
+            </summary>
+            <param name="gridCols">箱体的网格列数</param>
+            <param name="gridRows">箱体的网格行数</param>
+            <param name="cabinetGroupCount">箱体的数据组数</param>
+            <param name="isReservesCabinetInfo">设置箱体信息时是否保留当前箱体信息，如果为True，则</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.AddModuleToCabinet(Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet)">
+            <summary>
+            向箱体添加灯板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.DeleteSelectedModule">
+            <summary>
+             删除当前选中的灯板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.DeleteAllModule">
+            <summary>
+            删除箱体内所有灯板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SetCabinetCurrentGroupIndex(System.Int32)">
+            <summary>
+            设置箱体中的连接灯板的数据组数的索引
+            </summary>
+            <param name="groupIndexOfCabinet">指定箱体中需要连接灯板的数据组数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.UndoLastOperation">
+            <summary>
+            撤销上一步的操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ClearModuleConnectionOfCabinetGroup(System.Int32)">
+            <summary>
+            清除箱体指定数据组数连接的灯板信息
+            </summary>
+            <param name="groupIndexOfCabinet">箱体中需要清楚连接的数据组数索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ClearAllConnection">
+            <summary>
+            清除所有连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ClearSelectedModuleConnection">
+            <summary>
+            清除当前选中灯板的连接信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.GetSelectedModuleInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet}@)">
+            <summary>
+            获取当前选中灯板的信息
+            </summary>
+            <param name="moduleInfoList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LoadCabinetInfo(Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty)">
+            <summary>
+            箱体属性为静态时载入箱体信息,并在绘制时按照载入的箱体宽度和高度绘制箱体
+            </summary>
+            <param name="cabinetInfo">载入的箱体信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LoadDrawFieldCabinetInfo(Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty,System.Int32,System.Int32)">
+            <summary>
+            箱体属性为静态时载入绘制区域箱体信息，绘制时按照设置的Width和Height绘制
+            </summary>
+            <param name="cabinetInfo">载入的箱体信息</param>
+            <param name="gridCols">绘制区域的列数</param>
+            <param name="gridRows">绘制区域的行数</param>
+            <returns></returns>      
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SetColumnAndRow(System.Int32,System.Int32)">
+            <summary>
+            继承父类的SetColumnAndRow，并屏蔽SetColumnAndRow
+            </summary>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            重载ProcessCmdKey方法
+            </summary>
+            <param name="msg"></param>
+            <param name="keyData"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CurCabinetProperty">
+            <summary>
+            箱体的实际信息
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleEdgeLineColor">
+            <summary>
+            灯板边界线的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleBackColor">
+            <summary>
+            灯板背景颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleGridColor">
+            <summary>
+            灯板网格线颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CabinetEffectiveEdgeColor">
+            <summary>
+            箱体有效区域的边界虚线颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedGroupColorOfModule">
+            <summary>
+            灯板选中数据组数的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleEdgeLineColor">
+            <summary>
+            灯板选中时边界线的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LeftMouseSelectedBoxColor">
+            <summary>
+            鼠标左键框选时的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ConnectCoordinatesFontColor">
+            <summary>
+            箱体中灯板的字体颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CoordinatesBackColor">
+            <summary>
+            箱体中每组数据连接灯板后灯板连接数据组数显示的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleFont">
+            <summary>
+            箱体中灯板坐标的字体
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CabinetEffectiveField">
+            <summary>
+            获取箱体有效矩形区域
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleEdgeLineWidth">
+            <summary>
+            灯板边沿线宽
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CabinetGroupCount">
+            <summary>
+            箱体数据组数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.GridCols">
+            <summary>
+            箱体网格列数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.GridRows">
+            <summary>
+            箱体网格行数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.IsStaticCabinet">
+            <summary>
+            是否是静态箱体
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.IsDrawNum">
+            <summary>
+            屏蔽基类的是否绘制序号属性
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.IsAutoZoom">
+            <summary>
+            屏蔽基类的网格是否自动缩放属性
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleChangedEvent">
+            <summary>
+            选中灯板时需要触发的事件，如果鼠标左键无选中灯板，则事件也被触发
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CurrentOperateEvent">
+            <summary>
+            当前箱体被操作后触发的事件
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleConnectInfo">
+            <summary>
+            箱体中指定数据组数连接灯板的信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleConnectInfo.CabinetGroupIndex">
+            <summary>
+            箱体中连接灯板的数据组数的索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.ModuleConnectInfo.ConnectNumber">
+            <summary>
+            箱体该组数据连接灯板的序号
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo">
+             <summary>
+            选中灯板的信息及选中数据组数信息
+             </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.Module">
+            <summary>
+            选中的灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.SelectedGroupIndex">
+            <summary>
+            选中灯板的哪一组数据
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.SelectedBeginCol">
+            <summary>
+            选中某组数据的起始列
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.SelectedBeginRow">
+            <summary>
+            选中某组数据的起始行
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.SelectedEndRow">
+            <summary>
+            选中某组数据的结束行
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleGroupInfo.SelectedEndCol">
+            <summary>
+            选中某组数据的结束列
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LastConnectionInfo">
+            <summary>
+            鼠标左键双击连接灯板时的连接信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LastConnectionInfo.ModuleIndex">
+            <summary>
+            连接的灯板索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LastConnectionInfo.GroupIndexInModule">
+            <summary>
+            灯板中连接的数据组数的索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.LastConnectionInfo.ModuleConnectInfo">
+            <summary>
+            灯板中指定数据组数连接坐标
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType">
+            <summary>
+            鼠标左键在箱体中的操作类型
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.CtrlKeySelectedModule">
+            <summary>
+            按下ctrl键并点击鼠标选中灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.SelectedModule">
+            <summary>
+            选中灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.MoveModule">
+            <summary>
+            鼠标左键拖动灯板
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.ChooseBox">
+            <summary>
+            鼠标左键在箱体内进行框选
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.DoubleConnect">
+            <summary>
+            双击连接
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.MouseOperationType.None">
+            <summary>
+            未进行任何操作
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.keyType">
+            <summary>
+            按键盘的方向移动键类型
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.keyType.Left">
+            <summary>
+            左移键
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.keyType.Right">
+            <summary>
+            右移键
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.keyType.Up">
+            <summary>
+            上移键
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.keyType.Down">
+            <summary>
+            下移键
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.SelectedModuleChangedEventHandle">
+            <summary>
+            选中灯板时触发事件的委托
+            </summary>
+            <param name="ledModuleInfo">选中的灯板，如果事件触发时无选中灯板，则该参数为null</param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Control.IrRegularCabinetConstruction.CurrentOperateEventHandle">
+            <summary>
+            当前操作委托
+            </summary>
+            <param name="curOperateType">操作类型</param>
+            <param name="cabinetInfo">操作变化后的箱体信息</param>
+            <param name="cabinetGridColsandRows">当前箱体绘制区域信息</param>
+        </member>
+    </members>
+</doc>

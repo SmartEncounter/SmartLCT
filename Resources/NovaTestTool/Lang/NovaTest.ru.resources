@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>FrmTest</Name>
+    <Controls>
+      <Control name="FrmTest" text="Контрольный инструмент индикатора - Сиань Нова" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid</Name>
+    <Controls>
+      <Control name="groupBox_gridSetup" text="Установление сетки" />
+      <Control name="label_gBackColor" text="Цвет фона" />
+      <Control name="label_gLineInterval" text="Интервал между линиями" />
+      <Control name="label_gLineWidth" text="Ширина линий" />
+      <Control name="groupBox_mixTest" text="установление смешаного контроля" />
+      <Control name="checkBox_red" text="красный цвет" />
+      <Control name="checkBox_green" text="зеленый цвет" />
+      <Control name="checkBox_blue" text="синий цвет" />
+      <Control name="checkBox_black" text="черный цвет" />
+      <Control name="checkBox_white" text="белый цвет" />
+      <Control name="checkBox_yellow" text="желтый цвет" />
+      <Control name="checkBox_turquoise" text="голубой цвет" />
+      <Control name="checkBox_purple" text="фиолетовый цвет" />
+      <Control name="checkBox_H" text="поперечная линия" />
+      <Control name="checkBox_V" text="вертикальная линия" />
+      <Control name="checkBox_LeftSlating" text="влево косой" />
+      <Control name="checkBox_RighSlating" text="направо косой" />
+      <Control name="crystalButton_selectAll" text="все выбраны" />
+      <Control name="crystalButton_clearSelect" text="польностью убрать" />
+      <Control name="crystalButton_gOk" text="подтверждение" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid_ApplicationString</Name>
+    <Controls>
+      <Control name="OneAtLest" text="установление смешаного контроля：по меньшей мере выбирать один из них " />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_pitch</Name>
+    <Controls>
+      <Control name="FrmSetup_pitch" text="установление высокого класса" />
+      <Control name="grp_font" text="шрифт" />
+      <Control name="label_fontSize" text="размер шрифта" />
+      <Control name="label_fontShape" text="форма слова" />
+      <Control name="label_StartRowNo" text="цифра начала в строке" />
+      <Control name="label_StartColNo" text="цифра начала в ряде" />
+      <Control name="label_ModLineWidth" text="Ширина линий модуля" />
+      <Control name="label_ScannerlineWidth" text="ширина линий плиты развертки" />
+      <Control name="crystalButton_pOk" text="подтверждение" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTest</Name>
+    <Controls>
+      <Control name="tabPage_form" text="окно" />
+      <Control name="lbl_X" text="X:" />
+      <Control name="lbl_Y" text="Y:" />
+      <Control name="lbl_width" text="ширина：" />
+      <Control name="lbl_height" text="высота：" />
+      <Control name="crystalButton_show" text="отображение" />
+      <Control name="crystalButton_hide" text="скрытие" />
+      <Control name="tabPage_color" text="цвет" />
+      <Control name="radioButton_red" text="красный цвет" />
+      <Control name="radioButton_green" text="зеленый цвет" />
+      <Control name="radioButton_blue" text="синий цвет" />
+      <Control name="radioButton_white" text="белый цвет" />
+      <Control name="radioButton_yellow" text="желтый цвет" />
+      <Control name="radioButton_Turquoise" text="голубой цвет" />
+      <Control name="radioButton_purple" text="фиолетовый цвет" />
+      <Control name="radioButton_pureRed" text="красный цвет" />
+      <Control name="radioButton_pureGreen" text="зеленый цвет" />
+      <Control name="radioButton_pureBlue" text="синий цвет" />
+      <Control name="radioButton_pureWhite" text="белый цвет" />
+      <Control name="radioButton_pureYellow" text="желтый цвет" />
+      <Control name="radioButton_pureCyan" text="синий цвет" />
+      <Control name="radioButton_purePurple" text="фиолетовый цвет" />
+      <Control name="radioButton_GridRed" text="красный цвет" />
+      <Control name="radioButton_GridGreen" text="зеленый цвет" />
+      <Control name="radioButton_GridBlue" text="синий цвет" />
+      <Control name="radioButton_GridWhite" text="белый цвет" />
+      <Control name="radioButton_GridYellow" text="зеленый цвет" />
+      <Control name="radioButton_GridCyan" text="синий цвет" />
+      <Control name="radioButton_GridPink" text="фиолетовый цвет" />
+      <Control name="radioButton_GrayRed" text="красный цвет" />
+      <Control name="radioButton_GrayGreen" text="зеленый цвет" />
+      <Control name="radioButton_GrayBlue" text="голубой цвет" />
+      <Control name="radioButton_GrayWhite" text="белый цвет" />
+      <Control name="radioButton_GrayYellow" text="зеленый цвет" />
+      <Control name="radioButton_GrayCyan" text="синий цвет" />
+      <Control name="radioButton_GrayPink" text="фиолетовый цвет" />
+      <Control name="tabPage_pureColor" text="чистый цвет" />
+      <Control name="tabPage_cline" text="постепенное изменение" />
+      <Control name="radioButton_grade" text="классификация" />
+      <Control name="radioButton_noGrade" text="отсутствие классификации" />
+      <Control name="crystalButton_32" text="32 класса" />
+      <Control name="crystalButton_64" text="64 класса" />
+      <Control name="crystalButton_128" text="128 классов" />
+      <Control name="crystalButton_256" text="256 классов" />
+      <Control name="radioButton_manal" text="вручную" />
+      <Control name="radioButton_auto" text="автоматически" />
+      <Control name="lbl_curGrey" text="текущая уровень серости" />
+      <Control name="lbl_speed" text="скорость" />
+      <Control name="tabPage_grid" text="сетка" />
+      <Control name="crystalButton_horizonal" text="горизонтальный" />
+      <Control name="crystalButton_vertical" text="вертикальный" />
+      <Control name="crystalButton_leftSlating" text="влево косой" />
+      <Control name="crystalButton_rightSlating" text="направо косой" />
+      <Control name="crystalButton_mixTest" text="смешанный контроль" />
+      <Control name="crystalButton_aging" text="устарение" />
+      <Control name="crystalButton_gSetup" text="установление высокого класса" />
+      <Control name="lbl_gray" text="уровень серости" />
+      <Control name="lbl_gSpeed" text="скорость" />
+      <Control name="label_manalGrey" text="уровень серости" />
+      <Control name="checkBox_multiSelect" text="накладывание сетки" />
+      <Control name="tabPage_pitch" text="локация" />
+      <Control name="crystalButton_pitch" text="локация" />
+      <Control name="lbl_pFont" text="шрифт" />
+      <Control name="crystalButton_pset" text="установление высокого класса" />
+      <Control name="grp_module" text="модуль" />
+      <Control name="grp_scan" text="плита развертки несет модуль" />
+      <Control name="grp_color" text="цвет" />
+      <Control name="lbl_pWidth" text="ширина" />
+      <Control name="lbl_pHeight" text="высота：" />
+      <Control name="lbl_pRows" text="цифра строки" />
+      <Control name="lbl_pCols" text="цифра ряда" />
+      <Control name="lbl_pBackground" text="фон" />
+      <Control name="btn_fontColor" text="шрифт" />
+      <Control name="lbl_pModule" text="линия модуля" />
+      <Control name="lbl_pScanLine" text="линия плиты развертки" />
+      <Control name="radioButton_LR" text="слева направо" />
+      <Control name="radioButton_RL" text="снаправо влево" />
+      <Control name="tabPage_testSelf" text="самоконтроль" />
+      <Control name="grp_test" text="самоконтроль" />
+      <Control name="grp_cfig" text="перераспределение программного обеспечения" />
+      <Control name="crystalButton_send" text="послать" />
+      <Control name="crystalButton_bkScreen" text="черный экран" />
+      <Control name="crystalButton_lock" text="захват" />
+      <Control name="crystalButton_conmonShow" text="нормальное отображение" />
+      <Control name="tabPage_help" text="помощь" />
+      <Control name="tabPage_About" text="относительно" />
+      <Control name="label_HelpInfo1" text="наука и техника Нова - вариант специального решения экрана индикатора LED " />
+      <Control name="label_HelpDetailInfo" text="1. управляющая система экрана индикатора LED   2.  система выправки постепенной точки экрана индикатора LED   3.отраслевой прикладное программное обеспечение  экрана индикатора LED" />
+      <Control name="label_phone" text="телефор единой технической помощи по государству: 400-696-0755" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>DebugDispForm</Name>
+    <Controls>
+      <Control name="label_shortKeyInfo" text="[Home]: отображать/скрывать подсказку на правом нижнем угле окна；  [End]:  отображать/скрывать подсказку на центральном месте окна； [Space]: автоматическое переключение функций；[PageUp]:  верхнее переключение функций；[PageDown]: нижнее переключение функци" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTestInfo</Name>
+    <Controls>
+      <Control name="Run" text="начало" />
+      <Control name="Pause" text="приостановление" />
+      <Control name="ComboItem0" text="нормальное отображение" />
+      <Control name="ComboItem1" text="первая контрольная точка контроллера" />
+      <Control name="ComboItem2" text="вторая контрольная точка контроллера" />
+      <Control name="ComboItem3" text="третья контрольная точка контроллера" />
+      <Control name="ComboItem4" text="первая контрольная точка делителя" />
+      <Control name="ComboItem5" text="вторая контрольная точка делителя" />
+      <Control name="ComboItem6" text="третья контрольная точка делителя" />
+      <Control name="ComboItem7" text="первая контрольная точка плиты развертки" />
+      <Control name="ComboItem8" text="вторая контрольная точка плиты развертки" />
+      <Control name="ComboItem9" text="третья контрольная точка плиты развертки" />
+    </Controls>
+  </Form>
+
+<Form>
+    <Name>FrmTest_CustomMsg_String</Name>
+    <Controls>
+      <Control name="toolTip_FromInfo" text="информация об окне:"/>
+    </Controls>
+  </Form>
+</Resource>  

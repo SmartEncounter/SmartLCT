@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:Nova.SmartLCT.UI;assembly=Nova.SmartLCT.UI.ScreenVirtualEditer" xmlns:local="clr-namespace:Test" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Nova_SmartLCT_Interface="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" mc:Ignorable="d" x:Class="Test.Window4"
+        Title="Window4" Height="622" Width="737" Closed="Window_Closed" Closing="Window_Closing">
+	<Window.Resources>
+		<Nova_SmartLCT_Interface:EnumBoolConverter x:Key="EnumBoolConverter"/>
+		<local:Window4_VM x:Key="Window4_VMDataSource" d:IsDataSource="True"/>
+	</Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource Window4_VMDataSource}}">
+        <Border HorizontalAlignment="Left" Height="300" Margin="10,16,0,0" VerticalAlignment="Top" Width="300" BorderThickness="1" BorderBrush="#FFEDDDDD">
+    		<my:ScreenVirtualEditer x:Name="screenVirtualEditer1" VirtualMode="{Binding VirtualMode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" RedLightImage="{Binding RedImage}" VRedLightImage="{Binding VRedImage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GreenLightImage="{Binding GreenImage}" BlueLightImage="{Binding BlueImage}" VirtualLightSequence="{Binding LightSequence, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnableExchange="True" >
+    			<i:Interaction.Triggers>
+    				<i:EventTrigger EventName="LightSequenceChanged">
+    					<i:InvokeCommandAction Command="{Binding CmdLightChanged, Mode=OneWay}"/>
+    				</i:EventTrigger>
+    			</i:Interaction.Triggers>
+    		</my:ScreenVirtualEditer>
+    	</Border>
+        <GroupBox Header="布局" Margin="325,16,0,0" VerticalAlignment="Top" Height="139.837" HorizontalAlignment="Left" Width="283">
+        	<Grid>
+        		<RadioButton Content="四灯" Margin="30,20,64,0" VerticalAlignment="Top" IsChecked="{Binding VirtualMode, ConverterParameter=Led4Mode1, Converter={StaticResource EnumBoolConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        		<RadioButton Content="正三角交互" Margin="30,50,64,0" IsChecked="{Binding VirtualMode, ConverterParameter=Led31, Converter={StaticResource EnumBoolConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        		<RadioButton Content="倒三角交互" Margin="30,80,64,0" VerticalAlignment="Top" IsChecked="{Binding VirtualMode, ConverterParameter=Led3, Converter={StaticResource EnumBoolConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        	</Grid>
+        </GroupBox>
+        <GroupBox Header="预览" Margin="321,159,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        	<Grid>
+        		<my:ScreenVirtualEditer x:Name="screenVirtualEditer1_Copy" VirtualMode="{Binding PreviewFirstVirtualMode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" RedLightImage="{Binding RedImage}" VRedLightImage="{Binding VRedImage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GreenLightImage="{Binding GreenImage}" BlueLightImage="{Binding BlueImage}" VirtualLightSequence="{Binding PreviewFirstLightSequence, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="13,7,142,7.162" Width="120" Height="120" d:LayoutOverrides="VerticalAlignment" />
+        		<my:ScreenVirtualEditer x:Name="screenVirtualEditer1_Copy1" VirtualMode="{Binding PreviewSecondVirtualMode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" RedLightImage="{Binding RedImage}" VRedLightImage="{Binding VRedImage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" GreenLightImage="{Binding GreenImage}" BlueLightImage="{Binding BlueImage}" VirtualLightSequence="{Binding PreviewSecondLightSequence, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="137,7,18,7.162" Width="120" Height="120" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" />
+        	</Grid>
+        </GroupBox>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="91,0,0,48.163" VerticalAlignment="Bottom" IsThreeState="True" IsChecked="{Binding CheckedStaus, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="535,0,0,41" x:Name="button1" VerticalAlignment="Bottom" Width="75" Command="{Binding CmdExchanged, Mode=OneWay}" Click="button1_Click" />
+    </Grid>
+</Window>

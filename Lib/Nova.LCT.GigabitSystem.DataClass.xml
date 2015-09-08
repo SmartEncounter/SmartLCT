@@ -1,0 +1,2800 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.DataClass</name>
+    </assembly>
+    <members>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.GetScreenPosition">
+            <summary>
+            获取屏幕的起始坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.SetScreenPosition(System.Drawing.Point)">
+            <summary>
+            设置屏幕的起始坐标
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.GetScreenSize">
+            <summary>
+            获取屏幕的大小
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.GetFirstScanBoardInList(Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo@)">
+            <summary>
+            获取显示屏上第一个有效接收卡（不留空）的信息，返回当前这个卡的在列表的索引
+            </summary>
+            <param name="scanBdInfo">接收卡信息,如果函数失败则为null</param>
+            <returns>输出参数的接收卡在列表的索引,如果函数失败则返回-1</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.GetNextScanBoardInList(System.Int32,Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo@)">
+            <summary>
+            获取显示屏下一个有效接收卡的信息，返回值表示函数是否成功
+            </summary>
+            <param name="lastIndex">上一张卡的索引</param>
+            <param name="scanBdInfo">接收卡信息</param>
+            <returns>是否找到符合条件的卡，如果找到则返回索引，没有找到则返回-1</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.GetAreaScanBdList(System.Drawing.Rectangle)">
+            <summary>
+            获取指定区域内包含的接收卡列表
+            </summary>
+            <param name="areaRect">该矩形区域相对于显示屏左上角（0,0）位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.ResetScreenLocation(System.Int32,System.Int32)">
+            <summary>
+            调整显示屏位置
+            </summary>
+            <param name="offsetX">显示屏偏移x</param>
+            <param name="offsetY">显示偏移y</param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.ScannerCount">
+            <summary>
+            获取扫描板的个数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo.Item(System.Int32)">
+            <summary>
+            获取扫描板的Region信息
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ICabinetProperty.Name">
+            <summary>
+            箱体名称
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ICabinetProperty.CabinetType">
+            <summary>
+            箱体类型，规则或不规则
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ICabinetProperty.Width">
+            <summary>
+            箱体宽度，像素为单位
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ICabinetProperty.Height">
+            <summary>
+            箱体高度，宽度为单位
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ICabinetProperty.PointTableData">
+            <summary>
+            走线表数据
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ILCTFunctionForm">
+            <summary>
+            各个功能模块需要继承的窗口
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILCTFunctionForm.UpdateLanguage(System.String,System.String)">
+            <summary>
+            更新语言
+            </summary>
+            <param name="langFileName">UI及Form中用到的多语言文件名</param>
+            <param name="proxyLangName">协议库用到的多语言文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ILCTFunctionForm.UpdateFont(System.Drawing.Font)">
+            <summary>
+            更新软件的字体
+            </summary>
+            <param name="windowFont">字体风格</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.LEDDisplyType">
+            <summary>
+            屏体类型：简单单张屏，标准屏，复杂屏
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.CabinetType">
+            <summary>
+            箱体类型
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType">
+            <summary>
+            输出口网线连接接收卡方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.LeftTop_Horizontal">
+            <summary>
+            网线从左上角入，水平串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.LeftBottom_Horizontal">
+            <summary>
+            网线从左下角入，水平串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.RightTop_Horizontal">
+            <summary>
+            网线从右上角入，水平串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.RightBottom_Horizontal">
+            <summary>
+            网线从右下角入，水平串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.LeftTop_Vertical">
+            <summary>
+            网线从左上角入，垂直串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.LeftBottom_Vertical">
+            <summary>
+            网线从左下角入，垂直串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.RightTop_Vertical">
+            <summary>
+            网线从右上角入，垂直串线
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardConnectType.RightBottom_Vertical">
+            <summary>
+            网线从右下角入，垂直串线
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.MonitorDisplayType">
+            <summary>
+            当前监控界面显示类型
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ComboBoxDataSet">
+            <summary>
+            用于填充ComboBox的基本类型
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComboBoxDataSet.Name">
+            <summary>
+            表征用于ComboBox显示的字符串，用于填充ComboBox的DisplayMeber
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComboBoxDataSet.Data">
+            <summary>
+            标志实际的数据用于填充ComboBox的ValueMeber
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo">
+            <summary>
+            显卡DVI头排列信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo.DviPortCols">
+            <summary>
+            当前显卡的DVI头排列列数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo.DviPortRows">
+            <summary>
+            当前显卡的DVI头排列行数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo.GraphicsWidth">
+            <summary>
+            当前显示器宽度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo.GraphicsHeight">
+            <summary>
+            当前显示器高度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.DVISenderBoardPortConnectInfo.DVIPortIndex">
+            <summary>
+            显卡DVI输出头的索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.DVISenderBoardPortConnectInfo.SenderBoardIndex">
+            <summary>
+            连接到的发送卡的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SenderDVIRegionInfo">
+            <summary>
+            发送卡DVI输入端的区域信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderDVIRegionInfo.SenderIndex">
+            <summary>
+            发送卡序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderDVIRegionInfo.graphicsDviPortIndex">
+             <summary>
+            当前发送卡的DVI口输入对应的显卡的第几个DVI输出头
+             </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo">
+            <summary>
+            发送卡输出口的区域信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.SenderIndex">
+            <summary>
+            发送卡序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.PortIndex">
+            <summary>
+            输出口（百兆或千兆网口)序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.X">
+            <summary>
+            相对于当前发送卡输入DVI区域的X坐标
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.Y">
+            <summary>
+            相对于当前发送卡输入DVI区域的Y坐标
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.Width">
+            <summary>
+            显示区域宽度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.Height">
+            <summary>
+            显示区域高度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.LoadScanBoardCount">
+            <summary>
+            该网口带载的接收卡数量
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.Clone">
+            <summary>
+            创建克隆新对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SenderPortRegionInfo.CopyTo(System.Object)">
+            <summary>
+            将当前类参数值复制到输入对象
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo">
+            <summary>
+            每个接收卡的位置和大小信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.XInPort">
+            <summary>
+            X位置(在其所在Port带载区域的X坐标)
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.YInPort">
+            <summary>
+            Y位置(在其所在Port带载区域的Y坐标)
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.SenderIndex">
+            <summary>
+            所属发送卡序号
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.PortIndex">
+            <summary>
+            所属输出口序号，若为0xffff，表示留空 
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.ConnectIndex">
+            <summary>
+            位于所在输出口的第几个
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.X">
+            <summary>
+            X位置(在其所在显卡的X坐标)
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.Y">
+            <summary>
+            Y位置(在其所在显卡的Y坐标)
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.Width">
+            <summary>
+            带载像素宽度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ScanBoardRegionInfo.Height">
+            <summary>
+            带载像素高度
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo">
+            <summary>
+            简单显示屏，单块，矩形且只用一个发送卡,每个接收卡带载的面积相同
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.X">
+            <summary>
+            屏体映射位置X（当前显卡区域）
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.Y">
+            <summary>
+            屏体映射位置Y（当前显卡区域）
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.ScanBdCols">
+            <summary>
+            屏体区域的接收卡列数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.ScanBdRows">
+            <summary>
+            屏体区域的接收卡行数 
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PixelColsInScanBd">
+            <summary>
+            单个接收卡像素列数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PixelRowsInScanBd">
+            <summary>
+            单个接收卡像素行数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.SenderIndex">
+            <summary>
+            发送卡的序号
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.UInt16,System.UInt16,Nova.LCT.GigabitSystem.Common.VirtualModeType,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo})">
+            <summary>
+            简单屏构造函数
+            </summary>
+            <param name="pixelColsInScanBd">接收卡列像素数</param>
+            <param name="pixelRowsInScanBd">接收卡行像素数</param>
+            <param name="scanBdCols">接收卡列数</param>
+            <param name="scanBdRows">接收卡行数</param>
+            <param name="portCols">网口列数</param>
+            <param name="portRows">网口行数</param>
+            <param name="senderIndex">发送卡序号，从0开始</param>
+            <param name="x">显示屏位于显卡的X坐标（显卡坐标系）</param>
+            <param name="y">显示屏位于显卡的Y坐标（显卡坐标系）</param>
+            <param name="virtualMode"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.SetPortColsAndRows(System.Byte,System.Byte)">
+            <summary>
+            设置该显示屏由几列几行port口带载区域构成
+            </summary>
+            <param name="portCols"></param>
+            <param name="portRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.GetPortScanBoardInfo(System.Int32)">
+            <summary>
+             端口排布区域横向遍历的第index个区域的信息
+            </summary>
+            <param name="index">行遍历的索引</param>
+            <returns>如果信息不存在则返回Null</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.GetPortScanBoardInfo(System.Int32,System.Int32)">
+            <summary>
+             端口排布区域col列，row行区域的信息
+            </summary>
+            <param name="col">列索引</param>
+            <param name="row">行索引</param>
+            <returns>如果信息不存在则返回Null</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.GetPortScanBoardInfoByPortIndex(System.Int32)">
+            <summary>
+            更具网口序号获取网口信息
+            </summary>
+            <param name="portIndex">网口序号</param>
+            <returns>如果信息部存在则返回null</returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.Type">
+            <summary>
+            屏体类型
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.VirtualMode">
+            <summary>
+            虚拟方式
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortCols">
+            <summary>
+            端口排列列数，即若使用3个端口来带载整个屏的接收卡，且为左中右排列，则网口的列数为3
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortRows">
+            <summary>
+            端口排列行数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.ScannerCount">
+            <summary>
+            获取扫描板的个数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.ScrAdjustParams">
+            <summary>
+            显示屏调整参数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo">
+            <summary>
+            简单屏体配置下网口的带载信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.ConnectType">
+            <summary>
+            该输出口网线连接接收卡方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.PortIndex">
+             <summary>
+            输出口序号
+             </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.ScanBdBegColNo">
+            <summary>
+            输出口带载的接收卡起始列号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.ScanBdBegRowNo">
+            <summary>
+            输出口带载的接收卡起始行号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.ScanBdEndColNo">
+            <summary>
+            输出口带载的接收卡结束列号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.SimpleLEDDisplayInfo.PortScanBoardInfo.ScanBdEndRowNo">
+            <summary>
+            输出口带载的接收卡结束行号
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo">
+            <summary>
+            标准显示屏，矩形，包含的接收卡可带载不同的大小且位于不同的发送卡上
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.X">
+            <summary>
+            屏体映射位置X（当前显卡区域）
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.Y">
+            <summary>
+            屏体映射位置Y（当前显卡区域）
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.SetScreenSbColsAndRows(System.UInt16,System.UInt16)">
+            <summary>
+            设置全屏的接收卡行列数
+            </summary>
+            <param name="scanBdCols"></param>
+            <param name="scanBdRows"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.Type">
+            <summary>
+            屏体类型
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.VirtualMode">
+            <summary>
+            虚拟模式
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.ScanBoardCols">
+            <summary>
+            接收卡总列数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.ScanBoardRows">
+            <summary>
+            接收卡总行数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.ScannerCount">
+            <summary>
+            获取扫描板的个数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.Item(System.Int32)">
+            <summary>
+            第index接收卡位置等信息，index为按行遍历序号
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.Item(System.Int32,System.Int32)">
+            <summary>
+            第col列第row行的接收卡信息
+            </summary>
+            <param name="col"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.StandardLEDDisplayInfo.ScrAdjustParams">
+            <summary>
+            显示屏调整参数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo">
+            <summary>
+            复杂显示屏 不规则形状
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo.Type">
+            <summary>
+            屏体类型
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo.VirtualMode">
+            <summary>
+            虚拟方式
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo.ScanBoardRegionInfoList">
+            <summary>
+            接收卡列表
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo.ScannerCount">
+            <summary>
+            获取扫描板的个数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ComplexLEDDisplayInfo.ScrAdjustParams">
+            <summary>
+            显示屏调整参数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo">
+            <summary>
+            每个屏使用的网口信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo.SenderIndex">
+            <summary>
+            发送卡序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo.PortIndex">
+            <summary>
+            输出口（百兆或千兆网口)序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo.LoadScannerCount">
+            <summary>
+            带载的接收卡数目
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo.MaxConnectIndex">
+            <summary>
+            网口的最大接收卡连接序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenPortAddrInfo.MinConnectIndex">
+            <summary>
+            网口的最小连接序号
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ScreenSenderAddrInfo">
+            <summary>
+            每个屏使用的发送卡的信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenSenderAddrInfo.SenderIndex">
+            <summary>
+            发送卡序号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScreenSenderAddrInfo.LoadScannerCount">
+            <summary>
+            发送卡带载的接收卡个数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo">
+            <summary>
+            发送卡冗余信息
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo.MasterSenderIndex">
+            <summary>
+            主设备发送卡序号
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo.MasterPortIndex">
+            <summary>
+            主设备网口序号
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo.SlaveSenderIndex">
+            <summary>
+            从设备发送卡序号
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo.SlavePortIndex">
+            <summary>
+            从设备网口序号
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.DataMaskLib">
+            <summary>
+            数据掩码类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.DataMaskLib.RGBMaskString">
+            <summary>
+            RGB数据转换掩码
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.DataMaskLib.StartIndexASCII">
+            <summary>
+            从ASCII码表中开始的位置,默认从A开始
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.DataMaskLib.ConvertData(System.Byte[])">
+            <summary>
+            转换Byte数组，按ASCII码显示
+            </summary>
+            <param name="srcData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.DataMaskLib.ParseData(System.String[])">
+            <summary>
+            将字符串，按ASCII码表中的位置进行转换为Byte数组
+            </summary>
+            <param name="srcData"></param>
+            <param name="desData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.DataMaskLib.ConvertRGBData(System.Byte[])">
+            <summary>
+            将RGB值按一定掩码转换
+            </summary>
+            <param name="srcData"></param>
+            <param name="desData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.DataMaskLib.ParseRGBData(System.String[])">
+            <summary>
+            解析转换后的RGB数值
+            </summary>
+            <param name="srcData"></param>
+            <param name="desData"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_MODULEDATAGROUP">
+            <summary>
+            灯板最大数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_SCAN">
+            <summary>
+            最大扫描数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.COLOR_COUNT">
+            <summary>
+            颜色数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.GAMMAVALUE_COUNT">
+            <summary>
+            Gamma表中Gamma值个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.COLORMATRIX_LENGTH">
+            <summary>
+            颜色调整矩阵元素个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAXCOUNT_OF_MODULEPOINTTABLE">
+            <summary>
+            灯板走线数据的最大走线点数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAXCOUNT_OF_SCANBOARDPOINTTABLE">
+            <summary>
+            接收卡（箱体）走线数据的最大走线点数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_SCANNER_AREA">
+            <summary>
+            接收卡最大带载面积
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_SUBFIELDPART_COUNT">
+            <summary>
+            子场数最大个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_OETABLE_LENGHT">
+            <summary>
+            OE表的最大长度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_MULTIPLE_CHIP_TABLELEN">
+            <summary>
+            多芯片表的最大长度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_MULTIPLE_TABLECOUNT">
+            <summary>
+            多芯片表的最大个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_PARAMETER_TABLE_LEN">
+            <summary>
+            接收卡最大参数的个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_ASYSYS_DVISCREEN_TIME">
+            <summary>
+            最大异步DVI打屏的时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_SCREEN_COUNT">
+            <summary>
+            最大显示屏的个数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_SCANNER_DATAGROUP">
+            <summary>
+            接收卡的最大数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.MaxValue.MAX_PORT_LOADED_COUNT">
+            <summary>
+            网口支持带载的最大的接收卡数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SpecialPackTimeOut">
+            <summary>
+            特殊包处理，计时单位为秒
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ChipInfo">
+            <summary>
+            驱动芯片的固有属性的定义
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInfo.GetCurrentFromGain(System.Single,System.Single)">
+            <summary>
+            通过电阻值和电流增益计算电流值
+            </summary>
+            <param name="resisitanceValue">电阻值</param>
+            <param name="currentGain">电流增益</param>
+            <returns>电流值，单位mA</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInfo.GetGainFromCurrent(System.Single,System.Single)">
+            <summary>
+            通过电流和电阻计算电流增益
+            </summary>
+            <param name="resisitanceValue">电阻值</param>
+            <param name="current">电流值</param>
+            <returns>电流增益</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInfo.GetGainRange(System.Single@,System.Single@)">
+            <summary>
+            获取电流增益可调整的范围
+            </summary>
+            <param name="maxGain">最大电流增益</param>
+            <param name="minGain">最小电流增益</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInfo.GetDefaultGain(System.Int32@,System.Byte@,System.Single@)">
+            <summary>
+            获取默认的分级，寄存器存储增益，电流增益
+            </summary>
+            <param name="defalutStep">分级</param>
+            <param name="registorValue">寄存器存储增益</param>
+            <param name="currentGain">电流增益</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInfo.GetStepCurrentGain(System.Int32,System.Int32@,System.Single@)">
+            <summary>
+            通过电流增益寄存器值计算当前阶数及电流增益
+            </summary>
+            <param name="registorValue"></param>
+            <param name="step"></param>
+            <param name="currentGain"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.ChipType">
+            <summary>
+            驱动芯片型号
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.Discription">
+            <summary>
+            生产厂家等信息描述
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.IsCommonChip">
+            <summary>
+            是否是通用芯片
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.IsSupportCurrentGain">
+            <summary>
+            是否有电流增益
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.IsSupportPointDetect">
+            <summary>
+            是否支持点检
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.ChannelNumPerChip">
+            <summary>
+            驱动芯片的通道数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipInfo.CurrentGainStepInfo">
+            <summary>
+            增益级数与增益值之间的映射关系。（key是增益级数，value是增益值）
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.CurrentGainStepInfo">
+            <summary>
+            电流增益分级信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.CurrentGainStepInfo.TotalStep">
+            <summary>
+            总的级数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.CurrentGainStepInfo.GainStepMapping">
+            <summary>
+            级数与电流增益的映射关系，key为级数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.RegistorGainMapping">
+            <summary>
+            电流增益与给硬件寄存器发送的值映射
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ConstValue">
+            <summary>
+            常量的定义
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.APPDATA_PATH">
+            <summary>
+            应用程序在ApplicationData中的根文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MYDOCUMENT_PATH">
+            <summary>
+            应用程序在MyDocuments中的根文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_FOLDER">
+            <summary>
+            根文件夹下临时文件的文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.CONFIG_FOLDER">
+            <summary>
+            应用程序配置文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.CONFIG_SCANNERFILELIB_FOLDER">
+            <summary>
+            接收卡箱体配置库文件路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.DVISCREEN_FILENAME_WRITE">
+            <summary>
+            写入软件空间的屏体信息文件的文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.DVISCREEN_FILENAME_READ">
+            <summary>
+            从软件空间读出的屏体信息文件的文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.SAVE_DVISCREENINFO_TAG">
+            <summary>
+            写屏体信息时使用的Tag
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.SAVE_REDUNDANCYINFO_TAG">
+            <summary>
+            保存冗余信息时使用的Tag
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.SEND_DRIVERCHIPTYPE_TAG">
+            <summary>
+            发送驱动芯片时使用的Tag
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.READ_ASYSYS_DVISCREENINFO_TAG">
+            <summary>
+            异步系统读取屏体信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.READ_COEFFICIENT_FILEPATH">
+            <summary>
+            硬件回读的校正系数的文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.ASYSYS_COEFS_FILE">
+            <summary>
+            异步校正数据保存路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.ASYSYS_ZONELIST_FILE">
+            <summary>
+            异步保存显示区域列表的文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.PROGRAM_FATH">
+            <summary>
+            启动文件夹路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.COMMONDATA_PATH">
+            <summary>
+            启动路径下的CommData文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.EDID_FILEPATH">
+            <summary>
+            EDID文件夹路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.APPLICATION_CONFIG_FILE">
+            <summary>
+            程序加载UI的配置文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_GAMMA_FILE">
+            <summary>
+            临时Gamma文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_12BITGAMMA_FILE">
+            <summary>
+            临时12位Gamma文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_OE_FILE">
+            <summary>
+            临时0E文件的全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_MODULE_RUNLINE_FILE">
+            <summary>
+            临时灯板走线表全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_RUNLINE_FILE">
+            <summary>
+            临时接收卡走线表全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_POSITION_FILE0">
+            <summary>
+            临时网口0接收卡起始位置坐标文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_POSITION_FILE1">
+            <summary>
+            临时网口1接收卡起始位置坐标文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_POSITION_FILE2">
+            <summary>
+            临时网口2接收卡起始位置坐标文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_POSITION_FILE3">
+            <summary>
+            临时网口3接收卡起始位置坐标文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.TEMP_SCANNER_PROPERTY_FILE">
+            <summary>
+            临时接收卡配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_UI_CONFIG_FILE">
+            <summary>
+            亮度调节UI使用的配置文件的全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_TOOL_CONFIG_FOLDER">
+            <summary>
+            亮度调节小软件使用的配置文件的全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_TOOL_LOG_FOLDER">
+            <summary>
+            亮度调节小软件存储Log的文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_TOOL_FORM_NAME">
+            <summary>
+            亮度调节小软件的窗口名称（FindWindow使用）
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_TOOL_START_FILE">
+            <summary>
+            亮度调节小软件启动软件的软件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.BRIGHT_ADJUST_TOOL_PROC_NAME">
+            <summary>
+            亮度调节小软件的进程名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.SET_HWBRIGITADJUST_TAG">
+            <summary>
+            设置硬件自动亮度的tag
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.RELEASE_HWBRIGHTADJUST_TAG">
+            <summary>
+            取消硬件自动亮度的tag
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.PROGRAM_LOAD_CONFIG_FILE">
+            <summary>
+            程序加载UI的配置文件全名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.RAM_TABLE_NAME">
+            <summary>
+            RAM表的文件名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.CHIP_RAMTABLE_FILENAME">
+            <summary>
+            芯片参数RamA的文件名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.COLOR_RESTORE_FILE_NAME">
+            <summary>
+            色彩还原默认参数文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MONITOR_CONFIG_FILE">
+            <summary>
+            监控配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.EMAIL_NOTIFY_CONFIG_FILE">
+            <summary>
+            邮件通知配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.EMAIL_NOTIFY_LOG_PATH">
+            <summary>
+            邮件通知的日志
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MONITOR_CONTROL_CONFIG_FILE">
+            <summary>
+            监控控制配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MONITOR_CONTROL_LOG_PATH">
+            <summary>
+            监控控制的日志
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MUL_FUNC_CARD_CONFIG_FOLDER">
+            <summary>
+            多功能卡配置文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MUL_FUNC_CARD_CONFIG_SELFFILE">
+            <summary>
+            多功能卡自己的配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MUL_FUNC_CARD_CONFIG_EXTERNFFILE">
+            <summary>
+            多功能卡对外的配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.MUL_FUNC_CARD_LOG_FOLDER">
+            <summary>
+            多功能卡Log文件夹
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.External_Program_CONFIG_FILE">
+            <summary>
+            记录外部程序路径的的配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.COMMON_EDID_FILENAME">
+            <summary>
+            通用EDID文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConstValue.HDMI_EDID_FILENAME">
+            <summary>
+            HDMI卡edid文件
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ConfigFile">
+            <summary>
+            配置文件信息类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.SUPPERDISPLAY_CONFIGFILE">
+            <summary>
+            超大屏配置文件路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.SENDERSNMATCH_CONFIGFILE">
+            <summary>
+            发送卡sn和串口匹配信息存储文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.LCT_SENDERSNLIST_CONFIGFILE">
+            <summary>
+            LCT存储发送卡和大卡sn列表的配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.LCT_SERIALMATCH_CONFIGFILE">
+            <summary>
+            LCT存储串口变化前后对应关系的文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.BRIGHTTOOL_SENDERSNLIST_CONFIGFILE">
+            <summary>
+            亮度调节软件存储发送卡和大卡sn列表的配置文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.BRIGHTTOOL_SERIALMATCH_CONFIGFILE">
+            <summary>
+            亮度调节软件存储串口变化前后对应关系的文件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ConfigFile.DVIENCRYPT_CONFIGFILE">
+            <summary>
+            DVI加密配置文件路径
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.GainMappingScale">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ToBytes">
+            <summary>
+            该函数返回的Mask中仅启用阈值电流及电流增益位，如果IsExtendCfgCmd为true，那么ToBytes返回的
+            数组的字节数变大，且需要发送到新Config的地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.FromBytes(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.GetMask(System.Byte[]@)">
+            <summary>
+            该函数返回的Mask中仅有阈值电流及电流增益位不启用，其他位必须填正确值，如果IsExtendCfgCmd为true，那么ToBytes返回的
+            数组的字节数变大，且需要发送到新Config的地址
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ToBytesSecondReg">
+            <summary>
+            获取第二组寄存器指令字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.FromBytesSecondReg(System.Byte[])">
+            <summary>
+            从第二组寄存器获取信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.GetMaskSecondReg(System.Byte[]@)">
+            <summary>
+            获取第二组寄存器的掩码
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.FormMultiParseData(System.Byte[],System.Byte[])">
+            <summary>
+            两组寄存器交叉分析
+            </summary>
+            <param name="firstData"></param>
+            <param name="secondData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ConfigDataLen">
+            <summary>
+            发送第一组寄存器命令数据的长度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ConfigSecondDataLen">
+            <summary>
+            发送第二组寄存器命令的长度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ConfigDataStartIndex">
+            <summary>
+            第一组寄存器命令中，实际寄存器参数值的起始地址
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ConfigSecondDataStartIndex">
+            <summary>
+            第二组寄存器命令中，实际寄存器参数值的起始地址
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsUseThreshold">
+            <summary>
+            是否使用了点检阈值电流
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsUseSecondRegistor">
+            <summary>
+            是否启用第二组芯片配置寄存器
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.ThresholdGradeCount">
+            <summary>
+            点检阈值电流的级数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.Threshold">
+            <summary>
+            使用的阈值电流等级
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsSupportGhostClear">
+            <summary>
+            是否支持余辉控制
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsClearGhost">
+            <summary>
+            是否开启余辉控制
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsExtendCfgCmd">
+            <summary>
+            如果红绿蓝芯片的寄存器配置不一致，这个值置为true，软件使用扩展寄存器配置命令来发寄存器配置
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigBase.IsMultiParseData">
+            <summary>
+            寄存器数据是否进行交叉分析
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ChipSUM2017RegistorConfig">
+            <summary>
+            注意，该芯片不支持电流增益，但是需要配置寄存器，所以调用ToBytes接口时返回
+            值为null，调用接口FromBytes总是返回false,调用GetMask接口可得到芯片配置寄
+            器的值
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipSUM2030RegistorConfig.GetGhostCtrlData(Nova.LCT.GigabitSystem.Common.ChipSUM2030RegistorConfig.LEDColorType,System.Boolean)">
+            <summary>
+            获取余辉控制字节的信息
+            </summary>
+            <param name="color"></param>
+            <param name="isOpen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipSUM2030RegistorConfig.IsGhostControlOpen(System.Byte)">
+            <summary>
+            判断余辉控制是否开启
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ChipMBI5037RegistorConfig">
+            <summary>
+            注意，该芯片不支持电流增益，但是需要配置寄存器，所以调用ToBytes接口时返回
+            值为null，调用接口FromBytes总是返回false,调用GetMask接口可得到芯片配置寄
+            器的值
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipSUM2032RegistorConfig.GetGhostCtrlData(Nova.LCT.GigabitSystem.Common.ChipSUM2032RegistorConfig.LEDColorType,System.Boolean)">
+            <summary>
+            获取余辉控制字节的信息
+            </summary>
+            <param name="color"></param>
+            <param name="isOpen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipSUM2032RegistorConfig.IsGhostControlOpen(System.Byte)">
+            <summary>
+            判断余辉控制是否开启
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigFactory.GetChipRegistorConfig(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ScanType)">
+            <summary>
+            该接口是为发送驱动芯片配置用的，如果有设置芯片的信息，则返回该芯片的对象，否则返回null
+            </summary>
+            <param name="chip"></param>
+            <param name="scanType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigFactory.GetChipRegistorConfig(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ScanType,System.Int32,Nova.LCT.GigabitSystem.Common.ChipCfgCurrentRisingTime,Nova.LCT.GigabitSystem.Common.ChipCfgCurrentRange)">
+            <summary>
+            该接口是为需要支持芯片配置中需要换行倍率的芯片提供的，如果没有该种芯片则调用
+            GetChipRegistorConfig(ChipType chip, ScanType scanType)接口即可
+            </summary>
+            <param name="chip"></param>
+            <param name="scanType"></param>
+            <param name="partNumPerRef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigFactory.GetChipRegistorConfig(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ScanType,System.Int32,Nova.LCT.GigabitSystem.Common.ChipCfgCurrentRisingTime,Nova.LCT.GigabitSystem.Common.ChipCfgCurrentRange,System.Boolean)">
+            <summary>
+            该接口是为需要支持芯片配置中需要换行倍率的芯片提供的，如果没有该种芯片则调用
+            GetChipRegistorConfig(ChipType chip, ScanType scanType)接口即可
+            </summary>
+            <param name="chip"></param>
+            <param name="scanType"></param>
+            <param name="partNumPerRef"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipRegistorConfigFactory.GetChipRegistorConfig(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            该接口是为发送增益值用的
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.BrightValue">
+            <summary>
+            全局亮度值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.RedGain">
+            <summary>
+            红电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.GreenGain">
+            <summary>
+            绿电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.BlueGain">
+            <summary>
+            蓝电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.RedBright">
+            <summary>
+            红亮度分量
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.GreenBright">
+            <summary>
+            绿亮度分量
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo.BlueBright">
+            <summary>
+            蓝亮度分量
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.LEDModuleProperty">
+            <summary>
+            灯板构造
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.Name">
+            <summary>
+            灯板名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ModuleVersion">
+            <summary>
+            灯板的版本号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ModulePixelCols">
+             <summary>
+            灯板像素列数
+             </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ModulePixelRows">
+            <summary>
+            灯板像素行数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.DriverChipType">
+            <summary>
+            驱动芯片类型
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ScanType">
+            <summary>
+            扫描类型
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.OEPolarity">
+            <summary>
+            OE极性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.DecType">
+            <summary>
+            编码方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.DataDirectType">
+            <summary>
+            数据方向
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.DataGroup">
+            <summary>
+            数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.DataGroupSequence">
+            <summary>
+            数据组驱动灯板顺序，最多支持8组数据
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ScanABCDCode">
+            <summary>
+            扫描线参数排列
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.RGBCode">
+            <summary>
+            四色参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.TotalPointInTable">
+            <summary>
+            灯板走线表总点数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.PointTableData">
+            <summary>
+            走线表数据 应该为TotalPointInTable * 2个大小
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.RowsCtrlByDataGroup">
+            <summary>
+            灯板每组数据驱动的行列数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.ScreenDriveType">
+            <summary>
+            灯板的驱动方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.LineBias">
+            <summary>
+            扫描线偏移
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.StartPositionOfDataGroup">
+            <summary>
+            每组数据的带载起始位置
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.SerialColorNum">
+            <summary>
+            表征灯板单个像素的颜色数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.SerialDotsNumPerColor">
+            <summary>
+            表征灯板上驱动芯片与灯的连接方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.LEDModuleProperty.SerialRGBCode">
+            <summary>
+            表征灯板上驱动芯片驱动灯的颜色顺序
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty">
+            <summary>
+            规则箱体
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.ModCascadeType">
+            <summary>
+            灯板级联方式
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.#ctor(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.Byte,System.Byte)">
+            <summary>
+            使用灯板，灯板行列数构造箱体
+            </summary>
+            <param name="module">灯板属性</param>
+            <param name="modCols">灯板列数</param>
+            <param name="modRows">灯板行数</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.SetProperty(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.Byte,System.Byte)">
+            <summary>
+            设置(更改)箱体属性
+            </summary>
+            <param name="module">灯板属性</param>
+            <param name="modCols">灯板列数</param>
+            <param name="modRows">灯板行数</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.GetWidth">
+            <summary>
+            获得箱体宽度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.GetHeight">
+            <summary>
+            获得箱体高度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.GetPointTable">
+            <summary>
+            根据灯板属性和行列数计算出箱体的走线
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.Name">
+            <summary>
+            箱体名称
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.CabinetVersion">
+            <summary>
+            箱体的版本
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.CabinetType">
+            <summary>
+            箱体类型，规则或不规则
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.Width">
+            <summary>
+            箱体宽度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.Height">
+            <summary>
+            箱体高度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.PointTableData">
+            <summary>
+            箱体走线数据
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.ModColsInCabinet">
+            <summary>
+            箱体中灯板列数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.ModRowsInCabinet">
+            <summary>
+            箱体中灯板行数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.RegularCabinetProperty.ModuleProperty">
+            <summary>
+            箱体中灯板属性
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty">
+            <summary>
+            不规则箱体
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.PhysicalDataGroupNum">
+            <summary>
+            物理数据组数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.GetWidth">
+            <summary>
+            获得箱体宽度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.GetHeight">
+            <summary>
+            获得箱体高度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.GetMaxSumOfScanPointInGroup(System.Int32[]@,System.Int32[0:,0:]@)">
+            <summary>
+            获得箱体最大的每组数据一扫点数
+            </summary>
+            <param name="EachGroupTotalPointInTable">各组数据带的点数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.GetPointTable(System.Boolean,System.Boolean,System.Boolean,Nova.LCT.GigabitSystem.Common.ScreenDriveType)">
+            <summary>
+            根据灯板属性和行列数计算出箱体的走线
+            </summary>
+            <param name="isDExtend">是否D扩展(不能与20组数据同时设置为True)</param>
+            <param name="isSymmetricalOutput">是否对开输出</param>
+            <param name="isTwentyDataGroup">是否为20组数据模式(不能与D扩展同时设置为True)</param>
+            <returns>走线表，同时该函数也会修改属性中的走线表</returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.Name">
+            <summary>
+            箱体名称
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.CabinetVersion">
+            <summary>
+            箱体的版本
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.CabinetType">
+            <summary>
+            箱体类型，规则或不规则
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.Width">
+            <summary>
+            箱体宽度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.Height">
+            <summary>
+            箱体高度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.MaxSumOfScanPointInGroup">
+            <summary>
+            箱体最大的每组数据一扫点数
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.PointTableData">
+            <summary>
+            箱体走线数据
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleListInCabinet">
+            <summary>
+            不规则箱体灯板列表
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet">
+            <summary>
+            灯板每组数据在箱体中的信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet.groupIndex">
+            <summary>
+            位于第几组箱体数据上,当为-1时,表示没有使用
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet.connectIndex">
+            <summary>
+            位于当前箱体组数据上的第几个
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.ModuleProperty">
+            <summary>
+            灯板信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.XInCabinet">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.YInCabinet">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.PixelColInCabinet">
+            <summary>
+            代表像素宽度，一般情况下等于灯板宽度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.PixelRowInCabinet">
+            <summary>
+            代表像素高度，一般情况下等于灯板高度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet.GroupInfoInCabinet">
+            <summary>
+            当前灯板的各组数据在箱体连接中的信息(位于箱体的第几组数据，排在第几个）
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.ScanBoardProperty">
+            <summary>
+            接收卡特性参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GammaValue">
+            <summary>
+            当前Gamma值，如果为0xff，则表示当前Gamma表为自定义
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedGammaTable">
+            <summary>
+            红色Gamma表
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenGammaTable">
+            <summary>
+            绿色Gamma表
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueGammaTable">
+            <summary>
+            蓝色Gamma表
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Brightness">
+            <summary>
+            亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedBright">
+            <summary>
+            红分量亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueBright">
+            <summary>
+            蓝色分量亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenBright">
+            <summary>
+            绿色分量亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.VRedBright">
+            <summary>
+            虚拟红分量亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedGain">
+            <summary>
+            红色分量增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueGain">
+            <summary>
+            蓝色分量增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenGain">
+            <summary>
+            绿色分量增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.VRedGain">
+            <summary>
+            虚拟红分量增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsEnableCalibration">
+            <summary>
+            是否使能校正
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CoefSourceType">
+            <summary>
+            当前校正系数的来源
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CorrectionMode">
+            <summary>
+            校正的模式，亮度校正还是色度校正，默认值为色度校正
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsChromaCorrentionLowGray">
+            <summary>
+            低灰度时，是否保留色度校正信息，默认值为保留
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ThreasholdOfPointDetect">
+            <summary>
+            点检阈值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsIrRegular">
+            <summary>
+            当前接收卡带载的箱体是否为不规则结构的
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.StandardLedModuleProp">
+            <summary>
+            代表性的灯板信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.X">
+            <summary>
+            接收卡坐标X
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Y">
+            <summary>
+            接收卡坐标Y
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Width">
+            <summary>
+            接收卡宽度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Height">
+            <summary>
+            接收卡高度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ModuleCols">
+            <summary>
+            接收卡包含的灯板列数，带载不规则箱体时，该参数无效
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ModuleRows">
+            <summary>
+            接收卡包含的灯板行数，带载不规则箱体时，该参数无效
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.PhysicalDataGroupNum">
+            <summary>
+            接收卡物理数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LogicalDataGroupNum">
+            <summary>
+            接收卡逻辑数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ModCascadeType">
+            <summary>
+            灯板级联方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.PointTableData">
+            <summary>
+            接收卡走线数据
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RefNumPerVs">
+            <summary>
+            刷新率
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GrayDepth">
+            <summary>
+            灰度级数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GrayMode">
+            <summary>
+            灰度模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GrayRealize">
+            <summary>
+            灰度实现方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsLightFrom1stGray">
+            <summary>
+            是否一级起辉
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GhostRemoveType">
+            <summary>
+            鬼影余辉去除方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlankUnitNumPerScan">
+            <summary>
+            行消隐时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RowChangePoint">
+            <summary>
+            从消隐期开始数，第几个Unit开始换行
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LightTimeRatio">
+            <summary>
+            实际每个子场点亮时间调整参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LightTime">
+            <summary>
+            每个子场的最大点亮时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ShiftUnitNum">
+            <summary>
+            一组数据每扫带载点数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.PointNumberPerDriver">
+            <summary>
+            一组数据每扫带载点数,该值在通常情况下和ShiftUnitNum一致，在智能设置过程中不一样
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.TotalUnitNum">
+            <summary>
+            每个子场包含基本单元数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DclkUnitCycle">
+            <summary>
+            每个移位时钟周期占用系统时钟数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DclkPhase">
+            <summary>
+            移位时钟相位调整参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DclkHigh">
+            <summary>
+            移位时钟脉宽调整参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DclkHighRatio">
+            <summary>
+            DCLK占空比
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GCLKRate">
+            <summary>
+            每个Gclk周期占用系统时钟数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GCLKPhase">
+            <summary>
+            Gclk相位调整参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GCLKDuty">
+            <summary>
+            Gclk脉宽调整参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CtrlEndPoint">
+            <summary>
+            消隐期间余辉控制信号结束时刻
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.SubFields">
+            <summary>
+            一个刷新分成几部分实现，即几倍换行加速
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.SubFieldPart">
+            <summary>
+            子场数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.OEData">
+            <summary>
+            OE数据
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LowGrayCompensation">
+            <summary>
+            低灰度补偿参数，非PWM芯片有效
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.AddrExtend">
+            <summary>
+            是否使能扭转后的数据，0x05表示使能，其他值表示不使能
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LogicalShiftUnitNum">
+            <summary>
+            表征一组数据一扫串联的像素点数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ColorMatrix">
+            <summary>
+            色彩转换矩阵,可用于箱体颜色或亮度等校正
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.OfflineFrame">
+            <summary>
+            断线画面
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DriverFucntion">
+            <summary>
+            芯片功能描述
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ABCDRollOver">
+            <summary>
+            扫描屏是否轮询换行，消除突兀余辉点
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.LightFlashClose">
+            <summary>
+            接收卡信号指示灯是否关闭
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GclkNumPerScan">
+            <summary>
+            每扫gclk个数，这个参数仅仅对东芝的PWM芯片有效
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.SmartSetMode">
+            <summary>
+            为0x01进入智能设置模式，0x00表示正常工作模式。智能设置过程中用到
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RamAData">
+            <summary>
+            多芯片表A
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RamBData">
+            <summary>
+            多芯片表B
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RamCData">
+            <summary>
+            多芯片表C
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsDExtendMode">
+            <summary>
+            是否D扩展输出
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsSymmetricalOutputMode">
+            <summary>
+            是否对开输出
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedNoCorrectionThreshold">
+            <summary>
+            红色低灰阈值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenNoCorrectionThreshold">
+            <summary>
+            绿色低灰阈值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueNoCorrectionThreshold">
+            <summary>
+            蓝色低灰阈值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.VirRedNoCorrectionThreshold">
+            <summary>
+            虚拟红低灰阈值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedNoCorrectionAttenuation">
+            <summary>
+            红色低灰衰减
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenNoCorrectionAttenuation">
+            <summary>
+            绿色低灰衰减
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueNoCorrectionAttenuation">
+            <summary>
+            蓝色低灰衰减
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.VirRedNoCorrectionAttenuation">
+            <summary>
+            虚拟红低灰衰减
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.TwentyDataGroupEnable">
+            <summary>
+            是否启用20组数据
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GroupSwapEnable">
+            <summary>
+            是否启用数据组交换
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GroupSwapInfo">
+            <summary>
+            接收卡数据组的交换信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Mbi5042GrayEnhanced">
+            <summary>
+            是否优化5042的灰度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CabinetRotateAngle">
+            <summary>
+            箱体旋转角度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsClearGhost">
+            <summary>
+            是否消除下行余辉
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsEnableMonitorRGB">
+            <summary>
+            是否启用监控卡RGBCode
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.MonitorRGBCode">
+            <summary>
+            监控卡的RGBCode
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.SerialDecodeRepeatTimes">
+            <summary>
+            串行译码需要重复输出的次数，默认为1
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Is24DataGroup">
+            <summary>
+            是否为24组数据的模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Is28DataGroup">
+            <summary>
+            是否为28组数据模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsEnableOtherRefreshNumParams">
+            <summary>
+            是否启用接收卡刷新率自适应
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CommonIrCabinetMode">
+            <summary>
+            软件可以计算的某些异型箱的模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsGhostSignalNegation">
+            <summary>
+            是否余辉控制信号取反
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsCloseGhostSignal">
+            <summary>
+            是否关闭余辉控制信号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IsReverseScanOutput">
+            <summary>
+            是否按扫描线的相反顺序输出图像
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.DataGroupOutPutType">
+            <summary>
+            数据组输出模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CurrentRisingTime">
+            <summary>
+            表征驱动芯片输出电流的上升时间，用于调整灯的低灰度响应
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.CurrentRange">
+            <summary>
+            CurrentRange位段表征是驱动芯片的输出电流的范围
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.RedSpeedType">
+            <summary>
+            红色芯片的驱动速度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.GreenSpeedType">
+            <summary>
+            蓝色芯片的驱动速度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.BlueSpeedType">
+            <summary>
+            绿色芯片的驱动速度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.EnableEnhanceFirstScan">
+            <summary>
+            是否启用第一扫偏暗改善
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.FirstScanCompensation">
+            <summary>
+            第一扫偏暗补偿系数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.OtherScanCompenscation">
+            <summary>
+            其他扫偏暗补偿系数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.Chip5152Extend">
+            <summary>
+            MBI5152扩展属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ChipMY9221Extend">
+            <summary>
+            MY9221的扩展属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.MBI515xDeltaT">
+            <summary>
+            MBI515x的低灰度扩展参数1
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.MBI515xDhT">
+            <summary>
+            MBI515x的低灰度扩展参数2
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.IrCabinetProp">
+            <summary>
+            异型箱的构造
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ConvertToBytes(System.Int32,System.Int32)">
+            <summary>
+            将整数按一定的格式转换成字符串(这里按低位在前转换)
+            </summary>
+            <param name="data"></param>
+            <param name="converLen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ScanBoardProperty.ConvertToInt(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将数组转换到整型值
+            </summary>
+            <param name="data">数组</param>
+            <param name="offset">数组字节起始</param>
+            <param name="converLen">转换长度，小于等于4</param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.DriverSpeed">
+            <summary>
+            输出电流反应速度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.IsCurrentBreakUp">
+            <summary>
+            是否电流打散
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.IsInternalOscillator">
+            <summary>
+            是否为内部振荡器
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.IsDriverLED">
+            <summary>
+            输出电流极性选择
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.IsAutoRefreshPicture">
+            <summary>
+            是否自动画面更新
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Common.ChipMY9221ExtendProperty.IsPictrueRepeat">
+            <summary>
+            是否画面重复
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.SenderProperty">
+            <summary>
+            发送卡特性参数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsPWMChip(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            是否为PWM型驱动芯片
+            </summary>
+            <param name="chipType">芯片型号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsSupport(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            当前是否支持该驱动芯片类型
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsPWMAndHavePartNum(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            是否是PWM芯片，并且带有换行倍率
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsSupport5042GrayEnhanced(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            芯片是否支持5042灰度改进模式
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsConfigRegistorConcernWithScanType(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            寄存器参数是否与扫描方式有关，如果有关那么意味着智能设置的过程中，寄存器参数要随扫描数变化而变化
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.GetDetectPointType(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            获取点检支持的检测类型
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsNoCurrentGainButConfig(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            是否是没有电流增益但是需要配置寄存器参数的芯片
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.CanManualAdjustRefreshRate(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ScanType)">
+            <summary>
+            判断芯片是否可以调节刷新率
+            </summary>
+            <param name="chipType"></param>
+            <param name="scanType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.IsSupportScanType(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ScanType)">
+            <summary>
+            判断芯片是否支持某种扫描数
+            </summary>
+            <param name="chipType"></param>
+            <param name="scanType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.ChipInherentProperty.GetSupportScanType(Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            获取芯片支持的扫描数
+            </summary>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Common.DetectPointType">
+            <summary>
+            点检的检测类型
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.ModelIdToNSCarType(System.Int32)">
+            <summary>
+            将ModelID转换成设备类型
+            </summary>
+            <param name="modelID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsSystemController(Nova.LCT.GigabitSystem.Common.NSCardType)">
+            <summary>
+            判读是否卡是否属于控制系统
+            </summary>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsSystemController(System.Int32)">
+            <summary>
+            判读是否卡是否属于控制系统
+            </summary>
+            <param name="modelID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.RealDataGroupToLogical(System.Int32,System.Boolean,System.Boolean,System.Boolean,Nova.LCT.GigabitSystem.Common.ScreenDriveType)">
+            <summary>
+            实际数据组数转换成逻辑数据组数,该重载不支持4开等新模式，及大于16组的对开
+            </summary>
+            <param name="realDataGroup"></param>
+            <param name="isDExtend">是否为D扩展模式（不能与20组数据不同时设置true）</param>
+            <param name="isSymmetricalOutput">是否为对开输出</param>
+            <param name="isTwentyDataGroup">是否为20组数据模式（不能与D扩展同时设置true）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.RealDataGroupToLogical(Nova.LCT.GigabitSystem.Common.ScanBoardProperty)">
+            <summary>
+            实际数据组数转换成逻辑数据组数
+            </summary>
+            <param name="scanBdProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.RealScanModeToLogical(System.Int32)">
+            <summary>
+            实际数据扫描数转换成逻辑扫描数
+            </summary>
+            <param name="realScanMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.HWCoefsToSoftCoefs(System.Byte[],System.UInt16[]@)">
+            <summary>
+            将硬件上4*4的矩阵转换成软件使用的3*3矩阵
+            </summary>
+            <param name="coefsByte"></param>
+            <param name="coefsUInt16"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.SoftCoefsToHWCoefs(System.UInt16[],System.Byte[]@)">
+            <summary>
+            将3*3的校正系数矩阵转化成4*4的矩阵
+            </summary>
+            <param name="coefsUInt16"></param>
+            <param name="coefsByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.ScanCountToScanType(System.Int32)">
+            <summary>
+            通过扫描数获取扫描类型
+            </summary>
+            <param name="scanCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetLanguageString(System.String,System.Collections.Hashtable,System.String@)">
+            <summary>
+            获取资源中的指定文字
+            </summary>
+            <param name="keyStr"></param>
+            <param name="hsTable"></param>
+            <param name="strInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.HWVerIntToString(System.Int32)">
+            <summary>
+            将硬件存储的版本信息转船成字符串
+            </summary>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.BCD2INT(System.Byte)">
+            <summary>
+            将BCD码转换为int型
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.INT2BCD(System.Int32)">
+            <summary>
+            将int型转换为BCD码
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.DataXor(System.Byte[]@,System.Char)">
+            <summary>
+            将数组data中的数据与xor字符进行异或运算
+            </summary>
+            <param name="data"></param>
+            <param name="xor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.Delay(System.Int32,System.Int32)">
+            <summary>
+            延时函数，如果是界面线程，调用该函数可以进行延时，并保证延时期间
+            响应系统的事件
+            </summary>
+            <param name="millSeconds">总的延时事件</param>
+            <param name="divideCount">分多少次延时，没次间隔期间会响应一次系统消息</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.CheckEmailValid(System.String)">
+            <summary>
+            检查email地址是否符合规则
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetScanTypeString(Nova.LCT.GigabitSystem.Common.ScanType,System.Collections.Hashtable)">
+            <summary>
+            扫描方式转换成字符串
+            </summary>
+            <param name="scanType"></param>
+            <param name="hsProtocalTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetDataDirectionString(Nova.LCT.GigabitSystem.Common.DataDirectionType,System.Collections.Hashtable)">
+            <summary>
+            数据方向转换成字符串
+            </summary>
+            <param name="dataDirection"></param>
+            <param name="hsProtocalTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetDecodeTypeString(Nova.LCT.GigabitSystem.Common.DecodeType,System.Collections.Hashtable)">
+            <summary>
+            编码方式转化成字符串
+            </summary>
+            <param name="decodeType"></param>
+            <param name="hsProtocalTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetChipTypeToString(Nova.LCT.GigabitSystem.Common.ChipType,System.Collections.Hashtable)">
+            <summary>
+            将驱动芯片类型转换成对应字符串
+            </summary>
+            <param name="chipType"></param>
+            <param name="hsProtocalTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetOETypeToString(Nova.LCT.GigabitSystem.Common.OEPolarityType,System.Collections.Hashtable)">
+            <summary>
+            OE极性转化成字符串
+            </summary>
+            <param name="oeType"></param>
+            <param name="hsProtocalTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.RectagleCtrl(System.Drawing.Graphics,System.Windows.Forms.Control,System.Drawing.Color,System.Int32,System.Drawing.Size)">
+            <summary>
+            使用指定的颜色取绘制控件的边框
+            </summary>
+            <param name="g"></param>
+            <param name="ctrl"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetLineBias(System.Byte[],System.Int32)">
+            <summary>
+            得到第一扫相对常规扫的第一扫的偏移位置
+            </summary>
+            <param name="realABCDCode"></param>
+            <param name="realScanCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetInherentScanLineList(System.Collections.Generic.List{System.Byte[]}@)">
+            <summary>
+            获取固有扫描线列表
+            </summary>
+            <param name="existentScanLineList"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IntToDataGroupSequence(System.UInt32,System.Byte[]@)">
+            <summary>
+            将整型的数据组顺序数据转换成字节型数据组的顺序
+            </summary>
+            <param name="data"></param>
+            <param name="dataGroupSequence"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IntToABCDCode(System.UInt64,System.Byte[]@)">
+            <summary>
+            将整型的ABCDCode转换成字节型的ABCDCode
+            </summary>
+            <param name="decodeType"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.ByteToRGBCode(System.Byte,System.Byte[]@)">
+            <summary>
+            将Byte型的RGBCode转换成字节型的RGBCode
+            </summary>
+            <param name="rgbCode"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsSupportHGHRMode(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType)">
+            <summary>
+            是否支持灰度改进模式
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsSupportLowGrayQuery(System.Int32,Nova.LCT.GigabitSystem.Common.LowGrayQueryMode)">
+            <summary>
+            是否支持低灰增强模式
+            </summary>
+            <param name="grayScale"></param>
+            <param name="queryMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsChipSimilar(Nova.LCT.GigabitSystem.Common.ChipType,Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            芯片是否相似
+            </summary>
+            <param name="baseChip">作为参照的芯片</param>
+            <param name="compareChip">要与参照芯片作比较的芯片</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetScanSequenceType(System.Byte[])">
+            <summary>
+            判断ABCDCode是顺序的还是倒序的或者都不是
+            </summary>
+            <param name="scanABCDCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetProductInfo(System.String,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            从文件中获取Product信息
+            </summary>
+            <param name="fileName"></param>
+            <param name="productName"></param>
+            <param name="productCompany"></param>
+            <param name="productCopyRight"></param>
+            <param name="companyURLAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.LoadScanProFile(System.String,Nova.LCT.GigabitSystem.Common.ScanBoardProperty@)">
+            <summary>
+            加载接收卡属性文件
+            </summary>
+            <param name="openFileName"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.SaveScanProFile(System.String,Nova.LCT.GigabitSystem.Common.ScanBoardProperty)">
+            <summary>
+            保存接收卡参数到文件
+            </summary>
+            <param name="saveFileName"></param>
+            <param name="scanBdProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.LoadColorRestoreInfoFile(System.String,Nova.LCT.GigabitSystem.Common.ColorRestoreInfo@)">
+            <summary>
+            载入色彩还原的信息
+            </summary>
+            <param name="fileName"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.SaveColorRestoreInfoFile(System.String,Nova.LCT.GigabitSystem.Common.ColorRestoreInfo)">
+            <summary>
+            保存接收卡参数到文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.LoadColorRestoreInfoListFile(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ColorRestoreInfoList}@)">
+            <summary>
+            载入保存的色域信息
+            </summary>
+            <param name="fileName"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.SaveColorRestoreInfoListFile(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ColorRestoreInfoList})">
+            <summary>
+            保存添加的色域信息
+            </summary>
+            <param name="fileName"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.LogicalGammaToRealGamma(System.Byte,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            逻辑gamma（只有gamma值）转换为实际gamma（包含gamma模式）
+            </summary>
+            <param name="logicalGamma"></param>
+            <param name="isCustomGamma"></param>
+            <param name="isContrastStrength"></param>
+            <param name="isModeB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.RealGammaToLogicalGamma(System.Byte,System.Boolean@,System.Boolean@,System.Boolean@)">
+            <summary>
+            实际gamma（包含gamma模式）转换为逻辑gamma（只有gamma值）
+            </summary>
+            <param name="realGamma"></param>
+            <param name="isCustomGamma"></param>
+            <param name="isContrastStrength"></param>
+            <param name="isModeB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetSmartMode(System.Boolean,Nova.LCT.GigabitSystem.Common.ScreenDriveType,Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            获取智能设置过程中的SmartMode的值
+            </summary>
+            <param name="isBeginSmartSet"></param>
+            <param name="screenDriverType"></param>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetIsInDesignMode">
+            <summary>
+            判断是否处于设计器模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.IsSerialDecode(Nova.LCT.GigabitSystem.Common.DecodeType)">
+            <summary>
+            判断译码方式是否为串行译码方式
+            </summary>
+            <param name="decodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetSerialDecodeDefalutBlankTime(Nova.LCT.GigabitSystem.Common.ScanType,System.Byte)">
+            <summary>
+            获取串行译码的默认消隐时间
+            </summary>
+            <param name="scanType"></param>
+            <param name="repeatTimes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetDoorCountFromScanBdInfo(Nova.LCT.GigabitSystem.Common.ScanBoardProperty)">
+            <summary>
+            从接收卡信息中获取对开的数目
+            </summary>
+            <param name="scanBdProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.CaculateModuleSubPartStartPos(System.Byte,System.Byte[],System.Byte[],System.Byte[]@)">
+            <summary>
+            计算灯板每个Part的起始位置
+            </summary>
+            <param name="maxDataGroup"></param>
+            <param name="dataGroup"></param>
+            <param name="DataGroupSequence"></param>
+            <param name="RowsCtrlByDataGroup"></param>
+            <param name="startPositionOfDataGroup"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetPortNumber(System.Int32)">
+            <summary>
+            获取发送卡的网口数目
+            </summary>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Common.CustomTransform.GetPortNumber(Nova.LCT.GigabitSystem.Common.NSCardType)">
+            <summary>
+            获取发送卡的网口数目
+            </summary>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Control.ZoneDivider</name>
+    </assembly>
+    <members>
+        <member name="F:Nova.Control.UC_LoadedZoneDivide.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.InitZone(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            初始化zone信息
+            </summary>
+            <param name="zoneCnt">区域数量</param>
+            <param name="totalNumOfVertical">垂直方向上的totalNum</param>
+            <param name="totalNumOfHorizontal">水平方向上的totalNum</param>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.SetHeightNumber(System.Int32,System.Int32)">
+            <summary>
+            设置列Num
+            </summary>
+            <param name="zoneIndex">区域索引，即窗口显示序号 - 1</param>
+            <param name="colsNum">设置区域的新列Num</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.SetWidthNumber(System.Int32,System.Int32)">
+            <summary>
+            设置行Num
+            </summary>
+            <param name="zoneIndex">区域索引，即窗口显示序号 - 1</param>
+            <param name="rowsNum">设置区域的新行Num</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.GetArrangeRowsAndCols(System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            获取指定排列方式的行列数量
+            </summary>
+            <param name="arrangeIndex">排列方式的索引</param>
+            <param name="rows">指定排列方式的行数</param>
+            <param name="cols">指定排列方式的列数</param>
+            <returns>如果指定的排列方式存在则返回True，则获取对应的rows和cols，否则返回False</returns>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.GetZoneStartNumber(System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            获取指定Zone的StartNum
+            </summary>
+            <param name="zoneIndex">指定Zone的索引</param>
+            <param name="startXNum">指定Zone的StartXNum</param>
+            <param name="startYNum">指定Zone的StartYNum</param>
+            <returns>如果指定索引的Zone存在，则获取它的startXNum和startYNum，并返回True，否则返回False</returns>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.GetArrageCountAddArrangeType">
+            <summary>
+            获取设置区域数量对应的排列方式和排列数量
+            </summary>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.PaintDivideLine">
+            <summary>
+            绘制区域分割线
+            </summary>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.UC_LoadedZoneDivide_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            重绘窗口函数
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.UC_LoadedZoneDivide.PaintNumber">
+            <summary>
+            绘制序号
+            </summary>
+        </member>
+        <member name="T:Nova.Control.ArrangeInfo">
+            <summary>
+            每种zonecount对应的排列方式及其对应的行列数
+            </summary>
+        </member>
+    </members>
+</doc>

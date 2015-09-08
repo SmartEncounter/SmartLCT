@@ -1,0 +1,266 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="clr-namespace:System.Drawing.Drawing2D;assembly=System.Drawing"
+        xmlns:my="clr-namespace:Nova.SmartLCT.SmartLCTControl;assembly=SmartLCTControl" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+        xmlns:local="clr-namespace:Test" 
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:my1="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData" xmlns:Nova_SmartLCT_Behavior="clr-namespace:Nova.SmartLCT.Behavior;assembly=Behavior" mc:Ignorable="d" x:Class="Test.Window1"
+        Title="Window1" Height="532" Width="558">
+	<Window.Resources>
+		<local:MainWindow_VM x:Key="MainWindow_VMDataSource" d:IsDataSource="True"/>
+		<Style x:Key="ButtonFocusVisual">
+			<Setter Property="Control.Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#F3F3F3" Offset="0"/>
+			<GradientStop Color="#EBEBEB" Offset="0.5"/>
+			<GradientStop Color="#DDDDDD" Offset="0.5"/>
+			<GradientStop Color="#CDCDCD" Offset="1"/>
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+		<Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+			<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+			<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Padding" Value="1"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true">
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Microsoft_Windows_Themes:ButtonChrome>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsKeyboardFocused" Value="true">
+								<Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
+							</Trigger>
+							<Trigger Property="ToggleButton.IsChecked" Value="true">
+								<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Foreground" Value="#ADADAD"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="RectangleStyle1" TargetType="{x:Type Rectangle}">
+			<Setter Property="Fill" Value="#FFBA3BAA"/>
+		</Style>
+		<ItemsPanelTemplate x:Key="ItemsPanelTemplate123456">
+			<Canvas Height="250" IsItemsHost="True" Width="250"/>
+		</ItemsPanelTemplate>
+		<Storyboard x:Key="OnMouseDown1"/>
+		<my:MyTemplateSelector x:Key="MyTemplateSelectorDataSource" d:IsDataSource="True"/>
+    
+		<Style x:Key="SmartLCTControlStyle1" TargetType="{x:Type my:SmartLCTControl}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type my:SmartLCTControl}">
+						<ControlTemplate.Resources>
+							<DataTemplate x:Key="DataTemplate_MyLine">
+								<Path Data="M0.5,0.5 L183,0.5 201.5,15 184,31.5 0.5,31.5 z" Fill="#FFBFF7F1" Width ="{Binding Width, Mode=TwoWay}"  Height="{Binding Height, Mode=TwoWay}" Margin="{Binding Margin, Mode=TwoWay}" Stretch="Fill" Stroke="Black" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="0,0.5">
+									<Path.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="{Binding Angle, Mode=TwoWay}"/>
+											<TranslateTransform X="0.28069" Y="8.98665"/>
+										</TransformGroup>
+									</Path.RenderTransform>
+								</Path>
+							</DataTemplate>
+							<DataTemplate x:Key="DataTemplate_MyRectangle">
+                            
+								<!--</Grid>-->
+                        <!--<Grid x:Name="grid" Height="{Binding Height, Mode=TwoWay}" Width="{Binding Width, Mode=TwoWay}" Margin="{Binding Margin, Mode=TwoWay}">-->
+								<Canvas Background="Transparent" Margin="{Binding Margin, Mode=TwoWay}" Height="{Binding Height, Mode=TwoWay}" Width="{Binding Width, Mode=TwoWay}" Visibility="{Binding Visible, Mode=TwoWay}">
+									<my1:MyRectangleControl>
+										
+									</my1:MyRectangleControl>
+									<my1:MyLockButton>
+									
+									</my1:MyLockButton>
+								</Canvas>
+                            
+							</DataTemplate>
+							<DataTemplate x:Key="DataTemplate_MyRectLayer">
+								<Canvas  Height="{Binding Height, Mode=TwoWay}" Width="{Binding Width, Mode=TwoWay}"  Margin="{Binding Margin, Mode=TwoWay}" Visibility="{Binding Visible, Mode=TwoWay}" Background="Transparent">
+									<my1:MyRectLayerControl>
+										
+									</my1:MyRectLayerControl>
+									<my1:MyLockButton>
+										
+									</my1:MyLockButton>
+									<Image Source="/SmartLCTControl;component/Icon/Moving.png" Margin="0,0,20,20" Height="20" Width="20" Visibility="{Binding MovingIconVisible, Mode=TwoWay}">
+										
+									</Image>
+								</Canvas>
+							</DataTemplate>
+							<ItemsPanelTemplate x:Key="ItemsPanelTemplate_MyRectLayer">
+								<Canvas x:Name="MyCanvas"/>
+							</ItemsPanelTemplate>
+							<Style TargetType="{x:Type my1:MyRectangleControl}">
+								<Setter Property="ElementSelectedState" Value="{Binding ElementSelectedState}"/>
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type my1:MyRectangleControl}">
+											<Border Background="{TemplateBinding Background}" BorderThickness="2" BorderBrush="#FF087819" Visibility="{Binding Visible, Mode=TwoWay}" Width ="{Binding Width, Mode=TwoWay}" Height="{Binding Height, Mode=TwoWay}">
+												<Rectangle x:Name ="PART_Rect" Fill="{Binding BackgroundBrush, Mode=TwoWay}"  Width ="{Binding Width, Mode=TwoWay}" Height="{Binding Height, Mode=TwoWay}" Opacity="{Binding Opacity, Mode=TwoWay}"  Visibility="{Binding Visible, Mode=TwoWay}"/>
+											</Border>
+                                  
+											<ControlTemplate.Triggers>
+												<Trigger Property="ElementSelectedState" Value="Selected">
+													<Setter Property="Fill" TargetName="PART_Rect" Value="Yellow"/>
+												</Trigger>
+												<Trigger Property="ElementSelectedState" Value="SpecialSelected">
+													<Setter Property="Fill" TargetName="PART_Rect" Value="Red"/>
+												</Trigger>
+												<Trigger Property="IsMouseOver" Value="True">
+													<Setter Property="Fill" TargetName="PART_Rect" Value="#FF363E43"/>
+												</Trigger>
+											</ControlTemplate.Triggers>
+
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+
+							<Style TargetType="{x:Type my1:MyRectLayerControl}">
+								<Setter Property="ElementSelectedState" Value="{Binding ElementSelectedState}"/>
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type my1:MyRectLayerControl}">
+											<ItemsControl Background="#FFBCE9E4"  x:Name="PART_RectLayer" ItemsSource="{Binding ElementCollection}" ItemsPanel="{DynamicResource ItemsPanelTemplate_MyRectLayer}" BorderBrush="Black"  
+												BorderThickness="{Binding BorderThickness, Mode=TwoWay}"  ItemTemplateSelector="{Binding Mode=OneWay, Source={StaticResource MyTemplateSelectorDataSource}}" Visibility="{Binding Visible, Mode=TwoWay}" Width ="{Binding Width, Mode=TwoWay}" Height="{Binding Height, Mode=TwoWay}"/>
+											<ControlTemplate.Triggers>
+												<Trigger Property="ElementSelectedState" Value="Selected">
+                                                <!--<Setter Property="BorderThickness" TargetName="PART_RectLayer" Value="5"></Setter>-->
+													<Setter Property="BorderBrush" TargetName="PART_RectLayer" Value="Black"/>
+												</Trigger>
+												<Trigger Property="ElementSelectedState" Value="None">
+                                                <!--<Setter Property="BorderThickness" TargetName="PART_RectLayer" Value="5"></Setter>-->
+													<Setter Property="BorderBrush" TargetName="PART_RectLayer" Value="Yellow"/>                                             
+												</Trigger>               
+											</ControlTemplate.Triggers>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+
+							<Style TargetType="{x:Type my1:MyLockButton}">
+								<Setter Property="IsLocked" Value="{Binding IsLocked}"/>
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type my1:MyLockButton}">
+											<Image  Source="/SmartLCTControl;component/Icon/UnLock.png"  Margin="{Binding LockMargin, Mode=TwoWay}" Height="20" Width="20"  x:Name="PART_LockButton" Visibility="{Binding LockVisible, Mode=TwoWay}"/>  
+											<ControlTemplate.Triggers>
+												<Trigger Property="IsLocked" Value="true">
+													<Setter Property="Source" TargetName="PART_LockButton" Value="/SmartLCTControl;component/Icon/Lock.png"/>
+												</Trigger>
+												<Trigger Property="IsLocked" Value="false">
+													<Setter Property="Source" TargetName="PART_LockButton" Value="/SmartLCTControl;component/Icon/UnLock.png"/>
+												</Trigger>
+											</ControlTemplate.Triggers>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+							<!--<Style TargetType="{x:Type localInterface:MyMovingIcon}">
+                            <Setter Property="ParentElement" Value="{Binding ParentElement}"></Setter>
+                            <Setter Property="ZOrder" Value="{Binding ZOrder}"></Setter>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type localInterface:MyMovingIcon}">
+                                        <Image  Source="/SmartLCTControl;component/Icon/Moving.png"  Margin="10,-10,30,20" Height="20" Width="20"  x:Name="PART_MovingIcon" Visibility="{Binding MovingIconVisible,Mode=TwoWay}">
+                                        </Image>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>-->
+
+						</ControlTemplate.Resources>
+						<Border Background="{TemplateBinding Background}"
+							BorderThickness="1" BorderBrush="Black">
+							<ScrollViewer x:Name="MyScrollViewer" Background="White" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" >
+								<Viewbox Stretch="Fill" x:Name="MyViewbox">
+									<ItemsControl Background="#FFA1D3F9"  x:Name="MyItemsControl"  ItemsPanel="{DynamicResource ItemsPanelTemplate_MyRectLayer}" 
+										ItemTemplateSelector="{Binding Mode=OneWay, Source={StaticResource MyTemplateSelectorDataSource}}" Visibility="{Binding Visible, Mode=TwoWay}" />
+								</Viewbox>
+							</ScrollViewer>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+
+
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="Mouse.MouseDown">
+			<BeginStoryboard Storyboard="{StaticResource OnMouseDown1}"/>
+		</EventTrigger>
+	</Window.Triggers>
+    <Grid DataContext="{Binding Source={StaticResource MainWindow_VMDataSource}}">
+        <Path Data="M0.5,0.5 L183,0.5 201.5,15 184,31.5 0.5,31.5 z" Fill="#FFBFF7F1" Height="16" Margin="13,11,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="88">
+    		<Path.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform ScaleY="-1"/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="1.51"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Path.RenderTransform>
+    	</Path>
+        <TabControl Margin="87,378,266,43">
+        	<TabItem Header="TabItem">
+        		<Grid Background="#FFE5E5E5">
+        			<my:SmartLCTControl Margin="0,0,0,101.163" HorizontalAlignment="Left" Width="182"/>
+        		</Grid>
+        	</TabItem>
+        	<TabItem Header="TabItem">
+        		<Grid Background="#FFE5E5E5">
+        			<Grid.RowDefinitions>
+        				<RowDefinition Height="Auto" MinHeight="54.074"/>
+        				<RowDefinition Height="Auto" MinHeight="163.028"/>
+        			</Grid.RowDefinitions>
+        			<Grid.ColumnDefinitions>
+        				<ColumnDefinition Width="24"/>
+        				<ColumnDefinition/>
+        				<ColumnDefinition Width="Auto" MinWidth="267.93"/>
+        				<ColumnDefinition Width="Auto" MinWidth="24.902"/>
+        			</Grid.ColumnDefinitions>
+        			<my:SmartLCTControl Margin="0,0,-12,18.135" d:LayoutOverrides="Width, Height"/>
+        		</Grid>
+        	</TabItem>
+        </TabControl>
+        <GroupBox x:Name="groupBox_portpanel" Header="操作的网口" Margin="143,20,124,163">
+        	<StackPanel>
+        		<GroupBox x:Name="groupBox_Sender" Header="发送卡序号" Height="104.837">
+        			<Popup/>
+        		</GroupBox>
+        		<GroupBox x:Name="groupBox_Port" Header="网口序号" Height="66.837"/>
+        		<GroupBox x:Name="groupBox_ConnectLine" Header="连线" Height="112.837"/>
+        		<Popup/>
+        	</StackPanel>
+        </GroupBox>
+        <UserControl HorizontalAlignment="Left" Height="41" Margin="36,0,0,155" VerticalAlignment="Bottom" Width="58"/>
+        <ToggleButton Content="ToggleButton" HorizontalAlignment="Left" Height="29" Margin="19,163,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="Button" HorizontalAlignment="Right" Height="33" Margin="0,0,131,91" VerticalAlignment="Bottom" Width="134"/>
+    </Grid>
+</Window>

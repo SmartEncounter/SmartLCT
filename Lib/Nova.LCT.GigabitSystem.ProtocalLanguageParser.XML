@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.ProtocalLanguageParser</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser">
+            <summary>
+            协议语言解析类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.#ctor(System.String)">
+            <summary>
+            构造协议语言解析对象
+            </summary>
+            <param name="lanFileName">语言文件全路径名</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetProtocalEnumParseString(System.String)">
+            <summary>
+            获取协议枚举库中格枚举的解析字符串
+            </summary>
+            <param name="interfaceName">枚举的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetProtocalParseString(System.String)">
+            <summary>
+            获得协议接口的解析字符串
+            </summary>
+            <param name="interfaceName">协议接口</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetPackageResultInfo(Nova.Message.Common.PackageBase)">
+            <summary>
+            请求包结果字符串
+            </summary>
+            <param name="package">请求包对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetPackageResultString(Nova.Message.Common.PackageResults)">
+            <summary>
+            获得包请求结果字符串
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetComResultString(Nova.IO.Port.CommResults)">
+            <summary>
+            获得串口处理结果字符串
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Language.ProtocalLanguageParser.GetAckResultString(Nova.LCT.GigabitSystem.Common.AckResults)">
+            <summary>
+            获得ACK结果字符串
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

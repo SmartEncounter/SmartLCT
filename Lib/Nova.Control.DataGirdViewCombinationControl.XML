@@ -1,0 +1,803 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Control.DataGirdViewCombinationControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.DataGridViewRowsChangeEvent">
+            <summary>
+            行改变时触发该事件
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.DataGridViewSelectEvent">
+            <summary>
+            选中的行改变时触发该事件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            重绘
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnSizeChanged(System.EventArgs)">
+            <summary>
+            大小改变
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnRowsAdded(System.Windows.Forms.DataGridViewRowsAddedEventArgs)">
+            <summary>
+            添加行
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnRowsRemoved(System.Windows.Forms.DataGridViewRowsRemovedEventArgs)">
+            <summary>
+            移除行
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标点下
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseEnter(System.EventArgs)">
+            <summary>
+            鼠标进入
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseLeave(System.EventArgs)">
+            <summary>
+            鼠标离开
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标抬起
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标点击
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标双击
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标移动
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnRowHeadersWidthChanged(System.EventArgs)">
+            <summary>
+            行头宽改变
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.OnRowHeaderMouseClick(System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            鼠标在行头点击时
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.DrawRowHead(System.Drawing.Graphics)">
+            <summary>
+            绘制行头，可重载
+            </summary>
+            <param name="graphics"></param>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDRowHeadMouseDown">
+            <summary>
+            鼠标在列头点下时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseDoubleClick">
+            <summary>
+            鼠标双击控件时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseMove">
+            <summary>
+            鼠标移动时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseClick">
+            <summary>
+            鼠标点击时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseEnter">
+            <summary>
+            鼠标进入时触发改事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseUp">
+            <summary>
+            鼠标抬起时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.TDMouseLeave">
+            <summary>
+            鼠标离开时触发该事件
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.IsSelected">
+            <summary>
+            获取和设置是否选中
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.nIndex">
+             <summary>
+            获取和设置当前的索引
+             </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.RowHeadValue">
+            <summary>
+            获取和设置行头值
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.DownColor">
+            <summary>
+             获取和设置鼠标按下行头的边框颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewControl.RowHeadColor">
+            <summary>
+            获取和设置行标题的背景颜色
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DeleteEventHandler">
+            <summary>
+            删除指定DataGirdViewControl的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.TDDeleteEventArgs">
+            <summary>
+            删除指定DataGirdViewControl事件类
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.TDDeleteEventArgs.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="rowHeadValue"></param>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.TDDeleteEventArgs.RowHeadValue">
+            <summary>
+            DataGirdViewControl的行头值
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGridViewRowsChangeEventHandle">
+            <summary>
+            行改变委托
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGridViewSelectEventHandle">
+            <summary>
+            选中改变的委托
+            </summary>
+            <param name="dataGridViewControl"></param>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.SeperatorBar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.OnSeperatorBarMove(System.Object,Nova.Control.DataGirdViewCombinationControl.SeperatorBarEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.BarMove">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.BarColor">
+            <summary>
+            分隔条的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.SeperatorBar.BarMoveEventHandle">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.SeperatorBarEventArgs">
+            <summary>
+            分割条鼠标移动事件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.SeperatorBarEventArgs.#ctor(System.Int32,System.Int32,System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="oldx"></param>
+            <param name="oldy"></param>
+            <param name="mousebuttons"></param>
+            <param name="mouseclick"></param>
+            <param name="mousex"></param>
+            <param name="mousey"></param>
+            <param name="mousedelta"></param>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.SeperatorBarEventArgs.oldLocationX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.SeperatorBarEventArgs.oldLocationY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination">
+            <summary>
+            多DataGirdView组合控件
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.dataGridView_colHead">
+            <summary>
+            列头
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.dataGridView_scroll">
+            <summary>
+            水平滚动条
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.AddDGVControl(Nova.Control.DataGirdViewCombinationControl.DataGridViewControl)">
+            <summary>
+            增加DataGridViewControl
+            </summary>
+            <param name="DGVControl">DataGridViewControl</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.AddDGVControl(Nova.Control.DataGirdViewCombinationControl.DataGridViewControl,System.Int32@)">
+            <summary>
+            带返回值的增加DataGridViewControl
+            </summary>
+            <param name="DGVControl">DataGridViewControl</param>
+            <param name="index">添加处的位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.InsertDGVControl(Nova.Control.DataGirdViewCombinationControl.DataGridViewControl,System.Int32)">
+            <summary>
+            插入DataGridViewControl
+            </summary>
+            <param name="DGVControl">DataGridViewControl</param>
+            <param name="index">插入的位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.ModifyDGVCRowHeadValue(System.Int32,System.String,System.Int32@)">
+            <summary>
+            修改指定位置的DataGridViewControl行头内容
+            </summary>
+            <param name="index">DataGridViewControl的位置</param>
+            <param name="rowHeadValue">DataGridViewControl行头的值</param>
+            <param name="newIndex">新的位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.GetDGVCRowHeadValue(System.Int32,System.String@)">
+            <summary>
+            获取指定位置的DataGridViewControl行头的值
+            </summary>
+            <param name="index">索引</param>
+            <param name="rowHeadValue">返回的DataGridViewControl行头的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.GetDGVCSelectRows(System.Int32@,System.Windows.Forms.DataGridViewSelectedRowCollection@)">
+            <summary>
+            获取选中的DataGridViewControl以及其中的行
+            </summary>
+            <param name="DataGridViewControlIndex"></param>
+            <param name="SelectedRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.RemoveDGVCByIndex(System.Int32)">
+            <summary>
+            删除DataGridViewControl
+            </summary>
+            <param name="index">要删除的DataGridViewControl的索引</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.AddColumn(Nova.Control.DataGirdViewCombinationControl.ColumnsTypes,System.String,System.Int32,System.Windows.Forms.DataGridViewAutoSizeColumnMode)">
+            <summary>
+            增加列
+            </summary>
+            <param name="columnsType">要添加列的类型</param>
+            <param name="colName">列名</param>
+            <param name="width">列宽</param>
+            <param name="mode">列的填充方式</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.AddColumn(Nova.Control.DataGirdViewCombinationControl.ColumnsTypes,System.String,System.Int32,System.String,System.Windows.Forms.DataGridViewAutoSizeColumnMode)">
+            <summary>
+            增加列
+            </summary>
+            <param name="columnsType">要添加列的类型</param>
+            <param name="colName">列名</param>
+            <param name="width">列宽</param>
+            <param name="datapropertyname">DataPropertyName</param>
+            <param name="mode">列的填充方式</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.InsertColumn(System.Int32,Nova.Control.DataGirdViewCombinationControl.ColumnsTypes,System.String,System.Int32,System.Windows.Forms.DataGridViewAutoSizeColumnMode)">
+            <summary>
+            插入列
+            </summary>
+            <param name="index">插入的位置</param>
+            <param name="columnsType">插入列的类型</param>
+            <param name="colName">列名</param>
+            <param name="width">列宽</param>
+            <param name="mode">列调整模式</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.InsertColumn(System.Int32,Nova.Control.DataGirdViewCombinationControl.ColumnsTypes,System.String,System.Int32,System.String,System.Windows.Forms.DataGridViewAutoSizeColumnMode)">
+            <summary>
+            插入列
+            </summary>
+            <param name="index">插入的位置</param>
+            <param name="columnsType">插入列的类型</param>
+            <param name="colName">列名</param>
+            <param name="width">列宽</param>
+            <param name="datapropertyname">DataPropertyName</param>
+            <param name="mode">列调整模式</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.RemoveOneColumn(System.Int32)">
+            <summary>
+            删除某列
+            </summary>
+            <param name="SelectIndex">要删除的列的索引</param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.SetDGVCColHeadColumnStyle(System.Int32)">
+            <summary>
+            设值列头的某列的填充方式
+            </summary>
+            <param name="colindex"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.SetDGVCColumnStyle(System.Int32,System.Int32)">
+            <summary>
+            设值指定的某个DataGridViewControl的某列的填充方式
+            </summary>
+            <param name="DGVCIndex"></param>
+            <param name="colIndex"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnRowHeadMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标在行头移动函数
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+             鼠标移动事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标双击事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标单击事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            鼠标进入事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标弹起事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.OnDGVCMouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            鼠标弹起事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.InitDGVEvent(Nova.Control.DataGirdViewCombinationControl.DataGridViewControl)">
+            <summary>
+            初始化DGVC控件
+            </summary>
+            <param name="dgv"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.RowHeadSort">
+            <summary>
+            行头排序
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.dataGridView_colHead_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            处理没列的排序
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.dataGridView_colHead_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            处理行头的排序
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCelete">
+            <summary>
+            删除某一DataGridView时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCEmptyMouseDown">
+            <summary>
+            鼠标单击控件的空白处时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCEmptyDoubleClick">
+            <summary>
+            鼠标鼠标双击控件空白处时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCKeyDown">
+            <summary>
+            键盘按键点下的时候触发该事件
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.ListDGVControls">
+            <summary>
+            获取添加所有的DataGridViewControl控件
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.ListDataColumn">
+            <summary>
+            获取和设置所有的列
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.IsOrder">
+            <summary>
+            是否支持排序
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.ReadOnly">
+            <summary>
+            设置控件ReadOnly属性
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.TDRowHeadWidth">
+            <summary>
+            获取或设置控件行头的宽度
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.ColumnHeadDGV">
+            <summary>
+            列头DGV
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.SelectDGVCIndex">
+            <summary>
+            获取选中的DataGridViewControl的索引
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCRowHeadMouseDown">
+            <summary>
+            在表头单击右键时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseMove">
+            <summary>
+            鼠标移动触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseDoubleClick">
+            <summary>
+            鼠标双击事件触该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseClick">
+            <summary>
+            鼠标单击事件触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseEnter">
+            <summary>
+            鼠标进入事件触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseUp">
+            <summary>
+            鼠标弹起事件触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DGVCMouseLeave">
+            <summary>
+            鼠标离开触发该事件
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DataGirdViewCombinationControls">
+            <summary>
+            多DataGirdView组合控件包含的属性
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DataGirdViewCombinationControls.RowHeadValue">
+            <summary>
+            行头的值
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DataGirdViewCombinationControls.sepBarDataGridView">
+            <summary>
+            分割条
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGirdViewCombination.DataGirdViewCombinationControls.dataGridView">
+            <summary>
+            行头所对应的DataGridViewControl
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox">
+            <summary>
+            Combox列
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            重载重绘事件
+            </summary>
+            <param name="pe"></param>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.rowIndex">
+            <summary>
+            列索引
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.dataGridView">
+            <summary>
+            dataGridView对象
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.valueChanged">
+            <summary>
+            值是否改变
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.OnSelectedValueChanged(System.EventArgs)">
+            <summary>
+            重写引发 System.Windows.Forms.ListControl.SelectedValueChanged 事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.OnTextChanged(System.EventArgs)">
+            <summary>
+            重写引发 System.Windows.Forms.Control.TextChanged 事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)">
+            <summary>
+            获取控件的Text值
+            </summary>
+            <param name="context">错误上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            编辑键盘
+            </summary>
+            <param name="key"></param>
+            <param name="dataGridViewWantsInputKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.PrepareEditingControlForEdit(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="selectAll"></param>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            设置样式
+            </summary>
+            <param name="dataGridViewCellStyle"></param>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingPanelCursor">
+            <summary>
+            在Cell被编辑的时候光标显示
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingControlDataGridView">
+            <summary>
+            获取或设置所在的DataGridView
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingControlFormattedValue">
+            <summary>
+            获取或设置格式化后的值
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.RepositionEditingControlOnValueChange">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingControlRowIndex">
+            <summary>
+            控件所在行
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditingCombox.EditingControlValueChanged">
+            <summary>
+            是否值发生了变化
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditComboxCell">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditComboxCell.InitializeEditingControl(System.Int32,System.Object,System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="initialFormattedValue"></param>
+            <param name="dataGridViewCellStyle"></param>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditComboxCell.EditType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditComboxCell.ValueType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nova.Control.DataGirdViewCombinationControl.DataGridViewEditComboxCell.DefaultNewRowValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes">
+            <summary>
+            列的类型
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.TextBoxCol">
+            <summary>
+            文本列
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.ButtonCol">
+            <summary>
+            按钮列
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.CheckBoxCol">
+            <summary>
+            复选框列
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.ComboBoxCol">
+            <summary>
+            下拉框列
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.EditComboxCol">
+            <summary>
+            可编辑下拉框列
+            </summary>
+        </member>
+        <member name="F:Nova.Control.DataGirdViewCombinationControl.ColumnsTypes.ImageCol">
+            <summary>
+            图片列
+            </summary>
+        </member>
+    </members>
+</doc>

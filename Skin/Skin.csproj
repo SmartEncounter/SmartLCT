@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E5713C3-16B8-4A68-9635-3203DA825678}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nova.SmartLCT.Skin</RootNamespace>
+    <AssemblyName>Nova.SmartLCT.Skin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BlueMode\BlueMood.Color.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlueMode\BlueMood.UI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlueMode\CustomWindowStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RedMode\RedMood.Color.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RedMode\RedMood.UI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\Close.png" />
+    <Resource Include="Image\BlueMode\Disable\max.png" />
+    <Resource Include="Image\BlueMode\Disable\min.png" />
+    <Resource Include="Image\BlueMode\Disable\normal.gif" />
+    <Resource Include="Image\BlueMode\Normal\BottomAlignment.png" />
+    <Resource Include="Image\BlueMode\Normal\CancelLevel.png" />
+    <Resource Include="Image\BlueMode\Normal\CancelPlumb.png" />
+    <Resource Include="Image\BlueMode\Normal\ClearLine.png" />
+    <Resource Include="Image\BlueMode\Normal\Close.png" />
+    <Resource Include="Image\BlueMode\Normal\Copy.png" />
+    <Resource Include="Image\BlueMode\Normal\Cut.png" />
+    <Resource Include="Image\BlueMode\Normal\Decrease.png" />
+    <Resource Include="Image\BlueMode\Normal\Delete.png" />
+    <Resource Include="Image\BlueMode\Normal\Increase.png" />
+    <Resource Include="Image\BlueMode\Normal\LeftAlignment.png" />
+    <Resource Include="Image\BlueMode\Normal\Lock.png" />
+    <Resource Include="Image\BlueMode\Normal\L_B_H.png" />
+    <Resource Include="Image\BlueMode\Normal\L_B_V.png" />
+    <Resource Include="Image\BlueMode\Normal\L_T_H.png" />
+    <Resource Include="Image\BlueMode\Normal\L_T_V.png" />
+    <Resource Include="Image\BlueMode\Normal\ManualConnectLine.png" />
+    <Resource Include="Image\BlueMode\Normal\max.png" />
+    <Resource Include="Image\BlueMode\Normal\min.png" />
+    <Resource Include="Image\BlueMode\Normal\New.png" />
+    <Resource Include="Image\BlueMode\Normal\Open.png" />
+    <Resource Include="Image\BlueMode\Normal\Paste.png" />
+    <Resource Include="Image\BlueMode\Normal\ReDo.png" />
+    <Resource Include="Image\BlueMode\Normal\RightAlignment.png" />
+    <Resource Include="Image\BlueMode\Normal\R_B_H.png" />
+    <Resource Include="Image\BlueMode\Normal\R_B_V.png" />
+    <Resource Include="Image\BlueMode\Normal\R_T_H.png" />
+    <Resource Include="Image\BlueMode\Normal\R_T_V.png" />
+    <Resource Include="Image\BlueMode\Normal\Save.png" />
+    <Resource Include="Image\BlueMode\Normal\SendToHW.png" />
+    <Resource Include="Image\BlueMode\Normal\TopAlignment.png" />
+    <Resource Include="Image\BlueMode\Normal\UnDo.png" />
+    <Resource Include="Image\BlueMode\Normal\UnLock.png" />
+    <Resource Include="Image\BlueMode\Normal\Visibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\BottomAlignment.png" />
+    <Resource Include="Image\BlueMode\Selecte\CancelLevel.png" />
+    <Resource Include="Image\BlueMode\Selecte\CancelPlumb.png" />
+    <Resource Include="Image\BlueMode\Selecte\ClearLine.png" />
+    <Resource Include="Image\BlueMode\Selecte\Close.png" />
+    <Resource Include="Image\BlueMode\Selecte\Copy.png" />
+    <Resource Include="Image\BlueMode\Selecte\Cut.png" />
+    <Resource Include="Image\BlueMode\Selecte\Decrease.png" />
+    <Resource Include="Image\BlueMode\Selecte\Delete.png" />
+    <Resource Include="Image\BlueMode\Selecte\Increase.png" />
+    <Resource Include="Image\BlueMode\Selecte\LeftAlignment.png" />
+    <Resource Include="Image\BlueMode\Selecte\Lock.png" />
+    <Resource Include="Image\BlueMode\Selecte\L_B_H.png" />
+    <Resource Include="Image\BlueMode\Selecte\L_B_V.png" />
+    <Resource Include="Image\BlueMode\Selecte\L_T_H.png" />
+    <Resource Include="Image\BlueMode\Selecte\L_T_V.png" />
+    <Resource Include="Image\BlueMode\Selecte\max.png" />
+    <Resource Include="Image\BlueMode\Selecte\min.png" />
+    <Resource Include="Image\BlueMode\Selecte\New.png" />
+    <Resource Include="Image\BlueMode\Selecte\Open.png" />
+    <Resource Include="Image\BlueMode\Selecte\Paste.png" />
+    <Resource Include="Image\BlueMode\Selecte\Redo.png" />
+    <Resource Include="Image\BlueMode\Selecte\RightAlignment.png" />
+    <Resource Include="Image\BlueMode\Selecte\R_B_H.png" />
+    <Resource Include="Image\BlueMode\Selecte\R_B_V.png" />
+    <Resource Include="Image\BlueMode\Selecte\R_T_H.png" />
+    <Resource Include="Image\BlueMode\Selecte\R_T_V.png" />
+    <Resource Include="Image\BlueMode\Selecte\Save.png" />
+    <Resource Include="Image\BlueMode\Selecte\SendToHW.png" />
+    <Resource Include="Image\BlueMode\Selecte\TopAlignment.png" />
+    <Resource Include="Image\BlueMode\Selecte\UnDo.png" />
+    <Resource Include="Image\BlueMode\Selecte\UnLock.png" />
+    <Resource Include="Image\BlueMode\Selecte\Visibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\BottomAlignment.png" />
+    <Resource Include="Image\BlueMode\Disable\CancelLevel.png" />
+    <Resource Include="Image\BlueMode\Disable\CancelPlumb.png" />
+    <Resource Include="Image\BlueMode\Disable\ClearLine.png" />
+    <Resource Include="Image\BlueMode\Disable\Copy.png" />
+    <Resource Include="Image\BlueMode\Disable\Cut.png" />
+    <Resource Include="Image\BlueMode\Disable\Delete.png" />
+    <Resource Include="Image\BlueMode\Disable\Hidden.png" />
+    <Resource Include="Image\BlueMode\Disable\LeftAlignment.png" />
+    <Resource Include="Image\BlueMode\Disable\Lock.png" />
+    <Resource Include="Image\BlueMode\Disable\L_B_H.png" />
+    <Resource Include="Image\BlueMode\Disable\L_B_V.png" />
+    <Resource Include="Image\BlueMode\Disable\L_T_H.png" />
+    <Resource Include="Image\BlueMode\Disable\L_T_V.png" />
+    <Resource Include="Image\BlueMode\Disable\Paste.png" />
+    <Resource Include="Image\BlueMode\Disable\ReDo.png" />
+    <Resource Include="Image\BlueMode\Disable\RightAlignment.png" />
+    <Resource Include="Image\BlueMode\Disable\R_B_H.png" />
+    <Resource Include="Image\BlueMode\Disable\R_B_V.png" />
+    <Resource Include="Image\BlueMode\Disable\R_T_H.png" />
+    <Resource Include="Image\BlueMode\Disable\R_T_V.png" />
+    <Resource Include="Image\BlueMode\Disable\TopAlignment.png" />
+    <Resource Include="Image\BlueMode\Disable\UnDo.png" />
+    <Resource Include="Image\BlueMode\Disable\UnLock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\DeleteScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\Decrease.png" />
+    <Resource Include="Image\BlueMode\Disable\Increase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\New.png" />
+    <Resource Include="Image\BlueMode\Disable\Open.png" />
+    <Resource Include="Image\BlueMode\Disable\Save.png" />
+    <Resource Include="Image\BlueMode\Disable\SendToHW.png" />
+    <Resource Include="Image\BlueMode\Disable\Visibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\Hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\Hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\Moving.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\EqualHeight.png" />
+    <Resource Include="Image\BlueMode\Normal\EqualWidth.png" />
+    <Resource Include="Image\BlueMode\Normal\Fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\RectArrow.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\ManualConnectLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\ManualConnectLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\Add.png" />
+    <Resource Include="Image\BlueMode\Normal\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\move.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\SmartLCTProjectPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\OriginalSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\OriginalSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\OriginalSize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\DeleteScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\End.png" />
+    <Resource Include="Image\BlueMode\Normal\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\Add.png" />
+    <Resource Include="Image\BlueMode\Disable\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\Add.png" />
+    <Resource Include="Image\BlueMode\Selecte\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Behavior\Behavior.csproj">
+      <Project>{9A24B5AD-CD42-4FBA-BB4F-FEF08CCFEED9}</Project>
+      <Name>Behavior</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\Wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Disable\normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Selecte\normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\Screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\BlueMode\Normal\noConnect.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>Protocol_Interface</Name>
+    <Controls>
+      <Control name="ReadDeviceType" text="Ler o tipo de equipamento" />
+      <Control name="ReadCompanyID" text="Ler o ID de empresa" />
+      <Control name="ReadControllerModelId" text="Ler o modelo de cartão enviado&#xA;" />
+      <Control name="ReadCommunicationProtocol" text="Ler a edição do protocolo de comunicação&#xA;" />
+      <Control name="ReadControllerSnHigh" text="Ler o nº de Sn de cartão enviado" />
+      <Control name="SetControllerSnHigh" text="Configurar o nº de Sn de cartão enviado" />
+      <Control name="ReadSortOrder" text="Ler a sequência" />
+      <Control name="SetSortOrder" text="Configurar a sequência" />
+      <Control name="ReadSaveSendCardsParameters" text="Ler o valor de parâmetro de cartão enviado de conservação" />
+      <Control name="SetSaveSendCardsParameters" text="Conservar o parâmetro de cartão enviado" />
+      <Control name="ReadReturnFactoryValues" text="Ler o valor de retorna das configurações de fábrica" />
+      <Control name="SetReturnFactoryValues" text="Retornar as configurações de fábrica" />
+      <Control name="ReadTestPoint" text="Ler o ponto de teste" />
+      <Control name="SetTestPoint" text="Enviar o ponto de teste" />
+      <Control name="ReadControllerPhysical" text="Ler o endereço de cartão enviado" />
+      <Control name="ReadTemperature" text="Ler a temperatura de cartão enviado" />
+      <Control name="ReadHumidity" text="Ler a umidade de cartão enviado" />
+      <Control name="ReadFan" text="Ler o estado de ventilador de cartão enviado" />
+      <Control name="SetFieldRateMode" text="Configurar o modo de frequência de campo&#xA;" />
+      <Control name="ReadFieldRateMode" text="Ler o modo de frequência de campo" />
+      <Control name="ReadFieldRate" text="Ler a frequência de campo" />
+      <Control name="SetFieldRate" text="Configurar a frequência de campo " />
+      <Control name="ReadAudioControl" text="Ler o controle vocal de cartão enviado" />
+      <Control name="SetAudioControl" text="Enviar o controle vocal de cartão enviado" />
+      <Control name="ReadIoControl" text="Ler o controle de IO de cartão enviado" />
+      <Control name="SetIoControl" text="Enviar o controle de IO de cartão enviado" />
+      <Control name="ReadSenderBrightnessLux" text="Ler o valor de sonda óptica de cartão enviado" />
+      <Control name="ReadRtco" text="Ler o relógio de cartão enviado " />
+      <Control name="SetRtco" text="Configurar o relógio de cartão enviado" />
+      <Control name="ReadDVI0FieldRate" text="Ler a frequência de campo de DVI0&#xA;" />
+      <Control name="ReadDVI1FieldRate" text="Ler a frequência de campo de DVI1&#xA;" />
+      <Control name="ReadMasterOrSlave" text="Ler as informações redundantes" />
+      <Control name="SetMasterOrSlave" text="Enviar as informações redundantes" />
+      <Control name="ReadHoldTime" text="Ler o tempo de retenção de monitor iniciado&#xA;" />
+      <Control name="SetHoldTime" text="Configurar o tempo de retenção de monitor iniciado" />
+      <Control name="ReadDviMode" text="Ler o modo de DVI" />
+      <Control name="SetDviMode" text="Configurar o modo de DVI" />
+      <Control name="ReadDviSelect" text="Ler o DVI selecionado" />
+      <Control name="SetDviSelect" text="Configurar o DVI selecionado" />
+      <Control name="ReadDviWidth" text="Ler a largura de DVI" />
+      <Control name="SetDviWidth" text="Configurar a largura de DVI" />
+      <Control name="ReadDviHeight" text="Ler a largura de DVI" />
+      <Control name="SetDviHeight" text="Configurar a largura de DVI" />
+      <Control name="ReadDviOffsetX" text="Ler a deslocação X de DVI" />
+      <Control name="SetDviOffsetX" text="Configurar a deslocação X de DVI" />
+      <Control name="ReadDviOffsetY" text="Ler a deslocação Y de DVI" />
+      <Control name="SetDviOffsetY" text="Configurar a deslocação Y de DVI" />
+      <Control name="ReadDvi1Dvi0OffsetX" text="Ler a deslocação X de DVI1 relativa a DVI0" />
+      <Control name="SetDvi1Dvi0OffsetX" text="Configurar a deslocação X de DVI1 relativa a DVI0" />
+      <Control name="ReadDvi1Dvi0OffsetY" text="Ler a deslocação Y de DVI1 relativa a DVI0" />
+      <Control name="SetDvi1Dvi0OffsetY" text="Configurar a deslocação Y de DVI1 relativa a DVI0" />
+      <Control name="ReadPortEnable" text="Ler o sinal habilitado de rede de cartão enviado" />
+      <Control name="SetPortEnable" text="Configurar o sinal habilitado de rede de cartão enviado&#xA;" />
+      <Control name="ReadPortWidth" text="Ler a lartura de rede de cartão enviado" />
+      <Control name="SetPortWidth" text="Configurar a largura de rede de cartão enviado" />
+      <Control name="ReadPortHeight" text="Ler a altura de rede de cartão enviado" />
+      <Control name="SetPortHeight" text="Configurar a altura de rede de cartão enviado" />
+      <Control name="ReadPortOffsetX" text="Ler a deslocação X de rede de cartão enviado" />
+      <Control name="SetPortOffsetX" text="Configurar a deslocação X de rede de cartão enviado" />
+      <Control name="ReadPortOffsetY" text="Ler a deslocação Y de rede de cartão enviado" />
+      <Control name="SetPortOffsetY" text="Configurar a deslocação Y de rede de cartão enviado" />
+      <Control name="ReadEthernetPortScannerX" text="Ler a coordenada X de cartão recebido" />
+      <Control name="SetEthernetPortScannerX" text="Configurar a coordenada X de cartão recebido" />
+      <Control name="ReadEthernetPortScannerY" text="Ler a coordenada Y de cartão recebido" />
+      <Control name="SetEthernetPortScannerY" text="Configurar a coordenada Y de cartão recebido" />
+      <Control name="ReadEthernetPortScannerXY" text="Ler as coordenada X, Y de cartão recebido" />
+      <Control name="SetEthernetPortScannerXY" text="Configurar as coordenada X, Y de cartão recebido" />
+      <Control name="ReadNumberOfCardOrScanBoardInPort" text="Ler a quantidade de cartão recebido de carga de rede" />
+      <Control name="SetNumberOfCardOrScanBoardInPort" text="Configurar a quantidade de cartão recebido de carga de rede" />
+      <Control name="ReadVirtualEnable" text="Ler o sinal virtual de permissão" />
+      <Control name="SetVirtualEnable" text="Configurar o sinal virtual de permissão" />
+      <Control name="ReadDisplayMode" text="Ler o modo de mostra" />
+      <Control name="ReadHDEnable" text="Ler o sinal habilitado de HD" />
+      <Control name="SetHDEnable" text="Configurar o sinal habilitado de HD" />
+      <Control name="ReadSender_McuProgramLength" text="Ler o comprimento do programa de microcontrolador de chip único&#xA;&#xA;" />
+      <Control name="SetSender_McuProgramLength" text="Configurar o comprimento do programa de microcontrolador de chip único" />
+      <Control name="ReadSender_McuProgramEdition" text="Ler a edição do programa de microcontrolador de chip único" />
+      <Control name="SetSender_McuProgramEdition" text="Configurar a edição do programa de microcontrolador de chip único" />
+      <Control name="ReadSender_McuProgramRemarks" text="Ler a nota do programa de microcontrolador de chip único" />
+      <Control name="SetSender_McuProgramRemarks" text="Configurar a nota do programa de microcontrolador de chip único" />
+      <Control name="ReadSender_Mcu" text="Ler os dados do programa de microcontrolador de chip único" />
+      <Control name="SetSender_Mcu" text="Enviar os documentos do programa de microcontrolador de chip único" />
+      <Control name="SetSender_Reset" text="Repor o programa de microcontrolador de chip único" />
+      <Control name="SetSender_EncryptHandShake" text="Renovar a ligação do programa de microcontrolador de chip único" />
+      <Control name="SetSender_McuUpdateProgrammFinish" text="Terminar a renovação do programa de microcontrolador de chip único" />
+      <Control name="ReadSender_FPGAProgramLength" text="Ler o comprimento do programa FPGA" />
+      <Control name="SetSender_FPGAProgramLength" text="Configurar o comprimento do programa FPGA" />
+      <Control name="ReadSender_FPGAProgramEdition" text="Ler a edição de programa FPGA" />
+      <Control name="SetSender_FPGAProgramEdition" text="Configurar a edição do programa FPGA" />
+      <Control name="ReadSender_FPGAProgramRemarks" text="Ler a nota do programa FPGA" />
+      <Control name="SetSender_FPGAProgramRemarks" text="Configurar a nota do programa FPGA" />
+      <Control name="ReadSender_FPGA" text="Ler os dados do programa FPGA" />
+      <Control name="SetSender_FPGA" text="Enviar o documento do programa FPGA" />
+      <Control name="ReadSender_SoftwareSpace" text="Ler os dados no espaço de software" />
+      <Control name="SetSender_SoftwareSpace" text="Escrever os dados no espaço de software" />
+      <Control name="ReadSender_EDIDSpace" text="Ler os dados de EDID" />
+      <Control name="SetSender_EDIDSpace" text="Escrever os dados de EDID" />
+      <Control name="ReadSender_AuthorizeTime" text="Ler o horário autorizado de cartão enviado" />
+      <Control name="SetSender_AuthorizeTime" text="Configurar o horário autorizado de cartão enviado" />
+      <Control name="ReadSender_AuthorizePassward" text="Ler a senha autorizada de cartão enviado" />
+      <Control name="SetSender_AuthorizePassward" text="Configurar a senha autorizada de cartão enviado" />
+      <Control name="ReadSender_RedGammaTable" text="Ler a tabela de Gamma" />
+      <Control name="SetSender_RedGammaTable" text="Configurar a tabela de Gamma" />
+      <Control name="ReadSender_GreenGammaTable" text="Ler a tabela de Gamma" />
+      <Control name="SetSender_GreenGammaTable" text="Configurar a tabela de Gamma" />
+      <Control name="ReadSender_BlueGammaTable" text="Ler a tabela de Gamma" />
+      <Control name="SetSender_BlueGammaTable" text="Configurar a tabela de Gamma" />
+      <Control name="ReadScanCardModle" text="Ler o ID de cartão recebido" />
+      <Control name="ReadScanCardGoldenFPGAProgramVerion" text="Ler a edição do programa Glden de cartão recebido" />
+      <Control name="ReadAttachedMonitorCardExist" text="Inspecionar se existe o cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadAttachedMonitorCardModle" text="Ler o Modle ID de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadAttachedMonitorCardProgramVersion" text="Ler o edição de programa de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="SetScreenEncrypt" text="Cartão de criptografia de hardware&#xA;" />
+      <Control name="SetScreenDecrypt" text="Decodificação de cartão recebido" />
+      <Control name="SetCoefficientStore2SpiFlash" text="Salve os dados de calibração no cartão recebido" />
+      <Control name="SetCoefficientStore2IIcFlash" text="Salve os dados de calibração no placa de luz" />
+      <Control name="SetCoefficientReloadFromSpiFlash" text="Carregar os dados de calibração deste de cartão recebido" />
+      <Control name="SetCoefficientReloadFromIIcFlash" text="Carregar os dados de calibração deste de placa de luz" />
+      <Control name="SetCoefficientInSpiFlashErase" text="Limpar os dados de calibração deste de cartão recebido" />
+      <Control name="SetCoefficientInIIcFlashErase" text="Limpar os dados de calibração deste de placa de luz" />
+      <Control name="SetRebootGoldenFPGAProgram" text="Re-carregar o programa FPGA Golden" />
+      <Control name="SetRebootWorkFPGAProgram" text="Re-carregar o programa FPGA" />
+      <Control name="SetFPGAWorkProgramStore" text="Conservar o programa FPGA" />
+      <Control name="SetFPGAGoldenProgramStore" text="Conservar o programa FPGA á área de programa&#xA;" />
+      <Control name="SetParameterReloadFromSpiFlash" text="Obter os parâmetros&#xA;" />
+      <Control name="SetParameterStore2SpiFlash" text="Conservar os parâmetros" />
+      <Control name="SetRecaculateParameter" text="Re-calcular os parâmetros" />
+      <Control name="SetGenLinearScanBoardRunLineTable" text="Configurar a tabela de roteamento de cartão recebido&#xA;" />
+      <Control name="SetCoefficienceFromDvi" text="Escreva coeficiente de carregamento" />
+      <Control name="SetStoreStartingLogoImage" text="Defina o monitor actual como o monitor de inicialização" />
+      <Control name="SetStoreNoSignalLogoImage" text="Defina o monitor actual como o monitor sem sinal" />
+      <Control name="SetStartLedCheck" text="Iniciar a inspeção de mancha de cartão recebido" />
+      <Control name="SetConfigRegister" text="Escreva a configuração de registo&#xA;" />
+      <Control name="ReadOnePackageSBParameters" text="Ler o paramêtro de cartão de escaneamento" />
+      <Control name="ReadGamma" text="Ler o valor de Gamma" />
+      <Control name="SetGamma" text="Escrever o valor de Gamma" />
+      <Control name="ReadGlobalBrightness" text="Ler o brilho de monitor" />
+      <Control name="SetGlobalBrightness" text="Configurar o brilho de monitor" />
+      <Control name="ReadRedBrightness" text="Ler o brilho de vermelho" />
+      <Control name="SetRedBrightness" text="Configurar o brilho de vermelho" />
+      <Control name="ReadGreenBrightness" text="Ler o brilho de verde" />
+      <Control name="SetGreenBrightness" text="Configurar o brilho de verde" />
+      <Control name="ReadBlueBrightness" text="Ler o brilho de azul" />
+      <Control name="SetBlueBrightness" text="Configurar o brilho de azul" />
+      <Control name="ReadVRedBrightness" text="Ler o brilho virtual de vermelho" />
+      <Control name="SetVRedBrightness" text="Configurar o brilho virtual de vermelho" />
+      <Control name="ReadDataDirection" text="Ler a direção de transmissão de dados da placa de luz&#xA;" />
+      <Control name="SetDataDirection" text="Configurar a direção de transmissão de dados da placa de luz&#xA;" />
+      <Control name="ReadModuleWidth" text="Ler a largura de placa de luz" />
+      <Control name="SetModuleWidth" text="Configurar a largura de placa de luz" />
+      <Control name="ReadModuleHeight" text="Ler a altura de placa de luz" />
+      <Control name="SetModuleHeight" text="Configurar a altura de placa de luz" />
+      <Control name="ReadDriverType" text="Ler o modelo de chip drive de placa de luz" />
+      <Control name="SetDriverType" text="Configurar o modelo de chip drive de placa de luz" />
+      <Control name="ReadScanMode" text="Ler o modo de escaneamento de placa de luz" />
+      <Control name="SetScanMode" text="Configurar o modo de escaneamento de placa de luz" />
+      <Control name="ReadOEPority" text="Ler a polaridade de OE" />
+      <Control name="SetOEPority" text="Configurar a polaridade de OE" />
+      <Control name="ReadDecodeType" text="Ler o modo de decodificação de placa de luz&#xA;" />
+      <Control name="SetDecodeType" text="Configurar o modo de decodificação de placa de luz" />
+      <Control name="ReadGroupNumInModule" text="Ler a quantidade de grupo dos dados de placa de luz" />
+      <Control name="SetGroupNumInModule" text="Configurar a quantidade de grupo dos dados de placa de luz" />
+      <Control name="ReadDataGroupSequence" text="Ler a sequência S de grupo dos dados" />
+      <Control name="SetDataGroupSequence" text="Configurar a sequência S dos dados" />
+      <Control name="ReadModuelCols" text="Ler a quantidade de colunas de placa carregada de luz de cartão recebido" />
+      <Control name="SetModuelCols" text="Configurar a quantidade de colunas de placa carregada de luz de cartão recebido" />
+      <Control name="ReadModuelRows" text="Ler a quantidade de linhas de placa carregada de luz de cartão recebido" />
+      <Control name="SetModuelRows" text="Configurar a quantidade de linhas de placa carregada de luz de cartão recebido" />
+      <Control name="ReadControlWidth" text="Ler a largura de carregamento de cartão recebido" />
+      <Control name="SetControlWidth" text="Configurar a largura de carregamento de cartão recebido " />
+      <Control name="ReadControlHeight" text="Ler a altura de carregamento de cartão recebido" />
+      <Control name="SetControlHeight" text="Configurar a altura de carregamento de cartão recebido " />
+      <Control name="ReadPhysicalTotalDataGroupNum" text="Ler a quantidade de grupos dos dados de total o cartão recebido P" />
+      <Control name="SetPhysicalTotalDataGroupNum" text="Configurar a quantidade de grupos dos dados de total o cartão recebido P" />
+      <Control name="ReadCascadeDiretion" text="Ler a direção de cascata de placa de luz" />
+      <Control name="SetCascadeDiretion" text="Configurar a direção de cascata de placa de luz" />
+      <Control name="ReadTotalPointInTable" text="Ler a quantidade de pontos totais de tabela de roteamento de placa de luz&#xA;" />
+      <Control name="SetTotalPointInTable" text="Configurar a quantidade de pontos totais de tabela de roteamento de placa de luz" />
+      <Control name="ReadPointNumPerDrive" text="Ler a quantidade de pontos de unidade de placa de luz" />
+      <Control name="SetPointNumPerDrive" text="Configurar a quantidade de pontos de unidade de placa de luz" />
+      <Control name="ReadIrregularScreenDrive" text="Ler se é o roteamento carregado irregular" />
+      <Control name="SetIrregularScreenDrive" text="Configurar se é o roteamento carregado irregular" />
+      <Control name="ReadLogicalTotalDataGroupNum" text="Ler a quantidade de grupos dos dados de cartão recebido L" />
+      <Control name="SetLogicalTotalDataGroupNum" text="Configurar a quantidade de grupos dos dados de cartão recebido L" />
+      <Control name="ReadDriverFucntion" text="Ler a descrição de placa de luz F" />
+      <Control name="SetDriverFucntion" text="Configurar a descrição de placa de luz F" />
+      <Control name="ReadGrayDepth" text="Ler o nível de grau de cinza" />
+      <Control name="SetGrayDepth" text="Configurar o nível de grau de cinza" />
+      <Control name="ReadGrayMode" text="Ler o modelo de grau de cinza" />
+      <Control name="SetGrayMode" text="Configurar o modelo de grau de cinza" />
+      <Control name="ReadRefNumPerVs" text="Ler a taxa de atualização&#xA;" />
+      <Control name="SetRefNumPerVs" text="Configurar a taxa de atualização" />
+      <Control name="ReadLightFrom1stGray" text="Ler se iniciar deste de primeiro nível" />
+      <Control name="SetLightFrom1stGray" text="Configurar se iniciar deste de primeiro nível" />
+      <Control name="ReadGhostRemoveMode" text="Ler o modo de eliminação de sombra fantasma&#xA;" />
+      <Control name="SetGhostRemoveMode" text="Configurar o modo de eliminação de sombra fantasma" />
+      <Control name="ReadBlankUnitNumPerScan" text="Ler o tempo de escondedura" />
+      <Control name="SetBlankUnitNumPerScan" text="Configurar o tempo de escondedura" />
+      <Control name="ReadRowChangePoint" text="Ler o tempo de RC" />
+      <Control name="SetRowChangePoint" text="Configurar o tempo de RC" />
+      <Control name="ReadABCDRollOver" text="Ler o modo R" />
+      <Control name="SetABCDRollOver" text="Configurar o modo R" />
+      <Control name="ReadGclkNumPerScan" text="Ler a quantidade de gclk" />
+      <Control name="SetGclkNumPerScan" text="Configurar a guantidade de gclk" />
+      <Control name="ReadLightTimePerSubFieldRatio" text="Ler o paramêtro LR" />
+      <Control name="SetLightTimePerSubFieldRatio" text="Configurar o paramêtro LR" />
+      <Control name="ReadShiftUnitNumPerSubField" text="Ler o comprimento S" />
+      <Control name="SetShiftUnitNumPerSubField" text="Configurar o comprimento S" />
+      <Control name="ReadTotalUnitNumPerSubField" text="Ler a quantidade de T" />
+      <Control name="SetTotalUnitNumPerSubField" text="Configurar a quantidade de T" />
+      <Control name="ReadLightTimePerSubField" text="Ler o tempo L" />
+      <Control name="SetLightTimePerSubField" text="Configurar o tempo L" />
+      <Control name="ReadDclkUnitCycle" text="Ler dclk" />
+      <Control name="SetDclkUnitCycle" text="Configurar dclk" />
+      <Control name="ReadDclkPhase" text="Ler a fase dclk" />
+      <Control name="SetDclkPhase" text="Configurar a fase dclk" />
+      <Control name="ReadDclkHigh" text="Ler o paramêtro H de dclk" />
+      <Control name="SetDclkHigh" text="Configurar o paramêtro H de dclk" />
+      <Control name="ReadGclkUnitCycle" text="Ler Gclk" />
+      <Control name="SetGclkUnitCycle" text="Configurar Gclk" />
+      <Control name="ReadGclkPhase" text="Ler a fase Gclk" />
+      <Control name="SetGclkPhase" text="Configurar a fase Gclk" />
+      <Control name="ReadGclkHigh" text="Ler o paramêtro H de Gclk" />
+      <Control name="SetGclkHigh" text="Configurar o paramêtro H de Gclk" />
+      <Control name="ReadSubField" text="Ler a quantidade de Sub" />
+      <Control name="SetSubField" text="Configurar a quantidade de Sub" />
+      <Control name="ReadRowsCtrlByDataGroup" text="Ler a quantidade de linhas (colunas) dum grupo de dados detro de placa de luz" />
+      <Control name="SetRowsCtrlByDataGroup" text="Configurar a quantidade de linhas (colunas) dum grupo de dados detro de placa de luz" />
+      <Control name="ReadTotalGclkUnitNumPerScan" text="Ler a quantidade de unidade de Gclk" />
+      <Control name="SetTotalGclkUnitNumPerScan" text="Configurar a quantidade de unidade de Gclk" />
+      <Control name="ReadCorrectionOn" text="Ler se a correção está aberta" />
+      <Control name="SetCorrectionOn" text="Configurar se a correção está aberta" />
+      <Control name="ReadCoefficientSource" text="Ler o origem dos dados corregidos" />
+      <Control name="SetCoefficientSource" text="Configurar o origem dos dados corregidos" />
+      <Control name="ReadShowLastFrameWhenCableNotConected" text="Ler o modo de exibição de interrupção de sinal de cartão recebido" />
+      <Control name="SetShowLastFrameWhenCableNotConected" text="Configurar o modo de exibição de interrupção de sinal de cartão recebido" />
+      <Control name="ReadABCDCode" text="Ler o paramêtro de escaneamento" />
+      <Control name="SetABCDCode" text="Configurar o paramêtro de escaneamento" />
+      <Control name="ReadRgbCode" text="Ler o paramêtro de cor RGB" />
+      <Control name="SetRgbCode" text="Configurar o paramêtro de cor RGB" />
+      <Control name="ReadRgain" text="Ler o valor de ganho vermelho" />
+      <Control name="SetRgain" text="Configurar o valor de ganho vermelho" />
+      <Control name="ReadGgain" text="Ler o valor de ganho verde" />
+      <Control name="SetGgain" text="Configurar o valor de ganho verde" />
+      <Control name="ReadBgain" text="Ler o valor de ganho azul" />
+      <Control name="SetBgain" text="Configurar o valor de ganho azul" />
+      <Control name="ReadVRgain" text="Ler o ganho virtual de vermelho" />
+      <Control name="SetVRgain" text="Configurar o ganho virtual de vermelho" />
+      <Control name="ReadThreshold" text="Ler o limiar de inspeção" />
+      <Control name="SetThreshold" text="Configurar o limiar de inspeção" />
+      <Control name="ReadColorMatrix" text="Ler o paramêtro CM" />
+      <Control name="SetColorMatrix" text="Configurar o paramêtro CM" />
+      <Control name="ReadStartPositionOfDataGroup" text="Ler a linha (coluna) partida de carregamento de dados de cada grupo dentro de placa de luz" />
+      <Control name="SetStartPositionOfDataGroup" text="Configurar a linha (coluna) partida de carregamento de dados de cada grupo dentro de placa de luz" />
+      <Control name="ReadCabinetSerialNum" text="Ler o Nº de caixa conduzido de cartão recebido" />
+      <Control name="SetvCabinetSerialNum" text="Configurar o Nº de caixa conduzido de cartão recebido" />
+      <Control name="ReadConfigRegister" text="Ler o registro de configuração" />
+      <Control name="ReadTVCardDVI0Width" text="Ler a largura actual de carregamento de cartão de TV" />
+      <Control name="SetTVCardDVI0Width" text="Configurar a largura actual de carregamento de cartão de TV" />
+      <Control name="ReadTVCardDVI0Height" text="Ler a altura actual de carregamento de cartão de TV" />
+      <Control name="SetTVCardDVI0Height" text="Configurar a altura actual de carregamento de cartão de TV" />
+      <Control name="ReadTVCardDVI0OffsetX" text="Ler o deslocamento horizontal de carregamento de cartão de TV&#xA;" />
+      <Control name="SetTVCardDVI0OffsetX" text="Configurar o deslocamento horizontal de carregamento de cartão de TV" />
+      <Control name="ReadTVCardDVI0OffsetY" text="Ler o deslocamento vertical de carregamento de cartão de TV&#xA;" />
+      <Control name="SetTVCardDVI0OffsetY" text="Configurar o deslocamento vertical de carrregamento de cartão de TV" />
+      <Control name="ReadKillMode" text="Ler o modo de controle de monitor" />
+      <Control name="SetKillMode" text="Configurar o modo de controle de monitor" />
+      <Control name="ReadSelfTestMode" text="Ler o modo de auto-teste de monitor" />
+      <Control name="SetSelfTestMode" text="Configurar o modo de auto-teste de monitor" />
+      <Control name="ReadLockMode" text="Ler o modo de bloqueio de monitor" />
+      <Control name="SetLockMode" text="Configurar o modo de bloqueio de monitor" />
+      <Control name="ReadScreenEncrypt" text="Ler a autorização de cartão recebido" />
+      <Control name="ReadSmartSetMode" text="Ler o modo de configuração inteligente" />
+      <Control name="SetSmartSetMode" text="Configurar o modo de configuração inteligente" />
+      <Control name="ReadModuleRunLineTable" text="Ler a tabela de roteamento de placa de luz" />
+      <Control name="SetModuleRunLineTable" text="Configurar a tabela de roteamento de placa de luz" />
+      <Control name="ReadScanBoardRunLineTable" text="Ler a tabela de roteamento de cartão recebido" />
+      <Control name="SetScanBoardRunLineTable" text="Configurar a tabela de roteamento de cartão recebido&#xA;" />
+      <Control name="ReadRedGammaTable" text="Ler a tabela de Gamma" />
+      <Control name="SetRedGammaTable" text="Configurar a tabela de Gamma" />
+      <Control name="ReadGreenGammaTable" text="Ler a tabela verde de Gamma" />
+      <Control name="SetGreenGammaTable" text="Configurar a tabela verde de Gamma" />
+      <Control name="ReadBlueGammaTable" text="Ler a tabela azul de Gamma" />
+      <Control name="SetBlueGammaTable" text="Configurar a tabela azul de Gamma" />
+      <Control name="ReadOETable" text="Ler a tabela OE" />
+      <Control name="SetOETable" text="Configurar a tabela OE" />
+      <Control name="ReadCoefficient" text="Ler o fator de correção" />
+      <Control name="ReadCoefficientByOffset" text="Ler o fator de correção" />
+      <Control name="SetCoefficient" text="Configurar o fator de correção" />
+      <Control name="ReadScanner_FPGAProgramLength" text="Ler o comprimento de programa FPGA de cartão recebido" />
+      <Control name="SetScanner_FPGAProgramLength" text="Configurar o comprimento de programa FPGA de cartão recebido" />
+      <Control name="ReadScanner_FPGAProgramEdition" text="Ler a edição de programa FPGA de cartão recebido" />
+      <Control name="SetScanner_FPGAProgramEdition" text="Configurar a edição de programa FPGA de cartão recebido" />
+      <Control name="ReadScanner_FPGAProgramRemarks" text="Ler a nota de programa FPGA de cartão recebido" />
+      <Control name="SetScanner_FPGAProgramRemarks" text="Configurar a nota de programa FPGA de cartão recebido" />
+      <Control name="ReadScanner_FPGA" text="Ler os dados de programa FPGA de cartão recedido" />
+      <Control name="SetScanner_FPGA" text="Enviar os documentos de programa FPGA de cartão recebido" />
+      <Control name="ReadScanner_McuProgramLength" text="Ler o comprimento de programa MCU de cartão recebido" />
+      <Control name="SetScanner_McuProgramLength" text="Configurar o comprimento de programa MCU de cartão recebido" />
+      <Control name="ReadScanner_McuProgramEdition" text="Ler a edição de programa MCU de cartão recebido" />
+      <Control name="SetScanner_McuProgramEdition" text="Configurar a edição de programa MCU de cartão recebido" />
+      <Control name="ReadScanner_McuProgramRemarks" text="Ler a nota de programa MCU de cartão recebido" />
+      <Control name="SetScanner_McuProgramRemarks" text="Configurar a nota de programa MCU de cartão recebido" />
+      <Control name="ReadScanner_Mcu" text="Ler os dados de programa MCU de cartão recedido" />
+      <Control name="SetScanner_Mcu" text="Enviar os documentos de programa MCU de cartão recebido" />
+      <Control name="ReadTempInfoOfScanCard" text="Ler a temperatura de cartão recebido" />
+      <Control name="ReadHumiOfScanCard" text="Ler a umidade de cartão recebido" />
+      <Control name="ReadVoltageOfScanCard" text="Ler a voltagem de cartão recebido" />
+      <Control name="ReadTempInfoOfMonitorCard" text="Ler a temperatura de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadHumiOfMonitorCard" text="Ler a umidade de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadSmokeWarningOfMonitorCard" text="Ler os dados de  alarmes de fumo de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadFanSpeedOfMonitorCard" text="Ler a velocidade do ventilador de cartão adjuntivo de monitor de cartão recebido&#xA;" />
+      <Control name="ReadVoltageOfMonitorCard" text="Ler o valor de voltagem de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadAllStatus" text="Ler os dados de cartão adjuntivo de monitor e de cartão recebido" />
+      <Control name="ReadScanCardAllStatus" text="Ler os dados de monitor de cartão recebido" />
+      <Control name="ReadMonitorCardAllStatus" text="Ler os dados de cartão adjuntivo de monitor de cartão recebido" />
+      <Control name="ReadScanner_MutiChipRamA" text="Ler a tabela RamA" />
+      <Control name="SetScanner_MutiChipRamA" text="Configurar a tabela RamA" />
+      <Control name="ReadScanner_MutiChipRamB" text="Ler a tabela RamB" />
+      <Control name="SetScanner_MutiChipRamB" text="Configurar a tabela RamB" />
+      <Control name="ReadScanner_MutiChipRamC" text="Ler a tabela RamC" />
+      <Control name="SetScanner_MutiChipRamC" text="Configurar a tabela RamC" />
+      <Control name="FuncCard_ReadFuncCardModle" text="Ler o modelo de cartão multifuncional" />
+      <Control name="FuncCard_ReadGoldenFPGAVersion" text="Ler a edição de programa FPGA de área Gloden de cartão multifuncional" />
+      <Control name="FuncCard_ReadMonitorCardModle" text="Ler o modelo de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadMonitorFPGAVersion" text="Ler a edição de programa FPGA de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardFPGALength" text="Ler o comprimento de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardFPGALength" text="Configurar o comprimento de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardFPGAVersion" text="Ler a edição de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardFPGAVersion" text="Configurar a edição de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardFPGADescription" text="Ler a nota de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardFPGADescription" text="Configurar a nota de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardFPGAData" text="Ler os dados de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardFPGAData" text="Configurar os dados de programa FPGA de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardMCULength" text="Ler o comprimento de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardMCULength" text="Configurar o comprimento de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardMCUVersion" text="Ler a edição de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardMCUVersion" text="Configurar a edição de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardMCUDescription" text="Ler a nota de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardMCUDescription" text="Configurar a nota de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardMCUData" text="Ler os dados de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_SetFuncCardMCUData" text="Configurar os dados de programa MCU de cartão multifuncional" />
+      <Control name="FuncCard_SetRebootBootFpgaProgram" text="Carregar o programa FPGA deste de área Gloden" />
+      <Control name="FuncCard_SetRebootAppFpgaProgram" text="Carregar o programa FPGA deste de área aplicada" />
+      <Control name="FuncCard_SetStoreFpgaBootProgram" text="Conservar o programa FPGA á área Gloden" />
+      <Control name="FuncCard_SetStoreFpgaAppProgram" text="Conservar o programa FPGA á área aplicada" />
+      <Control name="FuncCard_ReadTempInfoOfFuncCard" text="Ler a temperatura de cartão multifuncional" />
+      <Control name="FuncCard_ReadHumiOfFuncCard" text="Ler a umidade de cartão multifuncional" />
+      <Control name="FuncCard_ReadVoltageOfFuncCard" text="Ler a voltagem de cartão multifuncional" />
+      <Control name="FuncCard_ReadLinkStateOfMonitorCard" text="Ler o estado de ligação de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadTempInfoOfMonitorCard" text="Ler a temperatura de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadHumiOfMonitorCard" text="Ler a umidade de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadSmokeWarningOfMonitorCard" text="Ler os dados de  alarmes de fumo de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadFanSpeedOfMonitorCard" text="Ler a velocidade do ventilador de cartão adjuntivo de monitor de cartão multifuncional&#xA;" />
+      <Control name="FuncCard_ReadVoltageOfMonitorCard" text="Ler o valor de voltagem de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadFuncCardAllStatus" text="Ler os dados de cartão adjuntivo de monitor e de cartão multifuncional" />
+      <Control name="FuncCard_ReadMonitorCardAllInfo" text="Ler os dados de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadMonitorCardAllStatus" text="Ler os dados de cartão adjuntivo de monitor de cartão multifuncional" />
+      <Control name="FuncCard_ReadTimeOnFuncCard" text="Ler o tempo de cartão multifuncional" />
+      <Control name="FuncCard_SetTimeOnFuncCard" text="Configurar o tempo de cartão multifuncional" />
+      <Control name="FuncCard_ReadPowerPortCtrl" text="Ler o estado de fonte de alimentação de cartão multifuncional" />
+      <Control name="FuncCard_SetPowerPortCtrl_Start" text="Iniciar a fonte de alimentação" />
+      <Control name="FuncCard_SetPowerPortCtrl_Stop" text="Fechar a fonte de alimentação" />
+      <Control name="FuncCard_ReadAllPowerPortCtrl" text="Ler todos os estados de fonte de alimentação de cartão multifuncional actual" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Start" text="Iniciar todos os fontes de alimentação de cartão multifuncional actual" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Stop" text="Fechar todos os fontes de alimentação de cartão multifuncional actual" />
+      <Control name="FuncCard_ReadPowerOperTime" text="Ler o tempo total de auto-controle de cartão multifuncional " />
+      <Control name="FuncCard_SetPowerOperTime" text="Configurar o tempo de auto-operação de fonte de alimentação" />
+      <Control name="FuncCard_ReadPowerCtrlMode" text="Ler o modelo de controle de fonte de alimentação de cartão multifuncional" />
+      <Control name="FuncCard_SetPowerCtrlMode" text="Configurar o modelo de controle de fonte de alimentação de cartão multifuncional" />
+      <Control name="FuncCard_ReadDelayTime" text="Ler o tempo atraso de inicialização de fonte de alimentação de cartão multifuncional" />
+      <Control name="FuncCard_SetDelayTime" text="Configurar o tempo atraso de inicialização de fonte de alimentação de cartão multifuncional" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Start" text="Iniciar todos os fontes de alimentação de cartão multifuncional actual" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Stop" text="Fechar todos os fontes de alimentação de cartão multifuncional actual" />
+      <Control name="FuncCard_ReadPowerPortCtrlTotal" text="Ler o estado de controle de fonte de alimentação de emergência de cartão multifuncional" />
+      <Control name="FuncCard_ReadOutDeviceValue" text="Ler o valor de sonda óptica que ligar ao cartão multifuncional" />
+      <Control name="FuncCard_SetOutDevice" text="Configurar a ligação periférica de cartão multifuncional como sonda óptica" />
+      <Control name="FuncCard_ReadAudioFrequency" text="Ler a taxa de amostragem de áudio de cartão multifuncional" />
+      <Control name="FuncCard_SetAudioFrequency" text="Configurar a taxa de amostragem de áudio de cartão multifuncional" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>PackageResults</Name>
+    <Controls>
+      <Control name="ok" text="Sucedido" />
+      <Control name="fileErr" text="Falha, causa do erro : Erro de arquivo" />
+      <Control name="memErr" text="Falha, causa do erro : Erro de memória" />
+      <Control name="fileDeleteErr" text="Falha, causa do erro: Erro de exclusão do arquivo" />
+      <Control name="directoryCreateErr" text="Falha, causa do erro : Erro de criação de caminho" />
+      <Control name="invalidPort" text="Falha, causa do erro : serial inválido" />
+      <Control name="parseFailure" text="Falha, causa do erro : Falha de analisar os dados de mensagem" />
+      <Control name="messageDisconnect" text="Falha , causa do erro : Desconexão das mensagens " />
+      <Control name="forceCancel" text="Falha , causa do erro : O serviço é cancelado forçado" />
+      <Control name="sendError" text="Falha, causa do erro: Erro de envio" />
+      <Control name="parsePackAddrFailure" text="Falha, causa do erro: Falha de analisar o endereço no pacote de dados" />
+      <Control name="fileSendNotExist" text="Falha, causa do erro: Não existe o arquivo enviado" />
+      <Control name="deviceSpaceNoEnough" text="Falha, causa do erro: Espaço de equipamento não é suficiente" />
+      <Control name="fileDataNotEnough" text="Falha, causa do erro: O comprimento de arquivo não é suficiente" />
+      <Control name="fileCrcErr" text="Falha, causa do erro: Erro crc de arquivo" />
+      <Control name="createCheckCodeError" text="Falha, causa do erro: Erro de criação de código de teste" />
+      <Control name="unkonwn" text="Falha, causa do erro: Desconhecimento" />
+      <Control name="timeout" text="Falha, causa do erro: Tempo ultrapassado" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>CommResults</Name>
+    <Controls>
+      <Control name="ok" text="Sucedido" />
+      <Control name="pending" text="Falha, causa do erro: Suspendido" />
+      <Control name="crcErr" text="Falha, causa do erro: Erro crc" />
+      <Control name="lengthErr" text="Falha, causa do erro: Erro de comprimento" />
+      <Control name="portErr" text="Falha, causa do erro: Erro de porta serial" />
+      <Control name="timeout" text="Falha, causa do erro: Tempo ultrapassado" />
+      <Control name="codeErr" text="Falha, causa do erro: Erro de código" />
+      <Control name="forcedCancel" text="Falha, causa do erro: Cancelamento forçado" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>AckResults</Name>
+    <Controls>
+      <Control name="ok" text="Sucedido" />
+      <Control name="timeout" text="Falha, causa do erro: Tempo ultrapassado" />
+      <Control name="requestCrcErr" text="Falha, causa do erro: Erro crc de pedido" />
+      <Control name="replyCrcErr" text="Falha, causa do erro: Erro crc de reversão" />
+      <Control name="unknownCmd" text="Falha, causa do erro: Comando desconhecido" />
+      <Control name="invalid" text="Falha, causa do erro: Inválido" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>ProtocolEnum_Interface</Name>
+    <Controls>
+      <Control name="Unknown" text="Desconhecimento" />
+      <Control name="NormalMode" text="Normal" />
+      <Control name="BlackMode" text="Monitor preto" />
+      <Control name="LockMode" text="Bloqueio" />
+      <Control name="Light" text="Brilho" />
+      <Control name="Chroma" text="Cor" />
+      <Control name="Chip_CommonBase" text="Chip geral" />
+      <Control name="Chip_MBI5028" text="MBI5028" />
+      <Control name="Chip_MBI5030" text="MBI5030" />
+      <Control name="Chip_MBI5036" text="MBI5036" />
+      <Control name="Chip_MBI5040" text="MBI5040" />
+      <Control name="Chip_MBI5042" text="MBI5042/5041" />
+      <Control name="Chip_MBI5050" text="MBI5050" />
+      <Control name="Chip_MBI5167" text="MBI5167" />
+      <Control name="Chip_DM13H" text="DM13H" />
+      <Control name="Chip_P2518" text="P2518" />
+      <Control name="Chip_P2510" text="P2510" />
+      <Control name="Chip_RFT3630" text="RFT3630" />
+      <Control name="Chip_SUM2017" text="SUM2017" />
+      <Control name="Chip_MBI5034" text="MBI5034" />
+      <Control name="Chip_SUM2018" text="SUM2018" />
+      <Control name="Chip_SUM2030" text="SUM2030" />
+      <Control name="Chip_MBI5037" text="MBI5037" />
+      <Control name="Chip_MBI5039" text="MBI5039" />
+      <Control name="Chip_MY9268" text="MY9268" />
+      <Control name="Chip_SCL8060" text="SCL8060" />
+      <Control name="Chip_MBI5224" text="MBI5224" />
+      <Control name="Chip_MBI5051" text="MBI5051" />
+      <Control name="Chip_MBI5052" text="MBI5052" />
+      <Control name="Chip_MBI5053" text="MBI5053" />
+      <Control name="Chip_MY9266" text="MY9266" />
+      <Control name="Chip_MY9269" text="MY9269" />
+      <Control name="Chip_MBI5042B" text="MBI5042B/5041B" />
+      <Control name="Chip_MBI5045" text="MBI5045" />
+      <Control name="LessOrEqual4_Data2" text="?" />
+      <Control name="LessOrEqual4_Data1" text="?" />
+      <Control name="LessOrEqual8_Data1" text="?" />
+      <Control name="LessOrEqual8_Data2" text="?" />
+      <Control name="MoreThan8" text="?" />
+      <Control name="RightLeft" text="De direita para esquerda" />
+      <Control name="LeftRight" text="De esquerda para direita" />
+      <Control name="DownUp" text="De baixo para cima" />
+      <Control name="UpDown" text="De cima para baixo" />
+      <Control name="HighEnable" text="Alto effetivo" />
+      <Control name="LowEnable" text="Baixo effetivo" />
+      <Control name="Disable" text="Não é virtual&#xA;" />
+      <Control name="Led4Mode1" text="Modo virtual 1 de 4 lâmpada" />
+      <Control name="Led4Mode2" text="Modo virtual 2 de 4 lâmpada" />
+      <Control name="Led3" text="3 lâmpada é virtual" />
+      <Control name="StaticNoCode" text="Estado estático não precisa decodificação" />
+      <Control name="Decode138" text="Decodificação 74HC138" />
+      <Control name="DicrectCode" text="Decodificação direita" />
+      <Control name="Scan_static" text="Estado estático" />
+      <Control name="Scan_2" text="2 varredura" />
+      <Control name="Scan_3" text="3 varredura" />
+      <Control name="Scan_4" text="4 varredura" />
+      <Control name="Scan_5" text="5 varredura" />
+      <Control name="Scan_6" text="6 varredura" />
+      <Control name="Scan_7" text="7 varredura" />
+      <Control name="Scan_8" text="8 varredura" />
+      <Control name="Scan_9" text="9 varredura" />
+      <Control name="Scan_10" text="10 varredura" />
+      <Control name="Scan_11" text="11 varredura" />
+      <Control name="Scan_12" text="12 varredura" />
+      <Control name="Scan_13" text="13 varredura" />
+      <Control name="Scan_14" text="14 varredura" />
+      <Control name="Scan_15" text="15 varredura" />
+      <Control name="Scan_16" text="16 varredura" />
+      <Control name="Scan_Unknown" text="Desconhecido" />
+      <Control name="Scanner_Card" text="Scanner_Card" />
+      <Control name="FunctionCard_1" text="FunctionCard_1" />
+      <Control name="FunctionCard_2" text="FunctionCard_2" />
+      <Control name="FunctionCard_3" text="FunctionCard_3" />
+      <Control name="FunctionCard_4" text="FunctionCard_4" />
+      <Control name="FunctionCard_5" text="FunctionCard_5" />
+      <Control name="FunctionCard_6" text="FunctionCard_6" />
+      <Control name="FunctionCard_7" text="FunctionCard_7" />
+      <Control name="FunctionCard_8" text="FunctionCard_8" />
+      <Control name="FunctionCard_9" text="FunctionCard_9" />
+      <Control name="FunctionCard_10" text="FunctionCard_10" />
+      <Control name="FunctionCard_11" text="FunctionCard_11" />
+      <Control name="FunctionCard_12" text="FunctionCard_12" />
+      <Control name="FunctionCard_13" text="FunctionCard_13" />
+      <Control name="FunctionCard_14" text="FunctionCard_14" />
+      <Control name="FunctionCard_15" text="FunctionCard_15" />
+      <Control name="Reserved1_Mode" text="Reserved1" />
+      <Control name="Reserved2_Mode" text="Reserved2" />
+      <Control name="Red_Mode" text="Vermelho" />
+      <Control name="Green_Mode" text="Verde" />
+      <Control name="Blue_Mode" text="Azul" />
+      <Control name="White_Mode" text="Branco" />
+      <Control name="HorizonLine_Mode" text="Linha horizontal" />
+      <Control name="VerticalLine_Mode" text="Linha vertical" />
+      <Control name="InclineLine_Mode" text="Linha inclinada" />
+      <Control name="GrayIncrease_Mode" text="Tons de cinza&#xA;" />
+      <Control name="Age_Mode" text="Envelhecimento" />
+      <Control name="Horizontal" text="Horizontal" />
+      <Control name="Vertical" text="Vertical" />
+      <Control name="Lowlight" text="Baixo brilho" />
+      <Control name="Normallight" text="Normal" />
+      <Control name="Highlight" text="Alto brilho" />
+      <Control name="ScanBoardFlash" text="Cartão recebido" />
+      <Control name="ModuleFlash" text="Placa de luz" />
+      <Control name="None" text="Nenhum" />
+      <Control name="BlackScreen" text="Monitor preto" />
+      <Control name="LastFrame" text="Último frame" />
+      <Control name="OK" text="Normal" />
+      <Control name="Error" text="Avaria" />
+      <Control name="Start" text="Iniciar" />
+      <Control name="Stop" text="Parar" />
+      <Control name="Mannual" text="Manual" />
+      <Control name="Auto" text="Automático" />
+      <Control name="SmartMode" text="Modo inteligente" />
+      <Control name="BT_115200bps" text="Taxa de transmissão 15200&#xA;" />
+      <Control name="BT_57600bps" text="Taxa de transmissão 57600" />
+      <Control name="BT_38400bps" text="Taxa de transmissão 38400" />
+      <Control name="BT_19200bps" text="Taxa de transmissão 19200" />
+      <Control name="BT_9600bps" text="Taxa de transmissão 9600" />
+      <Control name="BT_4800bps" text="Taxa de transmissão 4800" />
+      <Control name="BT_2400bps" text="Taxa de transmissão 2400" />
+      <Control name="BT_1200bps" text="Taxa de transmissão 1200" />
+      <Control name="BT_Reserved" text="?" />
+      <Control name="LightSensor" text="Sonda óptica" />
+      <Control name="requestRead" text="Ler o pedido" />
+      <Control name="replyRead" text="Ler a resposta" />
+      <Control name="requestWrite" text="Escrever o pedido" />
+      <Control name="replyWrite" text="Escrever a resposta" />
+      <Control name="FirstScaleDevice" text="?" />
+      <Control name="Scanner" text="Cartão recebido" />
+      <Control name="FunctionCard" text="Cartão multifuncional" />
+    </Controls>
+  </Form>
+</Resource>

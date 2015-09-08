@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.UI.ColorTempControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.UI.ColorTempControl">
+            <summary>
+            色温表控件
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColumnHeadFiled">
+            <summary>
+            色温表列字段
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.InitiColorTempControl(System.Int32)">
+            <summary>
+            初始化色温表控件
+            </summary>
+            <param name="columnHeadWidth">列头中每一个列的宽</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.AddColorTempValue(System.String)">
+            <summary>
+            添加色温值,存在相同的值则返回True，不再添加
+            </summary>
+            <param name="colorTempValue">色温值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.AddColorTempValue(System.String,System.Int32@)">
+            <summary>
+             添加色温值,存在相同的值则返回True，不再添加
+            </summary>
+            <param name="colorTempValue">色温值</param>
+            <param name="addIndex">返回处添加的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.InsertColorTempValue(System.String,System.Int32)">
+            <summary>
+            插入色温值，存在相同的值则返回True，不再添加
+            </summary>
+            <param name="colorTempValue">色温值</param>
+            <param name="insertIndex">插入处的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.AddBrightInfoByColorTempValue(System.String,Nova.LCT.GigabitSystem.UI.OneBrightInfo)">
+            <summary>
+            按照色温值添加对应的亮度参数
+            </summary>
+            <param name="colorTempValue">色温值</param>
+            <param name="brightInfo">亮度参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.AddBrightInfoByColorTempIndex(System.Int32,Nova.LCT.GigabitSystem.UI.OneBrightInfo)">
+            <summary>
+            按照色温段的索引添加对应的亮度参数
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="brightInfo">亮度参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.AddColorTempInfo(Nova.LCT.GigabitSystem.UI.ColorTempStrSegment)">
+            <summary>
+            按照色温表信息添加亮度参数
+            </summary>
+            <param name="clrTempInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.UpdateColorTempTable(Nova.LCT.GigabitSystem.UI.ColorTempStrTable)">
+            <summary>
+            更新整个色温表
+            </summary>
+            <param name="clrTempTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ClearColorTempTable">
+            <summary>
+            清空整个表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.DeleteSelectColorTempValue">
+            <summary>
+            删除选中的色温段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.DeleteSelectBrightInfoRow">
+            <summary>
+            删除选中的亮度参数行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.DeleteColorTempSegmentByIndex(System.Int32)">
+            <summary>
+            按索引移除某一色温段
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.DeleteBrightInfoRowByIndex(System.Int32,System.Int32)">
+            <summary>
+            按索引删除指定的色温段参数行
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="colorTempBrightIndex">亮度参数行的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ModifySelectColorTempValue(System.String)">
+            <summary>
+            修改选中的色温值
+            </summary>
+            <param name="colorTempValue">新的色温值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ModifyColorTempValueByIndex(System.Int32,System.String)">
+            <summary>
+            按索引修改色温值
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="colorTempValue">新的色温值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ModifySelectBrightInfo(Nova.LCT.GigabitSystem.UI.OneBrightInfo)">
+            <summary>
+            修改选中的亮度信息
+            </summary>
+            <param name="brightInfo">新的亮度信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ModifyBrightInfoByIndex(System.Int32,System.Int32,Nova.LCT.GigabitSystem.UI.OneBrightInfo)">
+            <summary>
+            按索引修改亮度信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段索引</param>
+            <param name="brightInfoRowIndex">亮度信息索引</param>
+            <param name="brightInfo">新的亮度信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.GetColorTempValueByIndex(System.Int32,System.String@)">
+            <summary>
+            按索引获取的色温值
+            </summary>
+            <param name="index"></param>
+            <param name="clrTempValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.GetSelectColorTempInfo(Nova.LCT.GigabitSystem.UI.ColorTempStrSegment@)">
+            <summary>
+            获取色温段所有选中参数信息（注:色温段不会出现多选，且某一参数行选中时对应的该色温段也选中）
+            </summary>
+            <param name="colorTempSegment">选中的色温段信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.GetColorTempInfoByColorTempIndex(System.Int32,Nova.LCT.GigabitSystem.UI.ColorTempStrSegment@)">
+            <summary>
+            获取指定色温段的所有参数信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段索引</param>
+            <param name="colorTempSegment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.GetBrightInfoByIndex(System.Int32,System.Int32,Nova.LCT.GigabitSystem.UI.OneBrightInfo@)">
+            <summary>
+            获取指定位置的色温段某行的参数信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="brightInfoRowIndex">亮度行的索引</param>
+            <param name="brightInfo">返回亮度参数信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.GetColorTempTable(Nova.LCT.GigabitSystem.UI.ColorTempStrTable@)">
+            <summary>
+            获取色温表中的所有信息
+            </summary>
+            <param name="clrTempTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SelectBrightInfoIndex">
+            <summary>
+            获取选中的亮度信息的索引
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempExist(System.String)">
+            <summary>
+            判断色温值是否存在
+            </summary>
+            <param name="colorTemoValue">色温值</param>
+            <returns>存在返回True，不存在返回False</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.InitiDGVC(Nova.Control.DataGirdViewCombinationControl.DataGridViewControl)">
+            <summary>
+            初始化DataGridViewControl控件绑定数据源
+            </summary>
+            <param name="dgvc"></param>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.ColorTempControl.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SelectColorTempSegmentIndex">
+            <summary>
+            选中的色温段的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1">
+            <summary>
+            自定义绑定列表类
+            </summary>
+            <typeparam name="T">列表对象类型</typeparam>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.#ctor(System.Collections.Generic.IList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">IList类型的列表对象</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.FindCore(System.ComponentModel.PropertyDescriptor,System.Object)">
+            <summary>
+            搜索对应值是否存在
+            </summary>
+            <param name="prop">对应的属性</param>
+            <param name="key">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)">
+            <summary>
+            自定义排序操作
+            </summary>
+            <param name="prop"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.RemoveSortCore">
+            <summary>
+            移除默认实现的排序
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.SupportsSortingCore">
+            <summary>
+            获取一个值，指示列表是否支持排序
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.SupportsSearchingCore">
+            <summary>
+            获取一个值，指示列表是否支持搜索
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.IsSortedCore">
+            <summary>
+            获取一个值，指示列表是否排序
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.SortDirectionCore">
+            <summary>
+            获取一个值，指定类别排序方向
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.SortPropertyCore">
+            <summary>
+            获取排序属性说明符
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.SortableBindingList`1.DefaultSortItem">
+            <summary>
+            自定排序的对象
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters">
+            <summary>
+            色温下亮度参数亮度信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.#ctor(Nova.LCT.GigabitSystem.UI.OneBrightInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="brightInfo"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.BrightInfo">
+            <summary>
+            亮度信息
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.BrightValue">
+            <summary>
+            亮度值
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.RedGain">
+            <summary>
+            红电流增益
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.GreenGain">
+            <summary>
+            绿电流增益
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.BlueGain">
+            <summary>
+            蓝电流增益
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.RedBright">
+            <summary>
+            获取红亮度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.GreenBright">
+            <summary>
+            获取绿亮度
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.ColorTempControl.ColorTempParameters.BlueBright">
+            <summary>
+            获取蓝亮度
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.OneBrightInfo">
+            <summary>
+            色温下亮度参数亮度信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.BrightValue">
+            <summary>
+            亮度值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.RedGain">
+            <summary>
+            红电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.GreenGain">
+            <summary>
+            绿电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.BlueGain">
+            <summary>
+            蓝电流增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.RedBright">
+            <summary>
+            获取红亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.GreenBright">
+            <summary>
+            获取绿亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.OneBrightInfo.BlueBright">
+            <summary>
+            获取蓝亮度
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.ColorTempStrSegment">
+            <summary>
+            某个色温段对应的色温信息字符串
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.ColorTempStrSegment.ColorTempValue">
+            <summary>
+            色温字符串
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.ColorTempStrSegment.ColorTempBrightList">
+            <summary>
+            色温段对应的亮度信息列表
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.ColorTempStrTable">
+            <summary>
+            整个色温表对应的字符串
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.ColorTempStrTable.ColorTempSegmentList">
+            <summary>
+            色温表中对应的色温段字符串列表
+            </summary>
+        </member>
+    </members>
+</doc>

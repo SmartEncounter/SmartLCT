@@ -1,0 +1,1425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.HardwareFiles</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.Files.LCTDictionary">
+            <summary>
+            Data包Xml文件解析类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LCTDictionary.#ctor(System.String,Nova.Xml.XmlFile.XmlFileFlag,System.Boolean@)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="szXmlPathName"></param>
+            <param name="XmlFlag"></param>
+            <param name="bSuccess"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LCTDictionary.GetVersionInfoCount(System.Int32@)">
+            <summary>
+            获得VersionInfo项个数
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LCTDictionary.GetVersionInfo(System.Int32,Nova.LCT.GigabitSystem.Files.VersionInfo@)">
+            <summary>
+            获取指定序号的下载程序信息
+            </summary>
+            <param name="itemIndex"></param>
+            <param name="itemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LCTDictionary.AddVersionInfo(Nova.LCT.GigabitSystem.Files.VersionInfo)">
+            <summary>
+            添加一项下载程序信息信息
+            </summary>
+            <param name="itemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LCTDictionary.RemoveVersionInfo(System.Int32)">
+            <summary>
+            移除一项VersionInfo
+            </summary>
+            <param name="itemIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.LCTDictionary.Ver">
+            <summary>
+            Data包版本信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetCabinetType(System.Int32,Nova.LCT.GigabitSystem.Common.CabinetType@)">
+            <summary>
+            获取某一项的箱体类型
+            </summary>
+            <param name="index"></param>
+            <param name="cabinetType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.SetCabinetType(System.Int32,Nova.LCT.GigabitSystem.Common.CabinetType)">
+            <summary>
+            设置某一项箱体的类型
+            </summary>
+            <param name="index"></param>
+            <param name="cabinetType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetCabinetCount(System.Int32@)">
+            <summary>
+            获得箱体项个数
+            </summary>
+            <param name="Count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetRegularCabinetByIndex(System.Int32,Nova.LCT.GigabitSystem.Common.ICabinetProperty@)">
+            <summary>
+            获取某一项规则箱体的信息
+            </summary>
+            <param name="ItemIndex"></param>
+            <param name="ItemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetIrRegularCabinetByIndex(System.Int32,Nova.LCT.GigabitSystem.Common.ICabinetProperty@)">
+            <summary>
+            获取某一项不规则箱体的信息
+            </summary>
+            <param name="ItemIndex"></param>
+            <param name="ItemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetModuleInfoFromSting(System.String[],Nova.LCT.GigabitSystem.Common.LEDModuleProperty@)">
+            <summary>
+            获取箱体中灯板的信息
+            </summary>
+            <param name="proValue"></param>
+            <param name="moduleInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetDataConnectInfo(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet}@)">
+            <summary>
+            解析不规则箱体的数据组数
+            </summary>
+            <param name="strInfo"></param>
+            <param name="groupInfoInCabinet"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.AddCabinetItem(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            添加一项箱体信息
+            </summary>
+            <param name="moduleProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.AddRegularCabinet(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            添加某一项规则箱体
+            </summary>
+            <param name="cabinetProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.AddIrRegularCabinet(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            添加一项不规则箱体
+            </summary>
+            <param name="cabinetProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.GetModuleProperty(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.String[]@,System.String[]@)">
+            <summary>
+            获取灯板节点的属性值
+            </summary>
+            <param name="moduleProperty"></param>
+            <param name="moduleProName"></param>
+            <param name="moduleProValue"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.CombinationConnectInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet})">
+            <summary>
+            组合灯板连接的数据组数
+            </summary>
+            <param name="groupInfoInCabinet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.RemoveCabinetItem(System.Int32)">
+            <summary>
+            按索引移除箱体
+            </summary>
+            <param name="itemIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.RemoveCabinetItem(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            按箱体信息移除箱体
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.RegularCabinetPropertyEqual(Nova.LCT.GigabitSystem.Common.RegularCabinetProperty,Nova.LCT.GigabitSystem.Common.RegularCabinetProperty)">
+            <summary>
+            判断两个规则箱体信息是否一致
+            </summary>
+            <param name="regularCabinetOne"></param>
+            <param name="regularCabinetTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.IrRegularCabinetPropertyEqual(Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty,Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty)">
+            <summary>
+            判断两个不规则箱体的信息是否一致
+            </summary>
+            <param name="irRegularCabinetOne"></param>
+            <param name="irRegularCabinetTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.ModuleInfoEqual(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            判断两个灯板的信息是否一致
+            </summary>
+            <param name="moduleInfoOne"></param>
+            <param name="moduleInfoTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.ListEqual(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet},System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet})">
+            <summary>
+            判断不规则箱体中到灯板列表信息是否一致
+            </summary>
+            <param name="ModuleListInCabinetOne"></param>
+            <param name="ModuleListInCabinetTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.ListEqual(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet},System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet})">
+            <summary>
+            判断每个灯板信息中连接数据列表信息是否一致
+            </summary>
+            <param name="groupInfoInCabinetOne"></param>
+            <param name="groupInfoInCabinetTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.IntConverToString(System.Int32[])">
+            <summary>
+            Int数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.StringConverInt(System.String)">
+            <summary>
+            字符串转换为Int数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.CabinetXml.ByteEqual(System.Byte[],System.Byte[])">
+            <summary>
+            判断两个字节数组是否相等
+            </summary>
+            <param name="newByte"></param>
+            <param name="oldByte"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.CabinetXml.Tag">
+            <summary>
+            设置和获取文件版本属性
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.CombinationConnectInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet})">
+            <summary>
+            组合灯板连接的数据组数
+            </summary>
+            <param name="groupInfoInCabinet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.GetDataConnectInfo(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet}@)">
+            <summary>
+            解析不规则箱体的数据组数
+            </summary>
+            <param name="strInfo"></param>
+            <param name="groupInfoInCabinet"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.CombinationModuleSize(System.Int32,System.Int32)">
+            <summary>
+            组合模块的大小
+            </summary>
+            <param name="pixelCols"></param>
+            <param name="pixelRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.DecomposeModuleSize(System.String,System.Int32@,System.Int32@)">
+            <summary>
+            解析模块大小
+            </summary>
+            <param name="strValue"></param>
+            <param name="pixelCols"></param>
+            <param name="pixelRows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.CombinationModulePos(System.Int32,System.Int32)">
+            <summary>
+            组合模块的位置
+            </summary>
+            <param name="locationX"></param>
+            <param name="locationY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.IrRegularCabinetPropertyPack.DecomposeModulePos(System.String,System.Int32@,System.Int32@)">
+            <summary>
+            解析模块的位置
+            </summary>
+            <param name="strValue"></param>
+            <param name="locationX"></param>
+            <param name="locationY"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.ColorTempTableXml">
+            <summary>
+            色温表配置文件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.#ctor(System.String,Nova.Xml.XmlFile.XmlFileFlag,System.Boolean@)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="szXmlPathName"></param>
+            <param name="XmlFlag"></param>
+            <param name="bSuccess"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempValue(System.Int32,System.String@)">
+            <summary>
+            获取某一项的色温值
+            </summary>
+            <param name="clrTempIndex">色温项的索引</param>
+            <param name="clrTempValue">返回色温值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.SetColorTempValue(System.Int32,System.String)">
+            <summary>
+            设置某一项的色温值
+            </summary>
+            <param name="clrTempIndex">色温项的索引</param>
+            <param name="clrTempValue">设置的色温值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetBrightValue(System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取某一项的色温下的亮度值
+            </summary>
+            <param name="clrTempIndex">色温项的索引</param>
+            <param name="brightIndex">亮度项的索引</param>
+            <param name="brightValue">返回亮度值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.SetBrightValue(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置某一项的色温下的亮度值
+            </summary>
+            <param name="clrTempIndex">色温项的索引</param>
+            <param name="brightIndex">亮度项的索引</param>
+            <param name="brightValue">亮度值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempCount(System.Int32@)">
+            <summary>
+            获得色温项个数
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetBrightCount(System.Int32,System.Int32@)">
+            <summary>
+            获得某个色温项下的亮度项个数
+            </summary>
+            <param name="colorTempIndex">色温段的索引</param>
+            <param name="count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempTableInfo(Nova.LCT.GigabitSystem.Common.ColorTempTable@)">
+            <summary>
+            获取所有色温段的信息
+            </summary>
+            <param name="clrTempTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempInfoByIndex(System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempSegment@)">
+             <summary>
+            按索引获取某一项的色温段信息
+             </summary>
+             <param name="colorTempSegmentIndex">色温段索引</param>
+             <param name="clrTempInfo"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempInfoByValue(System.String,Nova.LCT.GigabitSystem.Common.ColorTempSegment@)">
+             <summary>
+            按色温值获取色温段的信息
+             </summary>
+             <param name="colorTempValue">色温值</param>
+             <param name="clrTempInfo"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempBrightInfoByIndex(System.Int32,System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo@)">
+            <summary>
+            按照索引获取某一项的色温段下某一个亮度参数
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="colorTempBrightIndex">亮度的索引</param>
+            <param name="clrTempBrightInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetColorTempBrightInfoByValue(System.String,System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo@)">
+            <summary>
+            
+            </summary>
+            <param name="colorTempValue">色温值</param>
+            <param name="brightValue">亮度值</param>
+            <param name="clrTempBrightInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetBrightInfoFormString(System.String[],Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo@)">
+            <summary>
+            将字符串数组转化成亮度信息
+            </summary>
+            <param name="proValue"></param>
+            <param name="brightInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.AddColorTempTable(Nova.LCT.GigabitSystem.Common.ColorTempTable)">
+            <summary>
+            添加整个表
+            </summary>
+            <param name="clrTempTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.AddColorTempInfo(Nova.LCT.GigabitSystem.Common.ColorTempSegment)">
+            <summary>
+            添加一项色温段信息
+            </summary>
+            <param name="clrTempInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.AddColorTempBrightInfo(System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo)">
+            <summary>
+            在某一色温段下添加亮度信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段得索引</param>
+            <param name="brightInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.InsertColorTempTable(System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempTable)">
+            <summary>
+            插入整个表
+            </summary>
+            <param name="insertPos">插入位置</param>
+            <param name="clrTempTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.InsertColorTempInfo(System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempSegment)">
+            <summary>
+            插入一项色温段信息
+            </summary>
+            <param name="insertPos">插入位置</param>
+            <param name="clrTempInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.InsertColorTempBrightInfo(System.Int32,System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo)">
+            <summary>
+            在某一色温段下的某一亮度位置处添加亮度信息
+            </summary>
+            <param name="colorTempSegmentIndex">插入亮度时色温段的位置</param>
+            <param name="colorTempBrightIndex">色温段位置下插入亮度的位置</param>
+            <param name="brightInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.GetBrightProperty(Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo,System.String[]@)">
+            <summary>
+            将亮度信息转化为字符串数组
+            </summary>
+            <param name="brightInfo"></param>
+            <param name="brightInfoVaule"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.RemoveColorTempInfo(System.Int32)">
+            <summary>
+            按索引移除色温段信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.RemoveBrightInfo(System.Int32,System.Int32)">
+             <summary>
+            移除指定色温段下指定亮度索引的信息
+             </summary>
+             <param name="colorTempSegmentIndex">色温段的索引</param>
+             <param name="brightIndex">亮度的索引</param>
+             <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.RemoveBrightInfo(System.Int32,Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo)">
+            <summary>
+            移除指定色温段下指定亮度的信息
+            </summary>
+            <param name="colorTempSegmentIndex">色温段的索引</param>
+            <param name="brightInfo">亮度的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.RemoveColorTempInfo(Nova.LCT.GigabitSystem.Common.ColorTempSegment)">
+            <summary>
+            按色温段信息移除
+            </summary>
+            <param name="item">色温段的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.brightInfoListEqual(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo},System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ColorTempBrightInfo})">
+            <summary>
+            判断两个亮度列表是否相等
+            </summary>
+            <param name="CurItem"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.ColorTempTableXml.Tag">
+            <summary>
+            版本属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.IrRegularCabinetModuleField">
+            <summary>
+            不规则箱体灯板连接信息对应的节点
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.RegularCabinetField">
+            <summary>
+            规则箱体的节点属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.IrRegularCabinetField">
+            <summary>
+            不规则箱体的节点属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ModuleField">
+            <summary>
+            灯板的节点属性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoField">
+            <summary>
+            亮度信息对应的节点
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyName">
+            <summary>
+            节点属性名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyName">
+            <summary>
+            子节点属性名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoField">
+            <summary>
+            Data包Xml文件的节点属性
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.ModuleIndex">
+            <summary>
+            灯板属性对应的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.RegularCabinetIndex">
+            <summary>
+            规则箱体属性对应的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.IrRegularCabinetIndex">
+            <summary>
+            不规则箱体属性对应的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.IrRegularCabinetModuleIndex">
+            <summary>
+            不规则箱体灯板连接信息属性对应的索引
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex">
+            <summary>
+            亮度信息对应的索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.RedGain">
+            <summary>
+            红增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.GreenGain">
+            <summary>
+            绿增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.BlueGain">
+            <summary>
+            蓝增益
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.RedBright">
+            <summary>
+            红亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.GreenBright">
+            <summary>
+            绿亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.BlueBright">
+            <summary>
+            蓝亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.BrightInfoIndex.EndFlag">
+            <summary>
+            结束标志
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex">
+            <summary>
+            节点属性名称索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex.Bright">
+            <summary>
+            亮度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex.Gamma">
+             <summary>
+            Gamma 
+             </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex.ColorTemp">
+            <summary>
+            色温
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.PropertyNameIndex.EndFlag">
+            <summary>
+            结束标志
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyNameIndex">
+            <summary>
+            子节点属性名称索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyNameIndex.Enable">
+            <summary>
+            使能
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyNameIndex.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyNameIndex.RedTableData">
+            <summary>
+            Gamma数据表
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.ChildPropertyNameIndex.EndFlag">
+            <summary>
+            结束标志
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex">
+            <summary>
+            Data包Xml文件属性对应的索引
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.SenderMCU">
+            <summary>
+            发送卡MCU
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.SenderFPGA">
+            <summary>
+            发送卡FPGA
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.ScanBoardFPGA">
+            <summary>
+            扫描版FPGA
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.ScanBoardModel">
+            <summary>
+            接收卡型号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.SenderModel">
+            <summary>
+            发送卡型号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CommonData.VersionInfoIndex.EndFlag">
+             <summary>
+            结束标志
+             </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo">
+            <summary>
+            亮度(色温Gamma)定时调节表信息类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.Time">
+            <summary>
+            定时时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BirghtAdjust">
+            <summary>
+            亮度调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaAdjust">
+            <summary>
+            Gamma调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempAdjust">
+            <summary>
+            色温调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.IsEnableLowBright">
+            <summary>
+            是否启用低亮调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaAdjustMode">
+            <summary>
+            Gamma的调节模式
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.Clone">
+            <summary>
+            定时调节信息Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.CopyTo(System.Object)">
+            <summary>
+            定时调节拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BrightInfo">
+            <summary>
+            亮度调节信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BrightInfo.IsBrightEnable">
+            <summary>
+            是否使能亮度调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BrightInfo.BrightValue">
+            <summary>
+            亮度值
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BrightInfo.Clone">
+            <summary>
+            亮度信息Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.BrightInfo.CopyTo(System.Object)">
+            <summary>
+            亮度拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo">
+            <summary>
+            Gamma调节信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo.IsGammaEnable">
+            <summary>
+            是否使能Gamma调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo.GammaValue">
+            <summary>
+            Gamma值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo.GammaRedTableData">
+            <summary>
+            Gamma中RedTableData
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo.Clone">
+            <summary>
+            Gamma信息Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.GammaInfo.CopyTo(System.Object)">
+            <summary>
+            Gamma信息拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempInfo">
+            <summary>
+            色温调节信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempInfo.IsColorTempEnable">
+            <summary>
+            是否使能色温调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempInfo.ColorTempValue">
+            <summary>
+            色温值
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempInfo.Clone">
+            <summary>
+            色温信息Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo.ColorTempInfo.CopyTo(System.Object)">
+            <summary>
+            色温信息拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.VersionInfo">
+            <summary>
+            程序版本信息类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.SenderMCUFileName">
+            <summary>
+            发送卡MCU文件名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.SenderFPGAFileName">
+            <summary>
+            发送卡FPGA文件名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.ScanBoardFPGAFileName">
+            <summary>
+            扫描版FPGA文件名
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.ScanBoardModel">
+            <summary>
+            接收卡型号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.VersionInfo.SenderModel">
+            <summary>
+            发送卡型号
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.OETableItem">
+            <summary>
+            OE表元素
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.SerialDataConver.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.SerialDataConver.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.SerialDataConver.IntConverToString(System.Int32[])">
+            <summary>
+            Int数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.SerialDataConver.StringConverInt(System.String)">
+            <summary>
+            字符串转换为Int数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.ColorTempRGBMapping">
+            <summary>
+            不同色温对应的RGB分量
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.LightSensorAddr">
+            <summary>
+            光探头地址
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CaculateType">
+            <summary>
+            自动亮度计算方式
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip">
+            <summary>
+            自动亮度调节对应关系
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.MaxLux">
+            <summary>
+            最大Lux
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.MinLux">
+            <summary>
+            最小Lux
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.MaxBright">
+            <summary>
+            最大亮度值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.MinBright">
+            <summary>
+            最小亮度值
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.SegmentCnt">
+            <summary>
+            亮度分段数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.IsEnableLowBright">
+            <summary>
+            是否启用低亮模式表
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.IsFixelCorTemp">
+            <summary>
+            是否固定色温调节
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.CorTempValue">
+            <summary>
+            固定色温值（IsFixelCorTemp为True时有效）
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.BrightCaculateType">
+            <summary>
+            亮度计算方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.AdMode">
+            <summary>
+            调节模式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.CorrespondRelatinShip.EnvironAndScreenBrightInfo">
+            <summary>
+            高级模式信息列表
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.AutoBrightInfo">
+            <summary>
+            自动亮度信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.AutoBrightInfo.LightSensorList">
+            <summary>
+            光探头列表
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile">
+            <summary>
+            自动亮度配置文件
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.#ctor(System.String,Nova.Xml.XmlFile.XmlFileFlag,System.Boolean@)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="szXmlPathName"></param>
+            <param name="XmlFlag"></param>
+            <param name="bSuccess"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.SaveAutoBrightInfo(Nova.LCT.GigabitSystem.Files.AutoBrightInfo)">
+            <summary>
+            保存自动亮度信息
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.LoadAutoBrightInfo(Nova.LCT.GigabitSystem.Files.AutoBrightInfo@)">
+            <summary>
+            载入自动亮度信息
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.SerializeTimeInfo(Nova.LCT.GigabitSystem.Files.AutoBrightInfo)">
+            <summary>
+            序列化TimeInfoOfPlaylist对象
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.DeSerializeTimeInfo(System.String,Nova.LCT.GigabitSystem.Files.AutoBrightInfo@)">
+            <summary>
+            反序列化xml字符串为TimeInfoOfPlaylist对象
+            </summary>
+            <param name="xml"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.Clean(System.Xml.XmlDocument)">
+            <summary>
+            移除xml命名空间（序列化时自动添加的)
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.AutoBrightInfoFile.DoIndentation(System.String,System.Int32)">
+            <summary>
+            缩进
+            </summary>
+            <param name="sorXml"></param>
+            <param name="indentationLength"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.LowBrightnessTableFile">
+            <summary>
+            低亮模式表文件
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LowBrightnessTableFile.SaveTableToFile(System.String,Nova.LCT.GigabitSystem.Files.LowBrightnessTable)">
+            <summary>
+            保存低亮模式表
+            </summary>
+            <param name="fileName">保存到的文件全路径</param>
+            <param name="infoList">保存的低亮模式表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LowBrightnessTableFile.LoadTableFromFile(System.String,Nova.LCT.GigabitSystem.Files.LowBrightnessTable@)">
+            <summary>
+            载入低亮模式表
+            </summary>
+            <param name="fileName">需要载入的文件全路径</param>
+            <param name="infoList">载入的低亮模式表</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo">
+            <summary>
+            一个低亮模式信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.#ctor">
+            <summary>
+            初始化一个低亮模式信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.CopyTo(System.Object)">
+            <summary>
+            拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.ScanBoardProp">
+            <summary>
+            一个低亮模式的接收卡属性
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.SenderProp">
+            <summary>
+            一个低亮模式的发送卡属性
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.Name">
+             <summary>
+            个低亮模式的名称
+             </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.OneLowBrightnessInfo.BrightnessEfficiency">
+            <summary>
+            个低亮模式的亮度有效率
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.LowBrightnessTable">
+            <summary>
+            低亮模式表
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LowBrightnessTable.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.LowBrightnessTable.CopyTo(System.Object)">
+            <summary>
+            拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.LowBrightnessTable.StandardItemIndex">
+            <summary>
+            标准项的索引
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.LowBrightnessTable.LowBrightInfoList">
+            <summary>
+            低亮模式列表
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile">
+            <summary>
+            亮度(色温Gamma)定时调节表XML文件解析类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.Sep">
+            <summary>
+            Byte数据的分割符
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.#ctor(System.String,Nova.Xml.XmlFile.XmlFileFlag,System.Boolean@)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="szXmlPathName"></param>
+            <param name="XmlFlag"></param>
+            <param name="bSuccess"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.GetTimeAdjustSchedualCount(System.Int32@)">
+            <summary>
+            获得Segment项个数
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.GetTimeAdjustSchedualInfo(System.Int32,Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo@)">
+            <summary>
+            获取某一项定时调节信息
+            </summary>
+            <param name="index"></param>
+            <param name="itemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.AddTimeAdjustSchedualInfo(Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo)">
+            <summary>
+            添加某一项定时调节信息
+            </summary>
+            <param name="itemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.InsertTimeAdjustSchedualInfo(System.Int32,Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo)">
+            <summary>
+            插入某一项定时调节信息
+            </summary>
+            <param name="insertPos"></param>
+            <param name="itemInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.RemoveTimeAdjustSchedualInfo(System.Int32)">
+            <summary>
+            按索引删除一项定时调节信息
+            </summary>
+            <param name="itemIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.RemoveTimeAdjustSchedualInfo(Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualInfo)">
+            <summary>
+            按索引删除一项定时调节信息
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.IntEqual(System.Byte[],System.Byte[])">
+            <summary>
+            判断两个字节数组是否相等
+            </summary>
+            <param name="newByte"></param>
+            <param name="oldByte"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Files.TimeAdjustSchedualConfigFile.Tag">
+            <summary>
+            版本属性
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.ModuleXml">
+            <summary>
+            灯板配置文件操作类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.GetModuleCount(System.Int32@)">
+            <summary>
+            获得灯板项个数
+            </summary>
+            <param name="Count"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.AddModuleItem(Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            添加一项灯板信息
+            </summary>
+            <param name="moduleProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.ByteEqual(System.Byte[],System.Byte[])">
+            <summary>
+            判断两个字节数组是否相等
+            </summary>
+            <param name="newByte"></param>
+            <param name="oldByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.SerialToXml(System.String,Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            使用XmlSerializer自定义序列化
+            </summary>
+            <param name="fileName"></param>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.ModuleXml.DeserializeXml(System.String,Nova.LCT.GigabitSystem.Common.LEDModuleProperty@)">
+            <summary>
+            使用XmlSerializer自定义反序列化
+            </summary>
+            <param name="fileName"></param>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Files.LEDModulePropertyPacker">
+            <summary>
+            LEDModuleProperty的包装器，用来包装LEDModuleProperty使得可以对LEDModuleProperty使用xml自定义序列化
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.SaveAsOETableFile(System.String,Nova.LCT.GigabitSystem.Common.ScanBoardProperty@)">
+            <summary>
+            保存到OE表
+            </summary>
+            <param name="filename"></param>
+            <param name="scanBdProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetNewOETableData(Nova.LCT.GigabitSystem.Common.ScanBoardProperty)">
+            <summary>
+            获取新OE表的数据
+            </summary>
+            <param name="scanBdProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.SaveAsOETableFile(System.String,Nova.LCT.GigabitSystem.Common.GrayRealizeType,Nova.LCT.GigabitSystem.Common.LowGrayQueryMode,System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType,System.Int32)">
+            <summary>
+            将OE表保存到文件
+            </summary>
+            <param name="fileName">OE表的名称</param>
+            <param name="grayRealize">灰度实现方式</param>
+            <param name="grayBits">灰度位数</param>
+            <param name="grayMode">灰度模式</param>
+            <param name="partNumPerRef">分为几个part去实现</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.SaveSpecialChipOE(System.String,Nova.LCT.GigabitSystem.Common.ChipType)">
+            <summary>
+            特殊PWM芯片的OE表
+            </summary>
+            <param name="fileName"></param>
+            <param name="chipType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.DivideSubFieldNumPerRef(Nova.LCT.GigabitSystem.Common.LowGrayQueryMode,Nova.LCT.GigabitSystem.Common.GrayRealizeType,System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType,System.Int32,System.Collections.Generic.List{System.Byte}@)">
+            <summary>
+            未知总子场数，将子场数均分
+            </summary>
+            <param name="grayRealize">灰度实现方式</param>
+            <param name="grayBits">灰度位数</param>
+            <param name="grayMode">灰度模式</param>
+            <param name="partNum">分为几个part实现</param>
+            <param name="subFieldList">每个part对应的子场数</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.DivideSubFieldNumPerRef(System.Int32,System.Int32,System.Collections.Generic.List{System.Byte}@)">
+            <summary>
+            已知总子场数及要分为几个部分实现，将子场数均分
+            </summary>
+            <param name="subFieldNumPerRef"></param>
+            <param name="partNum"></param>
+            <param name="subFieldList"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetSubFieldNumPerRef(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType,Nova.LCT.GigabitSystem.Common.GrayRealizeType,Nova.LCT.GigabitSystem.Common.LowGrayQueryMode)">
+            <summary>
+            获得每灰度子场数，如果要使用改进的灰度模式，且灰度级及灰度模式对改进方式有效，才使用改进的方式计算
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <param name="realizeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetOETableItemList(Nova.LCT.GigabitSystem.Common.LowGrayQueryMode,System.Int32@,Nova.LCT.GigabitSystem.Common.GrayModeType,Nova.LCT.GigabitSystem.Common.GrayRealizeType,System.Int32@)">
+            <summary>
+            获得每一位灰度需要的子场数和它的权重
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetTraditionalSubFieldNumPerRef(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType)">
+            <summary>
+            获取传统模式下的每灰度子场数
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetHGHRSubFieldNumPerRef(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType)">
+            <summary>
+            获取高灰度高刷新模式下的每灰度子场数
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetGrayFirstSubFieldNumPerRef(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType)">
+            <summary>
+            获取灰度优先模式下的每灰度子场数
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.OEFileCreator.GetSubFieldNumForBit15(System.Int32,Nova.LCT.GigabitSystem.Common.GrayModeType)">
+            <summary>
+            获得灰度最高位的权重
+            </summary>
+            <param name="grayScale"></param>
+            <param name="grayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.GammaFileCreator.WriteGammaTable(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Boolean,System.Byte[]@)">
+            <summary>
+            根据Gamma值,x、y取值范围,构造Gamma表
+            </summary>
+            <param name="fileName"></param>
+            <param name="startX"></param>
+            <param name="endX"></param>
+            <param name="startY"></param>
+            <param name="endY"></param>
+            <param name="gamma"></param>
+            <param name="createNew"></param>
+            <param name="gammaArray"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.GammaFileCreator.WriteGammaTable(System.String,System.Double,System.Boolean,System.Byte[]@)">
+            <summary>
+            根据Gamma值构造Gamma表
+            </summary>
+            <param name="fileName">保存Gamma表的文件路径</param>
+            <param name="gamma">输入的gamma值</param>
+            <param name="createNew">是否创建新文件</param>
+            <param name="gammaArray">保存gamma表的字节数组</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.GammaFileCreator.GetGammaValue(System.Int32,System.Int32,System.Int32,System.Int32,System.Double)">
+            <summary>
+            根据gamma值，x、y取值范围获得对应的Gamma值数组
+            </summary>
+            <param name="startX"></param>
+            <param name="endX"></param>
+            <param name="startY"></param>
+            <param name="endY"></param>
+            <param name="gamma"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.GammaFileCreator.WriteGammaTable(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            将gamma数组写成文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="gammaArray"></param>
+            <param name="createNew"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Files.GammaFileCreator.CountGammaCurve(System.Int32[]@,System.Double,System.Int32,System.Double,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            如果用户希望自定义gammaY的值，那么调用该接口，并设置maxGammaY为1023~65535之间的值，否则设置maxGammaY为0；
+            </summary>
+            <param name="gammaArray"></param>
+            <param name="gamma"></param>
+            <param name="grayscale"></param>
+            <param name="lumratio"></param>
+            <param name="bContrastStrength"></param>
+            <param name="isModeB"></param>
+            <param name="maxGammaY"></param>
+        </member>
+    </members>
+</doc>

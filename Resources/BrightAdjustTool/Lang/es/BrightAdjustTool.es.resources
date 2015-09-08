@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<Resource>
+  <Form>
+    <Name>BrightAdjustTool</Name>
+    <Controls>
+      <Control name="ToolStripMenuItem_ReconnectServer" text="Volver a registro en el servicio" />
+      <Control name="ToolStripMenuItem_ReadLEDInfo" text="Re-leer las informaciones de la pantalla" />
+      <Control name="ToolStripMenuItem_AdvancedConfig" text="Configuración de nivel alto" />
+      <Control name="ToolStripMenuItem_Exit" text="Salir" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>BrightAdjustToolInfo</Name>
+    <Controls>
+      <Control name="Succeed" text="Èxito" />
+      <Control name="Failed" text="Fallo" />
+      <Control name="SomeScreenIsNotExist" text="Èxito de envìo, pero  algunas páginas no existen.!" />
+      <Control name="None" text="No hay" />
+      <Control name="Name" text="Nombre" />
+      <Control name="Config" text="Cofiguración de la pantalla" />
+      <Control name="AdjustMode" text="Modo de regulación" />
+      <Control name="DriverType" text="Chip de accionamiento" />
+      <Control name="LastAdjustInfo" text="Información de regulación de la vez pasada." />
+      <Control name="Screen" text="Pantalla" />
+      <Control name="View" text="Ver" />
+      <Control name="Manual" text="Manual" />
+      <Control name="Schedual" text="Periodicamente" />
+      <Control name="Auto" text="Automático" />
+      <Control name="Programmed" text="Control del programa" />
+      <Control name="CommPortScreen" text="Puerto serial+B40-pantalla:" />
+      <Control name="NotExist" text="No existe!" />
+      <Control name="No" text="No" />
+      <Control name="Yes" text="Sí" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdjustInfoPreview</Name>
+    <Controls>
+      <Control name="Frm_AdjustInfoPreview" text="Ver los datos de regulación anterior" />
+      <Control name="label_Time" text="Tiempo de regulación" />
+      <Control name="label_Result" text="Resultado de regulación" />
+      <Control name="groupBox_Data" text="Datos de regulación" />
+      <Control name="label_Bright" text="Valor de brillo" />
+      <Control name="label1_Gamma" text="Valor de Gamma" />
+      <Control name="groupBox_Gain" text="Ganancia" />
+      <Control name="groupBox_RGBBrightness" text="Clasificación de iluminación RGB" />
+      <Control name="crystalButton_Close" text="Cerrar" />
+      <Control name="label_RedGain" text="Rojo" />
+      <Control name="label_GreenGain" text="Verde" />
+      <Control name="label_BlueGain" text="Azul" />
+      <Control name="label_RedBright" text="Rojo" />
+      <Control name="label_GreeenBright" text="Verde" />
+      <Control name="label_BlueBright" text="Azul" />
+      <Control name="groupBox_ColorTemp" text="Información de temperatura de color" />
+      <Control name="label_IsEnableLowBright" text="Si se puede garantizar una escala de grises baja " />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdvancedConfig</Name>
+    <Controls>
+      <Control name="Frm_AdvancedConfig" text="Configuración de nivel alto" />
+      <Control name="seperatePanel_LogEffectiveDays" text="Dìas vàlidos de ajuste del diario" />
+      <Control name="label_Days" text="Día" />
+      <Control name="seperatePanel_AutoBrightInfo" text="Información de ajuste de brillo automático" />
+      <Control name="label_AutoBrightPeriod" text="Frecuencia de prueba de brillo ambiental" />
+      <Control name="label_ReadLuxCnt" text="Número de veces de leer el brillo ambiental" />
+      <Control name="label_Notice" text="Nota: En modo de ajuste de brillo automático, cada vez antes de ajustar el brillo de la pantalla, se debe eliminar el valor máximo y el valor mínomo de las lecturas de N veces para calcular el valor medio, luego según la curva compuesta por el valor de brillo ambiental y el de brillo de pantalla, se ajustará el brillo de pantalla.!" />
+      <Control name="crystalButton_Ok" text="Aceptar" />
+      <Control name="crystalButton_Cancel" text="Cancelar" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_DisplayInfo</Name>
+    <Controls>
+      <Control name="seperatePanel_ScreenInfo" text="Información de ajuste de brillo" />
+      <Control name="label_NoServer" text="Actualmente no se ha conectado con el servicio!" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_SupperDisplayLayout</Name>
+    <Controls>
+      <Control name="Frm_SupperDisplayLayout" text="Topología de la pantalla de combinación" />
+      <Control name="label_ScalingRate" text="Porcentaje de ampliación-reducción" />
+      <Control name="label_OK" text="Correcta conexión de la pantalla" />
+      <Control name="label_Unknown" text="No se ha detectado una pantalla" />
+      <Control name="crystalButto_Exit" text="Cerrar" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>CustomMessageBox</Name>
+    <Controls>
+      <Control name="button_Yes" text="Sí"/>
+      <Control name="button_No" text="No"/>
+
+      <Control name="button_Abort" text="Finalizar"/>
+      <Control name="button_Retry" text="Reintentar"/>
+      <Control name="button_Ignore" text="Pasar por alto"/>
+
+      <Control name="button_Cancel" text="Cancelar"/>
+      <Control name="button_OK" text="Aceptar"/>
+    </Controls>
+  </Form>
+</Resource>

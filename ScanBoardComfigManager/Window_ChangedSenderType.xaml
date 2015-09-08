@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Nova.SmartLCT.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Nova.SmartLCT.UI.Window_ChangedSenderType"
+        Title="更改发送卡型号" Height="249" Width="385">
+	<Window.Resources>
+        <local:Window_ChangedSenderType_VM x:Key="Window_ChangedSenderType_VMDataSource" d:IsDataSource="True"/>
+        <DataTemplate x:Key="DataTemplate_senderType">
+        	<Grid Width="100">
+        		<Image HorizontalAlignment="Left" Width="25" Height="25" Source="{Binding SenderPicturePath, Mode=TwoWay}"/>
+        		<TextBlock Margin="0" TextWrapping="Wrap" Text="{Binding SenderTypeName, Mode=TwoWay}" HorizontalAlignment="Right" Width="70" Height="25"/>
+        	</Grid>
+        </DataTemplate>
+	</Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource Window_ChangedSenderType_VMDataSource}}">
+    	<Label Content="发送卡型号：" HorizontalAlignment="Left" Height="35" Margin="9,24,0,0" VerticalAlignment="Top" Width="93"/>
+        <ComboBox x:Name="comboBox_senderType" SelectedItem="{Binding CurrentSenderConfigInfo,Mode=TwoWay}"  Height="28" Margin="106,24,12,0" VerticalAlignment="Top" ItemsSource="{Binding SenderConfigCollection}" ItemTemplate="{DynamicResource DataTemplate_senderType}"/>
+        <Button x:Name="button_ok" Command="{Binding CmdButton_OK,Mode=OneWay}" Content="确定" HorizontalAlignment="Left" Margin="79,0,0,11" Width="92" Height="28" VerticalAlignment="Bottom"/>
+        <Button x:Name="button_cancel" Content="取消" Command="{Binding CmdButton_Cancel,Mode=OneWay}" HorizontalAlignment="Right" Height="28" Margin="0,0,46,12" VerticalAlignment="Bottom" Width="92"/>
+        
+    </Grid>
+</Window>

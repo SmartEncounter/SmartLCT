@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Control.LedPointGrid</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Control.Grid.DrawOnePointEventHandler">
+            <summary>
+            绘制灯点的委托
+            </summary>
+            <param name="col">需要绘制灯点所在的列索引</param>
+            <param name="row">需要绘制灯点所在的行索引</param>
+        </member>
+        <member name="T:Nova.Control.Grid.LedPointGrid">
+            <summary>
+            灯板走线表绘制控件
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.#ctor">
+            <summary>
+            灯板走线表绘制控件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.SetLedPointInfo(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置灯点的行列数和扫描信息（几扫，每扫点数）
+            </summary>
+            <param name="cols">灯板中灯点的列数</param>
+            <param name="rows">灯板中灯点的行数</param>
+            <param name="ScanCount">灯板扫描方式（几扫）</param>
+            <param name="PointCountOfOneScan">灯板死一扫的灯点数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.ClearAllDistribution">
+            <summary>
+            清除所有点的分布状态
+            </summary>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.UndoLastDistribution">
+            <summary>
+            撤销上一次的分布状态
+            </summary>
+            <returns>返回撤销的点个数</returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.AutomaticDistribute">
+            <summary>
+            根据当前的分布状态智能分布，智能分布只是对第一扫进行自动分布
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.GetPointDistributionOfFirstScan(System.Collections.Generic.List{System.Drawing.Point}@)">
+            <summary>
+            获得第一扫的有分布序号的灯点行列坐标列表
+            </summary>
+            <param name="pointLocList">获取的坐标列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.GetFirstPointOfAllScan(System.Collections.Generic.List{System.Drawing.Point}@)">
+            <summary>
+            获得每扫的首点坐标列表
+            </summary>
+            <param name="firstPointList">每一扫的首点坐标列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.LoadAllDistribution(System.Collections.Generic.List{System.Drawing.Point},System.Collections.Generic.List{System.Drawing.Point})">
+            <summary>
+            根据载入的灯点坐标绘制灯点分布
+            </summary>
+            <param name="pointOfFirstScanList">第一扫的灯点坐标</param>
+            <param name="firstPointAllScanList">每一扫的首点坐标</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.InsertSertInvalidPointInCurPosition(System.Int32)">
+            <summary>
+            插入无效点
+            </summary>
+            <param name="invalidPointCnt">插入的无效点个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.DrawOtherScanFirstPoint(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            绘制其它扫的首点
+            </summary>
+            <param name="drawGraphic"></param>
+            <param name="ColNo"></param>
+            <param name="RowNo"></param>
+        </member>
+        <member name="M:Nova.Control.Grid.LedPointGrid.SetColumnAndRow(System.Int32,System.Int32)">
+            <summary>
+            设置灯板的行列数
+            </summary>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.IsStaticDistribute">
+            <summary>
+            是否支持静态灯点走线分布
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.IsNeedDrawPoint">
+            <summary>
+            是否绘制灯点
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.IsFinishScan">
+            <summary>
+            完成绘制标志
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointLineColor">
+            <summary>
+            灯点圆外线颜色(通常状态下)
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointColor">
+            <summary>
+            灯点颜色(通常状态下)
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointEdgeZoneClr">
+            <summary>
+            灯点边缘区域颜色(通常状态下)
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointFocusColor">
+            <summary>
+            灯点获得焦点时的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointEdgeFocusClr">
+            <summary>
+            灯点获得焦点时边缘区域的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.ConnectLineColor">
+            <summary>
+            灯点之间连线颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointDistributeColor">
+            <summary>
+            具有分布序号的灯点颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.FirstDistrtPointClr">
+            <summary>
+            第一个分布点的灯点颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.ConnectLineWidth">
+            <summary>
+            连接线宽度
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointCols">
+            <summary>
+            灯点列数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.PointRows">
+            <summary>
+            灯点行数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.DistrbtNumberFont">
+            <summary>
+            分布序号字体
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.DistrbtNumberColor">
+            <summary>
+            分布序号颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.IsDrawConnectLine">
+            <summary>
+            第一扫绘制时是否需要绘制连接线
+            </summary>
+        </member>
+        <member name="P:Nova.Control.Grid.LedPointGrid.FirstScanNumberBeginType">
+            <summary>
+            第一扫绘制的起始序号的类型
+            </summary>
+        </member>
+        <member name="E:Nova.Control.Grid.LedPointGrid.PointDrawedEvent">
+            <summary>
+            灯点绘制事件
+            </summary>
+        </member>
+        <member name="T:Nova.Control.Grid.LedPointGrid.LastOperateType">
+            <summary>
+            上一步的操作类型
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.LastOperateType.Automatic">
+            <summary>
+            智能设置
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.LastOperateType.MouseClick">
+            <summary>
+            鼠标点击分布
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.LastOperateType.None">
+            <summary>
+            无状态
+            </summary>
+        </member>
+        <member name="T:Nova.Control.Grid.LedPointGrid.LastOpeateStruct">
+            <summary>
+            上一步的操作结构，包含操作类型及该类型的灯点连接数量
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.LastOpeateStruct.OperateType">
+            <summary>
+            上一步的操作类型
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.LedPointGrid.LastOpeateStruct.OperateNum">
+            <summary>
+            上一步的连接灯点数量
+            </summary>
+        </member>
+        <member name="T:Nova.Control.Grid.LedPointGrid.ScanIndex">
+            <summary>
+            每一扫首点的字符
+            </summary>
+        </member>
+        <member name="T:Nova.Control.Grid.FirstDrawNumberType">
+            <summary>
+            第一扫序号的绘制方式
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.FirstDrawNumberType.Zero">
+            <summary>
+            以0开始
+            </summary>
+        </member>
+        <member name="F:Nova.Control.Grid.FirstDrawNumberType.One">
+            <summary>
+            以1开始
+            </summary>
+        </member>
+    </members>
+</doc>

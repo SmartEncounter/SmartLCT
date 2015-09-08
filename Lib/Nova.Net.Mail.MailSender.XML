@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Net.Mail.MailSender</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Net.Mail.MailSender">
+            <summary>
+            邮件发送对象
+            </summary>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.#ctor(System.String,System.String,System.String,System.Boolean@)">
+            <summary>
+            构造邮件发送类
+            </summary>
+            <param name="smtpHost">服务器地址</param>
+            <param name="emailOfFrom">发送者地址</param>
+            <param name="password">发送者密码</param>
+            <param name="bSuccess">邮件类初始化是否成功</param>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.#ctor(System.String,System.Int32,System.String,System.String,System.Boolean@)">
+            <summary>
+            构造邮件发送类
+            </summary>
+            <param name="smtpHost">服务器地址</param>
+            <param name="smtpPort">服务器端口</param>
+            <param name="emailOfFrom">发送者地址</param>
+            <param name="password">发送者密码</param>
+            <param name="bSuccess">邮件类初始化是否成功</param>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SetMailMessageContext(System.String,System.String,System.Boolean)">
+            <summary>
+            设置邮件内容
+            </summary>
+            <param name="Body">邮件内容</param>
+            <param name="Title">邮件标题</param>
+            <param name="IsbodyHtml">邮件内容是否为Html格式</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.Attachments(System.String)">
+            <summary>
+            添加附件
+            </summary>
+            <param name="path">附件路径(一次只能输入一个路径)</param>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.RemoveAttachments(System.Int32)">
+            <summary>
+            移除附件
+            </summary>
+            <param name="index">附件索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.ClearAttachments">
+            <summary>
+            清除附件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.AddCC(System.String)">
+            <summary>
+            添加一个抄送者
+            </summary>
+            <param name="ccAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.AddCC(System.Collections.Generic.List{System.String})">
+            <summary>
+            添加多个抄送者
+            </summary>
+            <param name="ccAddressList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.RemoveCC(System.Int32)">
+            <summary>
+            移除某一抄送者
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.ClearCC">
+            <summary>
+            清空所有抄送者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.AddBcc(System.String)">
+            <summary>
+            添加一个抄送者
+            </summary>
+            <param name="bCCAddress">密送邮箱</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.AddBcc(System.Collections.Generic.List{System.String})">
+            <summary>
+            添加多个抄送者
+            </summary>
+            <param name="bCCAddressList">密送邮箱列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.RemoveBcc(System.Int32)">
+            <summary>
+            移除某一抄送者
+            </summary>
+            <param name="index">删除的密送邮箱地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.ClearBcc">
+            <summary>
+            清空所有抄送者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.Send(System.String,System.Net.Mail.MailPriority,System.Int32)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="desMail">接收者</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="timeOut">同步发送超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.Send(System.String,System.Net.Mail.MailPriority,System.Int32,System.Net.Mail.SmtpException@)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="desMail">接收者</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="timeOut">同步发送超时时间</param>
+            <param name="smtpEx">异常信息类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.Send(System.Collections.Generic.List{System.String},System.Net.Mail.MailPriority,System.Int32)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="desMailList">接收者列表</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="timeOut">同步发送超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.Send(System.Collections.Generic.List{System.String},System.Net.Mail.MailPriority,System.Int32,System.Net.Mail.SmtpException@)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="desMailList">接收者列表</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="timeOut">同步发送超时时间</param>
+            <param name="smtpEx">异常信息类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.String,System.Net.Mail.MailPriority)">
+            <summary>
+            异步发送邮件
+            </summary>
+            <param name="desMail">接收者</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.String,System.Net.Mail.MailPriority,System.Net.Mail.SmtpException@)">
+            <summary>
+            异步发送邮件，若发送过程中出现异常，则输出异常信息
+            </summary>
+            <param name="desMail">接收者</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+            <param name="smtpEx">异常信息类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.String,System.Net.Mail.MailPriority,System.Net.Mail.SmtpException@,System.Object)">
+            <summary>
+            异步发送邮件，若发送过程中出现异常，则输出异常信息
+            </summary>
+            <param name="desMail">接收者</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+            <param name="smtpEx">异常信息类</param>
+            <param name="userToken">一个用户定义对象，此对象将被传递给完成异步操作时所调用的方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.Collections.Generic.List{System.String},System.Net.Mail.MailPriority)">
+            <summary>
+            异步发送邮件
+            </summary>
+            <param name="desMailList">接收者列表</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.Collections.Generic.List{System.String},System.Net.Mail.MailPriority,System.Net.Mail.SmtpException@)">
+            <summary>
+            异步发送邮件，若发送过程中出现异常，则输出异常信息
+            </summary>
+            <param name="desMailList">接收者列表</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+            <param name="smtpEx">异常信息类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.SendAsync(System.Collections.Generic.List{System.String},System.Net.Mail.MailPriority,System.Net.Mail.SmtpException@,System.Object)">
+            <summary>
+            异步发送邮件，若发送过程中出现异常，则输出异常信息
+            </summary>
+            <param name="desMailList">接收者列表</param>
+            <param name="priority">邮件的优先级属性</param>
+            <param name="CompletedMethod">SendCompletedEventHandler委托</param>
+            <param name="smtpEx">异常信息类</param>
+            <param name="userToken">一个用户定义对象，此对象将被传递给完成异步操作时所调用的方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Net.Mail.MailSender.CancelAsyncSend">
+            <summary>
+            取消异步发送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.Net.Mail.MailSender.EncodeType">
+            <summary>
+            编码方式
+            </summary>
+        </member>
+        <member name="P:Nova.Net.Mail.MailSender.IsEnableSsl">
+            <summary>
+            是否使用加密连接
+            </summary>
+        </member>
+        <member name="P:Nova.Net.Mail.MailSender.MailDomainPort">
+            <summary>
+            邮件服务器端口号
+            </summary>
+        </member>
+        <member name="P:Nova.Net.Mail.MailSender.IsReturnReceipt">
+            <summary>
+            是否要求回执
+            </summary>
+        </member>
+        <member name="E:Nova.Net.Mail.MailSender.EmailSendCompleteEvent">
+            <summary>
+            邮件发送完成通知
+            </summary>
+        </member>
+    </members>
+</doc>

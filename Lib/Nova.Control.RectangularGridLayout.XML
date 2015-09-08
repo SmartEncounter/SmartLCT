@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Control.RectangularGridLayout</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Control.RectangularGridStyle">
+            <summary>
+            格子的风格
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridStyle.BackColor">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridStyle.ForeColor">
+            <summary>
+            前景颜色，当格子上需要绘制字体时，该值表征字体的颜色
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridStyle.GridFont">
+            <summary>
+            格子字体，当格子上需要绘制字体时，该值表征字体的风格
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridStyle.BoardColor">
+            <summary>
+            格子边框颜色
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridStyle.BoardWidth">
+            <summary>
+            格子边框宽度
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridStyle.Clone">
+            <summary>
+            格子风格的clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridStyle.CopyTo(System.Object)">
+            <summary>
+            格子风格拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Control.RectangularGridInfo">
+            <summary>
+            格子的信息
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.Style">
+            <summary>
+            格子风格
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.SelectStyle">
+            <summary>
+            格子选中时的风格
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.Region">
+            <summary>
+            格子的区域信息，起始位置，宽高
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.DrawRegion">
+            <summary>
+            绘制区域格子的实际信息
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.Key">
+            <summary>
+            标识该格子的key
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.GridIsValid">
+            <summary>
+            格子是否有效
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridInfo.CustomObj">
+            <summary>
+            外界绑定的自定义数据对象
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridInfo.Clone">
+            <summary>
+            格子信息的clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridInfo.CopyTo(System.Object)">
+            <summary>
+            格子信息的拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Control.RectangularGridMouseEventArgs">
+            <summary>
+            鼠标事件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridMouseEventArgs.#ctor(System.Windows.Forms.MouseEventArgs,Nova.Control.RectangularGridInfo)">
+            <summary>
+            鼠标操作的参数
+            </summary>
+            <param name="baseArgs"></param>
+            <param name="info"></param>
+        </member>
+        <member name="P:Nova.Control.RectangularGridMouseEventArgs.BaseMouseEventArgs">
+            <summary>
+            系统自带的鼠标操作参数
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridMouseEventArgs.GridInfo">
+            <summary>
+            格子信息
+            </summary>
+        </member>
+        <member name="T:Nova.Control.RectangularGridMouseEventHandler">
+            <summary>
+            格子鼠标操作的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.Control.RectangularGridLayout">
+            <summary>
+            该控件用于显示矩形格子分布示意图
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.#ctor">
+            <summary>
+            扫描板区域拓扑图的构造控件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.AddRectangularGrid(System.Drawing.Rectangle,System.String,System.Object)">
+            <summary>
+            添加未指定风格的格子
+            </summary>
+            <param name="region">格子矩形</param>
+            <param name="key">格子对应的key</param>
+            <param name="customObj">格子被绑定的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.AddRectangularGrid(System.Drawing.Rectangle,System.String,System.Boolean,System.Object)">
+            <summary>
+            添加未指定风格的格子
+            </summary>
+            <param name="region">格子矩形</param>
+            <param name="key">格子对应的key</param>
+            <param name="isValidGrid">格子是否有效</param>
+            <param name="customObj">格子被绑定的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.AddRectangularGrid(Nova.Control.RectangularGridInfo)">
+            <summary>
+            添加指定风格的格子
+            </summary>
+            <param name="gridInf">格子信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.SetOneGridIsValid(System.String,System.Boolean)">
+            <summary>
+            设置某个格子是否有效
+            </summary>
+            <param name="key"></param>
+            <param name="isValid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.SetScrollPosition(System.Windows.Forms.ScrollOrientation,System.Int32)">
+            <summary>
+            设置滚动条的新位置
+            </summary>
+            <param name="type"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.RemoveRectangularGrid(System.String)">
+            <summary>
+            移除指定key的格子
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.AddOneSelectedGrid(System.String)">
+            <summary>
+            添加一个选中格子信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.SetSelectedGridList(System.Collections.Generic.List{System.String})">
+            <summary>
+            设置选中格子
+            </summary>
+            <param name="keyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.RemoveOneSeletedGrid(System.String)">
+            <summary>
+            将指定key的格子信息从选中格子中移除
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.ClearAllSelectedInfo">
+            <summary>
+            清除当前所有选中格子信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.DeleteAllSelectedGrid">
+            <summary>
+            移除所有选中的格子
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.ClearAllRectangularGrid">
+            <summary>
+            清空当前所有格子信息
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.InvalidateDrawArea">
+            <summary>
+            刷新当前显示
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.DrawGrid(System.Drawing.Graphics,Nova.Control.RectangularGridInfo)">
+            <summary>
+            绘制控件
+            </summary>
+            <param name="drawZoonGraphic"></param>
+            <param name="curGird"></param>
+        </member>
+        <member name="F:Nova.Control.RectangularGridLayout._gridDic">
+            <summary>
+            存储格子信息
+            </summary>\
+        </member>
+        <member name="F:Nova.Control.RectangularGridLayout._selectGridKeyList">
+            <summary>
+            当前选中的格子信息
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridLayout._isInDrawZoonSizeChanged">
+            <summary>
+            是否正在处理Panel的SizeChanged事件
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.HideVScroll">
+            <summary>
+            隐藏垂直滚动条
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.HideHScroll">
+            <summary>
+            隐藏水平滚动条
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.ShowVScroll">
+            <summary>
+            显示垂直滚动条
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.ShowHScroll">
+            <summary>
+            显示水平滚动条
+            </summary>
+        </member>
+        <member name="F:Nova.Control.RectangularGridLayout.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Control.RectangularGridLayout.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridMouseDown">
+            <summary>
+            鼠标按下
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridMouseMove">
+            <summary>
+            鼠标移动
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridMouseUp">
+            <summary>
+            鼠标弹起
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridMouseDoubleClick">
+            <summary>
+            鼠标双击
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridSelectionChanged">
+            <summary>
+            选中区域更改
+            </summary>
+        </member>
+        <member name="E:Nova.Control.RectangularGridLayout.GridScrollEvent">
+            <summary>
+            格子滚动条触发事件
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.IsCanSelect">
+            <summary>
+            是否支持选中，若支持，当鼠标点击分布图上的格子时，格子为选中状态；再次点击为取消选中；此外，支持框选
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.IsCanSelectMoreGrid">
+            <summary>
+            是否支持多选
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.DefaultStyle">
+            <summary>
+            默认的格子风格
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.DefaultSelectedStyle">
+            <summary>
+            默认的选中格子的风格
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.DefaultFocusStyle">
+            <summary>
+            移动鼠标时，当前处于焦点下的格子的风格
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.LengthForOnePixel">
+            <summary>
+            绘制时，一个像素代表的长度,缩放比例
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.SelectedZoneColorByMove">
+            <summary>
+            鼠标左键按下移动框选时，框的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.SelectedZoneBorderWidthByMove">
+            <summary>
+            鼠标左键按下移动框选时，框的线宽
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.Item(System.String)">
+            <summary>
+            获得当前控件包含的格子信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.SelectedGrid">
+            <summary>
+            当前选中的格子信息
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.HScrollPos">
+            <summary>
+            水平滚动条的位置
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.VScrollPos">
+            <summary>
+            垂直滚动条的位置
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.CurGridRegionCount">
+            <summary>
+            当前绘制区域格子的数量
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.CurAllRegionRealMaxSize">
+            <summary>
+            获取已添加的矩形区域未缩放时(实际)的最大尺寸
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.DrawPanelSize">
+            <summary>
+            绘制Pannel的大小
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.DrawPanel">
+            <summary>
+            当前绘制区域的Panel
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.GridDic">
+            <summary>
+            当前添加的Grid信息
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.EffectiveRegion">
+            <summary>
+            获取箱体有效区域的大小
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.IsDrawFocusBackColor">
+            <summary>
+            是否绘制聚焦的背景颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Control.RectangularGridLayout.IsDrawFocusBoardLine">
+            <summary>
+            是否绘制聚焦的线宽
+            </summary>
+        </member>
+        <member name="T:Nova.Control.RectangularGridLayout.LeftMouseOperateType">
+            <summary>
+            鼠标左键点击的类型
+            </summary>
+        </member>
+    </members>
+</doc>

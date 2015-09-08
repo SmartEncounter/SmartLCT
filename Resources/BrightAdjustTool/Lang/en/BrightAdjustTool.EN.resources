@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<Resource>
+  <Form>
+    <Name>BrightAdjustTool</Name>
+    <Controls>
+      <Control name="ToolStripMenuItem_ReconnectServer" text="Regist to server again" />
+      <Control name="ToolStripMenuItem_ReadLEDInfo" text="Read Screen Information" />
+      <Control name="ToolStripMenuItem_AdvancedConfig" text="Advance Setting" />
+      <Control name="ToolStripMenuItem_Exit" text="Exit" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>BrightAdjustToolInfo</Name>
+    <Controls>
+      <Control name="Succeed" text="Succeed" />
+      <Control name="Failed" text="Failed" />
+      <Control name="SomeScreenIsNotExist" text="Succeed，but some screen does not exist!" />
+      <Control name="None" text="None" />
+      <Control name="Name" text="Name" />
+      <Control name="Config" text="Config" />
+      <Control name="AdjustMode" text="Adjustment Mode" />
+      <Control name="DriverType" text="Driver Chip" />
+      <Control name="LastAdjustInfo" text="Last Adjust Info" />
+      <Control name="Screen" text="Screen" />
+      <Control name="View" text="View" />
+      <Control name="Manual" text="Manual" />
+      <Control name="Schedual" text="Schedual" />
+      <Control name="Auto" text="Auto" />
+      <Control name="Programmed" text="Programmed" />
+      <Control name="CommPortScreen" text="Serial ports-Screen:" />
+      <Control name="NotExist" text=" not exist!" />
+      <Control name="No" text="No" />
+      <Control name="Yes" text="Yes" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdjustInfoPreview</Name>
+    <Controls>
+      <Control name="Frm_AdjustInfoPreview" text="View the last adjustment data" />
+      <Control name="label_Time" text="Adjustment Time" />
+      <Control name="label_Result" text="Adjustment Result" />
+      <Control name="groupBox_Data" text="Adjustment Data" />
+      <Control name="label_Bright" text="Brightness" />
+      <Control name="label1_Gamma" text="Gamma Value" />
+      <Control name="groupBox_Gain" text="Gain" />
+      <Control name="groupBox_RGBBrightness" text="RGB Brightness" />
+      <Control name="crystalButton_Close" text="Close" />
+      <Control name="label_RedGain" text="R" />
+      <Control name="label_GreenGain" text="G" />
+      <Control name="label_BlueGain" text="B" />
+      <Control name="label_RedBright" text="R" />
+      <Control name="label_GreeenBright" text="G" />
+      <Control name="label_BlueBright" text="B" />
+      <Control name="groupBox_ColorTemp" text="Color Temperature Information" />
+      <Control name="label_IsEnableLowBright" text="Ensure Low Gray" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_AdvancedConfig</Name>
+    <Controls>
+      <Control name="Frm_AdvancedConfig" text="Advance Setting" />
+      <Control name="seperatePanel_LogEffectiveDays" text="Log effective days of adjustment" />
+      <Control name="label_Days" text="Days" />
+      <Control name="seperatePanel_AutoBrightInfo" text="Auto Adjustment information" />
+      <Control name="label_AutoBrightPeriod" text="Detect Period:" />
+      <Control name="label_ReadLuxCnt" text="Read times of light sensors:" />
+      <Control name="label_Notice" text="Notice:Before doing every auto adjustment, we will read the light sensor value N times， and caculate the average value after removing maximum and minimum, then we adjust screen brightness according to this average value and the linear straight which you set!" />
+      <Control name="crystalButton_Ok" text="OK" />
+      <Control name="crystalButton_Cancel" text="Cancel" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_DisplayInfo</Name>
+    <Controls>
+      <Control name="seperatePanel_ScreenInfo" text="Brightness Adjust Information" />
+      <Control name="label_NoServer" text="Not connecting server currently!" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>Frm_SupperDisplayLayout</Name>
+    <Controls>
+      <Control name="Frm_SupperDisplayLayout" text="Combination Display Topology" />
+      <Control name="label_ScalingRate" text="Zoom Ratio" />
+      <Control name="label_OK" text="Screen is ok" />
+      <Control name="label_Unknown" text="Screen not detected" />
+      <Control name="crystalButto_Exit" text="Close" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>CustomMessageBox</Name>
+    <Controls>
+      <Control name="button_Yes" text="Yes"/>
+      <Control name="button_No" text="No"/>
+
+      <Control name="button_Abort" text="Abort"/>
+      <Control name="button_Retry" text="Retry"/>
+      <Control name="button_Ignore" text="Ignore"/>
+
+      <Control name="button_Cancel" text="Cancel"/>
+      <Control name="button_OK" text="OK"/>
+    </Controls>
+  </Form>
+</Resource>

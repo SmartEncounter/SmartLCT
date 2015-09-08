@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Windows.ColorZoneForms</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Windows.Forms.Frm_ColorZoneDisplay">
+            <summary>
+            多个颜色区域显示窗口
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.Frm_ColorZoneDisplay.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.#ctor">
+            <summary>
+            颜色区域显示窗口构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.#ctor(System.Drawing.Point,System.Drawing.Size,System.Drawing.Color)">
+            <summary>
+            颜色区域显示窗口构造函数
+            </summary>
+            <param name="location"></param>
+            <param name="size"></param>
+            <param name="backColor"></param>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.AddZone(Nova.Windows.Forms.ColorZoneInfo)">
+            <summary>
+            添加区域信息
+            </summary>
+            <param name="zoneInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneInfo(System.Int32,Nova.Windows.Forms.ColorZoneInfo@)">
+            <summary>
+            获取指定区域属性
+            </summary>
+            <param name="index"></param>
+            <param name="zoneInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneBackColor(System.Int32,System.Drawing.Color@)">
+            <summary>
+            获取区域背景颜色
+            </summary>
+            <param name="index"></param>
+            <param name="zoneBackColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneLocation(System.Int32,System.Drawing.Point@)">
+            <summary>
+            获取指定区域位置
+            </summary>
+            <param name="index"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneSize(System.Int32,System.Drawing.Size@)">
+            <summary>
+            获取指定区域大小
+            </summary>
+            <param name="index"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneBright(System.Int32,System.Int32@)">
+            <summary>
+            获取指定区域亮度
+            </summary>
+            <param name="index"></param>
+            <param name="BrightPercent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetIsShowZoneEdge(System.Int32,System.Boolean@)">
+            <summary>
+            获取是否显示区域边界
+            </summary>
+            <param name="index"></param>
+            <param name="isShowZoneEdge"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneEdgeLineInfo(System.Int32,System.Single@,System.Drawing.Color@,System.Drawing.Drawing2D.DashStyle@)">
+            <summary>
+            获取区域边界属性
+            </summary>
+            <param name="index"></param>
+            <param name="edgeWidth"></param>
+            <param name="edgeColor"></param>
+            <param name="edgeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetZoneDisplayMode(System.Int32,Nova.Windows.Forms.ZoneDisplayType@)">
+            <summary>
+            获取显示模式
+            </summary>
+            <param name="index"></param>
+            <param name="zoneDisplayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneInfo(System.Int32,Nova.Windows.Forms.ColorZoneInfo)">
+            <summary>
+            设置指定区域信息
+            </summary>
+            <param name="index"></param>
+            <param name="zoneInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneBackColor(System.Int32,System.Drawing.Color)">
+            <summary>
+            设置区域背景颜色
+            </summary>
+            <param name="index"></param>
+            <param name="zoneBackColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneBright(System.Int32,System.Int32)">
+            <summary>
+            设置指定区域的亮度
+            </summary>
+            <param name="index"></param>
+            <param name="BrightValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneLocation(System.Int32,System.Drawing.Point)">
+            <summary>
+            设置区域位置
+            </summary>
+            <param name="index"></param>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneSize(System.Int32,System.Drawing.Size)">
+            <summary>
+            设置区域大小
+            </summary>
+            <param name="index"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetIsShowZoneEdge(System.Int32,System.Boolean)">
+            <summary>
+            设置是否显示区域边界
+            </summary>
+            <param name="index"></param>
+            <param name="isShowZoneEdge"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneEdgeLinInfoe(System.Int32,System.Single,System.Drawing.Color,System.Drawing.Drawing2D.DashStyle)">
+            <summary>
+            设置区域边界线属性
+            </summary>
+            <param name="index"></param>
+            <param name="edgeWidth"></param>
+            <param name="edgeColor"></param>
+            <param name="edgeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.SetZoneDisplayMode(System.Int32,Nova.Windows.Forms.ZoneDisplayType)">
+            <summary>
+            设置区域显示模式
+            </summary>
+            <param name="index"></param>
+            <param name="zoneDisplayMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.RemoveOneZone(System.Int32)">
+            <summary>
+            移除指定区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.ClearAllZone">
+            <summary>
+            清除当前所有区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.InvalidateDrawArea">
+            <summary>
+            刷新当前显示
+            </summary>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetAllModePixelMatrix(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            All模式下所有的点均显示
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="displayColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetOddModeMatrix(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Odd模式下是：偶行奇列和奇行偶列显示
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="displayColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetEvenModePixelMatrix(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Even模式下是：偶行偶列和奇行奇列显示
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="displayColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetDotModePixelMatrix(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Dot模式下显示Dot矩形区域的中心点
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="displayColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetTwoMatrixPixelMatrix(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            2*2矩阵时显示左上角
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="displayColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.GetCenterDisplayPixelMatrix(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            4*4时显示中间4个像素，8*8时显示中间4个像素，16*16时显示中间16个像素
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="matrix"></param>
+            <param name="displayColsPerMatrix"></param>
+            <param name="displayRowsPerMatrix"></param>
+            <param name="displayCor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.Frm_ColorZoneDisplay.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            重载窗口的接收消息函数
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.IsShowFrmEdge">
+            <summary>
+            显示窗口的边界
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.Location">
+            <summary>
+            窗口的位置
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.Size">
+            <summary>
+            窗口的大小
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.BackColor">
+            <summary>
+            设置绘制区域的背景颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.EdgeColor">
+            <summary>
+            窗口的边界颜色
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.EdgeLineType">
+            <summary>
+            窗口边界线类型
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.EdgeWidth">
+            <summary>
+            窗口的边界线宽
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.ColorZoneCount">
+            <summary>
+            区域数量
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.DotModeModuleSize">
+            <summary>
+            区域显示模式为dot时的，dot矩形发笑
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.IsTransparentFrm">
+            <summary>
+            是否透明窗口
+            </summary>
+        </member>
+        <member name="P:Nova.Windows.Forms.Frm_ColorZoneDisplay.IsHideCursor">
+            <summary>
+            是否隐藏光标
+            </summary>
+        </member>
+        <member name="T:Nova.Windows.Forms.Frm_ColorZoneDisplay.WindowsMsg">
+            <summary>
+            消息参数
+            </summary>
+        </member>
+        <member name="T:Nova.Windows.Forms.ColorZoneInfo">
+            <summary>
+            颜色区域属性
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.BackColor">
+            <summary>
+            区域背景颜色
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.EdgeLineColor">
+            <summary>
+            区域边界颜色
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.EdgeLineWidth">
+            <summary>
+            区域边界线宽
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.Location">
+            <summary>
+            区域位置
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.Size">
+            <summary>
+            区域大小
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.BrightPercent">
+            <summary>
+            区域亮度
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.IsShowZoneEdgeLine">
+            <summary>
+            是否显示区域边界
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.DisplayMode">
+            <summary>
+            区域显示模式
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ColorZoneInfo.EdgeLineStyle">
+            <summary>
+            区域边界线的样式
+            </summary>
+        </member>
+        <member name="M:Nova.Windows.Forms.ColorZoneInfo.Clone">
+            <summary>
+            区域信息Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Windows.Forms.ColorZoneInfo.CopyTo(System.Object)">
+            <summary>
+            区域信息拷贝
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Windows.Forms.ZoneDisplayType">
+            <summary>
+            区域显示类型
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.All">
+            <summary>
+            所有点均显示
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.Odd">
+            <summary>
+            偶行奇列和奇行偶列显示
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.Even">
+            <summary>
+            偶行偶列和奇行奇列显示
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.Dot">
+            <summary>
+            显示Dot矩形区域的中心点
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.TwoMatrix">
+            <summary>
+            2*2矩阵时显示左上角
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.FourMatrix">
+            <summary>
+            4*4时显示中间4个像素
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.EightMatrix">
+            <summary>
+            8*8时显示中间4个像素
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.SixteenMatrix">
+            <summary>
+            16*16时显示中间16个像素
+            </summary>
+        </member>
+        <member name="F:Nova.Windows.Forms.ZoneDisplayType.Unkown">
+            <summary>
+            未知的显示模式
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2DECE5B-333E-4178-A58D-D09A6E42BCE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nova.SmartLCT.UI</RootNamespace>
+    <AssemblyName>Nova.SmartLCT.UI.BrightAdjust</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WPF4, Version=3.0.0.19993, Culture=neutral, PublicKeyToken=1673db7d5906b0ad, processorArchitecture=MSIL" />
+    <Reference Include="GalaSoft.MvvmLight.WPF4, Version=3.0.0.19994, Culture=neutral, PublicKeyToken=63eb5c012e0b3c1c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Nova.Equipment.Protocol.TGProtocol">
+      <HintPath>..\Lib\Nova.Equipment.Protocol.TGProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.IO.Port.ICommProcessorBase, Version=1.1.1110.2201, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Nova.IO.Port.ICommProcessorBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.GigabitSystem.DataClass, Version=1.1.1312.401, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Nova.LCT.GigabitSystem.DataClass.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.GigabitSystem.HardwareCaculator">
+      <HintPath>..\Lib\Nova.LCT.GigabitSystem.HardwareCaculator.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.GigabitSystem.HardwareFiles">
+      <HintPath>..\Lib\Nova.LCT.GigabitSystem.HardwareFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.GigabitSystem.LEDConfigAccessor">
+      <HintPath>..\Lib\Nova.LCT.GigabitSystem.LEDConfigAccessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.GigabitSystem.ProtocolEnum, Version=1.0.1311.1201, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Nova.LCT.GigabitSystem.ProtocolEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.LCT.LCTServerBaseProxy">
+      <HintPath>..\Lib\Nova.LCT.LCTServerBaseProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.Message.Common, Version=1.0.1208.201, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Nova.Message.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Nova.Wpf.Control.NumericUpDown">
+      <HintPath>..\Lib\Nova.Wpf.Control.NumericUpDown.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\Lib\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
+      <DependentUpon>SampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateRules.cs" />
+    <Compile Include="Window_AddTimingAdjustData_VM.cs" />
+    <Compile Include="CommonData.cs" />
+    <Compile Include="ScreenBrightInfo.cs" />
+    <Compile Include="WinBrightAdjust_VM.cs" />
+    <Compile Include="Window_AddTimingAdjustData.xaml.cs">
+      <DependentUpon>Window_AddTimingAdjustData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_FastSegmentation.xaml.cs">
+      <DependentUpon>Window_FastSegmentation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_FastSegmentation_VM.cs" />
+    <Compile Include="Window_PeripheralsConfig.xaml.cs">
+      <DependentUpon>Window_PeripheralsConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_PeripheralsConfig_VM.cs" />
+    <Page Include="ProjectDataSources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDataSources>True</ContainsDataSources>
+    </Page>
+    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinBrightAdjust.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="WinBrightAdjust.xaml.cs">
+      <DependentUpon>WinBrightAdjust.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window_AddTimingAdjustData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window_FastSegmentation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window_PeripheralsConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Behavior\Behavior.csproj">
+      <Project>{9A24B5AD-CD42-4FBA-BB4F-FEF08CCFEED9}</Project>
+      <Name>Behavior</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonData\CommonData.csproj">
+      <Project>{2e34cd93-5181-4cbb-8b67-afb3a2ddceb4}</Project>
+      <Name>CommonData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartDB\SmartDB.csproj">
+      <Project>{21e648f0-8852-48ad-8ae4-37a9682f31c4}</Project>
+      <Name>SmartDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

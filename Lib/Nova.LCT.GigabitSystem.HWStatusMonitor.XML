@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.HWStatusMonitor</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor">
+            <summary>
+            硬件状态状态监控类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor._curSenderRedundancyDic">
+            <summary>
+            发送卡的冗余信息
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor._redundancyInfoDicDic">
+            <summary>
+            发送卡冗余信息对应的Dictionary
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor._readAllCommPortResDic">
+            <summary>
+            读所有串口接收卡状态的结果  -- 新增加存储变量
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor._readCurCommPortRes">
+            <summary>
+            读当前串口接收卡状态的结果  --- 新增加变量
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor._afterChangedLedInfoDic">
+            <summary>
+            如果设置了显示屏信息列表，则该值存储设置的新值
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.#ctor(Nova.LCT.Message.Client.LCTServerMessageProxy,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo}})">
+            <summary>
+            硬件状态监控类的构造函数
+            </summary>
+            <param name="serverProxy"></param>
+            <param name="portName"></param>
+            <param name="ledDisplayInfoList"></param>
+            <param name="senderRedundancyList"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.Initialize">
+            <summary>
+            初始化监控线程
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ManualRefreshStatus">
+            <summary>
+            手动刷新状态
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.PauseRefreshThread">
+            <summary>
+            挂起线程
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ResumeRefreshThead">
+            <summary>
+            恢复线程
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.StopThisRefresh">
+            <summary>
+            如果正在刷新状态，则停止此次刷新
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.GetMonitorDataDicKey(System.Byte,System.Byte,System.UInt16)">
+            <summary>
+            获取接收卡地址字符串，结果为发送卡序号 + 网口序号 + 接收卡序号
+            </summary>
+            <param name="commPort">串口号</param>
+            <param name="senderIndex">发送卡序号</param>
+            <param name="portIndex">网口序号</param>
+            <param name="connectIndex">接收卡序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.Dispose">
+            <summary>
+            Dispose线程及锁
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.GetRedundancyAddStr(System.Int32,System.Int32)">
+            <summary>
+            获取冗余的网口地址
+            </summary>
+            <param name="sendIndex"></param>
+            <param name="portIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.OutputDebugInfoStr(System.Boolean,System.String)">
+            <summary>
+            调试信息显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.GetSenderRedundancyInfoDic">
+             <summary>
+            将设置的冗余信息List存储在Dictionary中
+             </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.DetectServerIsValid(System.String)">
+            <summary>
+            检测服务是否有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ReadHWAllStatusBeginRequest(System.Object,Nova.Message.Common.BeginPackageRequestEventArgs)">
+            <summary>
+            开始读状态
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ReadHWAllStatusCompleteRequest(System.Object,Nova.Message.Common.CompletePackageRequestEventArgs)">
+            <summary>
+            结束读状态
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ParsePackData(Nova.Message.Common.PackageRequestReadData)">
+            <summary>
+            解析读到的数据
+            </summary>
+            <param name="pack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.SetReadFailedSBStatus(Nova.Message.Common.PackageBase)">
+            <summary>
+            读某一接收卡的状态失败时设置该接收卡的状态信息
+            </summary>
+            <param name="pack"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.StartReadHWStatusThread">
+            <summary>
+            启动线程
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.StopReadHWStatusThread">
+            <summary>
+            停止线程
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ReadHWStatusThread">
+            <summary>
+            线程执行体
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.IsCycleMonitor">
+            <summary>
+            是否周期监控
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.MonitorCycle">
+            <summary>
+            监控周期，在IsCycleMonitor为true，该值有效
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ServerProxy">
+            <summary>
+            服务对象
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.LedDisplayInfoDic">
+            <summary>
+            显示屏屏体对象
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.CurSenderRedundancyDic">
+            <summary>
+            当前发送卡的冗余信息列表
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.ReadFailedRetryTimes">
+            <summary>
+            读状态失败时重复读的次数
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.BeginRefreshOneCommPortEvent">
+            <summary>
+            开始读取状态信息事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.BeginRefreshAllCommPortStatusEvent">
+            <summary>
+            开始刷新所有串口的显示屏接收卡状态
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.CompleteRefreshOneCommPortEvent">
+            <summary>
+            完成读取一个串口接收卡状态信息事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.CompleteRefreshAllCommPortEvent">
+            <summary>
+            完成读取所有串口的接收卡状态信息事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.RefreshThreadIsPauseEvent">
+            <summary>
+            刷新线程被暂停的事件通知
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.RefreshThreadIsResumeEvent">
+            <summary>
+            刷新线程被恢复的事件通知
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.HWStatusMonitor.CurOperateStatus">
+            <summary>
+            当前监控类的状态
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.BeginRefreshOneCommPortEventHandler">
+            <summary>
+            开始读一个串口的硬件状态委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.BeginRefreshAllCommPortEventHandler">
+            <summary>
+            开始读所有串口硬件状态的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventHandler">
+            <summary>
+            结束读硬件状态的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e">读到的扫描板的状态信息</param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshAllCommPortEventHandler">
+            <summary>
+            刷新所有串口的接收卡状态数据结束  ---- 新增加
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.BeginRefreshOneCommPortEventArgs">
+            <summary>
+            完成读一个串口的接收卡状态的事件参数，包括读到的所有扫描板的状态信息  ----- 添加刷新的串口名称
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.BeginRefreshOneCommPortEventArgs.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="commPort"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.BeginRefreshOneCommPortEventArgs.CommPortName">
+            <summary>
+            读硬件状态的串口名称
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventArgs">
+            <summary>
+            完成读一个串口的接收卡状态的事件参数，包括读到的所有扫描板的状态信息  ----- 添加刷新的串口名称
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventArgs.#ctor(System.String,Nova.LCT.GigabitSystem.Monitor.ReadOneCommPortStatusResInfo,System.Collections.Generic.Dictionary{System.String,Nova.LCT.GigabitSystem.Common.ScannerMonitorData})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="commPort">串口名称</param>
+            <param name="readResInf">读状态完成的结果</param>
+            <param name="scannerMonitorDataDict"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventArgs.ScannerMonitorDataDict">
+            <summary>
+            保存所有扫描板的监控到的状态的信息，其中Key以如下方式定义："[senderIndex]-[portIndex]-[connectIndex]";
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventArgs.ReadResInfo">
+            <summary>
+            读硬件状态是否成功
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshOneCommPortEventArgs.CommPortName">
+            <summary>
+            读硬件状态的串口名称
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshAllCommPortEventArgs">
+            <summary>
+            完成读一个串口的接收卡状态的事件参数，包括读到的所有扫描板的状态信息  ----- 添加刷新所有串口监控数据完成的事件参数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshAllCommPortEventArgs.#ctor(System.Collections.Generic.Dictionary{System.String,Nova.LCT.GigabitSystem.Monitor.ReadOneCommPortStatusResInfo},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,Nova.LCT.GigabitSystem.Common.ScannerMonitorData}})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="readResInfDic">读每个串口接收卡状态的结果信息</param>
+            <param name="scannerMonitorDataDicDic"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshAllCommPortEventArgs.ScannerMonitorDataDicDic">
+            <summary>
+            保存所有串口的所有扫描板的监控到的状态的信息，其中第一个key值为串口名称，第二个Key为："[senderIndex]-[portIndex]-[connectIndex]";
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.Monitor.CompleteRefreshAllCommPortEventArgs.ReadStatusResultDic">
+            <summary>
+            读硬件状态是否成功
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.Monitor.ReadOneCommPortStatusResInfo">
+            <summary>
+            读一个串口接收卡状态的结果 ---- 添加的读接收卡状态的结果
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.ReadOneCommPortStatusResInfo.CompleteTime">
+            <summary>
+            读状态完成的时间
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.Monitor.ReadOneCommPortStatusResInfo.IsReadStatusSuccess">
+            <summary>
+            是否读状态成功
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Drawing.FontAdjuster</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Drawing.FontAdjuster">
+            <summary>
+            该类用来完成统一调节窗体的字体
+            </summary>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.Attach(System.Windows.Forms.Control)">
+            <summary>
+            将控件加入到调整列表中
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.Detach(System.Windows.Forms.Control)">
+            <summary>
+            将控件移除调整列表之外
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.UpdateFont(System.Drawing.Font)">
+            <summary>
+            更新列表中的控件及其子控件的字体，该接口默认使用AutoScaleMode.None来设置Form和Usercontrol
+            </summary>
+            <param name="font"></param>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.UpdateFont(System.Drawing.Font,System.Windows.Forms.AutoScaleMode)">
+            <summary>
+            更新列表中的控件及其子控件的字体
+            </summary>
+            <param name="font"></param>
+            <param name="autoScaleMode">用户设置From和UserContro的AutoScaleMode</param>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.UpdateCtrlFont(System.Windows.Forms.Control,System.Drawing.Font,System.Windows.Forms.AutoScaleMode)">
+            <summary>
+            更新列表中的控件及其子控件的字体
+            </summary>
+            <param name="ctrl"></param>
+            <param name="font"></param>
+            <param name="autoScaleMode">用户设置From和UserContro的AutoScaleMode</param>
+        </member>
+        <member name="M:Nova.Drawing.FontAdjuster.UpdateCtrlFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            更新列表中的控件及其子控件的字体，该接口默认使用AutoScaleMode.None来设置Form和Usercontrol
+            </summary>
+            <param name="ctrl"></param>
+            <param name="font"></param>
+        </member>
+    </members>
+</doc>

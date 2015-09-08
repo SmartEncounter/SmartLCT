@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.Runtime.APIFunction</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.Runtime.InteropServices.COPYDATASTRUCT">
+            <summary>
+            窗口间传递数据的结构体定义
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.COPYDATASTRUCT.dwData">
+            <summary>
+            自定义的数据
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.COPYDATASTRUCT.cbData">
+            <summary>
+            指定lpData指向数据的大小
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.COPYDATASTRUCT.lpData">
+            <summary>
+            指向数据的指针
+            </summary>
+        </member>
+        <member name="T:Nova.Runtime.InteropServices.APIMessage">
+            <summary>
+            消息发送相关API函数
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMessage.WM_COPYDATA">
+            <summary>
+            数据传递的消息ID
+            </summary>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.SendMessage(System.Int32,System.Int32,System.Int32,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送消息到指定窗口,且返回结果 
+            </summary>
+            <param name="hWnd">目的窗口句柄</param>
+            <param name="Msg">消息ID</param>
+            <param name="wParam">消息的第一个参数</param>
+            <param name="lParam">消息的第二个参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.PostMessage(System.Int32,System.Int32,System.Int32,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送消息到指定窗口,不等待目的窗口处理消息完成
+            </summary>
+            <param name="hWnd">目的窗口句柄</param>
+            <param name="Msg">消息ID</param>
+            <param name="wParam">消息的第一个参数</param>
+            <param name="lParam">消息的第二个参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.FindWindow(System.String,System.String)">
+            <summary>
+            查找窗口
+            </summary>
+            <param name="lpClassName">窗口类名称</param>
+            <param name="lpWindowName">窗口名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.GetLastError">
+            <summary>
+            获得系统的最近一次错误ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.IsWindow(System.Int32)">
+            <summary>
+            判断指定ID是否为窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.PostMessage(System.IntPtr,System.IntPtr,System.Int32,System.String,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送一条消息并立即返回。
+            </summary>
+            <param name="souWndHandle">发送方窗口句柄</param>
+            <param name="desWndHandle">接收方的句柄（Wince为MessageWindow类句柄）</param>
+            <param name="wParam">自定义消息的标识</param>
+            <param name="para">消息的参数</param>
+            <param name="cds">消息发送的结构体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.PostMessage(System.IntPtr,System.String,System.Int32,System.String,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送一条消息并立即返回。
+            </summary>
+            <param name="souWndHandle">发送方窗口句柄</param>
+            <param name="desWndName">接收方的窗口名称（Wince为MessageWindow类Text）</param>
+            <param name="wParam">自定义消息的标识</param>
+            <param name="para">消息的参数</param>
+            <param name="cds">消息发送的结构体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.SendMessage(System.IntPtr,System.IntPtr,System.Int32,System.String,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送一条消息，并一直等到 Microsoft.WindowsCE.Forms.MessageWindow.WndProc(Microsoft.WindowsCE.Forms.Message@)
+            方法处理此消息。 
+            </summary>
+            <param name="souWndHandle">发送方窗口句柄</param>
+            <param name="desWndHandle">接收方的句柄（Wince为MessageWindow类的句柄）</param>
+            <param name="wParam">自定义消息的标识</param>
+            <param name="para">消息的参数</param>
+            <param name="cds">消息发送的结构体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMessage.SendMessage(System.IntPtr,System.String,System.Int32,System.String,Nova.Runtime.InteropServices.COPYDATASTRUCT@)">
+            <summary>
+            发送一条消息，并一直等到 Microsoft.WindowsCE.Forms.MessageWindow.WndProc(Microsoft.WindowsCE.Forms.Message@)
+            方法处理此消息。 
+            </summary>
+            <param name="souWndHandle">发送方窗口句柄</param>
+            <param name="desWndName">接收方的窗口名称（Wince为MessageWindow类的Text）</param>
+            <param name="wParam">自定义消息的标识</param>
+            <param name="para">消息的参数</param>
+            <param name="cds">消息发送的结构体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.Runtime.InteropServices.APIMenu">
+            <summary>
+            菜单操作
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_BITMAP">
+            <summary>
+            将一个位图作为菜单项
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_CHECKED">
+            <summary>
+            菜单项旁边放置选取标志
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_DISABLED">
+            <summary>
+            使菜单项无效，不能被选取，但不变灰
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_ENABLED">
+            <summary>
+            使菜单项有效
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_GRAYED">
+            <summary>
+            使菜单项无效且变灰，使其不能被选择
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_MENUBARBREAK">
+            <summary>
+            同MF_MENUBREAK
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_MENUBREAK">
+            <summary>
+            将菜单项放置于新行
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_OWNERDRAW">
+            <summary>
+            自绘菜单项
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_POPUP">
+            <summary>
+            弹出式菜单项
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_SEPARATOR">
+            <summary>
+            分隔条
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_STRING">
+            <summary>
+            菜单项为正文字符串
+            </summary>
+        </member>
+        <member name="F:Nova.Runtime.InteropServices.APIMenu.MF_UNCHECKED">
+            <summary>
+            不放置选取标志在菜单项旁
+            </summary>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMenu.GetSystemMenu(System.IntPtr,System.Boolean)">
+            <summary>
+            复制或修改指定窗口菜单(窗口控制菜单)
+            </summary>
+            <param name="hWnd">窗口句柄</param>
+            <param name="bRevert">为true时，该函数将重置窗口菜单到缺省状态，返回NULL；为false，将返回窗口菜单句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMenu.CreatePopupMenu">
+            <summary>
+            创建弹出式的窗口菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMenu.AppendMenu(System.IntPtr,System.Int32,System.Int32,System.String)">
+            <summary>
+            向指定菜单添加一菜单项
+            </summary>
+            <param name="hMenu">菜单句柄</param>
+            <param name="uFlags">新菜单项的外观、性能、内容</param>
+            <param name="uIDNewItem">新菜单项ID</param>
+            <param name="lpNewItem">新菜单项名称</param>
+            <returns>如果函数调用成功，返回非零值；如果函数调用失败，返回值是零</returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMenu.InsertMenu(System.IntPtr,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            在菜单的指定位置插入菜单(或菜单项)
+            </summary>
+            <param name="hMenu"></param>
+            <param name="position"></param>
+            <param name="uFlags"></param>
+            <param name="uIDNewItem"></param>
+            <param name="lpNewItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.Runtime.InteropServices.APIMenu.ModifyMenu(System.IntPtr,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            修改已存在的菜单项
+            </summary>
+            <param name="hMenu"></param>
+            <param name="position"></param>
+            <param name="uFlags"></param>
+            <param name="uIDNewItem"></param>
+            <param name="lpNewItem"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

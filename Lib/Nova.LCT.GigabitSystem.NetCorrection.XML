@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.NetCorrection</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.Correction.KillDisplayEventArgs">
+            <summary>
+            黑屏
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.CheckScreenInfoEventArgs">
+            <summary>
+            检查屏体信息
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetDisplaySectionEventArgs">
+            <summary>
+            设置显示区域颜色
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetDisplaySectionRGBEventArgs">
+            <summary>
+            设置显示区域R、G、B
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.WriteCoefsEventArgs">
+            <summary>
+            设置模块（灯板）系数
+            </summary>
+             文件中内容：模块在整屏上的纵坐标（4字节），模块在整屏上的横坐标（4字节），模块的行数（1字节），模块的列数（1字节）
+            多字节情况下，低字节在前，高字节在前
+             下来文件的内容是： 发送校正系数的长度 (18×行数×列数，校正系数的数据值，每个字节都是低在前，高在后，共18 × 行数 × 列数 + 10个字节             
+        </member>
+        <member name="M:Nova.LCT.Correction.WriteCoefsEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            设置像素点的系数的构造函数
+            </summary>
+            <param name="eventRes">接收数据的结果</param>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsEventArgs.BegPixelCol">
+            <summary>
+            获取和设置起始像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsEventArgs.BegPixelRow">
+            <summary>
+            获取和设置起始像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsEventArgs.EndPixelCol">
+            <summary>
+            获取和设置结束像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsEventArgs.EndPixelRow">
+            <summary>
+            获取和设置结束像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsEventArgs.CoefArray">
+            <summary>
+            每个像素点的校正系数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SaveCoefsToFlashEventArgs">
+            <summary>
+            设置当前系数存储到flash
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetCorrectionModeEventArgs">
+            <summary>
+            设置校正模式
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.WriteCoefsByPixelEventArgs">
+            <summary>
+            设置像素点的系数事件类
+            </summary>
+             文件中内容:前16个字节存储点的起始和结束位置，起始行(0-3字节)起始列(3-7字节)结束列(7-11字节)结束行(11-15字节)
+                        所有的都是低字节在前，高字节在后。
+        </member>
+        <member name="M:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            设置像素点的系数的构造函数
+            </summary>
+            <param name="eventRes">接收数据的结果</param>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.BegPixelCol">
+            <summary>
+            获取和设置起始像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.BegPixelRow">
+            <summary>
+            获取和设置起始像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.EndPixelCol">
+            <summary>
+            获取和设置结束像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.EndPixelRow">
+            <summary>
+            获取和设置结束像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.WriteCoefsByPixelEventArgs.CoefArray">
+            <summary>
+            每个像素点的校正系数
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs">
+            <summary>
+            按像素点保存当前系数到flash事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes">接收数据的结果</param>
+        </member>
+        <member name="P:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs.BegPixelCol">
+            <summary>
+            获取和设置起始像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs.BegPixelRow">
+            <summary>
+            获取和设置起始像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs.EndPixelCol">
+            <summary>
+            获取和设置结束像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SaveCoefsToFlashByPixelEventArgs.EndPixelRow">
+            <summary>
+            获取和设置结束像素行
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs">
+            <summary>
+            按像素点设置显示区域颜色事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.BegPixelCol">
+            <summary>
+            获取和设置起始像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.BegPixelRow">
+            <summary>
+            获取和设置起始像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.EndPixelCol">
+            <summary>
+            获取和设置结束像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.EndPixelRow">
+            <summary>
+            获取和设置结束像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.Intensity">
+            <summary>
+            获取和设置亮度信息
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.DisplayColor">
+            <summary>
+            获取和设置显示的颜色
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionByPixelEventArgs.Pattern">
+            <summary>
+            获取和设置显示的类型
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs">
+            <summary>
+            按像素点设置显示区域R、G、B事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.BegPixelCol">
+            <summary>
+            获取和设置起始像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.BegPixelRow">
+            <summary>
+            获取和设置起始像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.EndPixelCol">
+            <summary>
+            获取和设置结束像素列
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.EndPixelRow">
+            <summary>
+            获取和设置结束像素行
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.Red">
+            <summary>
+            获取和设置R值
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.Green">
+            <summary>
+            获取和设置G值
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetDisplaySectionRGBByPixelEventArgs.Blue">
+            <summary>
+            获取和设置B值
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.EnableCorrectionEventArgs">
+            <summary>
+            开启或关闭校正事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.EnableCorrectionEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.EnableCorrectionEventArgs.EnableCorrection">
+            <summary>
+            获取和设置是否使能校正
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.SetCorrectionScreenIndexEventArgs">
+            <summary>
+            设置当前校正的显示屏序号事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.SetCorrectionScreenIndexEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.SetCorrectionScreenIndexEventArgs.CorrectionScreenIndex">
+             <summary>
+            获取和设置要校正屏的索引
+             </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.GetDisplayCountEventArgs">
+            <summary>
+            获得当前控制系统带载的显示屏个数事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.GetDisplayCountEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.GetDisplayCountEventArgs.DisplayCount">
+             <summary>
+            获取和设置屏的个数
+             </summary>
+        </member>
+        <member name="T:Nova.LCT.Correction.GetDisplayInfoEventArgs">
+            <summary>
+            获得指定序号显示屏的映射位置、大小和类型事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.GetDisplayInfoEventArgs.#ctor(Nova.LCT.CorrectionProtocol.ReplyPackageResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eventRes"></param>
+        </member>
+        <member name="P:Nova.LCT.Correction.GetDisplayInfoEventArgs.DisplayInfo">
+            <summary>
+            获取和设置屏的信息
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.WriteCoefsByPixelEvent">
+            <summary>
+            设置像素点的系数触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SaveCoefsToFlashByPixelEvent">
+            <summary>
+            按像素点设置当前系数存储到flash时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SetDisplaySectionByPixelEvent">
+            <summary>
+            按像素点设置显示区域颜色时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SetDisplaySectionRGBByPixelEvent">
+            <summary>
+            按像素点设置显示区域R、G、B时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.EnableCorrectionEvent">
+            <summary>
+            开启或关闭校正时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SetCorrectionScreenIndexEvent">
+            <summary>
+            设置当前校正的显示屏序号时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetDisplayCountEvent">
+            <summary>
+             获得当前控制系统带载的显示屏个数时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetDisplayInfoEvent">
+            <summary>
+            获得指定序号显示屏的映射位置、大小和类型时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SendFileRequestEvent">
+            <summary>
+            接收文件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetFileRequestEvent">
+            <summary>
+            获取文件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SendDataRequestEvent">
+            <summary>
+            发送数据
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetDataRequestEvent">
+            <summary>
+            获取数据
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.SetUploadCoefsModeEvent">
+            <summary>
+            设置上传系数的模式
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetControllerVersionEvent">
+            <summary>
+            获取控制系统版本
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.ICorrectionTransactor.GetRectAverCoefsEvent">
+            <summary>
+            获取某个矩形区域的平均校正系数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._writeCoefsByPixelEventArgs">
+            <summary>
+            设置像素点的系数事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._saveCoefsToFlashByPixelEventArgs">
+            <summary>
+            按像素点设置当前系数存储到flash事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._setDisplaySectionByPixelEventArgs">
+            <summary>
+            按像素点设置显示区域颜色事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._setDisplaySectionRGBByPixelEventArgs">
+            <summary>
+            按像素点设置显示区域R、G、B事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._enableCorrectionEventArgs">
+            <summary>
+            开启或关闭校正事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._setCorrectionScreenIndexEventArgs">
+            <summary>
+            设置当前校正的显示屏序号事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._getDisplayCountEventArgs">
+            <summary>
+            获得当前控制系统带载的显示屏个数事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._getDisplayInfoEventArgs">
+            <summary>
+            获得指定序号显示屏的映射位置、大小和类型事件类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.Correction.CorrectionTransactor._receiveFileEventArgs">
+            <summary>
+            接收到文件事件类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.CorrectionTransactor.StartListen(System.String,System.Int32)">
+            <summary>
+            启动监听
+            </summary>
+            <param name="localIp"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.Correction.CorrectionTransactor.EndListen">
+            <summary>
+            结束监听
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.CorrectionTransactor.UploadCoefficientsResult(Nova.LCT.CorrectionProtocol.NetFreamResults)">
+            <summary>
+            发送校正系数更新结束命令
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.Correction.CorrectionTransactor.CorrectionControl_SendData(System.Byte,System.Byte,System.String,System.Byte[])">
+            <summary>
+            发送数据（使用第一二标识码，表征所作的操作）
+            第一操作码“0”已经占用
+            </summary>
+            <param name="group">第一标识码</param>
+            <param name="cmd">第二标识码</param>
+            <param name="data">需要发送的数据</param>
+            <returns>返回是否发送成功的结果</returns>
+        </member>
+        <member name="M:Nova.LCT.Correction.CorrectionTransactor.SaveByteCofeByCofeFile(System.String,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.UInt16[]@)">
+            <summary>
+            读取文件中的数据
+            </summary>
+            <param name="filePath"></param>
+            <param name="begPixelCol"></param>
+            <param name="begPixelRow"></param>
+            <param name="endPixelCol"></param>
+            <param name="endPixelRow"></param>
+            <param name="coefArray"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.WriteCoefsByPixelEvent">
+            <summary>
+            设置像素点的系数时触发该事件,注：该事件将会接收到文件，请在外部将文件转存后使用，否则会出现文件正在被使用的异常。
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SaveCoefsToFlashByPixelEvent">
+            <summary>
+            按像素点设置当前系数存储到flash时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SetDisplaySectionByPixelEvent">
+            <summary>
+            按像素点设置显示区域颜色时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SetDisplaySectionRGBByPixelEvent">
+            <summary>
+            按像素点设置显示区域R、G、B时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.EnableCorrectionEvent">
+            <summary>
+            开启或关闭校正时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SetCorrectionScreenIndexEvent">
+            <summary>
+            设置当前校正的显示屏序号时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.GetDisplayCountEvent">
+            <summary>
+            开启或关闭校正时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.GetDisplayInfoEvent">
+            <summary>
+            设置当前校正的显示屏序号时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SendFileRequestEvent">
+            <summary>
+            接收到发送的文件时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.GetFileRequestEvent">
+            <summary>
+            接收到获取文件时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.SendDataRequestEvent">
+            <summary>
+            接收到发送的数据时触发该事件
+            </summary>
+        </member>
+        <member name="E:Nova.LCT.Correction.CorrectionTransactor.GetDataRequestEvent">
+            <summary>
+            接收到获取数据时触发该事件
+            </summary>
+        </member>
+    </members>
+</doc>

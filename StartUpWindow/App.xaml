@@ -1,0 +1,15 @@
+﻿<Application x:Class="StartUpWindow.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="StartUpWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="Lang/zh-CN/AppLanguage.zh-CN.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Nova.SmartLCT.Skin;Component/BlueMode/BlueMood.UI.xaml"/>
+                <ResourceDictionary Source="/Nova.SmartLCT.Skin;Component/BlueMode/BlueMood.Color.xaml"/>
+                <ResourceDictionary Source="/Nova.SmartLCT.Skin;Component/BlueMode/CustomWindowStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

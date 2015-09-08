@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.LoadProgramsControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.UI.LoadProgramsForm">
+            <summary>
+            程序加载窗体
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.LCTServerProxy">
+            <summary>
+            获取设置LCT服务端对象
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.LoadProgramsForm.DeviceType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms">
+            <summary>
+            LCT程序加载页面
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.UC_LoadPrograms_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            键盘相应事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.IsExist">
+            <summary>
+            确认是否退出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendSender_Reset">
+            <summary>
+            广播发送单片机复位命令
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.Send_EncryptHandShake(System.Byte)">
+            <summary>
+            发送卡0发送单片机握手
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.Send_McuUpdateProgrammFinish(System.Byte)">
+             <summary>
+            发送发送卡MCU程序加载结束命令
+             </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendSender_MCU(System.Byte)">
+            <summary>
+            发送发送卡MCU程序
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendSender_FPGA(System.Byte)">
+            <summary>
+            发送发送卡FPGA程序
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendScanBoard_FPGA(System.Byte)">
+            <summary>
+            发送发送卡FPGA程序
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.ReadScanCardModle(System.Byte)">
+            <summary>
+            读取扫描卡型号
+            </summary>
+            <param name="addr"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendFPGAWorkProgramStore(System.Byte,System.Int32)">
+            <summary>
+            发送保存命令
+            </summary>
+            <param name="addr"></param>
+            <param name="FPGAWorkProgramStore"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.SendFPGAGoldenProgramStore(System.Byte,System.Int32)">
+            <summary>
+            保存程序到Golden区
+            </summary>
+            <param name="addr"></param>
+            <param name="FPGAWorkProgramStore"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.PackageFailureResults(Nova.Message.Common.PackageResults)">
+            <summary>
+            解析包错误的结果
+            </summary>
+            <param name="packageResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.CommFailureResults(Nova.IO.Port.CommResults)">
+            <summary>
+            解析串口错误的结果
+            </summary>
+            <param name="commResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.AckFailureResults(System.Byte)">
+            <summary>
+            解析ACK错误的结果
+            </summary>
+            <param name="ackResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.CreateTempDirectory">
+            <summary>
+            创建临时目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.DelectTempDirectory">
+            <summary>
+            删除临时目录
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.DelectTempFile(System.String)">
+            <summary>
+            删除指定的文件
+            </summary>
+            <param name="path">文件的路径</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.UpdateVerAndRemarkDisplay">
+            <summary>
+            当设备类型不同时更新界面显示
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.LCTServerProxy">
+            <summary>
+            获取设置LCT服务端对象
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.NetInfo">
+            <summary>
+            交互显示信息类
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.UC_LoadPrograms.NetInfo.StrNetInfo">
+            <summary>
+            交互显示信息
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.SysInfo">
+            <summary>
+            序列化类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.SysInfo.DATA_PATH">
+            <summary>
+            配置文件存储路径
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.SysInfo.DataPath">
+            <summary>
+            Data包路径
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.SelectComPortForm">
+            <summary>
+            Com口选择窗口
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.SelectComPortForm.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.UI.SelectComPortForm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.SelectComPortForm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.UI.SelectComPortForm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.SelectComPortForm.ComPortName">
+            <summary>
+            Com口
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.UI.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.UI.Properties.Resources.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

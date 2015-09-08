@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>FrmTest</Name>
+    <Controls>
+      <Control name="FrmTest" text="ディスプレー・スクリーンをテストするツールー西安诺瓦" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid</Name>
+    <Controls>
+      <Control name="groupBox_gridSetup" text="グリッド設置" />
+      <Control name="label_gBackColor" text="背景色" />
+      <Control name="label_gLineInterval" text="ライン間隔" />
+      <Control name="label_gLineWidth" text="ライン幅" />
+      <Control name="groupBox_mixTest" text="混合テスト設置" />
+      <Control name="checkBox_red" text="赤色" />
+      <Control name="checkBox_green" text="緑色" />
+      <Control name="checkBox_blue" text="青色" />
+      <Control name="checkBox_black" text="黒色" />
+      <Control name="checkBox_white" text="白色" />
+      <Control name="checkBox_yellow" text="黄色" />
+      <Control name="checkBox_turquoise" text="青色" />
+      <Control name="checkBox_purple" text="紫色" />
+      <Control name="checkBox_H" text="横ライン" />
+      <Control name="checkBox_V" text="縦ライン" />
+      <Control name="checkBox_LeftSlating" text="左斜め" />
+      <Control name="checkBox_RighSlating" text="右斜め" />
+      <Control name="crystalButton_selectAll" text="全部選択する" />
+      <Control name="crystalButton_clearSelect" text="クリア" />
+      <Control name="crystalButton_gOk" text="確定" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid_ApplicationString</Name>
+    <Controls>
+      <Control name="OneAtLest" text="混合テスト設置：少なくとも一つの項目を選択してください！" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_pitch</Name>
+    <Controls>
+      <Control name="FrmSetup_pitch" text="高級設置" />
+      <Control name="grp_font" text="字体" />
+      <Control name="label_fontSize" text="文字のサイズ：" />
+      <Control name="label_fontShape" text="字形：" />
+      <Control name="label_StartRowNo" text="行開始数：" />
+      <Control name="label_StartColNo" text="列開始数：" />
+      <Control name="label_ModLineWidth" text="モジュール・ラインの幅：" />
+      <Control name="label_ScannerlineWidth" text="スキャニング・パネル・ラインの幅：" />
+      <Control name="crystalButton_pOk" text="確定" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTest</Name>
+    <Controls>
+      <Control name="tabPage_form" text="画面" />
+      <Control name="lbl_X" text="X:" />
+      <Control name="lbl_Y" text="Y:" />
+      <Control name="lbl_width" text="幅：" />
+      <Control name="lbl_height" text="高さ：" />
+      <Control name="crystalButton_show" text="顕示" />
+      <Control name="crystalButton_hide" text="隠す" />
+      <Control name="tabPage_color" text="色" />
+      <Control name="radioButton_red" text="赤" />
+      <Control name="radioButton_green" text="緑" />
+      <Control name="radioButton_blue" text="青" />
+      <Control name="radioButton_white" text="白" />
+      <Control name="radioButton_yellow" text="黄" />
+      <Control name="radioButton_Turquoise" text="青" />
+      <Control name="radioButton_purple" text="紫" />
+      <Control name="radioButton_pureRed" text="赤" />
+      <Control name="radioButton_pureGreen" text="緑" />
+      <Control name="radioButton_pureBlue" text="青" />
+      <Control name="radioButton_pureWhite" text="白" />
+      <Control name="radioButton_pureYellow" text="黄" />
+      <Control name="radioButton_pureCyan" text="青" />
+      <Control name="radioButton_purePurple" text="紫" />
+      <Control name="radioButton_GridRed" text="赤" />
+      <Control name="radioButton_GridGreen" text="緑" />
+      <Control name="radioButton_GridBlue" text="青" />
+      <Control name="radioButton_GridWhite" text="白" />
+      <Control name="radioButton_GridYellow" text="黄" />
+      <Control name="radioButton_GridCyan" text="青" />
+      <Control name="radioButton_GridPink" text="紫" />
+      <Control name="radioButton_GrayRed" text="赤" />
+      <Control name="radioButton_GrayGreen" text="緑" />
+      <Control name="radioButton_GrayBlue" text="青" />
+      <Control name="radioButton_GrayWhite" text="白" />
+      <Control name="radioButton_GrayYellow" text="黄" />
+      <Control name="radioButton_GrayCyan" text="青" />
+      <Control name="radioButton_GrayPink" text="紫" />
+      <Control name="tabPage_pureColor" text="純色" />
+      <Control name="tabPage_cline" text="段階的変化" />
+      <Control name="radioButton_grade" text="級別する" />
+      <Control name="radioButton_noGrade" text="級別しない" />
+      <Control name="crystalButton_32" text="32級" />
+      <Control name="crystalButton_64" text="64級" />
+      <Control name="crystalButton_128" text="128級" />
+      <Control name="crystalButton_256" text="256級" />
+      <Control name="radioButton_manal" text="手動" />
+      <Control name="radioButton_auto" text="自動" />
+      <Control name="lbl_curGrey" text="現在のグレー・スケール：" />
+      <Control name="lbl_speed" text="速度：" />
+      <Control name="tabPage_grid" text="グリッド" />
+      <Control name="crystalButton_horizonal" text="横" />
+      <Control name="crystalButton_vertical" text="縦" />
+      <Control name="crystalButton_leftSlating" text="左斜め" />
+      <Control name="crystalButton_rightSlating" text="右斜め" />
+      <Control name="crystalButton_mixTest" text="混合テスト" />
+      <Control name="crystalButton_aging" text="老化" />
+      <Control name="crystalButton_gSetup" text="高級設置" />
+      <Control name="lbl_gray" text="グレー・スケール：" />
+      <Control name="lbl_gSpeed" text="速度：" />
+      <Control name="label_manalGrey" text="グレー・スケール：" />
+      <Control name="checkBox_multiSelect" text="グリッド・オーバーレイ" />
+      <Control name="tabPage_pitch" text="定位" />
+      <Control name="crystalButton_pitch" text="定位" />
+      <Control name="lbl_pFont" text="字体：" />
+      <Control name="crystalButton_pset" text="高級設置" />
+      <Control name="grp_module" text="モジュール" />
+      <Control name="grp_scan" text="スキャニング・パネルにローディングするモジュール" />
+      <Control name="grp_color" text="色" />
+      <Control name="lbl_pWidth" text="幅：" />
+      <Control name="lbl_pHeight" text="高さ：" />
+      <Control name="lbl_pRows" text="行数：" />
+      <Control name="lbl_pCols" text="列数：" />
+      <Control name="lbl_pBackground" text="背景：" />
+      <Control name="btn_fontColor" text="字体：" />
+      <Control name="lbl_pModule" text="モジュール・ライン" />
+      <Control name="lbl_pScanLine" text="スキャニング・パネル・ライン" />
+      <Control name="radioButton_LR" text="左から右" />
+      <Control name="radioButton_RL" text="右から左" />
+      <Control name="tabPage_testSelf" text="自己テスト" />
+      <Control name="grp_test" text="自己テスト" />
+      <Control name="grp_cfig" text="プログラムを再配置する" />
+      <Control name="crystalButton_send" text="発送" />
+      <Control name="crystalButton_bkScreen" text="黒スクリーン" />
+      <Control name="crystalButton_lock" text="ロックする" />
+      <Control name="crystalButton_conmonShow" text="正常ディスプレー" />
+      <Control name="tabPage_help" text="ヘルプ" />
+      <Control name="tabPage_About" text="関する" />
+      <Control name="label_HelpInfo1" text="诺瓦科技-LEDディスプレー・スクリーンを専門的に解決する方案" />
+      <Control name="label_HelpDetailInfo" text="1.LEDディスプレー・スクリーンの制御システム　2.LEDディスプレー・スクリーンをピクセル校正するシステム　3.LEDディスプレー・スクリーン業界の応用ソフトウェア　　　　　　　　　" />
+      <Control name="label_phone" text="全国の統一技術サーポット電話：400-696-0755" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>DebugDispForm</Name>
+    <Controls>
+      <Control name="label_shortKeyInfo" text="「Home」：顕示/画面の右下角の提示を隠す　　「End」：顕示/画面中心の提示を隠す　　「PageUp」：機能を上向きに切り替え　　「PageDown」：機能を下向きに切り替え　　「Shift+↑↓←→」：画面のサイズ　　[Shift+F/ダブル・クリック]：フル・スクリーン/フル・スクリーンを取り消す　　[Ctrl+↑↓←→]：画面の位置　　[↑↓←→]：グレー・スケールの調節　　[Insert/Delete]：自動的に増加/グレー・スケールを減少　　[Shift+H]：顕示/画面を隠す　　　　　　　" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTestInfo</Name>
+    <Controls>
+      <Control name="Run" text="開始" />
+      <Control name="Pause" text="臨時停止" />
+      <Control name="ComboItem0" text="正常顕示" />
+      <Control name="ComboItem1" text="制御器の第一テスト点" />
+      <Control name="ComboItem2" text="制御器の第二テスト点" />
+      <Control name="ComboItem3" text="制御器の第三テスト点" />
+      <Control name="ComboItem4" text="分配器の第一テスト点" />
+      <Control name="ComboItem5" text="分配器の第二テスト点" />
+      <Control name="ComboItem6" text="分配器の第三テスト点" />
+      <Control name="ComboItem7" text="スキャニング・パネルの第一テスト点" />
+      <Control name="ComboItem8" text="スキャニング・パネルの第二テスト点" />
+      <Control name="ComboItem9" text="スキャニング・パネルの第三テスト点" />
+    </Controls>
+  </Form>
+<Form>
+    <Name>FrmTest_CustomMsg_String</Name>
+    <Controls>
+      <Control name="toolTip_FromInfo" text="ウィンドウ情報:"/>
+    </Controls>
+  </Form>
+</Resource>  

@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resource>
+  <Form>
+    <Name>Protocol_Interface</Name>
+    <Controls>
+      <Control name="ReadDeviceType" text="读设备类型" />
+      <Control name="ReadCompanyID" text="读公司ID" />
+      <Control name="ReadControllerModelId" text="读发送卡型号" />
+      <Control name="ReadCommunicationProtocol" text="读通信协议的版本" />
+      <Control name="ReadControllerSnHigh" text="读发送卡的Sn号" />
+      <Control name="SetControllerSnHigh" text="设置发送卡的Sn号" />
+      <Control name="ReadSortOrder" text="读排序" />
+      <Control name="SetSortOrder" text="设置排序" />
+      <Control name="ReadSaveSendCardsParameters" text="读保存发送卡参数的值" />
+      <Control name="SetSaveSendCardsParameters" text="保存发送卡参数" />
+      <Control name="ReadReturnFactoryValues" text="读返回出厂设置的值" />
+      <Control name="SetReturnFactoryValues" text="返回出厂设置" />
+      <Control name="ReadTestPoint" text="读测试点" />
+      <Control name="SetTestPoint" text="发送测试点" />
+      <Control name="ReadControllerPhysical" text="读发送卡地址" />
+      <Control name="ReadTemperature" text="读发送卡温度" />
+      <Control name="ReadHumidity" text="读发送卡湿度" />
+      <Control name="ReadFan" text="读发送卡风扇状态" />
+      <Control name="SetFieldRateMode" text="设置场频模式" />
+      <Control name="ReadFieldRateMode" text="读场频模式" />
+      <Control name="ReadFieldRate" text="读场频" />
+      <Control name="SetFieldRate" text="设置场频" /> 
+      <Control name="ReadAudioControl" text="读发送卡声音控制" />
+      <Control name="SetAudioControl" text="发送发送卡声音控制" />
+      <Control name="ReadIoControl" text="读发送卡IO控制" />
+      <Control name="SetIoControl" text="发送发送卡的IO控制" />
+      <Control name="ReadSenderBrightnessLux" text="读发送卡光探头的值" />
+      <Control name="ReadRtco" text="读发送卡时钟" />
+      <Control name="SetRtco" text="设置发送卡的时钟" />
+      <Control name="ReadDVI0FieldRate" text="读DVI0的场频" />
+      <Control name="ReadDVI1FieldRate" text="读DVI1的场频" />
+      <Control name="ReadMasterOrSlave" text="读冗余信息" />
+      <Control name="SetMasterOrSlave" text="发送冗余信息" />
+      <Control name="ReadHoldTime" text="读开机画面保持时间" />
+      <Control name="SetHoldTime" text="设置开机画面保持时间" />
+      <Control name="ReadDviMode" text="读DVI模式" />
+      <Control name="SetDviMode" text="设置DVI模式" />
+      <Control name="ReadDviSelect" text="读选中DVI" />
+      <Control name="SetDviSelect" text="设置选中DVI" />
+      <Control name="ReadDviWidth" text="读DVI宽度" />
+      <Control name="SetDviWidth" text="设置DVI宽度" />
+      <Control name="ReadDviHeight" text="读DVI高度" />
+      <Control name="SetDviHeight" text="设置DVI高度" />
+      <Control name="ReadDviOffsetX" text="读DVI的X偏移" />
+      <Control name="SetDviOffsetX" text="设置DVI的X偏移" />
+      <Control name="ReadDviOffsetY" text="读DVI的Y偏移" />
+      <Control name="SetDviOffsetY" text="设置DVI的Y偏移" />
+      <Control name="ReadDvi1Dvi0OffsetX" text="读DVI1相对于DVI0的X偏移" />
+      <Control name="SetDvi1Dvi0OffsetX" text="设置DVI1相对于DVI0的X偏移" />
+      <Control name="ReadDvi1Dvi0OffsetY" text="读DVI1相对于DVI0的Y偏移" />
+      <Control name="SetDvi1Dvi0OffsetY" text="设置DVI1相对于DVI0的Y偏移" />
+      <Control name="ReadPortEnable" text="读发送卡的网口使能标志" />
+      <Control name="SetPortEnable" text="设置发送卡的网口使能标志" />
+      <Control name="ReadPortWidth" text="读发送卡网口宽度" />
+      <Control name="SetPortWidth" text="设置发送卡网口宽度" />
+      <Control name="ReadPortHeight" text="读发送卡网口高度" />
+      <Control name="SetPortHeight" text="设置发送卡网口高度" />
+      <Control name="ReadPortOffsetX" text="读发送卡网口的X偏移" />
+      <Control name="SetPortOffsetX" text="设置发送卡网口的X偏移" />
+      <Control name="ReadPortOffsetY" text="读发送卡网口的Y偏移" />
+      <Control name="SetPortOffsetY" text="设置发送卡网口的Y偏移" />
+      <Control name="ReadEthernetPortScannerX" text="读接收卡X坐标" />
+      <Control name="SetEthernetPortScannerX" text="设置接收卡X坐标" />
+      <Control name="ReadEthernetPortScannerY" text="读接收卡Y坐标" />
+      <Control name="SetEthernetPortScannerY" text="设置接收卡Y坐标" />
+      <Control name="ReadEthernetPortScannerXY" text="读接收卡的X、Y坐标" />
+      <Control name="SetEthernetPortScannerXY" text="设置接收卡的X、Y坐标" />
+      <Control name="ReadNumberOfCardOrScanBoardInPort" text="读网口帯载的接收卡数量" />
+      <Control name="SetNumberOfCardOrScanBoardInPort" text="设置网口帯载的卡数量" />
+      <Control name="ReadVirtualEnable" text="读使能虚拟标志" />
+      <Control name="SetVirtualEnable" text="设置使能虚拟标志" />
+      <Control name="ReadDisplayMode" text="读显示模式" />
+      <Control name="ReadHDEnable" text="读使能高清标志" />
+      <Control name="SetHDEnable" text="设置使能高清标志" />
+      <Control name="ReadSender_McuProgramLength" text="读单片机程序长度" />
+      <Control name="SetSender_McuProgramLength" text="设置单片机程序长度" />
+      <Control name="ReadSender_McuProgramEdition" text="读单片机程序版本" />
+      <Control name="SetSender_McuProgramEdition" text="设置单片机程序版本" />
+      <Control name="ReadSender_McuProgramRemarks" text="读单片机程序备注" />
+      <Control name="SetSender_McuProgramRemarks" text="设置单片机程序备注" />
+      <Control name="ReadSender_Mcu" text="读单片机程序数据" />
+      <Control name="SetSender_Mcu" text="发送单片机程序文件" />
+      <Control name="SetSender_Reset" text="复位单片机程序" />
+      <Control name="SetSender_EncryptHandShake" text="更新单片机程序握手" />
+      <Control name="SetSender_McuUpdateProgrammFinish" text="更新单片机程序结束" />
+      <Control name="ReadSender_FPGAProgramLength" text="读FPGA程序长度" />
+      <Control name="SetSender_FPGAProgramLength" text="设置FPGA程序长度" />
+      <Control name="ReadSender_FPGAProgramEdition" text="读FPGA程序版本" />
+      <Control name="SetSender_FPGAProgramEdition" text="设置FPGA程序版本" />
+      <Control name="ReadSender_FPGAProgramRemarks" text="读FPGA程序备注" />
+      <Control name="SetSender_FPGAProgramRemarks" text="设置FPGA程序备注" />
+      <Control name="ReadSender_FPGA" text="读FPGA程序数据" />
+      <Control name="SetSender_FPGA" text="发送FPGA程序文件" />
+      <Control name="ReadSender_SoftwareSpace" text="读软件空间数据" />
+      <Control name="SetSender_SoftwareSpace" text="写软件空间数据" />
+      <Control name="ReadSender_EDIDSpace" text="读EDID数据" />
+      <Control name="SetSender_EDIDSpace" text="写EDID数据" />
+      <Control name="ReadSender_AuthorizeTime" text="读发送卡授权时间" />
+      <Control name="SetSender_AuthorizeTime" text="设置发送卡授权时间" />
+      <Control name="ReadSender_AuthorizePassward" text="读发送卡授权密码" />
+      <Control name="SetSender_AuthorizePassward" text="设置发送卡授权密码" />
+      <Control name="ReadSender_RedGammaTable" text="读Gamma表" />
+      <Control name="SetSender_RedGammaTable" text="设置Gamma表" />
+      <Control name="ReadSender_GreenGammaTable" text="读Gamma表" />
+      <Control name="SetSender_GreenGammaTable" text="设置Gamma表" />
+      <Control name="ReadSender_BlueGammaTable" text="读Gamma表" />
+      <Control name="SetSender_BlueGammaTable" text="设置Gamma表" />
+      <Control name="ReadScanCardModle" text="读接收卡ID" />
+      <Control name="ReadScanCardGoldenFPGAProgramVerion" text="读接收卡Glden程序版本" />
+      <Control name="ReadAttachedMonitorCardExist" text="检测接收卡附属监控卡是否存在" />
+      <Control name="ReadAttachedMonitorCardModle" text="读接收卡附属监控卡的ModleID" />
+      <Control name="ReadAttachedMonitorCardProgramVersion" text="读接收卡附属监控卡的程序版本" />
+      <Control name="SetScreenEncrypt" text="硬加密接收卡" />
+      <Control name="SetScreenDecrypt" text="给接收卡解密" />
+      <Control name="SetCoefficientStore2SpiFlash" text="将校正数据保存到接收卡" />
+      <Control name="SetCoefficientStore2IIcFlash" text="将校正数据保存到灯板" />
+      <Control name="SetCoefficientReloadFromSpiFlash" text="从接收卡加载校正数据" />
+      <Control name="SetCoefficientReloadFromIIcFlash" text="从灯板加载校正数据" />
+      <Control name="SetCoefficientInSpiFlashErase" text="擦除接收卡的校正数据" />
+      <Control name="SetCoefficientInIIcFlashErase" text="擦除灯板的校正数据" />
+      <Control name="SetRebootGoldenFPGAProgram" text="重新加载FPGA Golden程序" />
+      <Control name="SetRebootWorkFPGAProgram" text="重新加载FPGA程序" />
+      <Control name="SetFPGAWorkProgramStore" text="保存FPGA程序" />
+      <Control name="SetFPGAGoldenProgramStore" text="保存FPGA程序到Golden程序区" />
+      <Control name="SetParameterReloadFromSpiFlash" text="获取参数" />
+      <Control name="SetParameterStore2SpiFlash" text="将参数保存" />
+      <Control name="SetRecaculateParameter" text="重新计算参数" />
+      <Control name="SetGenLinearScanBoardRunLineTable" text="设置接收卡走线表" />
+      <Control name="SetCoefficienceFromDvi" text="写入上传系数" />
+      <Control name="SetStoreStartingLogoImage" text="设置显示屏当前画面为开机画面" />
+      <Control name="SetStoreNoSignalLogoImage" text="设置显示屏当前画面为无信号画面" />
+      <Control name="SetStartLedCheck" text="启动接收卡点检" />
+      <Control name="SetConfigRegister" text="写配置寄存器" />
+      <Control name="ReadOnePackageSBParameters" text="读接收卡参数" />
+      <Control name="ReadGamma" text="读Gamma值" />
+      <Control name="SetGamma" text="写Gamma值" />
+      <Control name="ReadGlobalBrightness" text="读显示屏亮度" />
+      <Control name="SetGlobalBrightness" text="设置显示屏亮度" />
+      <Control name="ReadRedBrightness" text="读红亮度" />
+      <Control name="SetRedBrightness" text="设置红亮度" />
+      <Control name="ReadGreenBrightness" text="读绿亮度" />
+      <Control name="SetGreenBrightness" text="设置绿亮度" />
+      <Control name="ReadBlueBrightness" text="读蓝亮度" />
+      <Control name="SetBlueBrightness" text="设置蓝亮度" />
+      <Control name="ReadVRedBrightness" text="读虚拟红亮度" />
+      <Control name="SetVRedBrightness" text="设置虚拟红亮度" />
+      <Control name="ReadDataDirection" text="读灯板数据传输方向" />
+      <Control name="SetDataDirection" text="设置灯板数据传输方向" />
+      <Control name="ReadModuleWidth" text="读灯板的宽" />
+      <Control name="SetModuleWidth" text="设置灯板的宽" />
+      <Control name="ReadModuleHeight" text="读灯板的高" />
+      <Control name="SetModuleHeight" text="设置灯板的高" />
+      <Control name="ReadDriverType" text="读灯板驱动芯片型号" />
+      <Control name="SetDriverType" text="设置灯板驱动芯片型号" />
+      <Control name="ReadScanMode" text="读灯板扫描方式" />
+      <Control name="SetScanMode" text="设置灯板扫描方式" />
+      <Control name="ReadOEPority" text="读OE极性" />
+      <Control name="SetOEPority" text="设置OE极性" />
+      <Control name="ReadDecodeType" text="读灯板译码方式" />
+      <Control name="SetDecodeType" text="设置灯板译码方式" />
+      <Control name="ReadGroupNumInModule" text="读灯板的数据组数" />
+      <Control name="SetGroupNumInModule" text="设置灯板的数据组数" />
+      <Control name="ReadDataGroupSequence" text="读数据组S序" />
+      <Control name="SetDataGroupSequence" text="设置数据S序" />
+      <Control name="ReadModuelCols" text="读接收卡帯载的灯板的列数" />
+      <Control name="SetModuelCols" text="设置接收卡帯载的灯板的列数" />
+      <Control name="ReadModuelRows" text="读接收卡帯载灯板的行数" />
+      <Control name="SetModuelRows" text="设置接收卡帯载灯板的行数" />
+      <Control name="ReadControlWidth" text="读接收卡帯载宽度" />
+      <Control name="SetControlWidth" text="设置接收卡帯载宽度" />
+      <Control name="ReadControlHeight" text="读接收卡帯载高度" />
+      <Control name="SetControlHeight" text="设置接收卡帯载高度" />
+      <Control name="ReadPhysicalTotalDataGroupNum" text="读整个接收卡P数据组数" />
+      <Control name="SetPhysicalTotalDataGroupNum" text="设置整个接收卡P数据组数" />
+      <Control name="ReadCascadeDiretion" text="读灯板级联方向" />
+      <Control name="SetCascadeDiretion" text="设置灯板级联方向" />
+      <Control name="ReadTotalPointInTable" text="读灯板走线表总点数" />
+      <Control name="SetTotalPointInTable" text="设置灯板走线表总点数" />
+      <Control name="ReadPointNumPerDrive" text="读灯板单元点数" />
+      <Control name="SetPointNumPerDrive" text="设置灯板单元点数" />
+      <Control name="ReadIrregularScreenDrive" text="读是否不规则带载走线" />
+      <Control name="SetIrregularScreenDrive" text="设置是否不规则带载走线" />
+      <Control name="ReadLogicalTotalDataGroupNum" text="读接收卡L数据组数" />
+      <Control name="SetLogicalTotalDataGroupNum" text="设置接收卡L数据组数" />
+      <Control name="ReadDriverFucntion" text="读灯板F描述" />
+      <Control name="SetDriverFucntion" text="设置灯板F描述" />
+      <Control name="ReadGrayDepth" text="读灰度级别" />
+      <Control name="SetGrayDepth" text="设置灰度级别" />
+      <Control name="ReadGrayMode" text="读灰度模式" />
+      <Control name="SetGrayMode" text="设置灰度模式" />
+      <Control name="ReadRefNumPerVs" text="读刷新率" />
+      <Control name="SetRefNumPerVs" text="设置刷新率" />
+      <Control name="ReadLightFrom1stGray" text="读是否从一级起辉" />
+      <Control name="SetLightFrom1stGray" text="设置是否从一级起辉" />
+      <Control name="ReadGhostRemoveMode" text="读鬼影余晖去除方式" />
+      <Control name="SetGhostRemoveMode" text="设置鬼影余晖去除方式" />
+      <Control name="ReadBlankUnitNumPerScan" text="读消隐时间" />
+      <Control name="SetBlankUnitNumPerScan" text="设置消隐时间" />
+      <Control name="ReadRowChangePoint" text="读RC时间" />
+      <Control name="SetRowChangePoint" text="设置RC时间" />
+      <Control name="ReadABCDRollOver" text="读R方式" />
+      <Control name="SetABCDRollOver" text="设置R方式" />
+      <Control name="ReadGclkNumPerScan" text="读gclk个数" />
+      <Control name="SetGclkNumPerScan" text="设置gclk个数" />
+      <Control name="ReadLightTimePerSubFieldRatio" text="读LR参数" />
+      <Control name="SetLightTimePerSubFieldRatio" text="设置LR参数" />
+      <Control name="ReadShiftUnitNumPerSubField" text="读S长度" />
+      <Control name="SetShiftUnitNumPerSubField" text="设置S长度" />
+      <Control name="ReadTotalUnitNumPerSubField" text="读T个数" />
+      <Control name="SetTotalUnitNumPerSubField" text="设置T个数" />
+      <Control name="ReadLightTimePerSubField" text="读L时间" />
+      <Control name="SetLightTimePerSubField" text="设置L时间" />
+      <Control name="ReadDclkUnitCycle" text="读dclk" />
+      <Control name="SetDclkUnitCycle" text="设置dclk" />
+      <Control name="ReadDclkPhase" text="读dclk相位" />
+      <Control name="SetDclkPhase" text="设置dclk相位" />
+      <Control name="ReadDclkHigh" text="读dclk H参数" />
+      <Control name="SetDclkHigh" text="设置dclk H参数" />
+      <Control name="ReadGclkUnitCycle" text="读Gclk" />
+      <Control name="SetGclkUnitCycle" text="设置Gclk" />
+      <Control name="ReadGclkPhase" text="读Gclk相位" />
+      <Control name="SetGclkPhase" text="设置Gclk相位" />
+      <Control name="ReadGclkHigh" text="读Gclk H参数" />
+      <Control name="SetGclkHigh" text="设置Gclk H参数" />
+      <Control name="ReadSubField" text="读Sub数" />
+      <Control name="SetSubField" text="设置Sub数" />     
+      <Control name="ReadRowsCtrlByDataGroup" text="读灯板内一组数据的行（列）数" />
+      <Control name="SetRowsCtrlByDataGroup" text="设置灯板内一组数据的行（列）数" />
+      <Control name="ReadTotalGclkUnitNumPerScan" text="读Gclk单元数" />
+      <Control name="SetTotalGclkUnitNumPerScan" text="设置Gclk单元数" />
+      <Control name="ReadCorrectionOn" text="读校正是否开启" />
+      <Control name="SetCorrectionOn" text="设置校正是否开启" />
+      <Control name="ReadCoefficientSource" text="读校正数据来源" />
+      <Control name="SetCoefficientSource" text="设置校正系数来源" />
+      <Control name="ReadShowLastFrameWhenCableNotConected" text="读接收卡信号中断显示模式" />
+      <Control name="SetShowLastFrameWhenCableNotConected" text="设置接收卡信号中断显示模式" />
+      <Control name="ReadABCDCode" text="读扫描参数" />
+      <Control name="SetABCDCode" text="设置扫描参数" />
+      <Control name="ReadRgbCode" text="读RGB颜色参数" />
+      <Control name="SetRgbCode" text="设置RGB颜色参数" />
+      <Control name="ReadRgain" text="读红增益值" />
+      <Control name="SetRgain" text="设置红增益" />
+      <Control name="ReadGgain" text="读绿增益值" />
+      <Control name="SetGgain" text="设置绿增益" />
+      <Control name="ReadBgain" text="读蓝增益值" />
+      <Control name="SetBgain" text="设置蓝增益" />
+      <Control name="ReadVRgain" text="读虚拟红增益" />
+      <Control name="SetVRgain" text="设置虚拟红增益" />
+      <Control name="ReadThreshold" text="读点检阈值" />
+      <Control name="SetThreshold" text="设置点检阈值" />
+      <Control name="ReadColorMatrix" text="读CM参数" />
+      <Control name="SetColorMatrix" text="设置CM参数" />
+      <Control name="ReadStartPositionOfDataGroup" text="读灯板内每组数据带载起始行（列）" />
+      <Control name="SetStartPositionOfDataGroup" text="设置灯板内每组数据带载起始行（列）" />
+      <Control name="ReadCabinetSerialNum" text="读接收卡所驱动的箱体编号" />
+      <Control name="SetvCabinetSerialNum" text="设置接收卡所驱动的箱体编号" />
+      <Control name="ReadConfigRegister" text="读配置寄存器" />
+      <Control name="ReadTVCardDVI0Width" text="读电视卡带载实际宽度" />
+      <Control name="SetTVCardDVI0Width" text="设置电视卡带载实际宽度" />
+      <Control name="ReadTVCardDVI0Height" text="读电视卡带载实际高度" />
+      <Control name="SetTVCardDVI0Height" text="设置电视卡带载实际高度" />
+      <Control name="ReadTVCardDVI0OffsetX" text="读电视卡带载水平偏移" />
+      <Control name="SetTVCardDVI0OffsetX" text="设置电视卡带载水平偏移" />
+      <Control name="ReadTVCardDVI0OffsetY" text="读电视卡带载垂直偏移" />
+      <Control name="SetTVCardDVI0OffsetY" text="设置电视卡带载垂直偏移" />
+      <Control name="ReadKillMode" text="读显示屏控制模式" />
+      <Control name="SetKillMode" text="设置显示屏控制模式" />
+      <Control name="ReadSelfTestMode" text="读显示屏自测试模式" />
+      <Control name="SetSelfTestMode" text="设置显示屏自测试模式" />
+      <Control name="ReadLockMode" text="读显示屏锁定模式" />
+      <Control name="SetLockMode" text="设置显示屏锁定模式" />
+      <Control name="ReadScreenEncrypt" text="读接收卡授权" />
+      <Control name="ReadSmartSetMode" text="读智能设置模式" />
+      <Control name="SetSmartSetMode" text="设置智能设置模式" />
+      <Control name="ReadModuleRunLineTable" text="读灯板走线表" />
+      <Control name="SetModuleRunLineTable" text="设置灯板走线表" />
+      <Control name="ReadScanBoardRunLineTable" text="读接收卡走线表" />
+      <Control name="SetScanBoardRunLineTable" text="设置接收卡走线表" />
+      <Control name="ReadRedGammaTable" text="读Gamma表" />
+      <Control name="SetRedGammaTable" text="设置Gamma表" />
+      <Control name="ReadGreenGammaTable" text="读绿色Gamma表" />
+      <Control name="SetGreenGammaTable" text="设置绿色Gamma表" />
+      <Control name="ReadBlueGammaTable" text="读蓝色Gamma表" />
+      <Control name="SetBlueGammaTable" text="设置蓝色Gamma表" />
+      <Control name="ReadOETable" text="读OE表" />
+      <Control name="SetOETable" text="设置OE表" />
+      <Control name="ReadCoefficient" text="读校正系数" />
+      <Control name="ReadCoefficientByOffset" text="读校正系数" />
+      <Control name="SetCoefficient" text="设置校正系数" />
+      <Control name="ReadScanner_FPGAProgramLength" text="读接收卡FPGA程序长度" />
+      <Control name="SetScanner_FPGAProgramLength" text="设置接收卡FPGA程序长度" />
+      <Control name="ReadScanner_FPGAProgramEdition" text="读接收卡FPGA程序版本" />
+      <Control name="SetScanner_FPGAProgramEdition" text="设置接收卡FPGA程序版本" />
+      <Control name="ReadScanner_FPGAProgramRemarks" text="读接收卡FPGA程序备注" />
+      <Control name="SetScanner_FPGAProgramRemarks" text="设置接收卡FPGA程序备注" />
+      <Control name="ReadScanner_FPGA" text="读接收卡FPGA程序数据" />
+      <Control name="SetScanner_FPGA" text="发送接收卡FPGA程序文件" />
+      <Control name="ReadScanner_McuProgramLength" text="读接收卡MCU程序长度" />
+      <Control name="SetScanner_McuProgramLength" text="设置接收卡MCU程序长度" />
+      <Control name="ReadScanner_McuProgramEdition" text="读接收卡MCU程序版本" />
+      <Control name="SetScanner_McuProgramEdition" text="设置接收卡MCU程序版本" />
+      <Control name="ReadScanner_McuProgramRemarks" text="读接收卡MCU程序备注" />
+      <Control name="SetScanner_McuProgramRemarks" text="设置接收卡MCU程序备注" />
+      <Control name="ReadScanner_Mcu" text="读接收卡MCU程序数据" />
+      <Control name="SetScanner_Mcu" text="发送接收卡MCU程序文件" />
+      <Control name="ReadTempInfoOfScanCard" text="读接收卡板载温度" />
+      <Control name="ReadHumiOfScanCard" text="读接收卡板载湿度" />
+      <Control name="ReadVoltageOfScanCard" text="读接收卡板载电压" />
+      <Control name="ReadTempInfoOfMonitorCard" text="读接收卡附属监控卡温度" />
+      <Control name="ReadHumiOfMonitorCard" text="读接收卡附属监控卡湿度" />
+      <Control name="ReadSmokeWarningOfMonitorCard" text="读接收卡附属监控卡烟雾告警数据" />
+      <Control name="ReadFanSpeedOfMonitorCard" text="读接收卡附属监控卡风扇转速" />
+      <Control name="ReadVoltageOfMonitorCard" text="读接收卡附属监控卡电压值" />
+      <Control name="ReadAllStatus" text="读接收卡及附属监控卡的监控数据" />
+      <Control name="ReadScanCardAllStatus" text="读接收卡监控数据" />
+      <Control name="ReadMonitorCardAllStatus" text="读接收卡附属监控卡监控数据" />
+      <Control name="ReadScanner_MutiChipRamA" text="读RamA表" />
+      <Control name="SetScanner_MutiChipRamA" text="设置RamA表" />
+      <Control name="ReadScanner_MutiChipRamB" text="读RamB表" />
+      <Control name="SetScanner_MutiChipRamB" text="设置RamB表" />
+      <Control name="ReadScanner_MutiChipRamC" text="读RamC表" />
+      <Control name="SetScanner_MutiChipRamC" text="设置RamC表" />
+      <Control name="FuncCard_ReadFuncCardModle" text="读多功能卡型号" />
+      <Control name="FuncCard_ReadGoldenFPGAVersion" text="读多功能卡Gloden区FPGA程序版本" />
+      <Control name="FuncCard_ReadMonitorCardModle" text="读多功能卡附属监控卡的型号" />
+      <Control name="FuncCard_ReadMonitorFPGAVersion" text="读多功能卡附属监控卡FPGA程序版本" />
+      <Control name="FuncCard_ReadFuncCardFPGALength" text="读多功能卡FPGA应用程序长度" />
+      <Control name="FuncCard_SetFuncCardFPGALength" text="设置多功能卡FPGA应用程序长度" />
+      <Control name="FuncCard_ReadFuncCardFPGAVersion" text="读多功能卡FPGA应用程序版本" />
+      <Control name="FuncCard_SetFuncCardFPGAVersion" text="设置多功能卡FPGA应用程序版本" />
+      <Control name="FuncCard_ReadFuncCardFPGADescription" text="读多功能卡FPGA应用程序备注" />
+      <Control name="FuncCard_SetFuncCardFPGADescription" text="设置读多功能卡FPGA应用程序备注" />
+      <Control name="FuncCard_ReadFuncCardFPGAData" text="读多功能卡FPGA应用程序数据" />
+      <Control name="FuncCard_SetFuncCardFPGAData" text="发送多功能卡FPGA应用程序文件" />
+      <Control name="FuncCard_ReadFuncCardMCULength" text="读多功能卡MCU应用程序长度" />
+      <Control name="FuncCard_SetFuncCardMCULength" text="设置多功能卡MCU应用程序长度" />
+      <Control name="FuncCard_ReadFuncCardMCUVersion" text="读多功能卡MCU应用程序版本" />
+      <Control name="FuncCard_SetFuncCardMCUVersion" text="设置多功能卡MCU应用程序版本" />
+      <Control name="FuncCard_ReadFuncCardMCUDescription" text="读多功能卡MCU应用程序备注" />
+      <Control name="FuncCard_SetFuncCardMCUDescription" text="设置读多功能卡MCU应用程序备注" />
+      <Control name="FuncCard_ReadFuncCardMCUData" text="读多功能卡MCU应用程序数据" />
+      <Control name="FuncCard_SetFuncCardMCUData" text="发送多功能卡MCU应用程序文件" />
+      <Control name="FuncCard_SetRebootBootFpgaProgram" text="从Gloden区载入FPGA程序" />
+      <Control name="FuncCard_SetRebootAppFpgaProgram" text="从应用区载入FPGA程序" />
+      <Control name="FuncCard_SetStoreFpgaBootProgram" text="将FPGA程序保存到Gloden区" />
+      <Control name="FuncCard_SetStoreFpgaAppProgram" text="将FPGA程序保存到应用区" />
+      <Control name="FuncCard_ReadTempInfoOfFuncCard" text="读多功能卡板载温度" />
+      <Control name="FuncCard_ReadHumiOfFuncCard" text="读多功能卡板载湿度" />
+      <Control name="FuncCard_ReadVoltageOfFuncCard" text="读多功能卡板载电压" />
+      <Control name="FuncCard_ReadLinkStateOfMonitorCard" text="读多功能卡附属监控卡连接状态" />
+      <Control name="FuncCard_ReadTempInfoOfMonitorCard" text="读多功能卡附属监控卡温度" />
+      <Control name="FuncCard_ReadHumiOfMonitorCard" text="读多功能卡附属监控卡湿度" />
+      <Control name="FuncCard_ReadSmokeWarningOfMonitorCard" text="读多功能卡附属监控卡烟雾报警状态" />
+      <Control name="FuncCard_ReadFanSpeedOfMonitorCard" text="读多功能卡附属监控卡风扇转速" />
+      <Control name="FuncCard_ReadVoltageOfMonitorCard" text="读多功能卡附属监控卡电压" />
+      <Control name="FuncCard_ReadFuncCardAllStatus" text="读多功能卡板载监控数据" />
+      <Control name="FuncCard_ReadMonitorCardAllInfo" text="读多功能卡附属监控卡监控数据" />
+      <Control name="FuncCard_ReadMonitorCardAllStatus" text="读多功能卡附属监控卡监控数据" />
+      <Control name="FuncCard_ReadTimeOnFuncCard" text="读多功能卡时间" />
+      <Control name="FuncCard_SetTimeOnFuncCard" text="设置多功能卡时间" />
+      <Control name="FuncCard_ReadPowerPortCtrl" text="读多功能卡电源状态" />
+      <Control name="FuncCard_SetPowerPortCtrl_Start" text="启动电源" />
+      <Control name="FuncCard_SetPowerPortCtrl_Stop" text="关闭电源" />
+      <Control name="FuncCard_ReadAllPowerPortCtrl" text="读当前多功能卡所有电源状态" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Start" text="启动当前多功能卡所有电源" />
+      <Control name="FuncCard_SetAllPowerPortCtrl_Stop" text="关闭当前多功能卡所有电源" />
+      <Control name="FuncCard_ReadPowerOperTime" text="读多功能卡所有自动控制时间" />
+      <Control name="FuncCard_SetPowerOperTime" text="设置电源自动操作时间" />
+      <Control name="FuncCard_ReadPowerCtrlMode" text="读多功能卡电源控制模式" />
+      <Control name="FuncCard_SetPowerCtrlMode" text="设置多功能卡电源控制模式" />
+      <Control name="FuncCard_ReadDelayTime" text="读多功能卡电源启动延时时间" />
+      <Control name="FuncCard_SetDelayTime" text="设置多功能卡电源启动延时时间" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Start" text="启动当前多功能卡所有电源" />
+      <Control name="FuncCard_SetPowerPortCtrlTotal_Stop" text="关闭当前多功能卡所有电源" />
+      <Control name="FuncCard_ReadPowerPortCtrlTotal" text="读多功能卡电源紧急控制的状态" />
+      <Control name="FuncCard_ReadOutDeviceValue" text="读多功能卡连接的光探头值" />
+      <Control name="FuncCard_SetOutDevice" text="设置多功能卡连接的外设为光探头" />
+      <Control name="FuncCard_ReadAudioFrequency" text="读多功能卡的音频采样率" />
+      <Control name="FuncCard_SetAudioFrequency" text="设置多功能卡的音频采样率" />
+    </Controls>
+   </Form>
+
+  <Form>
+    <Name>PackageResults</Name>
+    <Controls>
+      <Control name="ok" text="成功" />
+      <Control name="fileErr" text="失败,错误原因:文件错误" />
+      <Control name="memErr" text="失败,错误原因:内存错误" />
+      <Control name="fileDeleteErr" text="失败,错误原因:文件删除错误" />
+      <Control name="directoryCreateErr" text="失败,错误原因:路径创建错误" />
+      <Control name="invalidPort" text="失败,错误原因:无效串口" />
+      <Control name="parseFailure" text="失败,错误原因:服务解析消息数据失败" />
+      <Control name="messageDisconnect" text="失败,错误原因:消息通信断开" />
+      <Control name="forceCancel" text="失败,错误原因:服务强制取消" />
+      <Control name="sendError" text="失败,错误原因:发送错误" />
+      <Control name="parsePackAddrFailure" text="失败,错误原因:解析数据包中地址失败" />
+      <Control name="fileSendNotExist" text="失败,错误原因:发送文件不存在" />
+      <Control name="deviceSpaceNoEnough" text="失败,错误原因:设备空间不足" />
+      <Control name="fileDataNotEnough" text="失败,错误原因:文件长度不足" />
+      <Control name="fileCrcErr" text="失败,错误原因:文件crc错误" />
+      <Control name="createCheckCodeError" text="失败,错误原因:创建检验码错误" />
+      <Control name="unkonwn" text="失败,错误原因:未知" />
+      <Control name="timeout" text="失败,错误原因:超时" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>CommResults</Name>
+    <Controls>
+      <Control name="ok" text="成功" />
+      <Control name="pending" text="失败,错误原因:挂起" />
+      <Control name="crcErr" text="失败,错误原因:crc错误" />
+      <Control name="lengthErr" text="失败,错误原因:长度错误" />
+      <Control name="portErr" text="失败,错误原因:串口错误" />
+      <Control name="timeout" text="失败,错误原因:超时" />
+      <Control name="codeErr" text="失败,错误原因:码错误" />
+      <Control name="forcedCancel" text="失败,错误原因:被强制取消" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>AckResults</Name>
+    <Controls>
+      <Control name="ok" text="成功" />
+      <Control name="timeout" text="失败,错误原因:超时" />
+      <Control name="requestCrcErr" text="失败,错误原因:请求crc错误" />
+      <Control name="replyCrcErr" text="失败,错误原因:回复crc错误" />
+      <Control name="unknownCmd" text="失败,错误原因:未知命令" />
+      <Control name="invalid" text="失败,错误原因:无效" />
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>ProtocolEnum_Interface</Name>
+    <Controls>
+      <Control name="Unknown" text="未知" />
+      <Control name="NormalMode" text="正常" />
+      <Control name="BlackMode" text="黑屏" />
+      <Control name="LockMode" text="锁定" />
+      <Control name="Light" text="亮度" />
+      <Control name="Chroma" text="色度" />
+      <Control name="Chip_CommonBase" text="通用芯片" />
+      <Control name="Chip_MBI5028" text="MBI5028" />
+      <Control name="Chip_MBI5030" text="MBI5030" />
+      <Control name="Chip_MBI5036" text="MBI5036" />
+      <Control name="Chip_MBI5040" text="MBI5040" />
+      <Control name="Chip_MBI5042" text="MBI5042/5041" />
+      <Control name="Chip_MBI5050" text="MBI5050" />
+      <Control name="Chip_MBI5167" text="MBI5167" /> 
+      <Control name="Chip_DM13H" text="DM13H" />
+      <Control name="Chip_P2518" text="P2518" />
+      <Control name="Chip_P2510" text="P2510" />
+      <Control name="Chip_RFT3630" text="RFT3630" />
+      <Control name="Chip_SUM2017" text="SUM2017" />
+      <Control name="Chip_MBI5034" text="MBI5034" />
+      <Control name="Chip_SUM2018" text="SUM2018" />
+      <Control name="Chip_SUM2030" text="SUM2030" />
+      <Control name="Chip_MBI5037" text="MBI5037" />
+      <Control name="Chip_MBI5039" text="MBI5039" />
+      <Control name="Chip_MY9268" text="MY9268" />
+      <Control name="Chip_SCL8060" text="SCL8060" />
+      <Control name="Chip_MBI5224" text="MBI5224" />
+      <Control name="Chip_MBI5051" text="MBI5051" />
+      <Control name="Chip_MBI5052" text="MBI5052" />
+      <Control name="Chip_MBI5053" text="MBI5053" />
+      <Control name="Chip_MY9266" text="MY9266" />
+      <Control name="Chip_MY9269" text="MY9269" />
+      <Control name="Chip_MBI5042B" text="MBI5042B/5041B" />
+      <Control name="Chip_MBI5045" text="MBI5045" />
+      <Control name="LessOrEqual4_Data2" text="?" />
+      <Control name="LessOrEqual4_Data1" text="?" />
+      <Control name="LessOrEqual8_Data1" text="?" />
+      <Control name="LessOrEqual8_Data2" text="?" />
+      <Control name="MoreThan8" text="?" />
+      <Control name="RightLeft" text="从右到左" />
+      <Control name="LeftRight" text="从左到右" />
+      <Control name="DownUp" text="从下到上" />
+      <Control name="UpDown" text="从上到下" />
+      <Control name="HighEnable" text="高有效" />
+      <Control name="LowEnable" text="低有效" />
+      <Control name="Disable" text="不虚拟" />
+      <Control name="Led4Mode1" text="4灯虚拟模式1" />
+      <Control name="Led4Mode2" text="4灯虚拟模式2" />
+      <Control name="Led3" text="3灯虚拟" />
+      <Control name="StaticNoCode" text="静态无需译码" />
+      <Control name="Decode138" text="74HC138译码" />
+      <Control name="DicrectCode" text="直通译码" />
+      <Control name="Scan_static" text="静态" />
+      <Control name="Scan_2" text="2 扫" />
+      <Control name="Scan_3" text="3 扫" />
+      <Control name="Scan_4" text="4 扫" />
+      <Control name="Scan_5" text="5 扫" />
+      <Control name="Scan_6" text="6 扫" />
+      <Control name="Scan_7" text="7 扫" />
+      <Control name="Scan_8" text="8 扫" />
+      <Control name="Scan_9" text="9 扫" />
+      <Control name="Scan_10" text="10 扫" />
+      <Control name="Scan_11" text="11 扫" />
+      <Control name="Scan_12" text="12 扫" />
+      <Control name="Scan_13" text="13 扫" />
+      <Control name="Scan_14" text="14 扫" />
+      <Control name="Scan_15" text="15 扫" />
+      <Control name="Scan_16" text="16 扫" />
+      <Control name="Scan_17" text="17 扫" />
+      <Control name="Scan_18" text="18 扫" />
+      <Control name="Scan_19" text="19 扫" />
+      <Control name="Scan_20" text="20 扫" />
+      <Control name="Scan_21" text="21 扫" />
+      <Control name="Scan_22" text="22 扫" />
+      <Control name="Scan_23" text="23 扫" />
+      <Control name="Scan_24" text="24 扫" />
+      <Control name="Scan_25" text="25 扫" />
+      <Control name="Scan_26" text="26 扫" />
+      <Control name="Scan_27" text="27 扫" />
+      <Control name="Scan_28" text="28 扫" />
+      <Control name="Scan_29" text="28 扫" />
+      <Control name="Scan_30" text="30 扫" />
+      <Control name="Scan_31" text="31 扫" />
+      <Control name="Scan_32" text="32 扫" />
+      <Control name="Scan_Unknown" text="未知" />
+      <!--CardType-->
+      <Control name="Scanner_Card" text="Scanner_Card" />
+      <Control name="FunctionCard_1" text="FunctionCard_1" />
+      <Control name="FunctionCard_2" text="FunctionCard_2" />
+      <Control name="FunctionCard_3" text="FunctionCard_3" />
+      <Control name="FunctionCard_4" text="FunctionCard_4" />
+      <Control name="FunctionCard_5" text="FunctionCard_5" />
+      <Control name="FunctionCard_6" text="FunctionCard_6" />
+      <Control name="FunctionCard_7" text="FunctionCard_7" />
+      <Control name="FunctionCard_8" text="FunctionCard_8" />
+      <Control name="FunctionCard_9" text="FunctionCard_9" />
+      <Control name="FunctionCard_10" text="FunctionCard_10" />
+      <Control name="FunctionCard_11" text="FunctionCard_11" />
+      <Control name="FunctionCard_12" text="FunctionCard_12" />
+      <Control name="FunctionCard_13" text="FunctionCard_13" />
+      <Control name="FunctionCard_14" text="FunctionCard_14" />
+      <Control name="FunctionCard_15" text="FunctionCard_15" />
+      <!--TestMode-->
+      <Control name="Reserved1_Mode" text="Reserved1" />
+      <Control name="Reserved2_Mode" text="Reserved2" />
+      <Control name="Red_Mode" text="红色" />
+      <Control name="Green_Mode" text="绿色" />
+      <Control name="Blue_Mode" text="蓝色" />
+      <Control name="White_Mode" text="白色" />
+      <Control name="HorizonLine_Mode" text="横线" />
+      <Control name="VerticalLine_Mode" text="竖线" />
+      <Control name="InclineLine_Mode" text="斜线" />
+      <Control name="GrayIncrease_Mode" text="灰阶" />
+      <Control name="Age_Mode" text="老化" />
+      <Control name="Horizontal" text="水平" />
+      <Control name="Vertical" text="垂直" />
+      <Control name="Lowlight" text="低亮" />
+      <Control name="Normallight" text="正常" />
+      <Control name="Highlight" text="高亮" />
+      <Control name="ScanBoardFlash" text="接收卡Flash" />
+      <Control name="ModuleFlash" text="灯板Flash" />
+      <Control name="None" text="无" />
+      <Control name="BlackScreen" text="黑屏" />
+      <Control name="LastFrame" text="上一帧" />
+      <Control name="OK" text="正常" />
+      <Control name="Error" text="故障" />
+      <Control name="Start" text="开始" />
+      <Control name="Stop" text="停止" />
+      <Control name="Mannual" text="手动" />
+      <Control name="Auto" text="自动" />
+      <Control name="SmartMode" text="智能模式" />
+      <Control name="BT_115200bps" text="波特率115200" />
+      <Control name="BT_57600bps" text="波特率57600" />
+      <Control name="BT_38400bps" text="波特率38400" />
+      <Control name="BT_19200bps" text="波特率19200" />
+      <Control name="BT_9600bps" text="波特率9600" />
+      <Control name="BT_4800bps" text="波特率4800" />
+      <Control name="BT_2400bps" text="波特率2400" />
+      <Control name="BT_1200bps" text="波特率1200" />
+      <Control name="BT_Reserved" text="?" />
+      <Control name="LightSensor" text="光探头" />
+      <Control name="requestRead" text="读请求" />
+      <Control name="replyRead" text="读回复" />
+      <Control name="requestWrite" text="写请求" />
+      <Control name="replyWrite" text="写回复" />
+      <Control name="FirstScaleDevice" text="?" />
+      <Control name="Scanner" text="接收卡" />
+      <Control name="FunctionCard" text="多功能卡" />
+    </Controls>
+  </Form>
+  
+</Resource>

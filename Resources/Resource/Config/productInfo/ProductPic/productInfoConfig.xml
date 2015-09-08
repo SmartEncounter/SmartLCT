@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProductInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MCTRL300.jpg</PicPath>
+    <Description>Name： MCTRL300
+Loaded： 1280 * 1024
+</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MSD300.jpg</PicPath>
+    <Description>Name:  MSD300
+Loaded:  1280 * 1024</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MCTRL500.jpg</PicPath>
+    <Description>Name:  MCTRL500
+Loaded:  1920 * 1200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MCTRL600.jpg</PicPath>
+    <Description>Name:  MCTRL600
+Loaded:  1920 * 1200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MCTRL610.jpg</PicPath>
+    <Description>Name:  MCTRL610
+Loaded:  1920 * 1200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MCTRL660.jpg</PicPath>
+    <Description>Name:  MCTRL660
+Loaded:  1920 * 1200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MSD600.jpg</PicPath>
+    <Description>Name:  MSD600
+Loaded:  1920 * 1200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV300.jpg</PicPath>
+    <Description>Name:  MRV300</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV320.jpg</PicPath>
+    <Description>Name:  MRV320</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV360.jpg</PicPath>
+    <Description>Name:  MRV360</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV330.jpg</PicPath>
+    <Description>Name:  MRV330</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV220.jpg</PicPath>
+    <Description>Name:  MRV220</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV210.jpg</PicPath>
+    <Description>Name:  MRV210</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MRV200.jpg</PicPath>
+    <Description>Name:  MRV200</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MON300.jpg</PicPath>
+    <Description>Name:  MON300</Description>
+  </ProductInfo>
+
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MFN300.jpg</PicPath>
+    <Description>Name:  MFN300</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MTH300.jpg</PicPath>
+    <Description>Name:  MTH300</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\MTH310.jpg</PicPath>
+    <Description>Name:  MTH310</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\NS048C.jpg</PicPath>
+    <Description>Name:  NS048C</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\PSD100.jpg</PicPath>
+    <Description>Name:  PSD100</Description>
+  </ProductInfo>
+  <ProductInfo>
+    <PicPath>Resource\Config\productInfo\productPic\PCC80.jpg</PicPath>
+    <Description>Name:  PCC80</Description>
+  </ProductInfo>
+</ArrayOfProductInfo>

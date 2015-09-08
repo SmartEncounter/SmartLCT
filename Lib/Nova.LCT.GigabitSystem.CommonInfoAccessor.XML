@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.CommonInfoAccessor</name>
+    </assembly>
+    <members>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceBaseAccessor.LCTServerProxy">
+            <summary>
+            服务对象
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceBaseAccessor.HWCardType">
+            <summary>
+            硬件设备类型
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceBaseAccessor.SelectedPortName">
+            <summary>
+            发送使用到的串口号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ReduFlag">
+            <summary>
+            冗余信息标志
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ReduDataVer">
+            <summary>
+            冗余信息读写器的版本号
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ReduHeaderInfoLen">
+            <summary>
+            冗余信息的信息头的长度
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.LoadReduInfoFromHW(Nova.LCT.GigabitSystem.CommonInfoAccessor.LoadCommonInfoCompeleteCallBack)">
+            <summary>
+            从硬件读取冗余信息
+            </summary>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ClearHWReduInfo(Nova.LCT.GigabitSystem.CommonInfoAccessor.ClearCommonInfoCompleteCallBack)">
+            <summary>
+            清除冗余信息
+            </summary>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.SaveReduInfoToHW(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo},Nova.LCT.GigabitSystem.CommonInfoAccessor.SaveCommonInfoCompeleteCallBack)">
+            <summary>
+            保存冗余信息到硬件
+            </summary>
+            <param name="senderReduInfoList"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.LoadReduInfoFromFile(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo}@)">
+            <summary>
+            从文件获取冗余信息
+            </summary>
+            <param name="fileName"></param>
+            <param name="senderReduInfoList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.SaveReduInfoToFile(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo})">
+            <summary>
+            保存冗余信息到文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="senderReduInfoList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ReadReduHeaderInfo">
+            <summary>
+            读取冗余信息的信息头（10字节）
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoAccessor.ReadReduWholeInfo(System.Int32)">
+            <summary>
+            读取冗余的全部信息（包括信息头）
+            </summary>
+            <param name="readLen">要读取的长度</param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.CommonInfoCompeleteResult">
+            <summary>
+            通用信息存取结果
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.CommonInfoCompeleteArgs">
+            <summary>
+            通用信息存取完成后通知的参数，根据不同的存取，object表示不同的结果
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.CommonInfoCompeleteArgs.Result">
+            <summary>
+            通知结果
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.CommonInfoCompeleteArgs.SoftwareSpaceObj">
+            <summary>
+            获得的数据，对于存数据来说，该参数目前是无效的
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftwareSpaceInfoObj">
+            <summary>
+            软件空间基类对象
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenDviInfoObj">
+            <summary>
+            软件空间屏体信息DVI信息通知对象
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.RedundancyInfoObject">
+            <summary>
+            软件空间发送卡冗余信息通知对象
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor">
+            <summary>
+            屏幕信息存取的类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.ScreenDataVer">
+            <summary>
+            显示屏信息的版本
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.DVIDataVer">
+            <summary>
+            DVI信息的版本
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.ScrAdjustParamsVer">
+            <summary>
+            显示屏调整参数的版本
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.FileHeaderInfoLen">
+            <summary>
+            软件空间中信息头的长度
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.FileFlag">
+            <summary>
+            屏体信息标志
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.LoadDviScreenInfoFromHW(Nova.LCT.GigabitSystem.CommonInfoAccessor.LoadCommonInfoCompeleteCallBack)">
+            <summary>
+            从硬件存取空间获取屏幕分布信息（异步）
+            </summary>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.ClearHWScreenInfo(Nova.LCT.GigabitSystem.CommonInfoAccessor.ClearCommonInfoCompleteCallBack)">
+            <summary>
+            清除屏体信息
+            </summary>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.SaveDviScreenInfoToHW(Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo},Nova.LCT.GigabitSystem.CommonInfoAccessor.SaveCommonInfoCompeleteCallBack)">
+            <summary>
+            将屏幕分布信息写入硬件存取空间（异步）
+            </summary>
+            <param name="ledDisplayList"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.LoadDviScreenInfoFromFile(System.String,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo}@,Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo@)">
+            <summary>
+            从文件获取屏体信息（同步）
+            </summary>
+            <param name="fileName"></param>
+            <param name="ledDisplayInfo"></param>
+            <param name="graphicsDviInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.SaveDviScreenInfoToFile(System.String,Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo})">
+            <summary>
+            将屏体信息写入到文件中（同步）
+            </summary>
+            <param name="fileName"></param>
+            <param name="dviInfo"></param>
+            <param name="ledDisplayInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.ReadDviScreenHeaderInfo">
+            <summary>
+            读软件空间的头信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.ScreenInfoAccessor.ReadTVCardScanbordInfo(System.Byte,System.String)">
+            <summary>
+            读TVCard的信息
+            </summary>
+            <param name="senderIndex"></param>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser">
+            <summary>
+            与硬件无关的软件空间数据分析器
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.DviInfoToArray(Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo,System.Byte[]@)">
+            <summary>
+            由显卡DVI信息类转换成数组
+            </summary>
+            <param name="dviInfo">DVI信息</param>
+            <param name="byteDviInfo">数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ArrayToDviInfo(System.Byte[],Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo@,System.UInt16@)">
+            <summary>
+            由字节数组转换成DVI信息类
+            </summary>
+            <param name="byteDviInfo">保存了DVI信息的字节数组</param>
+            <param name="dviInfo">DVI信息</param>
+            <param name="version">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ScreenInfoToArray(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo},System.Byte[]@)">
+            <summary>
+            屏体信息列表转换成字节数组
+            </summary>
+            <param name="screenInfo">屏体信息列表</param>
+            <param name="byteScreenInfo">保存屏体信息的字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ArrayToScreenInfo(System.Byte[],System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo}@,System.UInt16@)">
+            <summary>
+            由字节数组转换成字节数组
+            </summary>
+            <param name="byteScreenInfo">保存了屏体信息的字节数组</param>
+            <param name="screenInfo">屏体信息列表</param>
+            <param name="version">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ScreenAdjustParamsToArray(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo},System.Byte[]@)">
+            <summary>
+            显示屏调整参数转换成字节数组
+            </summary>
+            <param name="scrrenInfo"></param>
+            <param name="byteAdjustInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.DviScreenInfoToArray(Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo},System.Byte[]@)">
+            <summary>
+            由DVI信息和屏体信息列表转换成字节数组
+            </summary>
+            <param name="dviInfo">DVI信息</param>
+            <param name="screenInfo">屏体信息列表</param>
+            <param name="byteInfo">保存了DVI信息及屏体信息的字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ArrayToDviScreenInfo(System.Byte[],Nova.LCT.GigabitSystem.Common.GraphicsDVIPortInfo@,System.UInt16@,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ILEDDisplayInfo}@,System.UInt16@)">
+            <summary>
+            由保存了DVI信息及屏体信息列表的字节数组得到DVI信息及屏体信息
+            </summary>
+            <param name="byteInfo">保存了DVI信息及屏体信息列表的字节数组</param>
+            <param name="dviInfo">DVI信息</param>
+            <param name="dviVersion">DVI信息的版本</param>
+            <param name="screenInfo">屏体信息列表</param>
+            <param name="screenVersion">屏体信息列表的版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.SenderRedundancyInfoToArray(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo},System.Byte[]@)">
+            <summary>
+            将冗余信息列表转换成字节数组
+            </summary>
+            <param name="reduInfoList"></param>
+            <param name="byteReduInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.ArrayToSenderRedundanceInfo(System.Byte[],System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.SenderRedundancyInfo}@,System.UInt16@)">
+            <summary>
+            将字节数组转换成冗余信息列表
+            </summary>
+            <param name="byteReduInfo"></param>
+            <param name="reduInfoList"></param>
+            <param name="reduVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAnalyser.CaculateCRC(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            校验码计算
+            </summary>
+            <param name="array"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAccessor">
+            <summary>
+            从软件空间回去所有信息
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAccessor.#ctor(Nova.LCT.Message.Client.ILCTServerBaseProxy)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="serverProxy">服务对象</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAccessor.ReadPortSoftwareSpaceInfo(System.Collections.Generic.List{System.String},Nova.LCT.GigabitSystem.CommonInfoAccessor.CompletedReadPortsSoftwareSpaceInfoDele)">
+            <summary>
+            读每个串口的软件空间信息
+            </summary>
+            <param name="readPortList"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.CommonInfoAccessor.SoftWareSpaceAccessor.ServerProxy">
+            <summary>
+            服务对象
+            </summary>
+        </member>
+    </members>
+</doc>

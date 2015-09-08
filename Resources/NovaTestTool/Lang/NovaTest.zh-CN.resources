@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resource>
+<Form>
+    <Name>FrmTest</Name>
+    <Controls>
+      <Control name="FrmTest" text="显示屏测试工具-西安诺瓦"/>
+    </Controls>
+  </Form>
+
+<Form>
+    <Name>FrmSetup_grid</Name>
+    <Controls>
+      <Control name="groupBox_gridSetup" text="网格设置"/>
+      <Control name="label_gBackColor" text="背景色:"/>
+      <Control name="label_gLineInterval" text="线条间距:"/>
+      <Control name="label_gLineWidth" text="线条宽度:"/>
+      <Control name="groupBox_mixTest" text="混测设置"/>
+      <Control name="checkBox_red" text="红色"/>
+      <Control name="checkBox_green" text="绿色"/>
+      <Control name="checkBox_blue" text="蓝色"/>
+      <Control name="checkBox_black" text="黑色"/>
+      <Control name="checkBox_white" text="白色"/>
+      <Control name="checkBox_yellow" text="黄色"/>
+      <Control name="checkBox_turquoise" text="青色"/>
+      <Control name="checkBox_purple" text="紫色"/>
+      <Control name="checkBox_H" text="横线"/>
+      <Control name="checkBox_V" text="竖线"/>
+      <Control name="checkBox_LeftSlating" text="左斜"/>
+      <Control name="checkBox_RighSlating" text="右斜"/>
+      <Control name="crystalButton_selectAll" text="全选"/>
+      <Control name="crystalButton_clearSelect" text="清空"/>
+      <Control name="crystalButton_gOk" text="确定"/>
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>FrmSetup_grid_ApplicationString</Name>
+    <Controls>
+      <Control name="OneAtLest" text="混测设置：请至少选中一项！"/>
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>FrmSetup_pitch</Name>
+    <Controls>
+      <Control name="FrmSetup_pitch" text="高级设置"/>
+      <Control name="grp_font" text="字体"/>
+      <Control name="label_fontSize" text="字体大小:"/>
+      <Control name="label_fontShape" text="字形:"/>
+      <Control name="label_StartRowNo" text="行起始数:"/>
+      <Control name="label_StartColNo" text="列起始数:"/>
+      <Control name="label_ModLineWidth" text="模块线宽:"/>  
+      <Control name="label_ScannerlineWidth" text="扫描板线宽:"/>
+      <Control name="crystalButton_pOk" text="确定"/>
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>LEDDispTest</Name>
+    <Controls>
+      <Control name="tabPage_form" text="窗口"/>
+      <Control name="lbl_X" text="X:"/>
+      <Control name="lbl_Y" text="Y:"/>
+      <Control name="lbl_width" text="宽度:"/> 
+      <Control name="lbl_height" text="高度:"/>
+      <Control name="crystalButton_show" text="显示"/>
+      <Control name="crystalButton_hide" text="隐藏"/>
+      <Control name="tabPage_color" text="颜色"/>
+      <Control name="radioButton_red" text="红"/>
+      <Control name="radioButton_green" text="绿"/>
+      <Control name="radioButton_blue" text="蓝"/>
+      <Control name="radioButton_white" text="白"/>
+      <Control name="radioButton_yellow" text="黄"/>
+      <Control name="radioButton_Turquoise" text="青"/>
+      <Control name="radioButton_purple" text="紫"/>
+
+      <Control name="radioButton_pureRed" text="红"/>
+      <Control name="radioButton_pureGreen" text="绿"/>
+      <Control name="radioButton_pureBlue" text="蓝"/>
+      <Control name="radioButton_pureWhite" text="白"/>
+      <Control name="radioButton_pureYellow" text="黄"/>
+      <Control name="radioButton_pureCyan" text="青"/>
+      <Control name="radioButton_purePurple" text="紫"/>
+
+      <Control name="radioButton_GridRed" text="红"/>
+      <Control name="radioButton_GridGreen" text="绿"/>
+      <Control name="radioButton_GridBlue" text="蓝"/>
+      <Control name="radioButton_GridWhite" text="白"/>
+      <Control name="radioButton_GridYellow" text="黄"/>
+      <Control name="radioButton_GridCyan" text="青"/>
+      <Control name="radioButton_GridPink" text="紫"/>
+      <Control name="radioButton_GrayRed" text="红"/>
+      <Control name="radioButton_GrayGreen" text="绿"/>
+      <Control name="radioButton_GrayBlue" text="蓝"/>
+      <Control name="radioButton_GrayWhite" text="白"/>
+      <Control name="radioButton_GrayYellow" text="黄"/>
+      <Control name="radioButton_GrayCyan" text="青"/>
+      <Control name="radioButton_GrayPink" text="紫"/>
+      <Control name="tabPage_pureColor" text="纯色"/>
+      <Control name="tabPage_cline" text="渐变"/>
+      <Control name="radioButton_grade" text="分级"/>
+      <Control name="radioButton_noGrade" text="不分级"/>
+      <Control name="crystalButton_32" text="32级"/>
+      <Control name="crystalButton_64" text="64级"/>
+      <Control name="crystalButton_128" text="128级"/>
+      <Control name="crystalButton_256" text="256级"/>
+      <Control name="radioButton_manal" text="手动"/>
+      <Control name="radioButton_auto" text="自动"/>
+      <Control name="lbl_curGrey" text="当前灰度:"/>
+      <Control name="lbl_speed" text="速度:"/>
+      <Control name="tabPage_grid" text="网格"/>
+      <Control name="crystalButton_horizonal" text="横"/>
+      <Control name="crystalButton_vertical" text="竖"/>
+      <Control name="crystalButton_leftSlating" text="左斜"/>
+      <Control name="crystalButton_rightSlating" text="右斜"/>
+      <Control name="crystalButton_mixTest" text="混测"/>
+      <Control name="crystalButton_aging" text="老化"/>
+      <Control name="crystalButton_gSetup" text="高级设置"/>
+      <Control name="lbl_gray" text="灰度:"/>
+      <Control name="lbl_gSpeed" text="速度:"/>
+      <Control name="label_manalGrey" text="灰度:" />
+      <Control name="checkBox_multiSelect" text="网格叠加" />
+      <Control name="tabPage_pitch" text="定位"/>
+      <Control name="crystalButton_pitch" text="定位"/>
+      <Control name="lbl_pFont" text="字体:"/>
+      <Control name="crystalButton_pset" text="高级设置"/>
+      <Control name="grp_module" text="模块"/>
+      <Control name="grp_scan" text="扫描板带载模块"/>
+      <Control name="grp_color" text="颜色"/>
+      <Control name="lbl_pWidth" text="宽度:"/>
+      <Control name="lbl_pHeight" text="高度:"/>
+      <Control name="lbl_pRows" text="行数:"/>
+      <Control name="lbl_pCols" text="列数:"/>
+      <Control name="lbl_pBackground" text="背景:"/>
+      <Control name="btn_fontColor" text="字体:"/>
+      <Control name="lbl_pModule" text="模块线:"/>
+      <Control name="lbl_pScanLine" text="扫描板线:"/>
+      <Control name="radioButton_LR" text="从左到右"/>
+      <Control name="radioButton_RL" text="从右到左"/>
+      <Control name="tabPage_testSelf" text="自测试"/>
+      <Control name="grp_test" text="自测试"/>
+      <Control name="grp_cfig" text="重新配置程序"/>
+      <Control name="crystalButton_send" text="发送"/>
+      <Control name="crystalButton_bkScreen" text="黑屏"/>
+      <Control name="crystalButton_lock" text="锁定"/>
+      <Control name="crystalButton_conmonShow" text="正常显示"/>
+      <Control name="tabPage_help" text="帮助"/>
+      <Control name="tabPage_About" text="关于"/>
+      <Control name="label_HelpInfo1" text="诺瓦科技-LED显示屏专业解决方案"/>
+      <Control name="label_HelpDetailInfo" text="1. LED显示屏控制系统
+
+2. LED显示屏逐点校正系统
+
+3. LED显示屏行业应用软件"/>
+      <Control name="label_phone" text="全国统一技术支持电话:400-696-0755"/>
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>DebugDispForm</Name>
+    <Controls>
+      <Control name="label_shortKeyInfo" text="   [Home]:显示/隐藏窗口右下角处提示
+   [End]:显示/隐藏窗口中心处提示
+   [Space]:功能自动切换
+   [PageUp]:功能向上切换
+   [PageDown]:功能向下切换
+   [Shift+↑↓←→]:窗口大小
+   [Shift+F/双击]:全屏/取消全屏
+   [Ctrl+↑↓←→]:窗口位置
+   [↑↓←→]:灰度调节
+   [Insert/Delete]:自动增加/减少灰度
+   [Shift+H]:显示/隐藏窗口"/>
+    </Controls>
+  </Form>
+
+  <Form>
+    <Name>LEDDispTestInfo</Name>
+    <Controls>
+      <Control name="Run" text="开始"/>
+      <Control name="Pause" text="暂停"/>
+      <Control name="ComboItem0" text="正常显示" />
+      <Control name="ComboItem1" text="控制器第一测试点" />
+      <Control name="ComboItem2" text="控制器第二测试点" />
+      <Control name="ComboItem3" text="控制器第三测试点" />
+      <Control name="ComboItem4" text="分配器第一测试点" />
+      <Control name="ComboItem5" text="分配器第二测试点" />
+      <Control name="ComboItem6" text="分配器第三测试点" />
+      <Control name="ComboItem7" text="扫描板第一测试点" />
+      <Control name="ComboItem8" text="扫描板第二测试点" />
+      <Control name="ComboItem9" text="扫描板第三测试点" />
+    </Controls>
+  </Form>
+
+<Form>
+    <Name>FrmTest_CustomMsg_String</Name>
+    <Controls>
+      <Control name="toolTip_FromInfo" text="窗口信息："/>
+    </Controls>
+  </Form>
+</Resource>  

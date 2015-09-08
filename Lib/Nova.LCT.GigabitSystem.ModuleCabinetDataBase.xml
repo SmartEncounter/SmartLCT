@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nova.LCT.GigabitSystem.ModuleCabinetDataBase</name>
+    </assembly>
+    <members>
+        <member name="T:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase">
+            <summary>
+            灯板箱体数据库操作类
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.#ctor(System.String,System.IO.FileMode)">
+            <summary>
+            根据数据库文件名称构造当前类，使用该构造函数后，请使用Close关闭数据库
+            </summary>
+            <param name="dataBaseName">数据库路径</param>
+            <param name="fileMode">打开方式</param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.Open(System.String,System.IO.FileMode)">
+            <summary>
+            打开数据库
+            </summary>
+            <param name="dataBaseName">数据库的路径</param>
+            <param name="fileMode">打开模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.Close">
+            <summary>
+            关闭数据库
+            </summary>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleCount(System.Int32@)">
+            <summary>
+            获得当前表中记录的灯板个数
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.AddModule(Nova.LCT.GigabitSystem.Common.LEDModuleProperty)">
+            <summary>
+            添加灯板信息到数据库Module表中，若该记录已经存在，则不重复添加，返回true
+            </summary>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.RemoveModuleByIndex(System.Int32)">
+            <summary>
+            删除指定序号的灯板记录
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.RemoveModuleByID(System.Int32)">
+            <summary>
+            删除指定ID的灯板记录
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModule(System.Int32,Nova.LCT.GigabitSystem.Common.LEDModuleProperty@,System.Int32@)">
+            <summary>
+            获得指定序号的灯板属性和ID
+            </summary>
+            <param name="index"></param>
+            <param name="moduleProp"></param>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModule(System.Int32,Nova.LCT.GigabitSystem.Common.LEDModuleProperty@)">
+            <summary>
+            获得指定ID的灯板属性
+            </summary>
+            <param name="moduleID"></param>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.SearchModule(Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.LEDModuleProperty}@,System.Collections.Generic.List{System.Int32}@)">
+            <summary>
+            按搜索条件搜索对应的灯板
+            </summary>
+            <param name="searchCodition"></param>
+            <param name="moduleList"></param>
+            <param name="moduleIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ExistLEDModule(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.Int32@)">
+            <summary>
+            检测输入的灯板是否存在
+            </summary>
+            <param name="moduleProp">灯板信息</param>
+            <param name="moduleID">返回存在的ID</param>
+            <returns>如果存在返回true，否则返回false</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetCabinetCount(Nova.LCT.GigabitSystem.Common.CabinetType,System.Int32@)">
+            <summary>
+            获得指定类型的箱体记录项个数
+            </summary>
+            <param name="cabinetType"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.AddCabinet(Nova.LCT.GigabitSystem.Common.ICabinetProperty)">
+            <summary>
+            添加新箱体到数据库
+            </summary>
+            <param name="cabinetProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.RemoveCabinetByIndex(Nova.LCT.GigabitSystem.Common.CabinetType,System.Int32)">
+            <summary>
+            删除指定类型，指定序号的箱体记录
+            </summary>
+            <param name="cabinetType"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.RemoveCabinetByID(Nova.LCT.GigabitSystem.Common.CabinetType,System.Int32)">
+            <summary>
+            删除指定类型，指定ID的箱体记录
+            </summary>
+            <param name="cabinetType"></param>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetCabinet(Nova.LCT.GigabitSystem.Common.CabinetType,System.Int32,Nova.LCT.GigabitSystem.Common.ICabinetProperty@,System.Int32@)">
+            <summary>
+            获得指定类型、序号的箱体属性信息和ID
+            </summary>
+            <param name="cabinetType"></param>
+            <param name="index"></param>
+            <param name="cabinetProp"></param>
+            <param name="cabinetID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleIDOfRegularCabinet(System.Int32,System.Int32@)">
+            <summary>
+            获得指定序号的规则箱体的构成灯板ID
+            </summary>
+            <param name="index"></param>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleIDOfIrRegularCabinet(System.Int32,System.Collections.Generic.List{System.Int32}@)">
+            <summary>
+            获得指定序号的不规则箱体的构成灯板ID列表
+            </summary>
+            <param name="index"></param>
+            <param name="moduleIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.SearchCabinet(Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.ICabinetProperty}@,System.Collections.Generic.List{System.Int32}@)">
+            <summary>
+            搜索指定宽度和高度的箱体
+            </summary>
+            <param name="searchCodition"></param>
+            <param name="cabinetList"></param>
+            <param name="cabinetIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ExistCabinet(Nova.LCT.GigabitSystem.Common.ICabinetProperty,System.Int32@)">
+            <summary>
+            判断输入的箱体是否存在
+            </summary>
+            <param name="cabinetProp">箱体的信息</param>
+            <param name="cabinetID">返回存在的箱体ID</param>
+            <returns>存在返回true，不存在返回false</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CreatMDBDataBase(System.String)">
+            <summary>
+            创建数据库
+            </summary>
+            <param name="dataBaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CreatModuleTable(ADOX.CatalogClass)">
+            <summary>
+            创建灯板数据表
+            </summary>
+            <param name="catalogClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CreatIrRegularCabinetTable(ADOX.CatalogClass)">
+            <summary>
+            创建不规则箱体数据表
+            </summary>
+            <param name="catalogClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CreatRegularCabinetTable(ADOX.CatalogClass)">
+            <summary>
+            创建规则箱体数据表
+            </summary>
+            <param name="catalogClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.AccessClose">
+            <summary>
+            检测数据库是否关闭
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ExecuteNonQuery(System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="strSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetDataSetBySQL(System.String,System.Data.DataSet@)">
+            <summary>
+            根据SQL语言筛选数据表，返回筛选的表
+            </summary>
+            <param name="strSQL"></param>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleByIndex(System.Int32,System.Data.DataSet,Nova.LCT.GigabitSystem.Common.LEDModuleProperty@)">
+            <summary>
+            按索引获取灯板的信息
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="moduleProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ExistLEDModuleProperty(Nova.LCT.GigabitSystem.Common.LEDModuleProperty,System.Boolean,System.Int32@)">
+            <summary>
+            检索表中是否存在moduleProp类型灯板信息
+            </summary>
+            <param name="moduleProp">灯板信息</param>
+            <param name="isChangeName">是否改名称</param>
+            <param name="moduleID">返回存在的ID</param>
+            <returns>存在返回true，不存在返回false</returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleIDStringInIrRegularCabinet(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet},System.String@)">
+            <summary>
+            获取不规则箱体中各灯板的ID字符串
+            </summary>
+            <param name="moduleListInCabinet"></param>
+            <param name="strModuleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleConnectInfoString(System.Int32,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet},System.String@)">
+            <summary>
+            灯板各组数据之间的连接信息
+            </summary>
+            <param name="physicalDataGroupNum"></param>
+            <param name="moduleListInCabinet"></param>
+            <param name="connectInfoString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetRegularCabinetByIndex(System.Int32,System.Data.DataSet,Nova.LCT.GigabitSystem.Common.ICabinetProperty@)">
+            <summary>
+            根据索引从数据库中获取规则箱体的信息
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="cabinetProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetIrRegularCabinetByIndex(System.Int32,System.Data.DataSet,Nova.LCT.GigabitSystem.Common.ICabinetProperty@)">
+            <summary>
+            按索引获取数据库中不规则箱体的信息
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="cabinetProp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetModuleInIrRegularCabinet(System.Int32,System.Data.DataSet,System.Int32,System.Int32,Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet@)">
+            <summary>
+            获取不规则箱体灯板列表
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="moduleIndex"></param>
+            <param name="moduleId"></param>
+            <param name="moduleInIrRegularCabinet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.GetGroupInfoInCabinet(System.Int32,System.Data.DataSet,System.Int32,System.Byte,System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleGroupInCabinet}@)">
+            <summary>
+            获取灯板数据组在箱体数据组中连接的信息
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="moduleIndex"></param>
+            <param name="dataGroup"></param>
+            <param name="groupInfoInCabinet"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CombinationMdoluePositionInfo(System.Collections.Generic.List{Nova.LCT.GigabitSystem.Common.IrRegularCabinetProperty.ModuleInIrRegularCabinet},System.String@,System.String@)">
+            <summary>
+            组合不规则箱体中各灯板的位置的大小信息
+            </summary>
+            <param name="moduleListInCabinet"></param>
+            <param name="sizeInfo"></param>
+            <param name="locInfo"></param>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.AnalysisMdoluePositionInfo(System.Int32,System.Data.DataSet,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            解析不规则箱体中灯板位置
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="moduleIndex"></param>
+            <param name="XInCabinet"></param>
+            <param name="YInCabinet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.AnalysisMdolueSizeInfo(System.Int32,System.Data.DataSet,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            解析不规则箱体中灯板的大小
+            </summary>
+            <param name="index"></param>
+            <param name="dataSet"></param>
+            <param name="moduleIndex"></param>
+            <param name="PixelColInCabinet"></param>
+            <param name="PixelRowInCabinet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ByteConverToString(System.Byte[])">
+            <summary>
+            字节数组转换为字符串
+            </summary>
+            <param name="byt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.StringConverByte(System.String)">
+            <summary>
+            字符串转换为字节数组
+            </summary>
+            <param name="strByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ByteEqual(System.Byte[],System.Byte[])">
+            <summary>
+            判断两个字节数组是否相等
+            </summary>
+            <param name="newByte"></param>
+            <param name="oldByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.StringConverToModuleIDList(System.String,System.Collections.Generic.List{System.Int32}@)">
+            <summary>
+            将ModuleID组成的字符串分割开，存储在List中
+            </summary>
+            <param name="strID"></param>
+            <param name="moduleIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.DataBaseName">
+            <summary>
+            设置和获取数据库存放路径
+            </summary>
+        </member>
+        <member name="P:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.IsOpenDataBase">
+            <summary>
+            获取当前数据库的是否打开
+            </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch">
+            <summary>
+            灯板搜索类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchDataDiretion">
+            <summary>
+            是否支持按数据方向查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchDriverType">
+            <summary>
+            是否支持按驱动芯片查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchScanMode">
+            <summary>
+            是否支持按扫描方式查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchDecodeType">
+            <summary>
+            是否支持按编码方式查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchOE">
+            <summary>
+            是否支持按OE极性查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchABCDCode">
+            <summary>
+            是否支持按扫描线参数排列查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchRGBCode">
+            <summary>
+            是否支持按四色参数查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchDataGroup">
+            <summary>
+            数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchModulePixelCols">
+            <summary>
+            是否支持按灯板像素列数查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.IsSearchModulePixelRows">
+            <summary>
+             是否支持按灯板像素行数查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.DataDircType">
+            <summary>
+            数据方向
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.DriverChipType">
+            <summary>
+            驱动芯片
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.Scan">
+            <summary>
+            扫描方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.Decode">
+            <summary>
+            编码方式
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.OeType">
+            <summary>
+            OE极性
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.DataGroupCount">
+            <summary>
+            数据组数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.ABCDCode">
+            <summary>
+            扫描线参数排列
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.RGBCode">
+            <summary>
+            四色参数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.ModulePixelCols">
+            <summary>
+            灯板像素列数
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.ModuleTableSearch.ModulePixelRows">
+             <summary>
+            灯板像素行数
+             </summary>
+        </member>
+        <member name="T:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch">
+            <summary>
+            箱体搜索类
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.IsSearchWidth">
+            <summary>
+            是否支持按箱体宽查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.IsSearchHeight">
+            <summary>
+            是否支持按箱体高查询
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.IsSearchModuleCascade">
+            <summary>
+            是否支持按灯板级联方向搜索
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.Width">
+            <summary>
+            箱体宽
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.Height">
+            <summary>
+            箱体高
+            </summary>
+        </member>
+        <member name="F:Nova.LCT.GigabitSystem.DataBase.ModuleCabinetDataBase.CabinetTableSearch.ModuleCascadeType">
+            <summary>
+            灯板级联方式
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource>
+  <Form>
+    <Name>FrmTest</Name>
+    <Controls>
+      <Control name="FrmTest" text="Les outils de test d'affichage - Xi'an Nova" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid</Name>
+    <Controls>
+      <Control name="groupBox_gridSetup" text="Paramètres de la grille" />
+      <Control name="label_gBackColor" text="Couleur de fond:" />
+      <Control name="label_gLineInterval" text="Interligne:" />
+      <Control name="label_gLineWidth" text="Largeur du trait:" />
+      <Control name="groupBox_mixTest" text="configuraton de détection mixte" />
+      <Control name="checkBox_red" text="Rouge" />
+      <Control name="checkBox_green" text="Vert" />
+      <Control name="checkBox_blue" text="Bleu" />
+      <Control name="checkBox_black" text="Noir" />
+      <Control name="checkBox_white" text="Blanc" />
+      <Control name="checkBox_yellow" text="Jaune" />
+      <Control name="checkBox_turquoise" text="Vert" />
+      <Control name="checkBox_purple" text="violet" />
+      <Control name="checkBox_H" text="Tiret" />
+      <Control name="checkBox_V" text="Les lignes verticales" />
+      <Control name="checkBox_LeftSlating" text="Oblique gauche" />
+      <Control name="checkBox_RighSlating" text="Oblique droite" />
+      <Control name="crystalButton_selectAll" text="Sélectionner tout" />
+      <Control name="crystalButton_clearSelect" text="Vider" />
+      <Control name="crystalButton_gOk" text="Déterminer" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_grid_ApplicationString</Name>
+    <Controls>
+      <Control name="OneAtLest" text="Le dispositif mixte de la dètection: Sélectionnez-en un au moins!" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>FrmSetup_pitch</Name>
+    <Controls>
+      <Control name="FrmSetup_pitch" text="Paramètres avancés" />
+      <Control name="grp_font" text="Font" />
+      <Control name="label_fontSize" text="Taille de la police:" />
+      <Control name="label_fontShape" text="Style de police:" />
+      <Control name="label_StartRowNo" text="Nombre de lignes de début:" />
+      <Control name="label_StartColNo" text="Numéro de la colonne due début:" />
+      <Control name="label_ModLineWidth" text="Largeur de ligne du module:" />
+      <Control name="label_ScannerlineWidth" text="La largeur de lignes de plaque de scan:" />
+      <Control name="crystalButton_pOk" text="Déterminer" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTest</Name>
+    <Controls>
+      <Control name="tabPage_form" text="fenêtre" />
+      <Control name="lbl_X" text="X:" />
+      <Control name="lbl_Y" text="Y:" />
+      <Control name="lbl_width" text="largeur" />
+      <Control name="lbl_height" text="hauteur" />
+      <Control name="crystalButton_show" text="Afficher" />
+      <Control name="crystalButton_hide" text="Cacher" />
+      <Control name="tabPage_color" text="Couleur" />
+      <Control name="radioButton_red" text="Rouge" />
+      <Control name="radioButton_green" text="Vert" />
+      <Control name="radioButton_blue" text="Bleu" />
+      <Control name="radioButton_white" text="Blanc" />
+      <Control name="radioButton_yellow" text="Jaune" />
+      <Control name="radioButton_Turquoise" text="Vert" />
+      <Control name="radioButton_purple" text="Violet" />
+      <Control name="radioButton_pureRed" text="Rouge" />
+      <Control name="radioButton_pureGreen" text="Vert" />
+      <Control name="radioButton_pureBlue" text="Bleu" />
+      <Control name="radioButton_pureWhite" text="Blanc" />
+      <Control name="radioButton_pureYellow" text="Jaune" />
+      <Control name="radioButton_pureCyan" text="Vert" />
+      <Control name="radioButton_purePurple" text="Violet" />
+      <Control name="radioButton_GridRed" text="Rouge" />
+      <Control name="radioButton_GridGreen" text="Vert" />
+      <Control name="radioButton_GridBlue" text="Bleu" />
+      <Control name="radioButton_GridWhite" text="Blanc" />
+      <Control name="radioButton_GridYellow" text="Jaune" />
+      <Control name="radioButton_GridCyan" text="Vert" />
+      <Control name="radioButton_GridPink" text="Violet" />
+      <Control name="radioButton_GrayRed" text="Rouge" />
+      <Control name="radioButton_GrayGreen" text="Vert" />
+      <Control name="radioButton_GrayBlue" text="Bleu" />
+      <Control name="radioButton_GrayWhite" text="Blanc" />
+      <Control name="radioButton_GrayYellow" text="Jaune" />
+      <Control name="radioButton_GrayCyan" text="Vert" />
+      <Control name="radioButton_GrayPink" text="Violet" />
+      <Control name="tabPage_pureColor" text="couleur pure" />
+      <Control name="tabPage_cline" text="Changement progressif" />
+      <Control name="radioButton_grade" text="classification" />
+      <Control name="radioButton_noGrade" text="Non classé" />
+      <Control name="crystalButton_32" text="32 grade" />
+      <Control name="crystalButton_64" text="64 grade" />
+      <Control name="crystalButton_128" text="128 grade" />
+      <Control name="crystalButton_256" text="256 grade" />
+      <Control name="radioButton_manal" text="Manuel" />
+      <Control name="radioButton_auto" text="Automatique" />
+      <Control name="lbl_curGrey" text="Niveaux de gris courant:" />
+      <Control name="lbl_speed" text="Vitesse" />
+      <Control name="tabPage_grid" text="grille" />
+      <Control name="crystalButton_horizonal" text="Transversal" />
+      <Control name="crystalButton_vertical" text="Verticale" />
+      <Control name="crystalButton_leftSlating" text="Oblique gauche" />
+      <Control name="crystalButton_rightSlating" text="Oblique droite" />
+      <Control name="crystalButton_mixTest" text="Détection mixte" />
+      <Control name="crystalButton_aging" text="Vieillissement" />
+      <Control name="crystalButton_gSetup" text="Paramètres avancés" />
+      <Control name="lbl_gray" text="Niveaux de gris:" />
+      <Control name="lbl_gSpeed" text="Vitesse" />
+      <Control name="label_manalGrey" text="Niveaux de gris:" />
+      <Control name="checkBox_multiSelect" text="grille superposée" />
+      <Control name="tabPage_pitch" text="Localiser" />
+      <Control name="crystalButton_pitch" text="Localiser" />
+      <Control name="lbl_pFont" text="Font" />
+      <Control name="crystalButton_pset" text="Paramètres avancés" />
+      <Control name="grp_module" text="module" />
+      <Control name="grp_scan" text="Module de scan de charge à bord" />
+      <Control name="grp_color" text="Couleur" />
+      <Control name="lbl_pWidth" text="largeur" />
+      <Control name="lbl_pHeight" text="hauteur" />
+      <Control name="lbl_pRows" text="Nombre de lignes:" />
+      <Control name="lbl_pCols" text="Nombre de colonnes:" />
+      <Control name="lbl_pBackground" text="Font" />
+      <Control name="btn_fontColor" text="Font" />
+      <Control name="lbl_pModule" text="Ligne du module:" />
+      <Control name="lbl_pScanLine" text="Linges de la scan:" />
+      <Control name="radioButton_LR" text="De gauche à droite" />
+      <Control name="radioButton_RL" text="De droite à gauche" />
+      <Control name="tabPage_testSelf" text="Self-Test" />
+      <Control name="grp_test" text="Self-Test" />
+      <Control name="grp_cfig" text="Reconfigurez le programme" />
+      <Control name="crystalButton_send" text="Envoyer" />
+      <Control name="crystalButton_bkScreen" text="Écran noir" />
+      <Control name="crystalButton_lock" text="Verrouillage" />
+      <Control name="crystalButton_conmonShow" text="Affichage normal" />
+      <Control name="tabPage_help" text="aide" />
+      <Control name="tabPage_About" text="Concerner" />
+      <Control name="label_HelpInfo1" text="Technologie Nova projet de solution professionnelle sur l'écran d'affichage LED" />
+      <Control name="label_HelpDetailInfo" text="Système de commande d'affichage LED   2. Système de correction point par point de l'affichage   3. le logiciel d'application LED d'affichage de l'industrie" />
+      <Control name="label_phone" text="les numéros téléphoniques de supports unifiés nationaux: 400 -696-0755" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>DebugDispForm</Name>
+    <Controls>
+      <Control name="label_shortKeyInfo" text="   [Accueil]: Inviter se trouve au coins en bas à droite de la fenêtre d'afficher / cacher [Fin]: Inviter se trouver au centre de la fenêtre d'Afficher / cacher [Espace]: fonction commute automatiquement [PageUp]: la fonction interruption vers le haut [Pa" />
+    </Controls>
+  </Form>
+  <Form>
+    <Name>LEDDispTestInfo</Name>
+    <Controls>
+      <Control name="Run" text="Commencer" />
+      <Control name="Pause" text="Pause" />
+      <Control name="ComboItem0" text="Affichage normal" />
+      <Control name="ComboItem1" text="Le premier point de test des contrôleurs" />
+      <Control name="ComboItem2" text="Le deuxième point de test des contrôleurs" />
+      <Control name="ComboItem3" text="Le troisième point de test des contrôleurs" />
+      <Control name="ComboItem4" text="Le premier point de test de distributeur" />
+      <Control name="ComboItem5" text="Le deuxième point de test de distributeur" />
+      <Control name="ComboItem6" text="Le troisième point de test de distributeur" />
+      <Control name="ComboItem7" text="Le premier point de test sur le panneau du scan" />
+      <Control name="ComboItem8" text="Le deuxièmer point de test sur le panneau du scan" />
+      <Control name="ComboItem9" text="Le troisième point de test sur le panneau du scan" />
+    </Controls>
+  </Form>
+
+<Form>
+    <Name>FrmTest_CustomMsg_String</Name>
+    <Controls>
+      <Control name="toolTip_FromInfo" text="des informations de fenêtre:"/>
+    </Controls>
+  </Form>
+</Resource>  

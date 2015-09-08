@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Nova_Wpf_Control="clr-namespace:Nova.Wpf.Control;assembly=Nova.Wpf.Control.NumericUpDown" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Test.MainWindow"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Background="#FF444881">
+        
+    	<Nova_Wpf_Control:NumericUpDown Margin="152,136,0,0" BorderThickness="1" BorderBrush="#FF5C2C2C" MaxValue="30" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="106" Background="#FFE8E2E2" IsEnabled="False"></Nova_Wpf_Control:NumericUpDown>
+        <Nova_Wpf_Control:NumericUpDown BorderThickness="1" Height="25" HorizontalAlignment="Left" Margin="61,79,0,0" MaxValue="12" VerticalAlignment="Top" Width="106" Background="Green" Name="num_test" OverflowBgColor="Red" MinValue="2" IsAutoResetValue="True" />
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="183,79,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Nova_Wpf_Control:NumericUpDown Background="Green" BorderThickness="1" Height="25" HorizontalAlignment="Left" Margin="316,123,0,0" MaxValue="12" MinValue="3" Name="numericUpDown1" OverflowBgColor="Red" VerticalAlignment="Top" Width="106" Value="0" ValueChangedEvent="numericUpDown1_ValueChangedEvent" />
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="183,33,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <Nova_Wpf_Control:NumericUpDown HorizontalAlignment="Left" Margin="228,192,0,0" Name="numericUpDown2" VerticalAlignment="Top" Width="180" Background="Green" />
+    </Grid>
+</Window>

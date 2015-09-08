@@ -1,0 +1,28 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Nova_SmartLCT_Interface="clr-namespace:Nova.SmartLCT.Interface;assembly=Nova.SmartLCT.Interface.CommonData" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Nova_SmartLCT_SmartLCTControl="clr-namespace:Nova.SmartLCT.SmartLCTControl;assembly=SmartLCTControl" xmlns:Test="clr-namespace:Test" mc:Ignorable="d">
+	<!-- 应该在此定义资源字典条目。-->
+    <Nova_SmartLCT_SmartLCTControl:MyTemplateSelector x:Key="MyTemplateSelectorDataSource" d:IsDataSource="True"/>
+	<Nova_SmartLCT_SmartLCTControl:SmartLCTControl x:Key="SmartLCTControlDataSource" d:IsDataSource="True"/>
+	<Test:MainWindow_VM x:Key="MainWindow_VMDataSource" d:IsDataSource="True"/>
+	<ItemsPanelTemplate x:Key="ItemsPanelTemplate_MyRectLayer2">
+		<Canvas/>
+	</ItemsPanelTemplate>
+	<Style x:Key="SmartLCTControlStyle1111" TargetType="{x:Type Nova_SmartLCT_SmartLCTControl:SmartLCTControl}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Nova_SmartLCT_SmartLCTControl:SmartLCTControl}">
+					<Border Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}" DataContext="{Binding Source={StaticResource MainWindow_VMDataSource}}">
+						<ScrollViewer x:Name="MyScrollViewer" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Background="White" >
+							<Viewbox Stretch="Fill" x:Name="MyViewbox" DataContext="{Binding Source={StaticResource MainWindow_VMDataSource}}" >
+								<ItemsControl  x:Name="MyItemsControl"  ItemsPanel="{DynamicResource ItemsPanelTemplate_MyRectLayer2}" Background="#FF485BF7" Width="{Binding MyRectLayer.Width, Mode=TwoWay}" Height="{Binding MyRectLayer.Height, Mode=TwoWay}" ItemTemplateSelector="{Binding Mode=OneWay, Source={StaticResource MyTemplateSelectorDataSource}}" />
+							</Viewbox>
+						</ScrollViewer>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
